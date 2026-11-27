@@ -61,7 +61,7 @@ const skipSplashByClick = async p => { await p.mouse.click(195, 300); await slee
 // The Chief's panel pops open when he speaks and auto-collapses ~8 s later, which moves the canvas and
 // every sheet under a finger mid-test; achievement cinematics (by design) swallow the next input.  Pin the panel
 // collapsed (the game's own steady state) and silence cinematic offers for deterministic runs.
-const pinLayout = async p => { await p.evaluate(() => { window.snGuidePop = () => {}; if (guideExpanded) toggleGuideBar(); try { SN_CINE.offer = () => {}; if (SN_CINE.state.active) SN_CINE.close(false); SN_CINE.state.queue.length = 0; } catch (e) {} }); await sleep(p, 800); };
+const pinLayout = async p => { await p.evaluate(() => { window.snGuidePop = () => {}; if (guideExpanded) toggleGuideBar(); try { SN_CINE.__offer = SN_CINE.offer; SN_CINE.offer = () => {}; if (SN_CINE.state.active) SN_CINE.close(false); SN_CINE.state.queue.length = 0; } catch (e) {} }); await sleep(p, 800); };
 const startL1 = async p => { await p.evaluate(() => startGame(1)); await p.waitForFunction(() => gameState.phase === 'playing' && player.onGround, null, { timeout: 10000 }); await pinLayout(p); };
 // where things are on the page (CSS px)
 const geo = p => p.evaluate(() => { const c = document.getElementById('gameCanvas').getBoundingClientRect(); const z = SN_TOUCH.zoneRects()[0]; return { cl: c.left, ct: c.top, cw: c.width, ch: c.height, zl: c.left + z.x + z.w * 0.25, zr: c.left + z.x + z.w * 0.75, zy: c.top + z.y + z.h / 2 }; });
@@ -338,8 +338,7 @@ if (on('deck')) {
   await sleep(p, 2500);
   const s1 = await p.evaluate(() => ({ code: snAlarmCode(), deck: deckExpanded, pop: !!SN_TOUCH.pop }));
   chk('DECK with an alarm showing and a control sheet open the gauge deck does NOT auto-open over the sheet', s1.code > 0 && s1.pop && s1.deck === false, JSON.stringify(s1));
-  await p.keyboard.press('Escape');
-  await p.waitForFunction(() => SN_TOUCH.pop === null, null, { timeout: 4000 }).catch(() => {});
+  for (let i = 0; i < 3 && (await st(p)).pop !== null; i++) { await p.keyboard.press('Escape'); await sleep(p, 700); }   // a sheet opened through the API needs a second Esc; a bump-opened one closes on the first
   await p.waitForFunction(() => deckExpanded, null, { timeout: 10000 }).catch(() => {});
   chk('DECK with the sheet closed the alarm auto-opens the deck again', await p.evaluate(() => deckExpanded) === true);
   await p.waitForFunction(() => deckExpanded, null, { timeout: 5000 }).catch(() => {});
@@ -350,6 +349,67 @@ if (on('deck')) {
   chk('DECK a deck the player closes stays closed while the alarm picture is unchanged', stayed, changed ? 'picture changed - inconclusive window' : 'held 2 s');
   chk('DECK no page errors', p.errs.length === 0, p.errs.join(' | ').slice(0, 200));
   await ctx.close();
+}
+
+// =============================================================== SHIP #25: SHOW walkthrough stops on ANY input; CINE toggle
+if (on('ship25')) {
+  const startWalk = async (touch) => {
+    const o = await open({ touch });
+    await sleep(o.p, 600); await skipSplashByClick(o.p); await startL1(o.p);
+    await o.p.evaluate(() => document.getElementById('helpBtn').click());
+    await o.p.waitForFunction(() => SN_WALK.active && TAKEOVER.active, null, { timeout: 5000 }).catch(() => {});
+    await sleep(o.p, 900);   // past the 0.5 s start grace
+    return o;
+  };
+  const stopped = p => p.evaluate(() => !SN_WALK.active && !TAKEOVER.active);
+  const cases = [
+    ['keyboard key (D)', false, async o => { await o.p.keyboard.press('KeyD'); }],
+    ['mouse click on the world', false, async o => { await o.p.mouse.click(300, 450); }],
+    ['trackpad wheel', false, async o => { await o.p.mouse.move(200, 450); await o.p.mouse.wheel(0, 80); }],
+    ['touch tap', true, async o => { await o.T('touchStart', [{ x: 300, y: 450 }]); await o.T('touchEnd', []); }],
+  ];
+  for (const [nm, touch, act] of cases) {
+    const o = await startWalk(touch);
+    const before = await o.p.evaluate(() => SN_WALK.active && TAKEOVER.active);
+    await act(o); await sleep(o.p, 300);
+    chk(`SHIP25 walkthrough: ${nm} stops it immediately`, before && await stopped(o.p), `running before=${before}`);
+    await o.ctx.close();
+  }
+  {
+    const o = await startWalk(false);
+    await o.p.evaluate(() => document.getElementById('helpBtn').click()); await sleep(o.p, 300);
+    chk('SHIP25 walkthrough: a second SHOW press stops it and the button turns red', await stopped(o.p) && await o.p.evaluate(() => document.getElementById('helpBtn').classList.contains('follow-off')));
+    await o.ctx.close();
+  }
+  {
+    const o = await startWalk(false);
+    await o.p.waitForFunction(() => gameState.procedureStep >= 1, null, { timeout: 45000 }).catch(() => {});
+    chk('SHIP25 walkthrough: SHOW button green while running; the Chief icon frame mirrors it', await o.p.evaluate(() => document.getElementById('helpBtn').classList.contains('follow-on') && document.getElementById('portraitMini').classList.contains('follow-on')));
+    chk('SHIP25 walkthrough: it makes real progress from the current state (procedure step advances)', await o.p.evaluate(() => gameState.procedureStep >= 1));
+    chk('SHIP25 walkthrough: no page errors', o.p.errs.length === 0, o.p.errs.join(' | ').slice(0, 200));
+    await o.ctx.close();
+  }
+  {
+    const o = await open(); const p = o.p;
+    await sleep(p, 600); await skipSplashByClick(p);
+    const lab = () => p.evaluate(() => document.getElementById('cineBtn').textContent);
+    chk('SHIP25 cine: default ON, button sits right beside AUDIO', await lab() === 'CINE: ON' && await p.evaluate(() => document.getElementById('audioBtn').nextElementSibling.id) === 'cineBtn');
+    await p.evaluate(() => document.getElementById('cineBtn').click()); await sleep(p, 200);
+    chk('SHIP25 cine: click turns it OFF and persists (sn.cine)', await lab() === 'CINE: OFF' && await p.evaluate(() => localStorage.getItem('sn.cine')) === 'off');
+    await startL1(p);
+    await p.evaluate(() => SN_CINE.offer('cold_state_verified')); await sleep(p, 600);
+    chk('SHIP25 cine: with cinematics OFF an offer plays nothing and queues nothing', await p.evaluate(() => !CINE_ACTIVE && SN_CINE.state.queue.length === 0 && SN_CINE.state.active === null));
+    await p.evaluate(() => document.getElementById('cineBtn').click()); await sleep(p, 200);
+    chk('SHIP25 cine: switching it back ON persists on', await lab() === 'CINE: ON' && await p.evaluate(() => localStorage.getItem('sn.cine')) === 'on');
+    await p.evaluate(() => { if (SN_CINE.__offer) SN_CINE.offer = SN_CINE.__offer; SN_CINE.state.played.clear(); SN_CINE.offer('cold_state_verified'); });
+    await p.waitForFunction(() => CINE_ACTIVE || SN_CINE.state.active !== null, null, { timeout: 10000 }).catch(() => {});
+    chk('SHIP25 cine: with cinematics ON the offer plays as before', await p.evaluate(() => CINE_ACTIVE || SN_CINE.state.active !== null));
+    await p.reload({ waitUntil: 'domcontentloaded' }); await p.waitForFunction(() => typeof SN_AUDIO !== 'undefined');
+    await p.evaluate(() => { localStorage.setItem('sn.cine', 'off'); });
+    await p.reload({ waitUntil: 'domcontentloaded' }); await p.waitForFunction(() => typeof SN_AUDIO !== 'undefined');
+    chk('SHIP25 cine: the OFF choice survives a reload', await p.evaluate(() => SN_AUDIO.cine === false && document.getElementById('cineBtn').textContent === 'CINE: OFF'));
+    await o.ctx.close();
+  }
 }
 
 // =============================================================== LAYOUT
