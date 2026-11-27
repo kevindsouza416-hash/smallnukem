@@ -6440,6 +6440,12 @@ function snWalkStop(announce) {
 function snWalkInput(e) {
   if (!SN_WALK.active || T_NOW - SN_WALK.t0 < 0.5) return;
   if (e && e.type === 'keydown' && (e.repeat || /^(Shift|Control|Alt|Meta)/.test(e.code))) return;
+  // patch182: a press ON the SHOW button is the toggle itself, not an interaction stop - its leading
+  // pointerdown/touchstart (or the Enter/Space keydown of a keyboard-activated press) reaches this handler
+  // BEFORE the click reaches snHelpPress, and stopping here reset the state snHelpPress checks, so the
+  // click fell through and restarted the walkthrough.  Leave button-targeted press events to snHelpPress.
+  if (e && e.target && typeof e.target.closest === 'function' && e.target.closest('#helpBtn') &&
+      (e.type === 'pointerdown' || e.type === 'touchstart' || (e.type === 'keydown' && (e.code === 'Enter' || e.code === 'Space')))) return;
   snWalkStop(true);
 }
 for (const ev of ['pointerdown', 'keydown', 'wheel', 'touchstart']) window.addEventListener(ev, snWalkInput, { capture: true, passive: true });

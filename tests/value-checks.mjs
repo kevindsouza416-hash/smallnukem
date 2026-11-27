@@ -1146,6 +1146,12 @@ chk('p180: portrait 375x667 CLIMB - no-op (eff 220), prompt top 349, gap 216, no
 chk('p180: OPEN/WALK (clear 122) no-op and clear of the step bar at the smallest in-scope canvas (375x667 portrait)', (() => { const g = p180geom(667, 179, 46, 133, 122); return g.eff === 122 && g.top === 447 && g.gap === 314; })(), '');
 chk('p180: THE BUG - 1280x800 with gauge deck EXPANDED (H 199): unclamped climb prompt top would be 102 (52 px inside step bar 61-175); clamped eff 143, top 179, gap exactly 4, overlap 52 -> 0', (() => { const g = p180geom(800, 601, 426, 175, 220); const unclampedTop = 800 - (426 + 220) - 52; return g.H === 199 && unclampedTop === 102 && (175 - unclampedTop) > 0 && g.eff === 143 && g.top === 179 && g.gap === 4; })(), '');
 chk('p180: clamp guarantees prompt top >= 4 px below canvas top for every canvas height 60..900 and both nominal clears', (() => { for (let H = 60; H <= 900; H++) { for (const n of [220, 122]) { const eff = Math.min(n, Math.max(0, H - 52 - 4)); if (H - eff - 52 < Math.min(4, H - 52)) return false; if (H >= n + 56 && eff !== n) return false; } } return true; })(), '');
+
+// ---- patch182: a REAL second SHOW press stops the walkthrough (no stop-then-restart) ----
+chk('p182: snWalkInput leaves a press ON the SHOW button to snHelpPress (pointerdown/touchstart targeted at #helpBtn are not an interaction stop)', html.includes("e.target.closest('#helpBtn')") && html.includes("e.type === 'pointerdown' || e.type === 'touchstart'"), '');
+chk('p182: a keyboard-activated SHOW press is left to snHelpPress too (Enter/Space keydown targeted at the button, whose click follows)', html.includes("e.type === 'keydown' && (e.code === 'Enter' || e.code === 'Space')"), '');
+chk('p182: the button exemption sits BEFORE the stop call inside snWalkInput, and the stop call itself stands', (() => { const i = html.indexOf('function snWalkInput(e)'); const g = html.indexOf("closest('#helpBtn')", i); const s = html.indexOf('snWalkStop(true);', i); return i >= 0 && g > i && s > g; })(), '');
+chk('p182: the exemption is scoped to the button press only - the capture listener set (pointer/key/wheel/touch) and the second-press stop branch in snHelpPress are unchanged', html.includes("for (const ev of ['pointerdown', 'keydown', 'wheel', 'touchstart']) window.addEventListener(ev, snWalkInput, { capture: true, passive: true });") && html.includes('if (SN_WALK.active) { snWalkStop(true); return true; }'), '');
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);
 

@@ -382,6 +382,27 @@ if (on('ship25')) {
     await o.ctx.close();
   }
   {
+    // patch182 (CR5 major): a REAL press fires pointerdown BEFORE the click - the programmatic .click()
+    // above cannot catch a stop-then-restart.  Press the button's real coordinates with the real mouse.
+    const o = await startWalk(false);
+    const bb = await o.p.evaluate(() => { const b = document.getElementById('helpBtn'); const r = b.getBoundingClientRect(); return { x: r.left + r.width / 2, y: r.top + r.height / 2, vis: r.width > 0 && getComputedStyle(b).display !== 'none' }; });
+    await o.p.mouse.click(bb.x, bb.y); await sleep(o.p, 300);
+    const stop1 = await stopped(o.p);
+    await sleep(o.p, 800);
+    chk('SHIP25 walkthrough: a REAL second SHOW press (mouse down+up on the button) stops it, turns red and does NOT restart it', bb.vis && stop1 && await stopped(o.p) && await o.p.evaluate(() => document.getElementById('helpBtn').classList.contains('follow-off')), `visible=${bb.vis}`);
+    await o.ctx.close();
+  }
+  {
+    // patch182: same real-press case through touch (touchstart precedes the click on a tap).
+    const o = await startWalk(true);
+    const bb = await o.p.evaluate(() => { const b = document.getElementById('helpBtn'); const r = b.getBoundingClientRect(); return { x: r.left + r.width / 2, y: r.top + r.height / 2, vis: r.width > 0 && getComputedStyle(b).display !== 'none' }; });
+    await o.p.touchscreen.tap(bb.x, bb.y); await sleep(o.p, 300);
+    const stop1 = await stopped(o.p);
+    await sleep(o.p, 800);
+    chk('SHIP25 walkthrough: a REAL second SHOW tap (touch on the button) stops it, turns red and does NOT restart it', bb.vis && stop1 && await stopped(o.p) && await o.p.evaluate(() => document.getElementById('helpBtn').classList.contains('follow-off')), `visible=${bb.vis}`);
+    await o.ctx.close();
+  }
+  {
     const o = await startWalk(false);
     await o.p.waitForFunction(() => gameState.procedureStep >= 1, null, { timeout: 45000 }).catch(() => {});
     chk('SHIP25 walkthrough: SHOW button green while running; the Chief icon frame mirrors it', await o.p.evaluate(() => document.getElementById('helpBtn').classList.contains('follow-on') && document.getElementById('portraitMini').classList.contains('follow-on')));
