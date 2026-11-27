@@ -1004,6 +1004,10 @@ chk('p162: the Chief stock automatic-trip line is NOT used for a manual SCRAM', 
 // ---- patch163 (controls audit): movement input ----
 chk('p163 G1: the gamepad stick axis is OR-ed into gpUp/gpDown (it used to overwrite the D-pad)', html.includes('if (gp.axes[1] < -0.5) gpUp = true;') && html.includes('if (gp.axes[1] > 0.5) gpDown = true;') && !html.includes('gpUp = gp.axes[1] < -0.5;'), '');
 chk('p163 J1: Space / gamepad A jump only when no sheet is open and no interact target', html.includes('const operating163 = !!(SN_TOUCH.pop || p.interactTarget);') && html.includes("(keys['Space'] && !operating163)"), '');
+
+// ---- patch164 (controls audit): landscape phones ----
+chk('p164: short-landscape CSS floats the popped Chief panel over the world (absolute, not in-flow)', html.includes('#guideBarExpanded { position: absolute; left: 0; right: 0; top: 100%; z-index: 40; max-height: 46vh;'), '');
+chk('p164: layoutTopBars parks the overlay below the step bar and clears the inline top outside landscape', html.includes("(orientation: landscape) and (max-height: 500px)').matches;") && html.includes("sb.getBoundingClientRect().bottom - gb.getBoundingClientRect().top") && html.includes(": '';"), '');
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);
 

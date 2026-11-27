@@ -767,6 +767,8 @@ body.chief-speaking .guide-speech { font-size: 14px; color: #ffffff; }   /* patc
   #stepBar { margin-top: 6px; flex-wrap: nowrap; }
   #stepBar #stepChip { flex: 1 1 auto; }
   #guideNextBtn { flex: 1 1 auto; }
+  /* patch164: the popped Chief panel floats over the world instead of pushing it down (top is set by layoutTopBars to clear the step bar) */
+  #guideBarExpanded { position: absolute; left: 0; right: 0; top: 100%; z-index: 40; max-height: 46vh; overflow: hidden; box-shadow: 0 8px 16px rgba(0,0,0,0.55); }
 }
 /* === patchF7 (iPhone fix stream F7): top bar + settings strip ===
    Top bar: 34 px buttons were flex-centred in the 32 px bar's 28 px content
@@ -4445,6 +4447,11 @@ function layoutTopBars() {
   let top = gc.offsetHeight + (guideExpanded ? ge.offsetHeight : 0) + 4;
   if (gb && snx.offsetParent) top = gb.getBoundingClientRect().bottom - snx.offsetParent.getBoundingClientRect().top + 4;
   snx.style.top = top + 'px';
+  // patch164: short landscape - the expanded guide panel is an overlay (CSS); park it just below the step bar
+  if (ge) {
+    const land164 = window.matchMedia && window.matchMedia('(orientation: landscape) and (max-height: 500px)').matches;
+    ge.style.top = (land164 && gb && sb && sb.offsetParent) ? Math.max(0, sb.getBoundingClientRect().bottom - gb.getBoundingClientRect().top) + 'px' : '';
+  }
   // #stepBar is in-flow (static): it clears the pill via its CSS margin.
 }
 function toggleGuideBar() {
