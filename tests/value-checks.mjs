@@ -437,7 +437,7 @@ chk('patch84: score screen carries the tap-for-menu hint', html.includes('TAP AN
 chk('patch85: the four guide controls live in one left-anchored row', html.includes('class="guide-btnrow"') && html.includes('.guide-btnrow { position: absolute; left: 10px;'), '');
 chk('patch85: no guide button is right-anchored any more', !html.includes('right: 292px') && !html.includes('right: 196px') && !html.includes('right: 96px') && !html.includes('right: 22px'), '');
 chk('patch85/86+134: guide row is TOUCH, DEMO (SOUND removed by patch134; AUDIO/SFX sit left of MENU)', (() => { const i = html.indexOf('class="guide-btnrow"'); const seg = html.slice(i, html.indexOf('</div>', i)); return seg.indexOf('touchModeBtn') > -1 && seg.indexOf('touchModeBtn') < seg.indexOf('demoBtn') && seg.indexOf('chiefMute') === -1 && seg.indexOf('takeoverBtn') === -1; })(), '');
-chk('patch85+134: row buttons carry the tappable standard (cluster scaled by patch134)', html.includes('#touchModeBtn { position: static;') && html.includes('#takeoverBtn { position: static;') && html.includes('#audioBtn { background: #2a1c08;'), '');
+chk('patch85+134: row buttons carry the tappable standard (cluster scaled by patch134)', html.includes('#touchModeBtn { position: static;') && html.includes('#takeoverBtn { position: static;') && html.includes('#audioBtn, #cineBtn { background: #2a1c08;')   /* ship #25: CINE shares the AUDIO rule */, '');
 
 // ---- 25. Control cluster (patch86, Kevin Nov 25 ~23:57) ----
 chk('patch93: SPEED/TAKEOVER/MAP/ASK share ONE row (orders 1-4, equal flex)', html.includes('#paceBtn { order: 1; flex: 1 1 0;') && html.includes('#takeoverBtn { order: 2; flex: 1.3 1 0;') && html.includes('#mapBtn { order: 3; flex: 0.85 1 0; }') && html.includes('#helpBtn { order: 4; flex: 0.85 1 0; }'), '');
@@ -449,7 +449,7 @@ chk('patch99: the ASK control is SHOW (Kevin, Nov 26 ~00:52)', html.includes('>S
 chk('patch87: offer visibility gate is 20 s on the step', html.includes('function snHelpOfferReady() { return T_NOW - (SN_HELP.stepT0 || 0) >= 20; }'), '');
 chk('patch99 supersedes patch87: the offer function never shows anything', html.includes('the assist offer pop-up is REMOVED'), '');
 chk('patch87: step clock restarts with the step counters', html.includes('SN_HELP.stepT0 = T_NOW;'), '');
-chk('patch99 supersedes patch87: SHOW starts the demo directly (no gated offer path)', html.includes('const ok = SN_HELP.startDemo();'), '');
+chk('patch99 supersedes patch87: SHOW starts the demo directly (no gated offer path)', html.includes('return snWalkStart();   // patch171 (ship #25)')   /* ship #25: SHOW starts the walkthrough (was SN_HELP.startDemo()) */, '');
 chk('patch93: the top-row buttons are border-box on an equal flex basis', html.includes('#paceBtn { order: 1; flex: 1 1 0; box-sizing: border-box; }') && html.includes('#takeoverBtn { order: 2; flex: 1.3 1 0; box-sizing: border-box; }'), '');
 
 // ---- 27. Deck rule, free movement, marking rules (patch88, Kevin Nov 26) ----
@@ -516,7 +516,7 @@ chk('patch96: fade tick wired into the loop, 2 s after the line', html.includes(
 chk('patch96: collapsed at level start', html.includes("document.getElementById('guideBarExpanded').style.display = 'none';"), '');
 chk('patch97: TAKEOVER = MAP = SHOW font (bold 16px Courier)', html.includes("#takeoverBtn { position: static; background: #0e2438;") && !html.includes("font: bold 22px 'Courier New'") && !html.includes("font: bold 24px 'Courier New'") && !html.includes('font: 700 24px system-ui'), '');
 chk('patch99: offer pop-up removed (never shows)', html.includes('#demoOffer { display: none !important; }') && html.includes('the assist offer pop-up is REMOVED'), '');
-chk('patch99: SHOW starts the demo directly, toggle stops it', html.includes('SN_HELP.showFollow = true; SN_HELP.showStopped = false;') && html.includes('const ok = SN_HELP.startDemo();'), '');
+chk('patch99: SHOW starts the demo directly, toggle stops it', html.includes('SN_HELP.showFollow = true; SN_HELP.showStopped = false;') && html.includes('return snWalkStart();   // patch171 (ship #25)')   /* ship #25: SHOW starts the walkthrough (was SN_HELP.startDemo()) */, '');
 chk('patch99: button green while following, red when stopped', html.includes('#helpBtn.follow-on { background: #14532d;') && html.includes('#helpBtn.follow-off { background: #5a1616;'), '');
 chk('patch99: Chief-continue click-gate removed (demo runs through)', html.includes("SHOWME.phase = 'operate'; SHOWME.opT = 0; guideNarrate(pin); guideShowGate(false);") && !html.includes("SHOWME.phase = 'gate'; guideNarrate(pin); guideShowGate(true);"), '');
 chk('patch99: follow floor flip is position-derived (no mid-climb band)', html.includes('if (player.onGround && !player.onLadder && guideFloorOf(feet) === tf) { SHOWME._pf = tf;'), '');
@@ -572,7 +572,7 @@ chk('patch112: SN_WASD module present with route()', html.includes('const SN_WAS
 chk('patch112: WASD modes - panel freeze via freezeKeys in panel and hud modes', (html.match(/this\.freezeKeys\(\);/g) || []).length >= 4, '');
 chk('patch112: bump-open uses SN_TOUCH.openPop from a WASD edge', html.includes('SN_TOUCH.openPop(hit)'), '');
 chk('patch112: hold-repeat timing 380ms delay / 90ms interval / snap 250ms', html.includes('now - this._holdAt >= 380') && html.includes('now - this._holdFired >= 90') && html.includes('this._snapUntil = performance.now() + 250'), '');
-chk('patch112+134: HUD strip is the cluster buttons (AUDIO/SFX replace SOUND)', html.includes("HUD_BTNS: ['helpBtn', 'mapBtn', 'audioBtn', 'sfxBtn', 'paceBtn', 'takeoverBtn']"), '');
+chk('patch112+134: HUD strip is the cluster buttons (AUDIO/SFX replace SOUND)', html.includes("HUD_BTNS: ['helpBtn', 'mapBtn', 'audioBtn', 'cineBtn', 'sfxBtn', 'paceBtn', 'takeoverBtn']")   /* ship #25 */, '');
 chk('patch112: splash element wired to splash-control-room.mp4, z-index above the title screen', html.includes('id="splashVideo" src="splash-control-room.mp4"') && html.includes('z-index:600'), '');
 chk('patch112: splash is not a cinematic (no SN_CINE routing, no once-flag)', html.includes('no once-per-run flag, no SN_CINE'), '');
 chk('patch113: auto-climb state on the player', html.includes('p.climbAuto === -1') && html.includes('p.climbAuto === 1') && html.includes('p.climbAutoWasOn'), '');
@@ -685,7 +685,7 @@ chk('patch133: map unit labels have no backing rect and use white text', !html.i
 // ---- patch134: AUDIO + SFX toggles ----
 chk('patch134: AUDIO and SFX buttons sit immediately left of MENU', (() => { const a = html.indexOf('id="audioBtn"'), s = html.indexOf('id="sfxBtn"'), m = html.indexOf('id="menuBtn"'); return a > 0 && s > a && m > s; })());
 chk('patch134: the old SOUND button is gone from the guide row', !html.includes('id="chiefMute"'));
-chk('patch134: SN_AUDIO persists two independent toggles', html.includes("const SN_AUDIO = { audio: true, sfx: true };") && html.includes("localStorage.getItem('sn.audio')") && html.includes("localStorage.getItem('sn.sfx')"));
+chk('patch134: SN_AUDIO persists two independent toggles', html.includes("const SN_AUDIO = { audio: true, sfx: true, cine: true };")   /* ship #25 */ && html.includes("localStorage.getItem('sn.audio')") && html.includes("localStorage.getItem('sn.sfx')"));
 chk('patch134: beds and music route through the AUDIO bedBus', html.includes('g.connect(bedBus || master)') && html.includes('musicGain.connect(bedBus || master)'));
 chk('patch134: setAudioOn gates the bedBus', html.includes('setAudioOn(on) { if (bedBus && ac)'));
 chk('patch134: SFX mute no longer freezes the beds in update()', html.includes('if (!ac || halted) return;'));
@@ -753,7 +753,7 @@ chk('patch145: the force runs AFTER the persisted SFX read (it overrides the sto
 chk('patch145: AUDIO keeps its persisted behaviour — read intact, no force-off anywhere', html.includes("SN_AUDIO.audio = localStorage.getItem('sn.audio') !== 'off';") && !html.includes('SN_AUDIO.audio = false;'), '');
 chk('patch145: the Chief voice gate still derives from the SFX state', html.includes('muted: !SN_AUDIO.sfx,'), '');
 chk('patch145: the SFX toggle still unmutes in-session and the button label reads SN_AUDIO.sfx', html.includes('SN_AUDIO.sfx = !SN_AUDIO.sfx;') && html.includes("'SFX: ' + (SN_AUDIO.sfx ? 'ON' : 'OFF')"), '');
-const _ai = html.indexOf('const SN_AUDIO = { audio: true, sfx: true };');
+const _ai = html.indexOf('const SN_AUDIO = { audio: true, sfx: true, cine: true };');
 const _aj = html.indexOf('window.SN_AUDIO = SN_AUDIO;', _ai);
 function snAudioBoot(store) {
   const ls = { getItem: k => (k in store ? store[k] : null), setItem: () => {} };
@@ -934,7 +934,7 @@ chk('ship24 interact: the press sets the 148/154 dwell latch for the pressed uni
 chk('ship24 levers: SNAP159 table — rod [0,20,39,58,100], load [0,95,100], bypass/leak end-stops [0,100]', html.includes('const SNAP159 = { rod_withdraw: [0, 20, 39, 58, 100], raise_power: [0, 95, 100], steam_valve: [0, 100], isolate_leak: [0, 100] };'), '');
 chk('ship24 levers: snap window is strictly inside +/-2 (a value exactly 2 away does NOT snap)', html.includes('const SNAP_WIN159 = 2;') && html.includes('for (const p of pts) if (Math.abs(v - p) < SNAP_WIN159) return p;'), '');
 chk('ship24 levers: padStep routes all four results through snapTarget (snap-in-stepper, coarse sizes unchanged)', html.includes("pop.target.lever = snapTarget(a, Math.max(0, Math.min(100, (pop.target.lever ?? leverPct) + dir * 5)));") && html.includes("pop.target.lever = snapTarget(a, Math.max(0, Math.min(100, (pop.target.lever ?? leverPct) + dir * 3)));") && html.includes("pop.target.bypass = snapTarget(a, Math.max(0, Math.min(100, (pop.target.bypass ?? bypassPct) + dir * 4)));") && html.includes("pop.target.leak = snapTarget(a, Math.max(0, Math.min(100, (pop.target.leak ?? pop.leakPct ?? 0) + dir * 5)));"), '');
-chk('ship24 levers: padStepFine (the fine channel) clamps then snaps through snapTarget', html.includes('const v = snapTarget(a, Math.max(0, Math.min(100, abs != null ? abs : cur + d)));') && html.includes("if (a === 'rod_withdraw' || a === 'raise_power') pop.target.lever = v;") && html.includes("else if (a === 'steam_valve') pop.target.bypass = v;") && html.includes('else pop.target.leak = v;'), '');
+chk('ship24 levers: padStepFine (the fine channel) clamps then snaps through snapTarget', html.includes('const v = snapTarget(a, Math.max(0, Math.min(100, abs != null ? abs : cur + d)), abs != null ? null : cur);')   /* patch168: origin passed so a fine step can leave a detent */ && html.includes("if (a === 'rod_withdraw' || a === 'raise_power') pop.target.lever = v;") && html.includes("else if (a === 'steam_valve') pop.target.bypass = v;") && html.includes('else pop.target.leak = v;'), '');
 chk('ship24 levers: snap is confined to step + release — exactly 9 snapTarget( sites (def + 4 padStep + 1 fine + 3 up()) and NO snap call inside sheetMove (mid-drag stays free)', (html.match(/snapTarget\(/g) || []).length === 9 && (() => { const _sm = html.indexOf('function sheetMove(x, y) {'); if (_sm < 0) return false; const _se = html.indexOf('function ', _sm + 20); return _se > _sm && !html.slice(_sm, _se).includes('snapTarget'); })(), '');
 chk('ship24 levers: snap-on-release in up() runs only for the grab owned by the releasing pointer (grab.id match)', html.includes('if (pop.grab && pop.grab.id === id) {   // patch159: snap-on-release'), '');
 chk('ship24 levers: up() snaps the lever for leverV/leverH grabs on release', html.includes("if ((g159.kind === 'leverV' || g159.kind === 'leverH') && pop.target.lever != null) { const s159 = snapTarget(g159.a, pop.target.lever);"), '');
@@ -981,6 +981,177 @@ chk('ship24 wheel: analog sheets step FINE — call order padStepFine, then SN_P
 chk('ship24 wheel: the standalone fine entry is GUARDED — it defers to a 159-provided SN_PADSTEP_FINE', html.includes('if (!window.SN_PADSTEP_FINE) window.SN_PADSTEP_FINE = function (a, dir) {'), '');
 chk('ship24 wheel: non-analog sheets get no wheel step at all (STEPPERS gate)', html.includes('SN_WASD.STEPPERS[padPop.action])) return;'), '');
 
+
+// ---- patch161 (controls audit): input hygiene ----
+chk('p161 D1: snReleaseAllInput clears keys, KB, latches, WASD held map, pointers, gamepad holds', html.includes('function snReleaseAllInput() {') && html.includes('for (const k in KB) KB[k] = false;') && html.includes('for (const k in SN_WASD.held) SN_WASD.held[k] = false;') && html.includes('pointers.clear();') && html.includes('GP.holdE = GP.holdQ = false;'), '');
+chk('p161 D1: wired to window blur, pagehide and a hidden visibilitychange', html.includes("window.addEventListener('blur', snReleaseAllInput);") && html.includes("window.addEventListener('pagehide', snReleaseAllInput);") && html.includes("document.addEventListener('visibilitychange', () => { if (document.hidden) snReleaseAllInput(); });"), '');
+chk('p161 D1: a panel grab is released through SN_TOUCH.up (snap-on-release still runs)', html.includes("if (p.role === 'pop') { try { SN_TOUCH.up(id); } catch (e) {} }"), '');
+chk('p161 D2: a key skips the startup splash, shortcuts / bare modifiers excepted', html.includes("window.addEventListener('keydown', endKey, true);") && html.includes('e.ctrlKey || e.metaKey || e.altKey'), '');
+chk('p161 D3: both canvas pointerdown listeners ignore non-primary mouse buttons (2 guards)', (html.match(/if \(e\.pointerType === 'mouse' && e\.button !== 0\) return;/g) || []).length === 2, '');
+chk('p161 D4: mergeInput scans KB / KB_LATCH without Object.values allocations', !html.includes('Object.values(KB)') && html.includes('let phys161 = false;'), '');
+
+// ---- patch162 (controls audit): the operator's manual SCRAM ----
+{
+  const S = fresh(); run(S, 5); BWR.scramNow(S);
+  chk('p162 model: her scramNow() trips with her reason string "Manual scram by operator" (the game now calls it)', S.scram === true && S.why === 'Manual scram by operator' && S.phase === 'tripped', S.why);
+}
+chk('p162: manual SCRAM is wired to the model through snManualScram -> BWR.scramNow(S)', html.includes('function snManualScram() {') && html.includes('BWR.scramNow(S);'), '');
+chk('p162: keyboard X and gamepad Back/View hold (1.0 s) with a progress pill; release cancels', html.includes("KB['KeyX'] || (gp && gp.buttons[8] && gp.buttons[8].pressed)") && html.includes('HOLD_S: 1.0') && html.includes('snScramHoldTick(dt);'), '');
+chk('p162: ARI-01 panel carries a SCRAM hold button (left) beside the ARI tap button (right)', html.includes("fx: 'scramFire'") && html.includes("if (pop.grab.fx === 'scramFire')"), '');
+chk('p162: overlay heading distinguishes a manual SCRAM from an automatic one', html.includes('id="scramHead"') && html.includes("'!! MANUAL SCRAM !!'") && html.includes("'!! AUTOMATIC SCRAM !!'"), '');
+chk('p162: the Chief stock automatic-trip line is NOT used for a manual SCRAM', html.includes('} else showCallout(\'scram\');'), '');
+
+// ---- patch163 (controls audit): movement input ----
+chk('p163 G1: the gamepad stick axis is OR-ed into gpUp/gpDown (it used to overwrite the D-pad)', html.includes('if (gp.axes[1] < -0.5) gpUp = true;') && html.includes('if (gp.axes[1] > 0.5) gpDown = true;') && !html.includes('gpUp = gp.axes[1] < -0.5;'), '');
+chk('p163 J1: Space / gamepad A jump only when no sheet is open and no interact target', html.includes('const operating163 = !!(SN_TOUCH.pop || p.interactTarget);') && html.includes("(keys['Space'] && !operating163)"), '');
+
+// ---- patch164 (controls audit): landscape phones ----
+chk('p164: short-landscape CSS floats the popped Chief panel over the world (absolute, not in-flow)', html.includes('#guideBarExpanded { position: absolute; left: 0; right: 0; top: 100%; z-index: 40; max-height: 46vh;'), '');
+chk('p164: layoutTopBars parks the overlay below the step bar and clears the inline top outside landscape', html.includes("(orientation: landscape) and (max-height: 500px)').matches;") && html.includes("sb.getBoundingClientRect().bottom - gb.getBoundingClientRect().top") && html.includes(": '';"), '');
+
+// ---- patch165 (PHYSICS, deliberate deviation from her block - see docs/AUDIT-2026-11-27.md) ----
+{
+  const { createHash } = await import('node:crypto');
+  const md5 = createHash('md5').update(html.slice(i, j + 5)).digest('hex');
+  chk('p165: the BWR block is pinned at the audited MD5 (be5a0982...) - any further drift from her verbatim block must be a new, recorded patch', md5 === 'be5a0982bf00617bda59847174d69474', md5);
+  // An attentive operator through the whole Level-3 grid emergency.
+  const S = fresh(); let atTu3 = null, tuWasHold = false;
+  for (let t = 0; t < 900 && !S.scram && S.phase !== 'complete' && S.phase !== 'failed'; t += 0.1) {
+    if (S.phase === 'heatup') S.lever = 48;
+    else if (S.phase === 'power') S.lever = Math.min(100, S.lever + 0.5);
+    else if (S.phase === 'grid') {
+      let want = S.disp / 3;
+      if (S.ev.fw === 1) S.ctl.rfpStby = true;
+      if (S.ev.tu === 1) want = 20;
+      S.lever += Math.max(-0.8, Math.min(0.8, want - S.lever));
+    }
+    BWR.step(S, 0.1);
+    if (S.ev.tu === 3 && !atTu3) atTu3 = { disp: S.disp, grace: S.grace, seg: BWR.SEG[S.segI].to, g: S.g, next: BWR.STARTS[S.segI + 1] };
+  }
+  chk('p165: when the turbine is back the dispatch target is the scheduled segment, not the emergency 60 MWe', !!atTu3 && atTu3.disp === atTu3.seg && atTu3.disp !== 60, JSON.stringify(atTu3));
+  chk('p165: the scheduled segment has NOT yet changed at that instant (the stale 60 used to persist to the next boundary)', !!atTu3 && atTu3.g < atTu3.next, JSON.stringify(atTu3));
+  chk('p165: recovery grace is granted - her own segment-change formula, min(30, 4 + |step|/5)', !!atTu3 && atTu3.grace >= Math.min(30, 4 + Math.abs(atTu3.seg - 60) / 5) - 0.2, JSON.stringify(atTu3));
+  chk('p165: the shift still completes for the attentive operator', S.phase === 'complete', S.phase);
+  const sm = BWR.summary(S);
+  chk('p165: dispatch accuracy for the attentive operator is >= 0.90 (was 0.85 with the stale target and no grace)', sm.acc >= 0.90, sm.acc.toFixed(3));
+}
+
+// ---- patch166 (controls audit): title-screen keys + dead code ----
+chk('p166 B1: on the title screen a focused button owns Enter/Space (the generic start key only fires with nothing focused)', html.includes("const btn166 = e && e.target && e.target.closest ? e.target.closest('button') : null;") && html.includes("if (btn166) { if (code === 'Space') btn166.click(); }") && html.includes('else startGame();'), '');
+chk('p166 C1: dead KEYBOARD TRACK listeners, the empty interact-once branch and the unused gpJump are gone', !html.includes('KeyE_keyboard') && !html.includes('KeyQ_keyboard') && !html.includes('KeyE_held') && !html.includes('gpJump'), '');
+
+// ---- patch168 (controls audit): fine step vs detent ----
+{
+  // Re-evaluate the game's own snapTarget / padStepFine logic in isolation (extracted from the source text).
+  const m = html.match(/const SNAP159 = [^\n]+\n[\s\S]*?const SNAP_WIN159 = 2;[^\n]*\n\s*function snapTarget\(a, v, from\) \{[\s\S]*?\n  \}/);
+  chk('p168: snapTarget(a, v, from) is present with the SNAP159 table and window', !!m, '');
+  if (m) {
+    const snap = new Function(m[0].replace(/\/\/[^\n]*/g, '') + '\nreturn snapTarget;')();
+    const fine = (a, cur, d) => snap(a, Math.max(0, Math.min(100, cur + d)), cur);
+    chk('p168: from the 0 detent a +1 fine step leaves 0 (it used to snap back to 0 forever)', fine('rod_withdraw', 0, 1) === 1);
+    chk('p168: from the 100 detent a -1 fine step leaves 100', fine('rod_withdraw', 100, -1) === 99 && fine('steam_valve', 100, -1) === 99);
+    chk('p168: from the 39 band-edge detent both fine directions leave it', fine('rod_withdraw', 39, 1) === 40 && fine('rod_withdraw', 39, -1) === 38);
+    chk('p168: the magnet still works - arriving within the window from outside snaps onto the detent', fine('rod_withdraw', 37, 1) === 39 && fine('rod_withdraw', 22, -1) === 20 && fine('raise_power', 94, 1) === 95);
+    chk('p168: coarse / release snaps (no origin) are unchanged', snap('rod_withdraw', 20.7) === 20 && snap('rod_withdraw', 22) === 22 && snap('rod_withdraw', 1.9) === 0);
+    let v = 0; for (let k = 0; k < 40; k++) v = fine('rod_withdraw', v, 1);
+    chk('p168: forty +1 fine steps from 0 travel the whole way to 40 (magnet jumps at most 2 once per detent)', v >= 40, 'reached ' + v);
+  }
+}
+
+// ---- patch169 (controls audit): the auto-expanding gauge deck vs an open control sheet ----
+chk('p169: autoExpandDeck never opens the deck while a control sheet is open', html.includes("if (typeof SN_TOUCH !== 'undefined' && SN_TOUCH.pop) return;   // patch169"), '');
+chk('p169: a deck closed by hand stays closed for the same alarm picture (base-3 alarm code, no allocation)', html.includes('function snAlarmCode()') && html.includes('deckDismissedCode = (!deckExpanded && typeof alarms') && html.includes('if (deckDismissedCode >= 0 && snAlarmCode() === deckDismissedCode) return;'), '');
+chk('p169: an all-normal plant re-arms the auto-expand', html.includes('if (hasAlarm) autoExpandDeck(); else deckDismissedCode = -1;'), '');
+
+// ---- patch170 (controls audit): an auto-opened deck yields to the control sheet ----
+chk('p170: autoExpandDeck marks the deck as game-opened; any manual toggle clears the mark', html.includes('deckExpanded = true; deckAutoOpened = true;') && html.includes("deckAutoOpened = false;   // patch170: any manual toggle makes the deck the player's"), '');
+chk('p170: updateDeckAutoClose closes a game-opened deck as soon as a control sheet is open (player-opened decks are left alone)', html.includes('if (deckExpanded && deckAutoOpened && typeof SN_TOUCH !== \'undefined\' && SN_TOUCH.pop) {'), '');
+
+// ---- patch171 (SHIP #25): the SHOW walkthrough ----
+chk('s25 walk: SHOW starts the Chief demo of the rest of the CURRENT level via the takeover driver (from the current state, no restart)', html.includes('function snWalkStart() {') && html.includes('startTakeover();   // from the player\'s current state'), '');
+chk('s25 walk: any keyboard / mouse / wheel / touch input stops it (capture listeners, 0.5 s start grace, key repeat and bare modifiers ignored)', html.includes("for (const ev of ['pointerdown', 'keydown', 'wheel', 'touchstart']) window.addEventListener(ev, snWalkInput, { capture: true, passive: true });") && html.includes('T_NOW - SN_WALK.t0 < 0.5') && html.includes('e.repeat'), '');
+chk('s25 walk: gamepad input stops it too', html.includes("gp.buttons.some(b => b && b.pressed)"), '');
+chk('s25 walk: a second SHOW press stops it (green/red follow toggle stands)', html.includes('if (SN_WALK.active) { snWalkStop(true); return true; }') && html.includes('!SN_WALK.active && !(typeof SHOWME'), '');
+chk('s25 walk: a completed non-final level advances on its own to the next one (waits for the level-complete cinematic)', html.includes("outcome === 'complete' && gameState.level < 3") && html.includes('const n = gameState.level + 1;') && html.includes('SN_WALK.gapT > 2.5 && !cineBusy'), '');
+chk('s25 walk: a finished final level or a trip ends the walkthrough and scores normally', html.includes('SN_WALK.active = false; SN_WALK.gap = false; SN_HELP.showFollow = false;\n  }\n  gameState.phase = \'scored\';'), '');
+chk('s25 walk: steps it completes are DEMO-ASSISTED (+50) through ASSIST.assisted; the marks are now per-run', html.includes('if (SN_WALK.active && ASSIST.assisted.indexOf(i) < 0) ASSIST.assisted.push(i);') && html.includes('ASSIST.assisted.length = 0;'), '');
+chk('s25 walk: the demo mechanics are unchanged - the 30 s cap / pacing layer / takeover driver are still the only drivers (no new physics, no new clock)', html.includes('function takeoverOperate(dt) {') && html.includes('function paceTick() {') && !/SN_WALK[^\n]*updatePhysics/.test(html), '');
+
+// ---- patch172 (SHIP #25): cinematics toggle ----
+chk('s25 cine: a CINE button sits immediately after the AUDIO button and shares its CSS rule, mobile sizes and the keyboard HUD ring', html.includes('onclick="toggleAudio(event)">AUDIO: ON</button>\n      <button id="cineBtn"') && html.includes('#audioBtn, #cineBtn { background: #2a1c08;') && html.includes('#audioBtn, #cineBtn, #sfxBtn { min-height: 26px;') && html.includes('#audioBtn, #cineBtn, #sfxBtn, #menuBtn { height: 44px;') && html.includes("'audioBtn', 'cineBtn', 'sfxBtn'"), '');
+chk('s25 cine (functional): default ON; persisted OFF boots OFF; the audio / SFX boot rules are untouched', (() => { const d = snAudioBoot({}); const o = snAudioBoot({ 'sn.cine': 'off' }); const a = snAudioBoot({ 'sn.sfx': 'on', 'sn.audio': 'on', 'sn.cine': 'on' }); return d.cine === true && o.cine === false && a.cine === true && a.sfx === false && a.audio === true; })(), '');
+chk('s25 cine: toggleCine persists under sn.cine like the audio choice, and switching off closes the running cinematic and empties the queue', html.includes("localStorage.setItem('sn.cine', SN_AUDIO.cine ? 'on' : 'off');") && html.includes('if (SN_CINE.state.active) SN_CINE.close(false); SN_CINE.state.queue.length = 0;'), '');
+chk('s25 cine: with cinematics off every offer is dropped at the door - no video, no audio graph, no queue', html.includes("!SN_AUDIO.cine) { state.log.push({ key, dur_s: 0, dismissed: false, dropped: 'cinematics_off' }); return; }"), '');
+
+// ---- patch173 (SHIP #25): the Chief icon ----
+chk('s25 icon: the Chief icon is ~30% larger (24 -> 31 px, phone 20 -> 26 px) on a 40 px bitmap', html.includes('#guideBarCollapsed canvas { width: 31px; height: 31px;') && html.includes('#guideBarCollapsed canvas { width: 26px; height: 26px; }') && html.includes('<canvas id="portraitMini" width="40" height="40"></canvas>'), '');
+chk('s25 icon: image only - the icon element carries no text, label or title', /<canvas id="portraitMini"[^>]*><\/canvas>/.test(html) && !/<canvas id="portraitMini"[^>]*(title|aria-label|alt)=/.test(html), '');
+chk('s25 icon: the frame mirrors the SHOW follow state (green following / red stopped); it adds no press-and-hold or long-press handler', html.includes("ic173.classList.toggle('follow-on'") && !/portraitMini[^\n]*(long|hold|contextmenu)/i.test(html.slice(html.indexOf('#guideBarCollapsed canvas { width: 31px'), html.indexOf('#guideBarCollapsed canvas { width: 31px') + 600)), '');
+
+// ---- patch174 (SHIP #25 follow-up): the driver stands where the pinned panel is the nearest interactable ----
+chk('p174: snStandX picks a stand position at which the pinned panel wins the game\'s nearest-interactable rule (hypot of centres, < 80)', html.includes('function snStandX(pin, side) {') && html.includes('Math.hypot(it.x + it.w / 2 - sx, it.y + it.h / 2 - py) <= d0') && html.includes('if (d0 >= 80) return false;'), '');
+chk('p174: guideTick uses it instead of the fixed +/-56 px offset', html.includes('SHOWME.flukeStandX = snStandX(pin,') && !html.includes('? 56 : -56);'), '');
+
+// ---- patches 175-179 (SHIP #25 support): the demo / takeover / walkthrough driver can finish Level 2 ----
+chk('p175: snDriverUrgent (turbine trip / feedwater lost / p>7.5 / level<85) and boosted-clock stretches skip the driver walk', html.includes('function snDriverUrgent() {') && html.includes('S.turbTrip > 0 || (S.ev && S.ev.tu === 1) || !S.fwOK || S.p > 7.5 || S.level < 85') && html.includes('(snDriverUrgent() || SN_PACE.effective > 1.5) && SHOWME.walkT > 0.25'), '');
+chk('p175: the driver arrives at Level 2\'s scheduled turbine trip at low power (lever 15) and the D20 fix-start cinematic is held back in a live emergency', html.includes("gameState.level === 2 && gameState.l2Stage === 1 && S.phase === 'heatup') leverT = 15;") && html.includes('if (!(SN_WALK.active && snDriverUrgent())) SN_CINE.offer(key);'), '');
+chk('p176: the auto-boost clock never runs while a cinematic holds the player (paceTick) - game-layer pacing only', html.includes("if (typeof CINE_ACTIVE !== 'undefined' && CINE_ACTIVE) { SN_PACE.effective = SN_PACE.player;"), '');
+chk('p176: a walkthrough skips mid-level cinematics (level_complete still plays) and closes a running one when the driver is needed', html.includes("dropped: 'walkthrough_driving'") && html.includes("key !== 'level_complete'") && html.includes('if (!SN_WALK.gap && CINE_ACTIVE && snDriverUrgent())'), '');
+chk('p174/177: snStandX chooses a stand where the pinned panel is the nearest interactable AND Fluke stands on the panel\'s own deck', html.includes('const onDeck = sx => platforms.some(') && html.includes('if (!onDeck(sx)) return false;'), '');
+chk('p178: the operate phase heals a mis-targeted panel by placing Fluke at it (demoPin)', html.includes('if (pin && player.interactTarget !== pin && (TAKEOVER.active || DEMO.active)) demoPin();'), '');
+chk('p179: the driver closes an isolation condenser latched open by an excursion (it capped the plant at 274 MWe < 285)', html.includes("S.phase === 'power' && S.icOpen && S.ctl.ic !== 'off' && S.p < 7.35 && S.turbTrip <= 0) { action = 'iso_condenser'; mode = 'tap'; }"), '');
+
+// ---- patch181 (freeze world-hold): the dwell-open sheet must not shadow the world hold (ship #24 W57) ----
+{
+  const mE = html.match(/function snFreezeEmergency\(\) \{[\s\S]*?\n\}/);
+  const mA = html.match(/function snFreezeAdjusting\(\) \{[\s\S]*?\n\}/);
+  const F = (mE && mA) ? new Function(mE[0] + '\n' + mA[0] + '\nreturn { e: snFreezeEmergency, a: snFreezeAdjusting };')() : null;
+  const base = () => {   // the W57 live state: L3 grid emergency, sheet dwell-open at the steam valve
+    globalThis.S = { phase: 'grid', scram: false, ev: { tu: 1 } };
+    globalThis.gameState = { level: 3, phase: 'playing' };
+    globalThis.DEMO = { active: false }; globalThis.TAKEOVER = { active: false }; globalThis.CINE_ACTIVE = false;
+    globalThis.SN_TOUCH = { pop: { action: 'steam_valve', grab: false, tgt: false } };
+    globalThis.SN_WASD = { kbPanel: false, held: {} };
+    globalThis.player = { interactTarget: { action: 'steam_valve' } };
+    globalThis.keys = {};
+  };
+  const now = () => !!(F && F.e() && F.a());   // snFreezeNow(): the exact gate the game loop (FZ155) freezes on
+  base(); globalThis.keys = { KeyE: true };
+  chk('p181a: sheet dwell-open + KeyE world hold at the steam valve in the L3 grid emergency -> freeze holds (W57 defect)', now());
+  base();
+  chk('p181b: sheet dwell-open, no keys held -> no freeze', F && !now());
+  base(); const grabHeld = (() => { globalThis.SN_TOUCH.pop.grab = true; return now(); })();
+  base(); const tgtHeld = (() => { globalThis.SN_TOUCH.pop.tgt = true; return now(); })();
+  base(); const kbHeld = (() => { globalThis.SN_WASD = { kbPanel: true, held: { KeyA: true } }; return now(); })();
+  chk('p181c: sheet grab / committed target travelling / kbPanel KeyA-KeyD hold -> still freeze', !!(grabHeld && tgtHeld && kbHeld));
+  base(); globalThis.SN_TOUCH.pop = null; globalThis.keys = { KeyE: true };
+  chk('p181d: sheet closed + KeyE world hold -> still freeze (fall-through path unchanged)', now());
+  base(); globalThis.keys = { KeyE: true }; const demoBlocks = (() => { globalThis.DEMO.active = true; return !now(); })();
+  base(); globalThis.keys = { KeyE: true }; const takeBlocks = (() => { globalThis.TAKEOVER.active = true; return !now(); })();
+  base(); globalThis.keys = { KeyE: true }; const cineBlocks = (() => { globalThis.CINE_ACTIVE = true; return !now(); })();
+  chk('p181e: DEMO / TAKEOVER / cinematic active -> still no freeze, even with sheet open + KeyE held', !!(demoBlocks && takeBlocks && cineBlocks));
+}
+// ---- patch 180 (SHIP #25, Kevin: "Fix the climb up"): snActionLift clamps clear on EVERY prompt path ----
+// Geometry per CL1 (WA-CL1 confirmed): prompt height bh = 52; climb clear nominal 220, open/walk 122.
+// Desktop chrome: canvas top (step-bar bottom) = 175, container below canvas = 66, H = VH - 241.
+// Portrait phone chrome: canvas top = 133, below = 46, H = VH - 179. Deck expanded at 1280x800: below = 426, H = 199.
+const p180geom = (VH, chrome, below, stepBottom, nominal) => { const H = VH - chrome; const eff = Math.min(nominal, Math.max(0, H - 52 - 4)); const top = VH - (below + eff) - 52; return { H: H, eff: eff, top: top, gap: top - stepBottom }; };
+chk('p180: the clamp line sits in snActionLift immediately before the style.bottom assignment', html.includes("clear = Math.min(clear, Math.max(0, H - bh - 4)); // patch180") && html.indexOf('clear = Math.min(clear, Math.max(0, H - bh - 4));') > html.indexOf('function snActionLift') && html.indexOf('clear = Math.min(clear, Math.max(0, H - bh - 4));') < html.indexOf("ab.style.bottom = (below + clear) + 'px';"), '');
+chk('p180: nominal clears unchanged (ladder 220 / other 122) and the step bar is not moved', html.includes('let clear = ladderShown ? 220 : 122;'), '');
+chk('p180: desktop 1280x800 CLIMB - clamp is a no-op (eff 220), prompt top 462, gap to step-bar bottom 287, no overlap', (() => { const g = p180geom(800, 241, 66, 175, 220); return g.H === 559 && g.eff === 220 && g.top === 462 && g.gap === 287; })(), '');
+chk('p180: desktop 1440x900 CLIMB - no-op (eff 220), prompt top 562, gap 387, no overlap', (() => { const g = p180geom(900, 241, 66, 175, 220); return g.H === 659 && g.eff === 220 && g.top === 562 && g.gap === 387; })(), '');
+chk('p180: desktop 1920x1080 CLIMB - no-op (eff 220), prompt top 742, gap 567, no overlap', (() => { const g = p180geom(1080, 241, 66, 175, 220); return g.H === 839 && g.eff === 220 && g.top === 742 && g.gap === 567; })(), '');
+chk('p180: portrait 390x844 CLIMB - no-op (eff 220), prompt top 526, gap 393, no overlap', (() => { const g = p180geom(844, 179, 46, 133, 220); return g.H === 665 && g.eff === 220 && g.top === 526 && g.gap === 393; })(), '');
+chk('p180: portrait 375x667 CLIMB - no-op (eff 220), prompt top 349, gap 216, no overlap', (() => { const g = p180geom(667, 179, 46, 133, 220); return g.H === 488 && g.eff === 220 && g.top === 349 && g.gap === 216; })(), '');
+chk('p180: OPEN/WALK (clear 122) no-op and clear of the step bar at the smallest in-scope canvas (375x667 portrait)', (() => { const g = p180geom(667, 179, 46, 133, 122); return g.eff === 122 && g.top === 447 && g.gap === 314; })(), '');
+chk('p180: THE BUG - 1280x800 with gauge deck EXPANDED (H 199): unclamped climb prompt top would be 102 (52 px inside step bar 61-175); clamped eff 143, top 179, gap exactly 4, overlap 52 -> 0', (() => { const g = p180geom(800, 601, 426, 175, 220); const unclampedTop = 800 - (426 + 220) - 52; return g.H === 199 && unclampedTop === 102 && (175 - unclampedTop) > 0 && g.eff === 143 && g.top === 179 && g.gap === 4; })(), '');
+chk('p180: clamp guarantees prompt top >= 4 px below canvas top for every canvas height 60..900 and both nominal clears', (() => { for (let H = 60; H <= 900; H++) { for (const n of [220, 122]) { const eff = Math.min(n, Math.max(0, H - 52 - 4)); if (H - eff - 52 < Math.min(4, H - 52)) return false; if (H >= n + 56 && eff !== n) return false; } } return true; })(), '');
+
+// ---- patch182: a REAL second SHOW press stops the walkthrough (no stop-then-restart) ----
+chk('p182: snWalkInput leaves a press ON the SHOW button to snHelpPress (pointerdown/touchstart targeted at #helpBtn are not an interaction stop)', html.includes("e.target.closest('#helpBtn')") && html.includes("e.type === 'pointerdown' || e.type === 'touchstart'"), '');
+chk('p182: a keyboard-activated SHOW press is left to snHelpPress too (Enter/Space keydown targeted at the button, whose click follows)', html.includes("e.type === 'keydown' && (e.code === 'Enter' || e.code === 'Space')"), '');
+chk('p182: the button exemption sits BEFORE the stop call inside snWalkInput, and the stop call itself stands', (() => { const i = html.indexOf('function snWalkInput(e)'); const g = html.indexOf("closest('#helpBtn')", i); const s = html.indexOf('snWalkStop(true);', i); return i >= 0 && g > i && s > g; })(), '');
+chk('p182: the exemption is scoped to the button press only - the capture listener set (pointer/key/wheel/touch) and the second-press stop branch in snHelpPress are unchanged', html.includes("for (const ev of ['pointerdown', 'keydown', 'wheel', 'touchstart']) window.addEventListener(ev, snWalkInput, { capture: true, passive: true });") && html.includes('if (SN_WALK.active) { snWalkStop(true); return true; }'), '');
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);
 

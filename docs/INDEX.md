@@ -14,6 +14,8 @@ almost every question; the rest are for the specific job named.
 | [research/controls.md](research/controls.md) | What should the controls be, and what did ship #24 change? The controls research report: comparable games × input methods, findings per research question, recommendations, and the ship #24 change-vs-leave-alone list, with its verification record and known gaps. | Before changing keyboard, touch, trackpad, or gamepad input, hold-to-operate, or any control scheme. |
 | [research/camera-angles.md](research/camera-angles.md) | How should the camera frame and zoom? The camera research report: follow/framing models, dead zones, lookahead, ladder framing, zoom as a state, two-subject (follow-the-Chief) framing, portrait specifics, a comparison table, and the recommendations adopted for Small Nukem. | Before changing camera follow, framing, or zoom behaviour. |
 
+| [AUDIT-2026-11-27.md](AUDIT-2026-11-27.md) | What did the controls/bug audit find, how were keyboard / mouse / trackpad / touch validated, what changed (incl. Ship #25 and the one physics change), and what is still recommended? | Before touching input, layout, the gauge deck, SCRAM, the SHOW walkthrough, or when re-running `tests/controls-e2e.mjs`. |
+
 ## Read order for a new agent
 
 Per `../AGENTS.md` §1 — read in this order, in full, before touching anything:

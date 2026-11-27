@@ -1,0 +1,92 @@
+PASS  KEY  Enter during the splash skips it and does NOT start the game  [title]
+PASS  KEY  Enter on a focused title button toggles it and does not start the game  [FX: ON]
+PASS  KEY  Enter with nothing focused starts the game
+PASS  KEY  D walks right while held and stops on release  [dx=85]
+PASS  KEY  ArrowRight walks right while held and stops on release  [dx=85]
+PASS  KEY  A walks left while held and stops on release  [dx=-5]
+PASS  KEY  ArrowLeft walks left while held and stops on release  [dx=-85]
+PASS  KEY  blur releases a held key (no run-away walking after alt-tab)  [moved 0]
+PASS  KEY  input works again after the blur reset
+PASS  KEY  Space jumps in the open world
+PASS  KEY  M map opens it, Esc closes it
+PASS  KEY  Tab procedure opens it, Esc closes it
+PASS  KEY  P procedure opens it, Esc closes it
+PASS  KEY  Backquote debug opens it, second press closes it
+PASS  KEY  walking into a panel bump-opens its sheet  [slc_panel]
+PASS  KEY  Space with a sheet open does NOT make Fluke jump  [dy=0]
+PASS  KEY  End on an open rod sheet drives the lever to 100 (APG)  [lever 0 -> 100]
+PASS  KEY  Home on an open rod sheet drives the lever back to 0  [lever 0]
+PASS  KEY  fine arrow steps leave the 0 detent (patch168)  [lever 3.0]
+PASS  KEY  Esc closes the sheet
+PASS  KEY  a short X hold does NOT scram (cancel by release)
+PASS  KEY  holding X for 1 s trips the reactor (her manual scram)
+PASS  KEY  the overlay reads MANUAL SCRAM
+PASS  KEY  no page errors across the keyboard run  []
+PASS  MOUSE click skips the splash and does not start the game
+PASS  MOUSE hold on the left third of the canvas walks left and stops on release  [dx=-95]
+PASS  MOUSE hold on the right third of the canvas walks right and stops on release  [dx=90]
+PASS  MOUSE right-button press is inert (no walking)  [dx=0]
+PASS  MOUSE middle-button press is inert (no walking)  [dx=0]
+PASS  MOUSE double-click on the world opens the plant map
+PASS  MOUSE holding + on a rod sheet raises the lever  [0.0 -> 58.0]
+PASS  MOUSE holding - on a rod sheet lowers the lever  [58.0 -> 5.0]
+PASS  MOUSE a short press on the ARI-panel SCRAM button does not trip the reactor
+PASS  MOUSE holding the ARI-panel SCRAM button (0.8 s) trips the reactor
+PASS  MOUSE a click outside the sheet closes it and it stays closed (no dwell re-open)
+PASS  MOUSE no page errors  []
+PASS  TRACKPAD two-finger scroll right (deltaX>0) walks right  [dx=20]
+PASS  TRACKPAD walking stops shortly after the scroll stream ends
+PASS  TRACKPAD two-finger scroll left (deltaX<0) walks left  [dx=-20]
+PASS  TRACKPAD pinch (ctrl+wheel) is swallowed (no browser page-zoom) and moves nothing
+PASS  TRACKPAD vertical scroll up over an open rod sheet raises the lever (fine steps)  [0.0 -> 7.0]
+PASS  TRACKPAD vertical scroll down lowers it  [7.0 -> 0.0]
+PASS  TRACKPAD no page errors  []
+PASS  TOUCH tap skips the splash and does not start the game
+PASS  TOUCH finger held on the left half of the move zone walks left and stops on lift  [dx=-80]
+PASS  TOUCH finger held on the right half of the move zone walks right and stops on lift  [dx=95]
+PASS  TOUCH two fingers on both halves, then both lifted: no stuck input
+PASS  TOUCH touchcancel (system gesture / call) releases the hold
+PASS  TOUCH app-switch (blur) with a finger down releases the hold
+PASS  TOUCH double-tap on the world opens the plant map
+PASS  TOUCH holding + on a rod sheet raises the lever  [0.0 -> 63.0]
+PASS  TOUCH holding - on a rod sheet lowers the lever  [63.0 -> 10.0]
+PASS  TOUCH a tap outside the sheet closes it and it stays closed
+PASS  TOUCH a short press on the ARI-panel SCRAM button does not trip the reactor
+PASS  TOUCH holding the ARI-panel SCRAM button (0.8 s) trips the reactor
+PASS  TOUCH no page errors  []
+PASS  PAD  left stick right walks right  [dx=75]
+PASS  PAD  D-pad up climbs a ladder (was overwritten by the stick axis)  [dy=-144]
+PASS  PAD  holding Back/View for 1 s trips the reactor
+PASS  PAD  no page errors  []
+PASS  DECK with an alarm showing and a control sheet open the gauge deck does NOT auto-open over the sheet  [{"code":72,"deck":false,"pop":true}]
+PASS  DECK with the sheet closed the alarm auto-opens the deck again
+PASS  DECK a deck the player closes stays closed while the alarm picture is unchanged  [held 2 s]
+PASS  DECK no page errors  []
+PASS  SHIP25 walkthrough: keyboard key (D) stops it immediately  [running before=true]
+PASS  SHIP25 walkthrough: mouse click on the world stops it immediately  [running before=true]
+PASS  SHIP25 walkthrough: trackpad wheel stops it immediately  [running before=true]
+PASS  SHIP25 walkthrough: touch tap stops it immediately  [running before=true]
+PASS  SHIP25 walkthrough: a second SHOW press stops it and the button turns red
+PASS  SHIP25 walkthrough: SHOW button green while running; the Chief icon frame mirrors it
+PASS  SHIP25 walkthrough: it makes real progress from the current state (procedure step advances)
+PASS  SHIP25 walkthrough: no page errors  []
+PASS  SHIP25 cine: default ON, button sits right beside AUDIO
+PASS  SHIP25 cine: click turns it OFF and persists (sn.cine)
+PASS  SHIP25 cine: with cinematics OFF an offer plays nothing and queues nothing
+PASS  SHIP25 cine: switching it back ON persists on
+PASS  SHIP25 cine: with cinematics ON the offer plays as before
+PASS  SHIP25 cine: the OFF choice survives a reload
+PASS  LAYOUT portrait 390x844: world canvas is >= 30% of the viewport height while the Chief's panel is popped (collapsed)  [617 of 844]
+PASS  LAYOUT portrait 390x844: no horizontal overflow  [390 vs 390]
+PASS  LAYOUT portrait 375x667: world canvas is >= 30% of the viewport height while the Chief's panel is popped (collapsed)  [440 of 667]
+PASS  LAYOUT portrait 375x667: no horizontal overflow  [375 vs 375]
+PASS  LAYOUT landscape 844x390: world canvas is >= 30% of the viewport height while the Chief's panel is popped (collapsed)  [207 of 390]
+PASS  LAYOUT landscape 844x390: no horizontal overflow  [844 vs 844]
+PASS  LAYOUT desktop 1280x800: world canvas is >= 30% of the viewport height while the Chief's panel is popped (collapsed)  [555 of 800]
+PASS  LAYOUT desktop 1280x800: no horizontal overflow  [1280 vs 1280]
+
+86 passed, 0 failed
+
+real	4m46.953s
+user	0m18.781s
+sys	0m6.469s

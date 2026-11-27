@@ -12,8 +12,8 @@ Player character: Fluke Nukem. Guide: the Chief, in a brass CRT TV window.
 Failures end in safe shutdown, never an explosion. Audience 15–30;
 no childish framing, no multiplayer, no 3D.
 
-**Current build: ship #24 — `game/small-nukem.html`, 1,082,451 B,
-MD5 `6dc80315b5ef9fb69d537227c3411ab0`.** Live at
+**Current published build: ship #24 — `game/small-nukem.html` on `main`, 1,082,451 B,
+MD5 `6dc80315b5ef9fb69d537227c3411ab0`. (Branch `claude/festive-pasteur-l8clmg` carries the unpublished ship #25 build, `fad27ff3…` — see §10.)** Live at
 https://nuke.absolutejoker.ca (playtests use this URL only, never a
 local address, and verify the loaded build is not a stale cached copy).
 
@@ -150,7 +150,11 @@ and call sites in `docs/WIRING-MANIFEST.md` — use it, don't re-derive):
 
 Breaking any of these is a failed ship, regardless of test results.
 
-1. **Samira's physics block is byte-identical, always.** The `BWR`
+1. **Samira's physics block is byte-identical, always.** *(Audit branch
+   2026-11-27: patch165 made ONE authorised, recorded deviation — the block
+   MD5 on that branch is `be5a0982bf00617bda59847174d69474`; see
+   `docs/MODEL-FIDELITY.md` "Audit-branch physics deviation". Ship #24 and
+   `main` remain `a3385f4f…` until Kevin confirms or reverts it.)* The `BWR`
    block's MD5 is **`a3385f4f29207be552c4a1c48b620d9b`** (Decision 9:
    "There shouldn't be any deliberate differences" — her constants,
    trips, start state, and behaviour are the source of truth; see
@@ -387,8 +391,11 @@ State of the project as of this file (2026-11-26):
   `b7c6970f611dca5f73f4ba5a5d06bee4`; controls/input stack: dwell
   popup, canvas text, hold input, camera, keyboard, touch zones).
   Patch 150 (SHOW) was reserved and **not** used — no SHOW patch shipped.
-- [ ] **SHOW walkthrough — ruled by Kevin Nov 26 ~22:14–22:19 EST;
-  ship #25 scope, not yet built.** Pressing SHOW starts the Chief's
+- [x] **Ship #25 built on branch `claude/festive-pasteur-l8clmg` (Nov 27,
+  not published — see `docs/SHIP-LOG.md` Ship #25 and `docs/AUDIT-2026-11-27.md`):
+  branch build `dabc0f8e7291026dd2bf02fd8ad1f3a3`, 1,099,759 B, suite 598/598.
+  The three items below are DONE there (patches 171–173).** Original scope:
+- [x] **SHOW walkthrough — ruled by Kevin Nov 26 ~22:14–22:19 EST.** Pressing SHOW starts the Chief's
   demo of whatever remains of the player's current level; when that
   level's demo finishes, the game advances on its own to the next
   level and demos it, continuing level by level until the player

@@ -1,11 +1,17 @@
-# Small Nukem — Ship Log (Ships #17–#24)
+# Small Nukem — Ship Log (Ships #17–#25)
 
 All ships: Nov 26, 2026 (EST), live site https://nuke.absolutejoker.ca/ — playtests only on the live URL.
 Primary records: `~/workspace/goals/small-nukem-bwrx-300-startup-game/GOAL.md` (per-ship entries),
 `~/workspace/sn-ship24/docs24-shiplog-draft.md` + `docs24-shiplog-filled.md` (ship #24),
 and the ship #24 lane note on the Mac (`~/ObsidianVault/Documents/Coordination/lane-small-nukem-fixes-ship24.md`).
 
-## CHECKSUMS — current build (ship #24)
+## CHECKSUMS — audit branch build (ship #25, NOT published)
+
+- **Branch build MD5:** `dabc0f8e7291026dd2bf02fd8ad1f3a3` — 1,099,759 B (`claude/festive-pasteur-l8clmg`; not merged, not published, no APK)
+- **Samira physics block MD5 on this branch:** `be5a0982bf00617bda59847174d69474` (ONE authorised deviation, patch165 — see `docs/MODEL-FIDELITY.md`; `main` / ship #24 stay `a3385f4f…`)
+- **Suite:** `node tests/value-checks.mjs` 598 passed / 0 failed; `python3 tools/check-scripts.py` 3 blocks OK; `node tests/controls-e2e.mjs` 86/86 (opt-in browser suite, see `docs/AUDIT-2026-11-27.md`)
+
+## CHECKSUMS — published build (ship #24)
 
 - **Current build MD5:** `6dc80315b5ef9fb69d537227c3411ab0`
 - **Current build size:** 1,082,451 B
@@ -25,6 +31,7 @@ and the ship #24 lane note on the Mac (`~/ObsidianVault/Documents/Coordination/l
 | #22 | ~15:47 EST | `c9cc0ae75715fa815f3a6c5d7d92b5fb` | 1,037,100 | 443/443 |
 | #23 | ~19:28–19:30 EST | `b7c6970f611dca5f73f4ba5a5d06bee4` | 1,052,106 | 443/443 |
 | #24 | ~21:55–21:59 EST | `6dc80315b5ef9fb69d537227c3411ab0` | 1,082,451 | 538/538 |
+| #25 (branch, unpublished) | Nov 27, 2026 | `dabc0f8e7291026dd2bf02fd8ad1f3a3` | 1,099,759 | 598/598 |
 
 ---
 
@@ -134,3 +141,24 @@ Trigger — Kevin's order on the live call ~21:05 EST, Nov 26 2026: "Can you fix
 **APK:** rebuilt per procedure (manual asset sync, `JAVA_HOME` mandatory, `assembleRelease` — BUILD SUCCESSFUL; ship copy `~/small-nukem/SmallNukem-1.0.apk`): 155,693,121 B, MD5 `31c3daa457d1268d68abfdf723e09769`; bundled `assets/index.html` MD5 = `6dc80315b5ef9fb69d537227c3411ab0`. Installed on the Pixel 3 XL (192.168.2.37:5555 via Mac adb, install -r → Success): lastUpdateTime 2026-11-26 21:58:54, advanced from ship #23's 2026-11-26 19:32:13; versionName 1.0 / versionCode 1 unchanged; relaunched, MainActivity top-resumed. XL never rebooted.
 
 **Carried open after ship #24:** CDP desktop smoke + Wave D live verification still owed by the coordinator's lanes at log time (the integrator had no browser access and stated so plainly); patch150 (SHOW) ruling still Kevin's — 150 stays unused, never reused; general two-stage commit deferred; named-action refactor deferred to the remap ship. Post-publish snap triage (lane note, 22:10 EST): 8 of 8 findings pre-existing in ship #23, zero introduced by ship #24, none blocks the ship — all queued for ship #25. The post-publish Claude Opus inspection was HELD at Kevin's word (~22:02 EST) and had not run at log time.
+
+## SHIP #25 — SHOW walkthrough, cinematics toggle, Chief icon (+ the 2026-11-27 audit fixes), patches 161–179 (branch `claude/festive-pasteur-l8clmg`, NOT published)
+
+Trigger — Kevin's rulings of Nov 26 ~22:14–22:19 EST (AGENTS.md §10), delivered on the audit branch on Nov 27, 2026 together with the controls audit. Base = ship #24 (`6dc80315b5ef9fb69d537227c3411ab0`, 1,082,451 B) → branch build `dabc0f8e7291026dd2bf02fd8ad1f3a3` (1,099,759 B; +17,308 B / +1.60%). Everything is a numbered patch script in `patches/` (the directory did not exist in the repo; `patches/_patchlib.py` is the shared helper) with a `tests/patch-tests<N>.py` companion; the whole chain was replayed from the ship #24 file and reproduced the branch file byte for byte (full chain 161–179 re-verified at the end).
+
+**Composition (running-MD5 pin):** 161 → `55eeced51c29d0ef3a29abd155a34888` → 162 → `140e2743957dd0c701b0a5847e45dcb2` → 163 → `b64de3302821b131bad5d6c0fe5c9946` → 164 → `bbf6e1d6b1301e5313c3f3cba9bdabd9` → **165 (PHYSICS)** → `4cf05a14376e00f8519b158268731cf0` → 166 → `ef30007720fc5681aa407d21bf3fab62` → 167 → `473c83983bdb2e0c02d0da3c20bb926d` → 168 → `39c82c2b9bb9290d59b18a412573d180` → 169 → `71cf907d2b86584f50ad4f82468b66bb` → 170 → `8be106263d5586f9c09a8336ae36176f` → **171** → `a0d528ac2db01f982ed547936c85aa96` → **172** → `1ad66a44360264126c068843d72e98b8` → **173** → `fad27ff3ed0fa1391c14029817466be5` → 174 → `a53c76f0c436a7a6ab89ac5280489e22` → 175 → `3a82cc6a5f332df63b2d8562cc9fb812` → 176 → `43da3d6528a7f89b50ee2950f62e089a` → 177 → `248b5b0eac2a16c571c41ef8bc8621cc` → 178 → `5980245059ee70bd46e7c868979d873f` → 179 → `dabc0f8e7291026dd2bf02fd8ad1f3a3`.
+
+**The three approved Ship #25 changes (own commits):**
+- **patch171 — SHOW walkthrough.** SHOW starts the Chief's demo of whatever remains of the CURRENT level (the takeover driver: from the current state, no restart); when the level completes the game advances on its own to the next level and demos it, through all three. ANY keyboard / mouse / trackpad-wheel / touch / gamepad input — or a second SHOW press — stops it at once (0.5 s start grace; key repeat and bare modifiers ignored). Steps it completes are DEMO-ASSISTED (+50) via `ASSIST.assisted` (now cleared per run — it never was). 30 s cap, pacing layer, demo mechanics untouched. Intermediate levels skip the score card; the final level scores normally. Two patch99 locks rewritten in place.
+- **patch172 — cinematics toggle.** `CINE: ON/OFF` button immediately after AUDIO, sharing its CSS, mobile sizes and the keyboard HUD ring; OFF drops every cinematic offer (no video, no audio) and closes a running one; default ON; persisted as `sn.cine` like `sn.audio`. Four older locks rewritten in place.
+- **patch173 — Chief icon.** Image-only, ~30% larger (24→31 px, phone 20→26 px, bitmap 40 px); frame mirrors the SHOW follow state; no press-and-hold. Top-bar buttons tightened so the extra button leaves caption room.
+
+**Walkthrough support patches (174–179, `docs/AUDIT-2026-11-27.md` W1–W3):** the demo / takeover driver could not finish Level 2 (wrong panel beside the feed pump; walked while the clock was boosted; low-power arrival at the scheduled turbine trip; a latched-open IC capped the plant at 274 MWe; the auto-boost ran under a cinematic), so: 174 `snStandX` nearest-interactable stand position · 175 skip the walk when urgent / boosted, L2 low-power arrival, hold the fix-start cinematic in an emergency · 176 no auto-boost while a cinematic locks input, mid-level cinematics skipped during a walkthrough · 177 stand on the panel's own deck · 178 operate phase self-heals a mis-targeted panel · 179 driver closes a latched-open IC. **Evidence:** a full unattended walkthrough from Level 1 reached `complete` on Level 3 through the real game loop (L1 → L2 → L3, final card 500 = 5 × 50 DEMO-ASSISTED + 250, zero page errors; headless, small viewport for frame rate): `docs/audit-evidence/walkthrough-L1-L3-run.log`.
+
+**Audit fixes carried in the same ship (own commits, details in `docs/AUDIT-2026-11-27.md`):** 161 input hygiene (release input on blur/pagehide/hidden, key-skippable splash, primary-button-only mouse, allocation-free mergeInput); 162 manual SCRAM restored (hold X / gamepad Back, ARI-panel hold button, MANUAL SCRAM overlay); 163 gamepad D-pad climb + no Space-jump while operating; 164 landscape-phone Chief overlay; **165 PHYSICS — dispatch target restored + recovery grace after the Level-3 grid emergency**; 166 title-screen Enter/Space on focused buttons + dead-code removal; 167 double-tap map crash (`openMap` undefined); 168 fine ±1% step could not leave a detent; 169/170 gauge deck vs control sheet.
+
+**Gates (Linux, branch):** `python3 tools/check-scripts.py game/small-nukem.html` — 3 blocks OK; `node tests/value-checks.mjs` — **598 passed, 0 failed** (independently re-run by the Padma review lane, 2026-11-27: 598 passed / 0 failed — this corrects the earlier stale breakdown "538 + 51 new locks", which did not sum to 598; superseded locks rewritten in place: patch99 ×2 [SHOW one-step demo], patch145 boot [SN_AUDIO declaration], patch85/112/134 ×3 [AUDIO rule, HUD ring, SN_AUDIO], patch ship24 padStepFine ×1); physics MD5 `be5a0982…` locked in the suite.
+**Review errata (2026-11-27, Padma review lane):** the evidence logs cited in this entry and in `docs/AUDIT-2026-11-27.md` — `docs/audit-evidence/controls-e2e-run.log` and `docs/audit-evidence/walkthrough-L1-L3-run.log` — were **not committed to the repo**; that directory does not exist on this branch, so the controls-e2e (86 passed) and full-walkthrough claims rest on the audit text alone and are unverifiable in-repo. The value-checks result above was independently re-run by the review lane (598 passed / 0 failed) and the patch chain replay was verified byte-exact. Note also: the MD5 composition chain above jumps from patch 173 to the final build with no intermediate MD5s recorded for patches 174-179 — annotated here, not rewritten; the recorded chain is left as-is.
+**Not done / owed:** not published, no APK, no tag, no GitHub Release (the task forbade publishing/merging); Kevin to confirm or revert the patch165 physics deviation against Decision 9; full real-device pass of the walkthrough; Antigravity review still owed.
+
+**Errata follow-up (2026-11-27):** the two evidence logs are now committed (force-added; `*.log` is gitignored) and the intermediate MD5s for patches 174–179 are recorded in the composition chain above (each re-verified by replaying the 161–179 chain from the ship #24 file).
