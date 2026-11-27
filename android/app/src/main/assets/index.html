@@ -21,7 +21,7 @@ html, body { width: 100%; height: 100%; overflow: hidden; background: #0a0a0f; f
 #demoBtn { position: static; background: #14303a; color: #7fe3ff; border: 1px solid #2b6a7a; border-radius: 8px; padding: 2px 6px; font: bold 16px 'Courier New', monospace; cursor: pointer; min-height: 48px; white-space: nowrap; }
 #takeoverBtn { position: static; background: #0e2438; color: #9fd8ff;
   border: 1px solid #2a4a6a; border-radius: 3px; font: bold 16px 'Courier New', monospace; padding: 2px 6px; cursor: pointer; min-height: 48px; white-space: normal; line-height: 1.05; }
-#audioBtn { background: #2a1c08; color: #c8a060; border: 1px solid #6a5320; border-radius: 4px; font: 13px 'Courier New', monospace; padding: 5px 8px; cursor: pointer; min-height: 34px; white-space: nowrap; flex-shrink: 0; }
+#audioBtn, #cineBtn { background: #2a1c08; color: #c8a060; border: 1px solid #6a5320; border-radius: 4px; font: 13px 'Courier New', monospace; padding: 5px 8px; cursor: pointer; min-height: 34px; white-space: nowrap; flex-shrink: 0; }
 #sfxBtn { background: #14303a; color: #7fe3ff; border: 1px solid #2b6a7a; border-radius: 4px; font: 13px 'Courier New', monospace; padding: 5px 8px; cursor: pointer; min-height: 34px; white-space: nowrap; flex-shrink: 0; }
 /* patch85 (Kevin, Nov 25 ~23:55): the guide controls are one
    left-anchored row — TOUCH underneath the Chief's portrait, DEMO /
@@ -435,7 +435,9 @@ body.chief-speaking .guide-speech { font-size: 14px; color: #ffffff; }   /* patc
   padding: 2px 8px; height: 32px;
   cursor: pointer; user-select: none; -webkit-user-select: none;
 }
-#guideBarCollapsed canvas { width: 24px; height: 24px; border-radius: 3px; border: 1px solid #3a2810; flex-shrink: 0; }
+#guideBarCollapsed canvas { width: 31px; height: 31px; border-radius: 3px; border: 1px solid #3a2810; flex-shrink: 0; }   /* patch173 (ship #25): ~30% larger (was 24 px) */
+#guideBarCollapsed canvas.follow-on { border-color: #37d67a; box-shadow: 0 0 5px rgba(55,214,122,0.6); }   /* patch173: frame mirrors the SHOW follow state, green = following */
+#guideBarCollapsed canvas.follow-off { border-color: #e5484d; }   /* red = stopped */
 #guideBarCaption { flex: 1; color: #c8a060; font-size: 11px; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 #guideBarToggle {
   color: #6a5030; font-size: 10px; padding: 2px; flex-shrink: 0;
@@ -577,10 +579,10 @@ body.chief-speaking .guide-speech { font-size: 14px; color: #ffffff; }   /* patc
    matches this query and renders exactly as ship #22. */
 @media (max-width: 500px) {
   #guideBarCollapsed { height: 30px; padding: 1px 6px; gap: 4px; }
-  #guideBarCollapsed canvas { width: 20px; height: 20px; }
+  #guideBarCollapsed canvas { width: 26px; height: 26px; }   /* patch173: ~30% larger (was 20 px) */
   #guideBarCaption { font-size: 11px; }
   #guideBarToggle { min-width: 26px; min-height: 24px; }
-  #audioBtn, #sfxBtn { min-height: 26px; font-size: 11px; padding: 2px 5px; }
+  #audioBtn, #cineBtn, #sfxBtn { min-height: 26px; font-size: 11px; padding: 2px 5px; }
   #menuBtn { min-height: 26px; font-size: 11px; padding: 2px 7px; }
   #guideBarExpanded { padding: 6px 8px 50px; }
   .guide-portrait { width: 84px; height: 71px; }
@@ -767,6 +769,8 @@ body.chief-speaking .guide-speech { font-size: 14px; color: #ffffff; }   /* patc
   #stepBar { margin-top: 6px; flex-wrap: nowrap; }
   #stepBar #stepChip { flex: 1 1 auto; }
   #guideNextBtn { flex: 1 1 auto; }
+  /* patch164: the popped Chief panel floats over the world instead of pushing it down (top is set by layoutTopBars to clear the step bar) */
+  #guideBarExpanded { position: absolute; left: 0; right: 0; top: 100%; z-index: 40; max-height: 46vh; overflow: hidden; box-shadow: 0 8px 16px rgba(0,0,0,0.55); }
 }
 /* === patchF7 (iPhone fix stream F7): top bar + settings strip ===
    Top bar: 34 px buttons were flex-centred in the 32 px bar's 28 px content
@@ -780,7 +784,7 @@ body.chief-speaking .guide-speech { font-size: 14px; color: #ffffff; }   /* patc
    over F2's 26 px top-bar compaction at equal specificity. */
 @media (max-width: 500px), (max-height: 500px) and (max-width: 980px) {
   #guideBarCollapsed { height: 48px; }
-  #audioBtn, #sfxBtn, #menuBtn { height: 44px; min-height: 44px; font-size: 13px; }
+  #audioBtn, #cineBtn, #sfxBtn, #menuBtn { height: 44px; min-height: 44px; font-size: 12px; padding: 0 5px; }   /* patch173: tighter so the CINE button leaves the caption room */
   #titleScreen .settings-strip {
     left: 50%; transform: translateX(-50%); width: min(96vw, 560px); height: auto;
     padding: 3px 6px; gap: 4px; align-content: center;
@@ -813,10 +817,11 @@ body.chief-speaking .guide-speech { font-size: 14px; color: #ffffff; }   /* patc
   <!-- Guide TV bar (HUD, top, collapsible) -->
   <div id="guideBar">
     <div id="guideBarCollapsed" onclick="toggleGuideBar()">
-      <canvas id="portraitMini" width="24" height="24"></canvas>
+      <canvas id="portraitMini" width="40" height="40"></canvas>
       <span id="guideBarCaption">Ready for startup, chief.</span>
       <span id="guideBarToggle">&#9650;</span>
       <button id="audioBtn" onpointerdown="event.stopPropagation()" onclick="toggleAudio(event)">AUDIO: ON</button>
+      <button id="cineBtn" onpointerdown="event.stopPropagation()" onclick="toggleCine(event)" title="Cinematics: the short achievement videos">CINE: ON</button>
       <button id="sfxBtn" onpointerdown="event.stopPropagation()" onclick="toggleSfx(event)">SFX: ON</button>
       <button id="menuBtn" onpointerdown="event.stopPropagation()" onclick="event.stopPropagation(); quitToMenu()">MENU</button>
     </div>
@@ -981,7 +986,7 @@ body.chief-speaking .guide-speech { font-size: 14px; color: #ffffff; }   /* patc
   <button id="procDoneBtn" type="button" onclick="toggleProcedure()">Done ✔</button>
 </div>
 
-<div id="scramAlert">!! AUTOMATIC SCRAM !!<br><span style="font-size:16px" id="scramReason"></span></div>
+<div id="scramAlert"><span id="scramHead">!! AUTOMATIC SCRAM !!</span><br><span style="font-size:16px" id="scramReason"></span></div>
 <div id="interactPrompt">[E] Interact</div>
 <div id="scoreScreen">
   <canvas class="score-backdrop" id="scoreBackdrop"></canvas>
@@ -2328,6 +2333,7 @@ function drawMiniPortrait() {
   const c = document.getElementById('portraitMini');
   if (!c) return;
   const x = c.getContext('2d');
+  x.setTransform(c.width / 24, 0, 0, c.height / 24, 0, 0);   // patch173: the fallback face is drawn on a 24-unit grid; the bitmap is now 40 px
   x.clearRect(0, 0, 24, 24);
   x.fillStyle = '#0a1a1a';
   x.fillRect(0, 0, 24, 24);
@@ -2722,6 +2728,9 @@ function game(S, dt) {
     if (S.ev.tu === 2 && S.turbTrip <= 0) {
       S.ev.tu = 3; S.score += 250; S.evPass++;
       log(S, 'Turbine back on the grid.', 'ok');
+      S.disp = SEG[S.segI].to;   // patch165: the emergency's 60 MWe target is over - back to the scheduled dispatch
+      S.grace = Math.max(S.grace, Math.min(30, 4 + Math.abs(S.disp - 60) / 5));   // patch165: same recovery grace her segment change grants
+      log(S, 'Grid asks for ' + S.disp + ' MWe again.', 'info');
     }
     const hold = S.ev.fw === 1 || S.ev.tu === 1 || S.ev.tu === 2;
     if (S.grace > 0) S.grace -= dt;
@@ -3237,6 +3246,7 @@ function snxResetRun() {
   SNX.stepDanger = false; SNX.stepTransient = false; SNX.stepGrades = [];
   SNX.ckpt = null; SNX.stableT = 0; SNX.drill = null; SNX.drillT = 0; SNX.hinted = {}; SNX.l2Warned = {};
   SN_FREEZE.active = false; SN_FREEZE.used = false; SN_FREEZE.heldSec = 0;   // patch155 (R155 amendment): the freeze record is per-run
+  ASSIST.assisted.length = 0;   // patch171: DEMO-ASSISTED marks are per-run (they were never cleared, so a new run inherited the last run's marks)
   const cb = document.getElementById('ckptBtn'); if (cb) cb.style.display = 'none';
 }
 function snxSnapshot() {
@@ -4230,7 +4240,9 @@ function handleKeyPress(code, e) {
   // Title screen handling
   if (gameState.phase === 'title') {
     if (code === 'Enter' || code === 'Space') {
-      startGame();
+      const btn166 = e && e.target && e.target.closest ? e.target.closest('button') : null;   // patch166 (B1): a focused button owns Enter/Space
+      if (btn166) { if (code === 'Space') btn166.click(); }   // Enter: the browser's native click; Space: patch153 preventDefault-ed it, so click here
+      else startGame();
     }
     return;
   }
@@ -4250,9 +4262,6 @@ function handleKeyPress(code, e) {
   }
   if (code === 'KeyT') startTakeover();
   if (code === 'Backquote') toggleDebug();
-  if ((code === 'KeyE' || code === 'Enter') && !keys['KeyE_held']) {
-    // interact once on press
-  }
 }
 
 function clearJustPressed() {
@@ -4354,6 +4363,7 @@ function SN_STOP_ALL_MEDIA() {
 }
 
 function quitToMenu() {
+  SN_WALK.active = false; SN_WALK.gap = false;   // patch171
   SN_STOP_ALL_MEDIA();   // patch130: quit-to-menu silences everything, not just the cinematic
   clearTimeout(window.__scoreFadeT);   // patch117: going home cancels the score screen's pending auto-fade
   // Easy quit (Kevin, Nov 25): one tap/click (or M, or gamepad Menu) back
@@ -4445,6 +4455,11 @@ function layoutTopBars() {
   let top = gc.offsetHeight + (guideExpanded ? ge.offsetHeight : 0) + 4;
   if (gb && snx.offsetParent) top = gb.getBoundingClientRect().bottom - snx.offsetParent.getBoundingClientRect().top + 4;
   snx.style.top = top + 'px';
+  // patch164: short landscape - the expanded guide panel is an overlay (CSS); park it just below the step bar
+  if (ge) {
+    const land164 = window.matchMedia && window.matchMedia('(orientation: landscape) and (max-height: 500px)').matches;
+    ge.style.top = (land164 && gb && sb && sb.offsetParent) ? Math.max(0, sb.getBoundingClientRect().bottom - gb.getBoundingClientRect().top) + 'px' : '';
+  }
   // #stepBar is in-flow (static): it clears the pill via its CSS margin.
 }
 function toggleGuideBar() {
@@ -4459,8 +4474,15 @@ function toggleGuideBar() {
 let deckExpanded = false;
 let deckAutoCloseTimer = 0;
 
+// patch169: alarm picture as one base-3 number (0 normal / 1 caution / 2 danger per gauge) - no allocation.
+const SN_ALARM_KEYS = ['temp', 'press', 'power', 'react', 'period', 'steam', 'level'];
+function snAlarmCode() { let c = 0; for (let i = 0; i < SN_ALARM_KEYS.length; i++) { const z = alarms[SN_ALARM_KEYS[i]]; c = c * 3 + (z === 'danger' ? 2 : z === 'caution' ? 1 : 0); } return c; }
+let deckDismissedCode = -1;   // patch169: alarm picture the player closed the deck on (-1 = none)
+let deckAutoOpened = false;   // patch170: the deck is open because the game opened it (not the player)
 function toggleGaugeDeck() {
   deckExpanded = !deckExpanded;
+  deckDismissedCode = (!deckExpanded && typeof alarms !== 'undefined') ? snAlarmCode() : -1;   // patch169: a manual close sticks for this alarm picture
+  deckAutoOpened = false;   // patch170: any manual toggle makes the deck the player's
   document.getElementById('gaugeDeckExpanded').style.display = deckExpanded ? 'block' : 'none';
   document.getElementById('deckExpandArrow').innerHTML = deckExpanded ? '&#9660; GAUGES' : '&#9650; GAUGES';
   requestAnimationFrame(deckRelayout);
@@ -4536,9 +4558,11 @@ function snDemoActive121() {   // patch121 + patch121b: the REAL demo state fiel
   return false;
 }
 function autoExpandDeck() {
+  if (typeof SN_TOUCH !== 'undefined' && SN_TOUCH.pop) return;   // patch169: never open the deck over the control sheet the player is working
+  if (deckDismissedCode >= 0 && snAlarmCode() === deckDismissedCode) return;   // patch169: the player closed it on exactly this alarm picture
   if (snDemoActive121()) return;   // patch121 (Kevin): no gauge pop-up during the demo - the bottom gauges stay as normal, the deck simply never pops
   if (!deckExpanded) {
-    deckExpanded = true;
+    deckExpanded = true; deckAutoOpened = true;   // patch170
     document.getElementById('gaugeDeckExpanded').style.display = 'block';
     document.getElementById('deckExpandArrow').innerHTML = '&#9660; GAUGES';
     requestAnimationFrame(deckRelayout);
@@ -4547,6 +4571,12 @@ function autoExpandDeck() {
 }
 
 function updateDeckAutoClose(dt) {
+  if (deckExpanded && deckAutoOpened && typeof SN_TOUCH !== 'undefined' && SN_TOUCH.pop) {   // patch170: an auto-opened deck yields to the control sheet being worked
+    deckExpanded = false; deckAutoOpened = false; deckAutoCloseTimer = 0;
+    document.getElementById('gaugeDeckExpanded').style.display = 'none';
+    document.getElementById('deckExpandArrow').innerHTML = '&#9650; GAUGES';
+    requestAnimationFrame(deckRelayout);
+  }
   if (deckAutoCloseTimer > 0) {
     deckAutoCloseTimer -= dt;
     if (deckAutoCloseTimer <= 0 && deckExpanded) {
@@ -4661,6 +4691,7 @@ function paceSnap() {
 }
 function paceTick() {
   if (!S || gameState.phase !== 'playing') { SN_PACE.effective = SN_PACE.player; SN_PACE.kind = 0; return SN_PACE.player; }
+  if (typeof CINE_ACTIVE !== 'undefined' && CINE_ACTIVE) { SN_PACE.effective = SN_PACE.player; SN_PACE.kind = 0; paceUiTick(); return SN_PACE.player; }   // patch176: no auto-boost while a cinematic has the player's hands tied (input is locked, the sim keeps running)
   // patch144 (Kevin, Nov 26): the hands-off DEMO — the title-screen
   // attract loop and the menu demo — runs at 1x. The passive-wait auto
   // boost (AUTO 10x / grid floor) never engages while DEMO.active; the
@@ -4725,6 +4756,7 @@ function snFreezeAdjusting() {
     if (pop.grab) return true;   // pointer down on the sheet control (drag / stepper hold / wheel)
     if (pop.tgt) return true;    // released, but the committed target is still travelling — the commit is not done
     if (typeof SN_WASD !== 'undefined' && SN_WASD.kbPanel && (SN_WASD.held['KeyA'] || SN_WASD.held['KeyD'])) return true;   // keyboard panel operate hold
+    if (keys['KeyE'] || keys['KeyQ'] || keys['Enter'] || keys['ShiftLeft']) return true;   // world hold while the sheet is dwell-open: the open sheet must not shadow the world hold (ship #24 W57 defect)
     return false;
   }
   const t = (typeof player !== 'undefined' && player) ? player.interactTarget : null;
@@ -4819,6 +4851,35 @@ function checkScramConditions() {
   }
 }
 
+// patch162: the operator's SCRAM.  Hold X (1.0 s) or gamepad Back/View, or hold the
+// SCRAM button on the ARI-01 panel (0.8 s).  Release early = cancelled.  The trip
+// itself is HER BWR.scramNow(); checkScramConditions() then raises the overlay.
+const SN_SCRAM = { t: 0, HOLD_S: 1.0 };
+function snManualScram() {
+  if (!S || gameState.phase !== 'playing' || S.scram || S.phase === 'failed' || S.phase === 'complete') return false;
+  BWR.scramNow(S);
+  return true;
+}
+function snScramPillSet(frac) {
+  let el = document.getElementById('scramPill');
+  if (!el) {
+    if (frac <= 0) return;
+    el = document.createElement('div'); el.id = 'scramPill'; el.textContent = 'HOLD TO SCRAM';
+    el.style.cssText = 'position:fixed;left:50%;top:8px;transform:translateX(-50%);z-index:950;padding:7px 16px;border:2px solid #e5484d;border-radius:6px;color:#ffe3e3;font:bold 15px "Courier New",monospace;letter-spacing:1px;pointer-events:none;white-space:nowrap';
+    document.body.appendChild(el);
+  }
+  el.style.display = frac > 0 ? 'block' : 'none';
+  if (frac > 0) { const pct = Math.round(Math.min(1, frac) * 100); el.style.background = 'linear-gradient(90deg,#b01515 ' + pct + '%,#2a0a0a ' + pct + '%)'; }
+}
+function snScramHoldTick(dt) {
+  const gp = getGamepad();
+  const down = !!(KB['KeyX'] || (gp && gp.buttons[8] && gp.buttons[8].pressed));
+  if (!down || gameState.phase !== 'playing' || CINE_ACTIVE || !S || S.scram) { if (SN_SCRAM.t > 0) snScramPillSet(0); SN_SCRAM.t = 0; return; }
+  SN_SCRAM.t += dt;
+  snScramPillSet(SN_SCRAM.t / SN_SCRAM.HOLD_S);
+  if (SN_SCRAM.t >= SN_SCRAM.HOLD_S) { SN_SCRAM.t = 0; snScramPillSet(0); snManualScram(); }
+}
+
 function triggerScram(reason) {
   if (gameState.phase === 'scram' || gameState.phase === 'scored') return;
   SN_SFX.scram();
@@ -4832,7 +4893,13 @@ function triggerScram(reason) {
   gameState.scramCount++;
   document.getElementById('scramAlert').style.display = 'block';
   document.getElementById('scramReason').textContent = reason;
-  showCallout('scram');
+  const manual162 = /^Manual/.test(reason);   // patch162: the operator's own SCRAM is not an automatic one
+  const head162 = document.getElementById('scramHead');
+  if (head162) head162.textContent = manual162 ? '!! MANUAL SCRAM !!' : '!! AUTOMATIC SCRAM !!';
+  if (manual162) {
+    const t162 = 'Manual SCRAM. You tripped the reactor by hand. Rods are in and passive cooling holds the plant: a safe shutdown.';
+    showCalloutText(t162); chiefSpeak(t162, true); CHIEF.expr = 'alarmed'; CHIEF.exprT = 4;
+  } else showCallout('scram');
   setTimeout(() => {
     document.getElementById('scramAlert').style.display = 'none';
     endGame('scram');
@@ -4886,6 +4953,7 @@ function advanceProcedure(to) {
   if (to > gameState.procedureStep) {
     for (let i = gameState.procedureStep; i < to; i++) {
       if (!gameState.stepsCompleted.includes(i)) gameState.stepsCompleted.push(i);
+      if (SN_WALK.active && ASSIST.assisted.indexOf(i) < 0) ASSIST.assisted.push(i);   // patch171: a step the walkthrough completes is DEMO-ASSISTED (+50)
     }
     gameState.procedureStep = to;
     updateProcedureUI();
@@ -5129,16 +5197,15 @@ function updatePlayer(dt) {
 
   // Gamepad input
   let gp = getGamepad();
-  let gpLeft = 0, gpJump = false, gpUp = false, gpDown = false;
+  let gpLeft = 0, gpUp = false, gpDown = false;
   if (gp) {
     gpLeft = gp.axes[0] || 0;
     if (gp.buttons[14] && gp.buttons[14].pressed) gpLeft = -1;
     if (gp.buttons[15] && gp.buttons[15].pressed) gpLeft = 1;
     if (gp.buttons[12] && gp.buttons[12].pressed) gpUp = true;
     if (gp.buttons[13] && gp.buttons[13].pressed) gpDown = true;
-    gpJump = gp.buttons[0] && gp.buttons[0].pressed;
-    gpUp = gp.axes[1] < -0.5;
-    gpDown = gp.axes[1] > 0.5;
+    if (gp.axes[1] < -0.5) gpUp = true;   // patch163 (G1): OR-ed in - the plain assignment erased the D-pad up/down set above
+    if (gp.axes[1] > 0.5) gpDown = true;
   }
 
   // patch113 (Kevin, Nov 26 ~02:07): press-once AUTO-CLIMB. A
@@ -5223,7 +5290,8 @@ function updatePlayer(dt) {
     if (keys['ArrowDown'] || keys['KeyS'] || gpDown || p.climbAuto === 1) p.vy = LADDER_SPEED;   // patch113
   } else {
     p.vy += GRAVITY * dt;
-    if ((keys['Space'] || (keys['ArrowUp'] && !p.ladderLatch) || (gp && gp.buttons[0] && gp.buttons[0].pressed)) && p.onGround) {   // held Up after a climb must not fire a jump at the top (BUG-001)
+    const operating163 = !!(SN_TOUCH.pop || p.interactTarget);   // patch163 (J1): Space / A are the operate keys too - no jump while a sheet is open or Fluke stands at a panel
+    if (((keys['Space'] && !operating163) || (keys['ArrowUp'] && !p.ladderLatch) || (gp && gp.buttons[0] && gp.buttons[0].pressed && !operating163)) && p.onGround) {   // held Up after a climb must not fire a jump at the top (BUG-001)
       p.vy = JUMP_SPEED; SN_SFX.jump();
       p.onGround = false;
     }
@@ -5400,7 +5468,7 @@ function updateHUD() {
     alarms.period !== 'normal' || alarms.steam !== 'normal' ||
     alarms.press !== 'normal' || alarms.level !== 'normal' ||
     alarms.react === 'danger';
-  if (hasAlarm) autoExpandDeck();
+  if (hasAlarm) autoExpandDeck(); else deckDismissedCode = -1;   // patch169: all-normal re-arms the auto-expand
 
   // === Gauge presentation state (Tier 1 mini + Tier 2 deck) ===
   // The dials themselves are drawn by updateGauges() from the game loop;
@@ -5633,6 +5701,7 @@ function bindPointerInput() {
   cv.__snBound = true;
   const frac = e => { const r = cv.getBoundingClientRect(); return { fx: (e.clientX - r.left) / Math.max(1, r.width), fy: (e.clientY - r.top) / Math.max(1, r.height) }; };
   cv.addEventListener('pointerdown', e => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;   // patch161 (D3): right / middle click is not a press
     try { cv.setPointerCapture(e.pointerId); } catch (err) {}
     const { fx, fy } = frac(e);
     SNX.attractT = 0;
@@ -5721,7 +5790,7 @@ const SN_WASD = {
   heldLatch: {},   // patch153: per-key latch expiry for the held map, same 170 ms idiom as KB_LATCH
   _holdCode: null, _holdAt: 0, _holdFired: 0, _snapUntil: 0, _opEdge: false,   // patch144 (D1): operate-edge latch for tap-class panel actions
   _pUp: false, _pDn: false,
-  HUD_BTNS: ['helpBtn', 'mapBtn', 'audioBtn', 'sfxBtn', 'paceBtn', 'takeoverBtn'],   // patch134
+  HUD_BTNS: ['helpBtn', 'mapBtn', 'audioBtn', 'cineBtn', 'sfxBtn', 'paceBtn', 'takeoverBtn'],   // patch134
   STEPPERS: { rod_withdraw: 1, raise_power: 1, steam_valve: 1, isolate_leak: 1 },
   mode() {
     if (typeof SN_TOUCH !== 'undefined' && SN_TOUCH.pop) return 'panel';
@@ -5837,10 +5906,36 @@ window.SN_WASD = SN_WASD;
 window.addEventListener('keydown', e => { if (e.code in SN_WASD.held) { SN_WASD.held[e.code] = true; SN_WASD.heldLatch[e.code] = performance.now() + 170; } });   // patch153: latch stamp mirrors KB_LATCH
 window.addEventListener('keyup', e => { if (e.code in SN_WASD.held) SN_WASD.held[e.code] = false; });
 
+// patch161 (D1): one place that lets go of EVERY input source.  Runs on
+// blur / tab-hidden / pagehide: the OS delivers no keyup / pointerup once
+// focus is gone, so without this a held key or finger sticks until the next
+// real press.  Panel grabs are released through SN_TOUCH.up (snap-on-release
+// still applies), the rest is cleared in place - no allocation.
+function snReleaseAllInput() {
+  for (const k in keys) keys[k] = false;
+  for (const k in KB) KB[k] = false;
+  for (const k in KB_LATCH) KB_LATCH[k] = 0;
+  for (const k in keysJustPressed) delete keysJustPressed[k];
+  for (const k in SN_WASD.held) SN_WASD.held[k] = false;
+  for (const k in SN_WASD.heldLatch) SN_WASD.heldLatch[k] = 0;
+  SN_WASD._holdCode = null; SN_WASD._opEdge = false;
+  for (const [id, p] of pointers) { if (p.role === 'pop') { try { SN_TOUCH.up(id); } catch (e) {} } }
+  pointers.clear();
+  GP.holdE = GP.holdQ = false;
+  syncPointerInput();
+}
+function snAnyKeyHeld() { for (const k in KB) { if (KB[k]) return true; } return false; }   // allocation-free scan of the keyboard state
+window.addEventListener('blur', snReleaseAllInput);
+window.addEventListener('pagehide', snReleaseAllInput);
+document.addEventListener('visibilitychange', () => { if (document.hidden) snReleaseAllInput(); });
+
 function mergeInput() {
   const kbNow153 = performance.now();
   const kbEff153 = c => !!(KB[c] || (KB_LATCH[c] || 0) > kbNow153);   // patch153: held level OR unexpired latch — a tap between frames registers for at least one frame; a hold is level-sampled exactly as before
-  if (Object.values(KB).some(v => v) || Object.values(KB_LATCH).some(t => t > kbNow153)) SN_TOUCH.notePhys();
+  let phys161 = false;   // patch161 (D4): allocation-free scan (was two Object.values arrays per frame)
+  for (const k in KB) { if (KB[k]) { phys161 = true; break; } }
+  if (!phys161) for (const k in KB_LATCH) { if (KB_LATCH[k] > kbNow153) { phys161 = true; break; } }
+  if (phys161) SN_TOUCH.notePhys();
   if (CINE_ACTIVE) { for (const k of ['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','KeyE','KeyQ']) keys[k] = false; INPUT.tapPulse = INPUT.tapAltPulse = false; return; }
   keys['ArrowLeft']  = !!(kbEff153('ArrowLeft')  || INPUT.left);
   keys['ArrowRight'] = !!(kbEff153('ArrowRight') || INPUT.right);
@@ -5952,9 +6047,11 @@ function autoOperate(dt) {
   else if (S.ev && S.ev.tu === 1 && bypassPct < 90) { action = 'steam_valve'; mode = 'E'; } // grid-emergency warning: pre-open the bypass BEFORE the trip
   else if (S.ev && S.ev.tu === 1) leverT = 12; // and cut below her 25% instruction
   else if (S.turbTrip > 0 && bypassPct < 99) { action = 'steam_valve'; mode = 'E'; } // turbine out: bypass fully open first
+  else if (S.phase === 'power' && S.icOpen && S.ctl.ic !== 'off' && S.p < 7.35 && S.turbTrip <= 0) { action = 'iso_condenser'; mode = 'tap'; } // patch179: an IC latched open by an earlier excursion caps the plant below 285 MWe - the operator closes it (ctl.ic 'off')
   else if (S.p > 7.35 && bypassPct < 100) { action = 'steam_valve'; mode = 'E'; }
   else if (S.phase === 'power' && S.mwe < 285 && bypassPct > 0 && S.turbTrip <= 0) { action = 'steam_valve'; mode = 'Q'; } // pacing pass: her 285 hold vs the bypass dead band (pinned-open bypass caps MWe ~228, measured)
   else if (S.p < 7.05 && bypassPct > 0) { action = 'steam_valve'; mode = 'Q'; }
+  else if (gameState.level === 2 && gameState.l2Stage === 1 && S.phase === 'heatup') leverT = 15; // patch175: L2's turbine trip is scheduled right after sync - arrive there at low power, where her QB_MAX 200 MWt bypass can carry it
   else if (S.turbTrip > 0) leverT = 15; // turbine out: cut power, bypass carries the rest (her QB_MAX)
   else if (S.phase === 'grid') leverT = S.level < 80 ? S.disp / 6 : Math.max(0, Math.min(100, S.disp / 3));
   else if (S.phase === 'power') leverT = 100;
@@ -6044,7 +6141,7 @@ function takeoverOperate(dt) {
       const key = pid === 'order' ? 'recovery_order' : pid === 'rate' ? 'recovery_rate' : pid === 'rods' ? 'recovery_rods'
         : pid === 'press' ? 'recovery_press' : pid === 'bypass' ? 'recovery_bypass' : pid === 'fw' ? 'recovery_fw'
         : pid === 'level' ? 'recovery_level' : pid === 'turb' ? 'recovery_turb' : pid === 'ic' ? 'recovery_ic' : 'recovery_alarm';
-      SN_CINE.offer(key);
+      if (!(SN_WALK.active && snDriverUrgent())) SN_CINE.offer(key);   // patch175: no 5-10 s cinematic over a live emergency during the walkthrough (it blocks the driver's input while the plant keeps running)
     }
   }
   if (TAKEOVER.state === 'shutdown') {
@@ -6309,9 +6406,68 @@ function snShowBtnSync() {
   // patch99: the SHOW button's colour IS the follow state — green while
   // Fluke follows the Chief, red after a stop press.
   const b = document.getElementById('helpBtn'); if (!b) return;
-  if (SN_HELP.showFollow && ASSIST.phase === 'watch' && !TAKEOVER.active && !(typeof SHOWME !== 'undefined' && SHOWME.active)) SN_HELP.showFollow = false;   // the follow ended on its own
+  if (SN_HELP.showFollow && ASSIST.phase === 'watch' && !TAKEOVER.active && !SN_WALK.active && !(typeof SHOWME !== 'undefined' && SHOWME.active)) SN_HELP.showFollow = false;   // the follow ended on its own
   b.classList.toggle('follow-on', !!SN_HELP.showFollow);
   b.classList.toggle('follow-off', !!SN_HELP.showStopped && !SN_HELP.showFollow);
+  const ic173 = document.getElementById('portraitMini');   // patch173: the Chief icon's frame mirrors the follow state
+  if (ic173) { ic173.classList.toggle('follow-on', !!SN_HELP.showFollow); ic173.classList.toggle('follow-off', !!SN_HELP.showStopped && !SN_HELP.showFollow); }
+}
+// patch171 (ship #25): the SHOW walkthrough.  active = the Chief is demonstrating; gap = the level just
+// finished and the next one starts once the level-complete cinematic (if enabled) has played.
+const SN_WALK = { active: false, t0: -9, gap: false, gapT: 0 };
+function snWalkStart() {
+  SN_WALK.active = true; SN_WALK.gap = false; SN_WALK.t0 = T_NOW;
+  SN_HELP.usedHelpOnStep = true; SN_HELP.showFollow = true; SN_HELP.showStopped = false;
+  startTakeover();   // from the player's current state: diagnoses, fixes by procedure, runs to completion
+  snShowBtnSync();
+  snHelpTrace('walk-start', { level: gameState.level });
+  return true;
+}
+function snWalkStop(announce) {
+  if (!SN_WALK.active) return;
+  const wasGap = SN_WALK.gap;
+  SN_WALK.active = false; SN_WALK.gap = false;
+  SN_HELP.showFollow = false; SN_HELP.showStopped = true;
+  if (TAKEOVER.active) { TAKEOVER.active = false; TAKEOVER.state = 'idle'; }
+  if (typeof ASSIST !== 'undefined' && ASSIST.phase === 'takeover') { ASSIST.phase = 'watch'; ASSIST.expl = 0; ASSIST.lastProgT = T_NOW; }
+  if (wasGap) { gameState.phase = 'playing'; try { endGame('complete'); } catch (e) {} }   // interrupted between levels: the finished level scores normally
+  else if (announce) { showCalloutText('Walkthrough off. Your plant, operator.'); chiefSpeak('Walkthrough off. Your plant, operator.', false); }
+  snShowBtnSync();
+  snHelpTrace('walk-stop', { wasGap: wasGap });
+}
+// Any player interaction stops it: keyboard, mouse / trackpad (pointer + wheel), touch, gamepad.  A 0.5 s grace covers
+// the press that started it (a held key repeating, the button's own click).
+function snWalkInput(e) {
+  if (!SN_WALK.active || T_NOW - SN_WALK.t0 < 0.5) return;
+  if (e && e.type === 'keydown' && (e.repeat || /^(Shift|Control|Alt|Meta)/.test(e.code))) return;
+  // patch182: a press ON the SHOW button is the toggle itself, not an interaction stop - its leading
+  // pointerdown/touchstart (or the Enter/Space keydown of a keyboard-activated press) reaches this handler
+  // BEFORE the click reaches snHelpPress, and stopping here reset the state snHelpPress checks, so the
+  // click fell through and restarted the walkthrough.  Leave button-targeted press events to snHelpPress.
+  if (e && e.target && typeof e.target.closest === 'function' && e.target.closest('#helpBtn') &&
+      (e.type === 'pointerdown' || e.type === 'touchstart' || (e.type === 'keydown' && (e.code === 'Enter' || e.code === 'Space')))) return;
+  snWalkStop(true);
+}
+for (const ev of ['pointerdown', 'keydown', 'wheel', 'touchstart']) window.addEventListener(ev, snWalkInput, { capture: true, passive: true });
+function snWalkNextLevel() {
+  const n = gameState.level + 1;
+  SN_WALK.gap = false;
+  startGame(n);   // fresh plant for the next level (restartGame), intro callout
+  SN_WALK.t0 = T_NOW;
+  SN_HELP.showFollow = true; SN_HELP.showStopped = false;
+  startTakeover();
+  snShowBtnSync();
+  snHelpTrace('walk-next', { level: n });
+}
+function snWalkTick(dt) {
+  if (!SN_WALK.active) return;
+  const gp = getGamepad();
+  if (gp && T_NOW - SN_WALK.t0 > 0.5 && (gp.buttons.some(b => b && b.pressed) || Math.abs(gp.axes[0] || 0) > 0.5 || Math.abs(gp.axes[1] || 0) > 0.5)) { snWalkStop(true); return; }
+  if (!SN_WALK.gap && CINE_ACTIVE && snDriverUrgent()) { try { SN_CINE.close(false); SN_CINE.state.queue.length = 0; } catch (e) {} return; }   // patch176: the Chief does not watch a movie over a live emergency
+  if (!SN_WALK.gap) return;
+  SN_WALK.gapT += dt;
+  const cineBusy = CINE_ACTIVE || (SN_CINE.state.active != null) || SN_CINE.state.queue.length > 0;
+  if (SN_WALK.gapT > 2.5 && !cineBusy) snWalkNextLevel();
 }
 function snHelpPress() {
   // patch99 (Kevin, Nov 26 ~00:51-00:54): SHOW is the follow toggle.
@@ -6320,6 +6476,7 @@ function snHelpPress() {
   // button is GREEN while following. Second press: RED — the follow
   // stops and the player has control.
   if (!S || gameState.phase !== 'playing' || DEMO.active || CINE_ACTIVE) return false;
+  if (SN_WALK.active) { snWalkStop(true); return true; }   // patch171: the second press stops the walkthrough
   if (SN_HELP.showFollow) {
     SN_HELP.showFollow = false; SN_HELP.showStopped = true;
     if (ASSIST.phase === 'clip') ASSIST.phase = 'watch';
@@ -6330,13 +6487,7 @@ function snHelpPress() {
     return true;
   }
   if (TAKEOVER.active || ASSIST.phase !== 'watch') return false;
-  SN_HELP.usedHelpOnStep = true;
-  SN_HELP.showFollow = true; SN_HELP.showStopped = false;
-  const ok = SN_HELP.startDemo();
-  if (!ok) SN_HELP.showFollow = false;
-  snShowBtnSync();
-  snHelpTrace('show-start', { ok: !!ok });
-  return ok;
+  return snWalkStart();   // patch171 (ship #25): SHOW = the Chief demonstrates the rest of the level, then the next levels (was: a one-step demo)
 }
 window.snHelpPress = snHelpPress;
 function cycleGuidance() {
@@ -6379,11 +6530,12 @@ function snActionLift(ab, lad, ladD) {
       clear = Math.min(H - fy0 + 8, Math.max(clear, H - bh - 4));
     }
   }
+  clear = Math.min(clear, Math.max(0, H - bh - 4)); // patch180: cap EVERY prompt path (CLIMB UP/DOWN, OPEN, WALK TO share snActionLift) so the button top never crosses the canvas top into the step bar - previously only the lift-above-head branch was capped; strict no-op whenever H permits the nominal 220/122 clear
   ab.style.bottom = (below + clear) + 'px';
 }
 function snHelpActionTick(busy) {
   const H = SN_HELP, ab = document.getElementById('actionBtn');
-  const manual = Object.values(KB).some(v => v) || pointers.size > 0;
+  const manual = snAnyKeyHeld() || pointers.size > 0;   // patch161 (D4)
   if (manual && (H.walkTo || H.climb)) { H.walkTo = null; H.climb = null; INPUT.left = INPUT.right = INPUT.up = INPUT.down = false; }
   if (H.climb && !busy) {
     const c = H.climb;
@@ -6452,7 +6604,7 @@ function snHelpTick(dt) {
   H.lastTargetId = tid;
   // Active-input accounting: PURE IDLE NEVER ACCUMULATES. Standing
   // still, reading or thinking is not stuckness (research §5.3).
-  const active = Object.values(KB).some(v => v) || pointers.size > 0 || Math.abs(player.vx || 0) > 5 || player.onLadder;
+  const active = snAnyKeyHeld() || pointers.size > 0 || Math.abs(player.vx || 0) > 5 || player.onLadder;   // patch161 (D4)
   if (active) H.activeNoProg += dt;
   if (H.guidance === 'request') return;
   const fade = 1 + 0.5 * Math.min(2, H.hist['s' + step] || 0);
@@ -6648,6 +6800,27 @@ function flukeStep(tx, tf) {
   if (Math.abs(pcx - tx) > 9) { if (tx < pcx) INPUT.left = true; else INPUT.right = true; return false; }
   return true;
 }
+// patch174: where Fluke stands for a panel so that the game's own nearest-interactable rule (hypot of
+// centres, < 80) picks THAT panel - neighbours (the feed pump sits beside the isolation condenser)
+// otherwise steal the tap.  Prefers the side he arrives from, then the other, then closer in, then centred.
+function snStandX(pin, side) {
+  const cx = pin.x + pin.w / 2, py = pin.y + pin.h - player.h / 2, d = [56, 36, 16];
+  const floorY = pin.y + pin.h;
+  const onDeck = sx => platforms.some(pl => Math.abs(pl.y - floorY) < 8 && sx - player.w / 2 >= pl.x && sx + player.w / 2 <= pl.x + pl.w);   // patch177: he must stand ON the pin's deck, not drop off its edge
+  const wins = sx => {
+    if (!onDeck(sx)) return false;
+    const d0 = Math.hypot(cx - sx, pin.y + pin.h / 2 - py);
+    if (d0 >= 80) return false;
+    for (const it of interactables) if (it !== pin && Math.hypot(it.x + it.w / 2 - sx, it.y + it.h / 2 - py) <= d0) return false;
+    return true;
+  };
+  for (const o of d) { if (wins(cx + side * o)) return cx + side * o; if (wins(cx - side * o)) return cx - side * o; }
+  return cx;
+}
+// patch175: something the driver must answer NOW (it cannot spend ten seconds walking to the panel)
+function snDriverUrgent() {
+  return !!(S && (S.turbTrip > 0 || (S.ev && S.ev.tu === 1) || !S.fwOK || S.p > 7.5 || S.level < 85));
+}
 function guideTick(dt) {
   const on = !!(DEMO.active || TAKEOVER.active) && gameState.phase === 'playing';
   if (on && !SHOWME.active) { SHOWME.active = true; SHOWME.seqDone = true; guideSpawn(); }
@@ -6658,7 +6831,7 @@ function guideTick(dt) {
   const key = (TAKEOVER.active ? 'TK' : 'DM') + '|' + gameState.procedureStep + '|' + pin.id;
   if (key !== SHOWME.segKey) {
     SHOWME.segKey = key; SHOWME.phase = 'walk'; SHOWME.walkT = 0;
-    SHOWME.flukeStandX = pin.x + pin.w / 2 + ((player.x + player.w / 2) >= pin.x + pin.w / 2 ? 56 : -56);
+    SHOWME.flukeStandX = snStandX(pin, (player.x + player.w / 2) >= pin.x + pin.w / 2 ? 1 : -1);   // patch174: was a fixed +/-56 px, which handed the feed-pump taps to the neighbouring isolation condenser
     SHOWME._pf = guideFloorOf(player.y + player.h);
     SHOWME.trace.push({ ev: 'segment', key, t: +T_NOW.toFixed(1) });
   }
@@ -6667,8 +6840,9 @@ function guideTick(dt) {
     INPUT.operate = INPUT.operateAlt = false; INPUT.tapPulse = INPUT.tapAltPulse = false;
     const cArr = chiefStep(dt, pin.x + pin.w / 2, pin.floor);
     const fArr = flukeStep(SHOWME.flukeStandX, pin.floor);
-    if ((cArr && fArr) || SHOWME.walkT > 30) {
-      if (SHOWME.walkT > 30) {
+    const urgent175 = (snDriverUrgent() || SN_PACE.effective > 1.5) && SHOWME.walkT > 0.25;   // patch175: emergencies - and boosted-clock stretches, where a 10 s walk is 100 s of unattended plant - skip the walk
+    if ((cArr && fArr) || SHOWME.walkT > 30 || urgent175) {
+      if (SHOWME.walkT > 30 || urgent175) {
         SHOWME.chief.x = pin.x + pin.w / 2; SHOWME.chief.floor = pin.floor; SHOWME.chief.y = guideFloorY(pin.floor) - 70; SHOWME.chief.climbing = false;
         player.x = SHOWME.flukeStandX - player.w / 2; player.y = guideFloorY(pin.floor) - player.h; player.vy = 0;
         SHOWME.trace.push({ ev: 'walk-failsafe', key, t: +T_NOW.toFixed(1) });
@@ -6686,6 +6860,7 @@ function guideTick(dt) {
     return;
   }
   if (SHOWME.phase === 'operate') {
+    if (pin && player.interactTarget !== pin && (TAKEOVER.active || DEMO.active)) demoPin();   // patch178: operate presses must reach the pinned panel, not a neighbour
     INPUT.left = INPUT.right = INPUT.up = INPUT.down = false;
     SHOWME.chief.moving = false;
     SHOWME.opT = (SHOWME.opT || 0) + dt;   // patch122
@@ -7062,7 +7237,10 @@ const SN_TOUCH = (() => {
       if (pop.guardOpen && ly > soY(150)) { pop.grab = { id, kind: 'hold', fx: 'slcFire', t: performance.now() }; return; }
       return;
     }
-    if (a === 'ari_button' && ly > soY(130)) { actuateARI(); return; }
+    if (a === 'ari_button' && ly > soY(130)) {
+      if (lx < r.w / 2) { pop.grab = { id, kind: 'hold', fx: 'scramFire', t: performance.now() }; snTick(880, 0.04, 0.06); return; }   // patch162: left half = SCRAM (hold), right half = ARI (tap)
+      actuateARI(); return;
+    }
     if (a === 'rcic_panel' && ly > soY(140)) {
       const modes = ['auto', 'on', 'off']; const idx = modes.indexOf(S.ctl.rcic);
       S.ctl.rcic = modes[(idx + 1) % 3]; SN_SFX.switchThrow(); showFaultBanner('RCIC mode: ' + S.ctl.rcic.toUpperCase()); snTick(300, 0.07, 0.1); return;
@@ -7096,8 +7274,9 @@ const SN_TOUCH = (() => {
   // 159's normal-ops UI.
   const SNAP159 = { rod_withdraw: [0, 20, 39, 58, 100], raise_power: [0, 95, 100], steam_valve: [0, 100], isolate_leak: [0, 100] };
   const SNAP_WIN159 = 2;   // patch159: snap window — strictly inside +/-2 (a value exactly 2 away, e.g. rod 41 vs the 39 point, does NOT snap)
-  function snapTarget(a, v) {
+  function snapTarget(a, v, from) {
     const pts = SNAP159[a]; if (!pts || v == null) return v;
+    if (from != null && pts.indexOf(from) >= 0 && Math.abs(v - from) < SNAP_WIN159) return v;   // patch168: a fine step OFF the detent you stand on is free (it used to snap straight back, so the lever could never leave 0 / 100 / a band edge by +/-1)
     for (const p of pts) if (Math.abs(v - p) < SNAP_WIN159) return p;
     return v;
   }
@@ -7106,7 +7285,7 @@ const SN_TOUCH = (() => {
       : a === 'steam_valve' ? (pop.target.bypass ?? bypassPct)
       : a === 'isolate_leak' ? (pop.target.leak ?? pop.leakPct ?? 0) : null;
     if (cur == null) return;
-    const v = snapTarget(a, Math.max(0, Math.min(100, abs != null ? abs : cur + d)));
+    const v = snapTarget(a, Math.max(0, Math.min(100, abs != null ? abs : cur + d)), abs != null ? null : cur);   // patch168: cur = the step's origin
     if (a === 'rod_withdraw' || a === 'raise_power') pop.target.lever = v;
     else if (a === 'steam_valve') pop.target.bypass = v;
     else pop.target.leak = v;
@@ -7191,6 +7370,7 @@ const SN_TOUCH = (() => {
       if (held >= 0.8 && !pop.holdFx) {
         pop.holdFx = pop.grab.fx;
         if (pop.grab.fx === 'fwRestart') { BWR.inject(S, 'fw'); SN_SFX.pumpStart(); SN_SFX.holdDone(); showFaultBanner('Main feedwater pump restarted.'); }
+        if (pop.grab.fx === 'scramFire') { SN_SFX.switchThrow(); SN_SFX.holdDone(); snManualScram(); }   // patch162
         if (pop.grab.fx === 'slcFire') { S.ctl.slc = !S.ctl.slc; SN_SFX.switchThrow(); if (S.ctl.slc) SN_SFX.hiss(1.1, 0.13); SN_SFX.holdDone(); showFaultBanner('SLC boron injection: ' + (S.ctl.slc ? 'ON — tank ' + Math.round(S.tank) + '%' : 'OFF')); }
         snTick(110, 0.1, 0.13); pop.grab = null;
       }
@@ -7547,8 +7727,12 @@ const SN_TOUCH = (() => {
       }
     } else if (a === 'ari_button') {
       readout(r, S.atws ? 'ATWS — ARI AVAILABLE' : 'ARI ARMED · NO ATWS');
-      mushroom(cx, r.y + soY(182), srY(44), '#b01515', '#e84a4a');
-      ctx.fillStyle = '#fff'; ctx.font = 'bold 14px Courier New'; ctx.textAlign = 'center'; ctx.fillText('ARI', cx, r.y + soY(188));
+      mushroom(cx + 62, r.y + soY(182), srY(44), '#b01515', '#e84a4a');   // patch162: ARI right (tap) ...
+      ctx.fillStyle = '#fff'; ctx.font = 'bold 14px Courier New'; ctx.textAlign = 'center'; ctx.fillText('ARI', cx + 62, r.y + soY(188));
+      mushroom(cx - 62, r.y + soY(182), srY(44), '#5c0d0d', '#c0392b');   // ... SCRAM left (hold)
+      ctx.fillStyle = '#fff'; ctx.font = 'bold 12px Courier New'; ctx.fillText('SCRAM', cx - 62, r.y + soY(187));
+      ctx.fillStyle = '#9fd8ff'; ctx.font = '11px Courier New'; ctx.fillText('HOLD: SCRAM  \u00b7  TAP: ARI', cx, r.y + soY(240));
+      if (pop.grab && pop.grab.kind === 'hold' && pop.grab.fx === 'scramFire') { ctx.fillStyle = '#e5484d'; ctx.fillRect(cx - 62 - 40, r.y + soY(222), 80 * Math.min(1, (performance.now() - pop.grab.t) / 800), 5); }
     } else if (a === 'rcic_panel') {
       readout(r, 'RCIC MODE: ' + S.ctl.rcic.toUpperCase() + (S.rcicOn ? ' · RUNNING' : ''));
       const modes = ['auto', 'on', 'off'];
@@ -8118,6 +8302,8 @@ g.fillStyle = '#f5c81e'; g.beginPath(); g.arc(4, -50, 3, 0, Math.PI * 2); g.fill
   window.addEventListener('keydown', e => { if (e.repeat) return; if (dismissArmed()) { e.stopPropagation(); dismiss(); } }, true);
   function offer(key) {
     const def = DEFS[key]; if (!def) return;
+    if (typeof SN_WALK !== 'undefined' && SN_WALK.active && !SN_WALK.gap && key !== 'level_complete') { state.log.push({ key, dur_s: 0, dismissed: false, dropped: 'walkthrough_driving' }); return; }   // patch176: the walkthrough's driver must keep the controls
+    if (typeof SN_AUDIO !== 'undefined' && !SN_AUDIO.cine) { state.log.push({ key, dur_s: 0, dismissed: false, dropped: 'cinematics_off' }); return; }   // patch172: cinematics OFF - skipped entirely, no video, no audio
     if (typeof gameState !== 'undefined' && gameState.phase === 'scored') { state.log.push({ key, dur_s: 0, dismissed: false, dropped: 'game_ended' }); return; }   // patch130b: no cinematic starts over the score screen (the deliberate endGame offer precedes the phase flip)
     if (state.played.has(key)) { state.log.push({ key, dur_s: 0, dismissed: false, dropped: 'once_per_run' }); return; }   // patch109: already played this run — the trigger still counts, the video does not replay
     if (state.active && state.active.key === key) return;
@@ -8182,9 +8368,10 @@ window.SN_DUCK = SN_DUCK;
 // (music + ambience + cinematic audio) and SFX (effects + the
 // Chief's voice). CHIEF.muted keeps its long-standing meaning as
 // the SFX-side gate so every existing voice/effect check holds.
-const SN_AUDIO = { audio: true, sfx: true };
+const SN_AUDIO = { audio: true, sfx: true, cine: true };   // patch172: cine = cinematics on/off (default on)
 try {
   SN_AUDIO.audio = localStorage.getItem('sn.audio') !== 'off';
+  SN_AUDIO.cine = localStorage.getItem('sn.cine') !== 'off';   // patch172: persisted the way the audio choice is
   SN_AUDIO.sfx = localStorage.getItem('sn.sfx') !== 'off';
   if (!localStorage.getItem('sn.sfx') && localStorage.getItem('sn_chief_muted') === '1') SN_AUDIO.sfx = false;
 } catch (e) {}
@@ -8303,6 +8490,14 @@ function snSyncAudioBtns() {
   const a = document.getElementById('audioBtn'), s = document.getElementById('sfxBtn');
   if (a) a.textContent = 'AUDIO: ' + (SN_AUDIO.audio ? 'ON' : 'OFF');
   if (s) s.textContent = 'SFX: ' + (SN_AUDIO.sfx ? 'ON' : 'OFF');
+  const c = document.getElementById('cineBtn'); if (c) c.textContent = 'CINE: ' + (SN_AUDIO.cine ? 'ON' : 'OFF');   // patch172
+}
+function toggleCine(ev) {   // patch172 (ship #25): CINE = the achievement / recovery cinematics, video and sound
+  if (ev) ev.stopPropagation();
+  SN_AUDIO.cine = !SN_AUDIO.cine;
+  try { localStorage.setItem('sn.cine', SN_AUDIO.cine ? 'on' : 'off'); } catch (e) {}
+  if (!SN_AUDIO.cine) { try { if (SN_CINE.state.active) SN_CINE.close(false); SN_CINE.state.queue.length = 0; } catch (e) {} }   // switching off closes the running one and empties the queue
+  snSyncAudioBtns();
 }
 function toggleAudio(ev) {   // patch134: AUDIO = music + ambience + cinematic audio
   if (ev) ev.stopPropagation();
@@ -11543,6 +11738,10 @@ function endGame(outcome) {
   SN_STOP_ALL_MEDIA();   // patch130 (Kevin, Nov 26 ~10:12): game end stops every video and audio source; the deliberate end-flow media below (level_complete cinematic) starts after the stop
   if (outcome === 'complete') { achFire(gameState.level === 3 ? 'shift_complete' : 'full_power'); if (gameState.level !== 3) SN_CINE.offer('level_complete'); triggerCelebrate(); flukeSay('Hail to the king of the core.'); }
   if (outcome === 'scram' || outcome === 'failed') triggerStartle();
+  if (SN_WALK.active) {   // patch171: the walkthrough carries on to the next level; only a finished final level (or a trip) ends it
+    if (outcome === 'complete' && gameState.level < 3) { gameState.phase = 'scored'; SN_WALK.gap = true; SN_WALK.gapT = 0; TAKEOVER.active = false; TAKEOVER.state = 'idle'; showCalloutText('Level complete. On to the next one \u2014 stay on the controls if you want it.'); return; }
+    SN_WALK.active = false; SN_WALK.gap = false; SN_HELP.showFollow = false;
+  }
   gameState.phase = 'scored';
   const elapsed = (Date.now() - gameState.startTime) / 1000;
   // patch117 (Kevin, Nov 26 ~02:28): SIMPLIFIED SCORING. A step
@@ -11742,6 +11941,8 @@ function gameLoop(ts) {
   if (gameState.phase === 'playing' && !player.onLadder && Math.abs(player.vx || 0) > 20) { SNX.stepAcc = (SNX.stepAcc || 0) + Math.abs(player.vx) * dt; if (SNX.stepAcc > 52) { SNX.stepAcc = 0; SNX.stepAlt = !SNX.stepAlt; SN_SFX.step(SNX.stepAlt); } }
 
   handleGamepad();
+  snScramHoldTick(dt);   // patch162
+  snWalkTick(dt);   // patch171
   // 280 ms hold-gate flip: re-sync once when a stationary operate press goes
   // deliberate (a full per-frame sync would fight SN_TOUCH's walk driver).
   for (const p of pointers.values()) if (p.role === 'operate' && !p.gateFired && performance.now() - p.t >= 280) { p.gateFired = true; syncPointerInput(); }
@@ -11852,11 +12053,12 @@ ASSIST.summon = function () {
   if (cvEl) {
     let lpTimer = 0, lpX = 0, lpY = 0, lastTapT = 0, lastTapX = 0;
     cvEl.addEventListener('pointerdown', e => {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;   // patch161 (D3): a right-button double-click must not open the map
       lpX = e.clientX; lpY = e.clientY;
       const now = performance.now();
       if (now - lastTapT < 330 && Math.abs(e.clientX - lastTapX) < 60) {
         lastTapT = 0;
-        if (gameState.phase === 'playing' && !SN_TOUCH.pop) { openMap(); SN_SFX.uiOpen(); }
+        if (gameState.phase === 'playing' && !SN_TOUCH.pop) { openSchematic(); SN_SFX.uiOpen(); }   // patch167: was openMap() - undefined
       } else { lastTapT = now; lastTapX = e.clientX; }
       // patch138 (Kevin, Nov 26): NO press-and-hold summon — buttons
       // are navigation and action only; help starts ONLY from SHOW.
@@ -11977,18 +12179,6 @@ document.getElementById('titleScreen').addEventListener('pointerdown', function(
     e.preventDefault();
     startGame();
   }
-});
-
-// =====================================================================
-//  KEYBOARD TRACK (for analog differentiation)
-// =====================================================================
-window.addEventListener('keydown', e => {
-  if (e.code === 'KeyE') keys['KeyE_keyboard'] = true;
-  if (e.code === 'KeyQ') keys['KeyQ_keyboard'] = true;
-});
-window.addEventListener('keyup', e => {
-  if (e.code === 'KeyE') keys['KeyE_keyboard'] = false;
-  if (e.code === 'KeyQ') keys['KeyQ_keyboard'] = false;
 });
 
 // =====================================================================
@@ -12231,8 +12421,12 @@ window.__SN__ = {
     try { v.pause(); } catch (err) {}
     v.style.display = 'none';
     window.removeEventListener('pointerdown', end, true);
+    window.removeEventListener('keydown', endKey, true);
   }
   window.addEventListener('pointerdown', end, true);
+  // patch161 (D2): a key skips the splash too (browser / OS shortcuts and bare modifiers excepted)
+  const endKey = e => { if (e.ctrlKey || e.metaKey || e.altKey || /^(Shift|Control|Alt|Meta|F\d+)/.test(e.code)) return; end(e); };
+  window.addEventListener('keydown', endKey, true);
   v.addEventListener('ended', () => end());
   setTimeout(() => end(), 7000);
   const p = v.play();
