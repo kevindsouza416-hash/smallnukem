@@ -12,8 +12,8 @@ Player character: Fluke Nukem. Guide: the Chief, in a brass CRT TV window.
 Failures end in safe shutdown, never an explosion. Audience 15–30;
 no childish framing, no multiplayer, no 3D.
 
-**Current build: ship #24 — `game/small-nukem.html`, 1,082,451 B,
-MD5 `6dc80315b5ef9fb69d537227c3411ab0`.** Live at
+**Current published build: ship #24 — `game/small-nukem.html` on `main`, 1,082,451 B,
+MD5 `6dc80315b5ef9fb69d537227c3411ab0`. (Branch `claude/festive-pasteur-l8clmg` carries the unpublished ship #25 build, `fad27ff3…` — see §10.)** Live at
 https://nuke.absolutejoker.ca (playtests use this URL only, never a
 local address, and verify the loaded build is not a stale cached copy).
 
@@ -391,8 +391,11 @@ State of the project as of this file (2026-11-26):
   `b7c6970f611dca5f73f4ba5a5d06bee4`; controls/input stack: dwell
   popup, canvas text, hold input, camera, keyboard, touch zones).
   Patch 150 (SHOW) was reserved and **not** used — no SHOW patch shipped.
-- [ ] **SHOW walkthrough — ruled by Kevin Nov 26 ~22:14–22:19 EST;
-  ship #25 scope, not yet built.** Pressing SHOW starts the Chief's
+- [x] **Ship #25 built on branch `claude/festive-pasteur-l8clmg` (Nov 27,
+  not published — see `docs/SHIP-LOG.md` Ship #25 and `docs/AUDIT-2026-11-27.md`):
+  branch build `fad27ff3ed0fa1391c14029817466be5`, 1,096,485 B, suite 589/589.
+  The three items below are DONE there (patches 171–173).** Original scope:
+- [x] **SHOW walkthrough — ruled by Kevin Nov 26 ~22:14–22:19 EST.** Pressing SHOW starts the Chief's
   demo of whatever remains of the player's current level; when that
   level's demo finishes, the game advances on its own to the next
   level and demos it, continuing level by level until the player

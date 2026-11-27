@@ -6788,6 +6788,20 @@ function flukeStep(tx, tf) {
   if (Math.abs(pcx - tx) > 9) { if (tx < pcx) INPUT.left = true; else INPUT.right = true; return false; }
   return true;
 }
+// patch174: where Fluke stands for a panel so that the game's own nearest-interactable rule (hypot of
+// centres, < 80) picks THAT panel - neighbours (the feed pump sits beside the isolation condenser)
+// otherwise steal the tap.  Prefers the side he arrives from, then the other, then closer in, then centred.
+function snStandX(pin, side) {
+  const cx = pin.x + pin.w / 2, py = pin.y + pin.h - player.h / 2, d = [56, 36, 16];
+  const wins = sx => {
+    const d0 = Math.hypot(cx - sx, pin.y + pin.h / 2 - py);
+    if (d0 >= 80) return false;
+    for (const it of interactables) if (it !== pin && Math.hypot(it.x + it.w / 2 - sx, it.y + it.h / 2 - py) <= d0) return false;
+    return true;
+  };
+  for (const o of d) { if (wins(cx + side * o)) return cx + side * o; if (wins(cx - side * o)) return cx - side * o; }
+  return cx;
+}
 function guideTick(dt) {
   const on = !!(DEMO.active || TAKEOVER.active) && gameState.phase === 'playing';
   if (on && !SHOWME.active) { SHOWME.active = true; SHOWME.seqDone = true; guideSpawn(); }
@@ -6798,7 +6812,7 @@ function guideTick(dt) {
   const key = (TAKEOVER.active ? 'TK' : 'DM') + '|' + gameState.procedureStep + '|' + pin.id;
   if (key !== SHOWME.segKey) {
     SHOWME.segKey = key; SHOWME.phase = 'walk'; SHOWME.walkT = 0;
-    SHOWME.flukeStandX = pin.x + pin.w / 2 + ((player.x + player.w / 2) >= pin.x + pin.w / 2 ? 56 : -56);
+    SHOWME.flukeStandX = snStandX(pin, (player.x + player.w / 2) >= pin.x + pin.w / 2 ? 1 : -1);   // patch174: was a fixed +/-56 px, which handed the feed-pump taps to the neighbouring isolation condenser
     SHOWME._pf = guideFloorOf(player.y + player.h);
     SHOWME.trace.push({ ev: 'segment', key, t: +T_NOW.toFixed(1) });
   }
