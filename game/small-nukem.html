@@ -6516,7 +6516,7 @@ function snActionLift(ab, lad, ladD) {
   const cr = cv.getBoundingClientRect(), gr = gc.getBoundingClientRect();
   const below = Math.max(0, Math.round(gr.bottom - cr.bottom));   // container px below the canvas (gauge deck)
   const ladderShown = player.onLadder || (lad && ladD < 78);
-  const key = (ladderShown ? 'L' : '-') + '|' + below + '|' + Math.round(w2sY(player.y) / 16) + '|' + Math.round(w2sX(player.x) / 16) + '|' + ab.offsetWidth + 'x' + ab.offsetHeight;
+  const key = (ladderShown ? 'L' : '-') + '|' + below + '|' + Math.round(w2sY(player.y) / 16) + '|' + Math.round(w2sX(player.x) / 16) + '|' + ab.offsetWidth + 'x' + ab.offsetHeight + '|' + H;
   if (key === _snLiftKey) return;
   _snLiftKey = key;
   let clear = ladderShown ? 220 : 122;                            // canvas px above the canvas bottom edge
