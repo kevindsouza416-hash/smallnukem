@@ -393,7 +393,7 @@ State of the project as of this file (2026-11-26):
   Patch 150 (SHOW) was reserved and **not** used — no SHOW patch shipped.
 - [x] **Ship #25 built on branch `claude/festive-pasteur-l8clmg` (Nov 27,
   not published — see `docs/SHIP-LOG.md` Ship #25 and `docs/AUDIT-2026-11-27.md`):
-  branch build `fad27ff3ed0fa1391c14029817466be5`, 1,096,485 B, suite 589/589.
+  branch build `dabc0f8e7291026dd2bf02fd8ad1f3a3`, 1,099,759 B, suite 598/598.
   The three items below are DONE there (patches 171–173).** Original scope:
 - [x] **SHOW walkthrough — ruled by Kevin Nov 26 ~22:14–22:19 EST.** Pressing SHOW starts the Chief's
   demo of whatever remains of the player's current level; when that
