@@ -1056,7 +1056,13 @@ body.chief-speaking .guide-speech { font-size: 14px; color: #ffffff; }   /* patc
   atlasCtx.fillStyle = '#ffffff';
   atlasCtx.fillRect(0, 0, 2, 2); // white pixel cell at origin
   var WHITE = { u0: 0.25 / ATLAS_SIZE, v0: 0.25 / ATLAS_SIZE, u1: 1.75 / ATLAS_SIZE, v1: 1.75 / ATLAS_SIZE };
-  var shelves = [{ y: 0, h: 4, x: 2 }];
+  // patch184: a permanently transparent cell beside the white one (x 2..4 on
+  // the reserved first shelf; never painted, and the shelf now starts handing
+  // out space at x = 4 so nothing allocates over it) - the fallback region
+  // for image draws when the atlas is full, so a sprite can never be painted
+  // as a white quad.
+  var CLEAR = { u0: 2.25 / ATLAS_SIZE, v0: 0.25 / ATLAS_SIZE, u1: 3.75 / ATLAS_SIZE, v1: 1.75 / ATLAS_SIZE };
+  var shelves = [{ y: 0, h: 4, x: 4 }];
   var atlasDirty = true;
   var atlasGen = 0; // bumped on every atlas change; surfaces upload per generation (patch6)
   var atlasFullUpload = true;
@@ -1439,6 +1445,35 @@ body.chief-speaking .guide-speech { font-size: 14px; color: #ffffff; }   /* patc
     atlasMarkDirty(cell.x, cell.y, w, h);
     reg = { u0: cell.x / ATLAS_SIZE, v0: cell.y / ATLAS_SIZE, u1: (cell.x + w) / ATLAS_SIZE, v1: (cell.y + h) / ATLAS_SIZE };
     patternRegions.set(src, reg);
+    return reg;
+  }
+
+  // patch184 (Kevin, 2026-11-27 - the white border around Fluke, removed
+  // completely): drawImage sources get their OWN atlas regions with a 1 px
+  // transparent moat. patternRegion() packs images edge-to-edge against
+  // their neighbours, and the shader samples with LINEAR filtering and no
+  // inset, so a quad-edge tap straddles the region boundary and pulls in
+  // whatever cell sits next door - white glyph strokes or the white
+  // fallback cell read as a light border around the sprite (most visible
+  // while walking, when the walk frames cycle and the edge shimmers). With
+  // the moat, an edge tap can only ever reach this image's own transparent
+  // padding. If the atlas is full the region falls back to CLEAR (fully
+  // transparent) instead of WHITE: a missing sprite draws nothing, never a
+  // white quad. createPattern fills keep patternRegion() - patterns tile
+  // via fract() and rely on wrap, so they must not gain a moat.
+  var imageRegions = new Map();
+  function imageRegion(src) {
+    if (imageRegions.has(src)) return imageRegions.get(src);
+    var w = src.width || 0, h = src.height || 0;
+    if (!w || !h) return patternRegion({ src: src });
+    var cell = atlasAlloc(w + 2, h + 2);
+    var reg;
+    if (!cell) { reg = { u0: CLEAR.u0, v0: CLEAR.v0, u1: CLEAR.u1, v1: CLEAR.v1 }; imageRegions.set(src, reg); return reg; }
+    atlasCtx.clearRect(cell.x, cell.y, w + 2, h + 2);
+    try { atlasCtx.drawImage(src, cell.x + 1, cell.y + 1); } catch (e) {}
+    atlasMarkDirty(cell.x, cell.y, w + 2, h + 2);
+    reg = { u0: (cell.x + 1) / ATLAS_SIZE, v0: (cell.y + 1) / ATLAS_SIZE, u1: (cell.x + 1 + w) / ATLAS_SIZE, v1: (cell.y + 1 + h) / ATLAS_SIZE };
+    imageRegions.set(src, reg);
     return reg;
   }
 
@@ -1880,7 +1915,7 @@ body.chief-speaking .guide-speech { font-size: 14px; color: #ffffff; }   /* patc
   GLShim.prototype.drawImage = function (src, a, b, c, d, e, f, g2, h) {
     // Implemented Nov 25 (was a no-op stub — sprites and the
     // steam wisps silently never drew). Source uploads into the
-    // atlas via patternRegion(); the quad carries explicit UVs
+    // atlas via imageRegion() (patch184: padded); the quad carries explicit UVs
     // in fract() space, exactly like pattern fills (mode 2).
     if (!src || this.lost) return;
     var iw = src.width || 0, ih = src.height || 0;
@@ -1891,7 +1926,7 @@ body.chief-speaking .guide-speech { font-size: 14px; color: #ffffff; }   /* patc
     else if (arguments.length === 9) { sx = a; sy = b; sw = c; sh = d; dx = e; dy = f; dw = g2; dh = h; }
     else return;
     if (!dw || !dh || !sw || !sh) return;
-    var reg = patternRegion({ src: src });
+    var reg = imageRegion(src);   // patch184: padded image region (patternRegion is unpadded - its edge taps bled neighbouring atlas cells into a light border around sprites)
     var ga = this.state.globalAlpha;
     var col = { r: ga, g: ga, b: ga, a: ga, mode: 2, reg: reg, tileW: 1, tileH: 1, grad: [0, 0, 0, 0], greg: { u0: 0, u1: 0, v: 0 } };
     var st5 = this.snSteam;   // patch143: mode-5 steam state, set by the game around a particle draw (see steamFXTick); tint replaces the replicated-alpha rgb, erosion data rides aGrad, the noise rect rides aGReg
