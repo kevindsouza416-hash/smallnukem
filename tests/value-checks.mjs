@@ -449,7 +449,7 @@ chk('patch99: the ASK control is SHOW (Kevin, Nov 26 ~00:52)', html.includes('>S
 chk('patch87: offer visibility gate is 20 s on the step', html.includes('function snHelpOfferReady() { return T_NOW - (SN_HELP.stepT0 || 0) >= 20; }'), '');
 chk('patch99 supersedes patch87: the offer function never shows anything', html.includes('the assist offer pop-up is REMOVED'), '');
 chk('patch87: step clock restarts with the step counters', html.includes('SN_HELP.stepT0 = T_NOW;'), '');
-chk('patch99 supersedes patch87: SHOW starts the demo directly (no gated offer path)', html.includes('const ok = SN_HELP.startDemo();'), '');
+chk('patch99 supersedes patch87: SHOW starts the demo directly (no gated offer path)', html.includes('return snWalkStart();   // patch171 (ship #25)')   /* ship #25: SHOW starts the walkthrough (was SN_HELP.startDemo()) */, '');
 chk('patch93: the top-row buttons are border-box on an equal flex basis', html.includes('#paceBtn { order: 1; flex: 1 1 0; box-sizing: border-box; }') && html.includes('#takeoverBtn { order: 2; flex: 1.3 1 0; box-sizing: border-box; }'), '');
 
 // ---- 27. Deck rule, free movement, marking rules (patch88, Kevin Nov 26) ----
@@ -516,7 +516,7 @@ chk('patch96: fade tick wired into the loop, 2 s after the line', html.includes(
 chk('patch96: collapsed at level start', html.includes("document.getElementById('guideBarExpanded').style.display = 'none';"), '');
 chk('patch97: TAKEOVER = MAP = SHOW font (bold 16px Courier)', html.includes("#takeoverBtn { position: static; background: #0e2438;") && !html.includes("font: bold 22px 'Courier New'") && !html.includes("font: bold 24px 'Courier New'") && !html.includes('font: 700 24px system-ui'), '');
 chk('patch99: offer pop-up removed (never shows)', html.includes('#demoOffer { display: none !important; }') && html.includes('the assist offer pop-up is REMOVED'), '');
-chk('patch99: SHOW starts the demo directly, toggle stops it', html.includes('SN_HELP.showFollow = true; SN_HELP.showStopped = false;') && html.includes('const ok = SN_HELP.startDemo();'), '');
+chk('patch99: SHOW starts the demo directly, toggle stops it', html.includes('SN_HELP.showFollow = true; SN_HELP.showStopped = false;') && html.includes('return snWalkStart();   // patch171 (ship #25)')   /* ship #25: SHOW starts the walkthrough (was SN_HELP.startDemo()) */, '');
 chk('patch99: button green while following, red when stopped', html.includes('#helpBtn.follow-on { background: #14532d;') && html.includes('#helpBtn.follow-off { background: #5a1616;'), '');
 chk('patch99: Chief-continue click-gate removed (demo runs through)', html.includes("SHOWME.phase = 'operate'; SHOWME.opT = 0; guideNarrate(pin); guideShowGate(false);") && !html.includes("SHOWME.phase = 'gate'; guideNarrate(pin); guideShowGate(true);"), '');
 chk('patch99: follow floor flip is position-derived (no mid-climb band)', html.includes('if (player.onGround && !player.onLadder && guideFloorOf(feet) === tf) { SHOWME._pf = tf;'), '');
@@ -1066,6 +1066,16 @@ chk('p169: an all-normal plant re-arms the auto-expand', html.includes('if (hasA
 // ---- patch170 (controls audit): an auto-opened deck yields to the control sheet ----
 chk('p170: autoExpandDeck marks the deck as game-opened; any manual toggle clears the mark', html.includes('deckExpanded = true; deckAutoOpened = true;') && html.includes("deckAutoOpened = false;   // patch170: any manual toggle makes the deck the player's"), '');
 chk('p170: updateDeckAutoClose closes a game-opened deck as soon as a control sheet is open (player-opened decks are left alone)', html.includes('if (deckExpanded && deckAutoOpened && typeof SN_TOUCH !== \'undefined\' && SN_TOUCH.pop) {'), '');
+
+// ---- patch171 (SHIP #25): the SHOW walkthrough ----
+chk('s25 walk: SHOW starts the Chief demo of the rest of the CURRENT level via the takeover driver (from the current state, no restart)', html.includes('function snWalkStart() {') && html.includes('startTakeover();   // from the player\'s current state'), '');
+chk('s25 walk: any keyboard / mouse / wheel / touch input stops it (capture listeners, 0.5 s start grace, key repeat and bare modifiers ignored)', html.includes("for (const ev of ['pointerdown', 'keydown', 'wheel', 'touchstart']) window.addEventListener(ev, snWalkInput, { capture: true, passive: true });") && html.includes('T_NOW - SN_WALK.t0 < 0.5') && html.includes('e.repeat'), '');
+chk('s25 walk: gamepad input stops it too', html.includes("gp.buttons.some(b => b && b.pressed)"), '');
+chk('s25 walk: a second SHOW press stops it (green/red follow toggle stands)', html.includes('if (SN_WALK.active) { snWalkStop(true); return true; }') && html.includes('!SN_WALK.active && !(typeof SHOWME'), '');
+chk('s25 walk: a completed non-final level advances on its own to the next one (waits for the level-complete cinematic)', html.includes("outcome === 'complete' && gameState.level < 3") && html.includes('const n = gameState.level + 1;') && html.includes('SN_WALK.gapT > 2.5 && !cineBusy'), '');
+chk('s25 walk: a finished final level or a trip ends the walkthrough and scores normally', html.includes('SN_WALK.active = false; SN_WALK.gap = false; SN_HELP.showFollow = false;\n  }\n  gameState.phase = \'scored\';'), '');
+chk('s25 walk: steps it completes are DEMO-ASSISTED (+50) through ASSIST.assisted; the marks are now per-run', html.includes('if (SN_WALK.active && ASSIST.assisted.indexOf(i) < 0) ASSIST.assisted.push(i);') && html.includes('ASSIST.assisted.length = 0;'), '');
+chk('s25 walk: the demo mechanics are unchanged - the 30 s cap / pacing layer / takeover driver are still the only drivers (no new physics, no new clock)', html.includes('function takeoverOperate(dt) {') && html.includes('function paceTick() {') && !/SN_WALK[^\n]*updatePhysics/.test(html), '');
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);
 
