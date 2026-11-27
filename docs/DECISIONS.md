@@ -211,6 +211,8 @@ Kevin's ruling, verbatim: "There shouldn't be any deliberate differences."
 - M2 is re-gated as a fidelity gate: tests/value-checks.mjs asserts her
   values and behaviours (86 checks).
 
+**Exception adopted 2026-11-27 (ship #25, patch165):** the dispatch-target restore + recovery-grace deviation recorded in spec R63 is ADOPTED under Kevin's 2026-11-27 ~02:21 rule (where game and spec disagree, the game's side wins). Physics block MD5 is now `be5a0982bf00617bda59847174d69474`. No other deliberate difference is authorised by this exception.
+
 ## Decision 10 — Demo mode (Kevin, 2026-11-25 ~01:26 EST)
 
 Kevin's words: "Can it also have a demo mode for solving the levels that's entertaining"

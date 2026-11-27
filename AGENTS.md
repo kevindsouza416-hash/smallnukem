@@ -91,8 +91,7 @@ The repo is now the home; do not resurrect the old locations as sources.
 ## 3. Game-file anatomy
 
 One self-contained HTML file (~1 MB, 3 `<script>` blocks — the script
-checker must report exactly that, all clean). Mobile portrait is the
-primary platform (reference 390×844); desktop and gamepad are secondary.
+checker must report exactly that, all clean). Mobile portrait is the primary platform (reference 390×844); **landscape is desktop-only — phones play portrait**; desktop and gamepad are secondary.
 
 Systems, in the order a reader meets them (full anchors, line tables,
 and call sites in `docs/WIRING-MANIFEST.md` — use it, don't re-derive):
@@ -150,12 +149,8 @@ and call sites in `docs/WIRING-MANIFEST.md` — use it, don't re-derive):
 
 Breaking any of these is a failed ship, regardless of test results.
 
-1. **Samira's physics block is byte-identical, always.** *(Audit branch
-   2026-11-27: patch165 made ONE authorised, recorded deviation — the block
-   MD5 on that branch is `be5a0982bf00617bda59847174d69474`; see
-   `docs/MODEL-FIDELITY.md` "Audit-branch physics deviation". Ship #24 and
-   `main` remain `a3385f4f…` until Kevin confirms or reverts it.)* The `BWR`
-   block's MD5 is **`a3385f4f29207be552c4a1c48b620d9b`** (Decision 9:
+1. **Samira's physics block is byte-identical, always.** *(Ship #25: patch165 made ONE adopted, recorded deviation — the block MD5 is `be5a0982bf00617bda59847174d69474`; see spec R63 and `docs/MODEL-FIDELITY.md` "Audit-branch physics deviation". Adopted under Kevin's 2026-11-27 rule; not a revert candidate.)* The `BWR`
+   block's MD5 is **`be5a0982bf00617bda59847174d69474`** (Decision 9:
    "There shouldn't be any deliberate differences" — her constants,
    trips, start state, and behaviour are the source of truth; see
    `docs/MODEL-FIDELITY.md`). Extract and check it exactly this way
@@ -163,7 +158,7 @@ Breaking any of these is a failed ship, regardless of test results.
    ```python
    i = html.index('const BWR = (() => {')
    j = html.index('})();', i)
-   assert md5(html[i:j+5].encode()).hexdigest() == 'a3385f4f29207be552c4a1c48b620d9b'
+   assert md5(html[i:j+5].encode()).hexdigest() == 'be5a0982bf00617bda59847174d69474'
    ```
    Every patch script asserts this **before and after** applying and
    aborts on mismatch. The test suite also extracts and evaluates the
@@ -180,20 +175,13 @@ Breaking any of these is a failed ship, regardless of test results.
 3. **SFX + voice are MUTED ON LOAD.** Audio starts only after a user
    gesture / explicit unmute; the mute state persists. No sound may
    play on page load, ever.
-4. **SHOW is the Chief demo/follow toggle — green = following,
-   red = stopped.** SHOW starts/stops the Chief's demonstration/follow
-   behaviour. **No press/hold ever summons the Chief** — buttons are
-   navigation and action only; there is no offer pop-up and no
-   progression gate (both were removed completely; do not re-add them).
+4. **SHOW is the Chief walkthrough control — green = following, red = stopped.** Pressing SHOW starts the Chief's demo of whatever remains of the CURRENT level; when that level's demo finishes, the game advances on its own to the next level and demos it, continuing through all three levels. It stops on ANY keyboard/mouse/wheel/touch/gamepad input **or on a second SHOW press** (0.5 s start grace; key repeat and bare modifiers ignored; a real press on the SHOW button itself stops it — see spec R67). **No press/hold ever summons the Chief** — buttons are navigation and action only; there is no offer pop-up and no progression gate (both were removed completely; do not re-add them).
 5. **30-second cap on every step.** No single step, test, or action —
    passive waits included — may take longer than 30 s of player time.
    Enforced by a suite gate that measures time-to-complete for every
    step in every level; met via the game-layer clock (SPEED control /
    auto-acceleration during passive waits), never by editing physics.
-6. **Readings pop-ups only after >3 s dwell.** A readings panel/pop-up
-   appears only after the player has stood in front of the panel for
-   more than 3 seconds. The rule applies consistently to every
-   readings pop-up in the game. No walk-past pop-ups.
+6. **Readings timing — two tiers.** The readings SHEET/pop-up opens after **1.2 s of accumulated presence** in front of the panel (presence pauses on absence; it resets only after >5 s absence, a unit switch, or a >5 s frame gap; a progress ring shows from 200 ms, full at 1,200 ms), **or immediately on an Interact press**. The **on-panel info plate** (name/type/live readings drawn on the panel itself) requires **>3 s dwell**. No walk-past pop-ups.
 7. **One file, safe shutdown, real terms.** The game stays one
    self-contained HTML file; failures end in safe shutdown, never an
    explosion; technical terms are used for real and paired with a
@@ -313,12 +301,12 @@ reloaded/bypassed, never played on).
 |---|---|
 | **BWRX-300** | GE Vernova Hitachi boiling-water small modular reactor the game models: 870 MWt / 300 MWe. Player-facing naming is just "BWRX-300". |
 | **MWt / MWe** | Megawatts thermal (heat the core makes) / megawatts electric (power the generator delivers). 870 MWt → 300 MWe here. |
-| **SCRAM** | Emergency shutdown: all control rods drop in by gravity. The protection system trips on her three thresholds only — pressure >8.3 MPa, power >112%, water level <62%. |
+| **SCRAM** | Emergency shutdown: all control rods drop in by gravity. The protection system trips on her three thresholds — pressure >8.3 MPa, power >112%, water level <62% — **plus operator manual SCRAM** (hold X 1 s / gamepad Back-View 1 s / ARI-panel SCRAM hold 0.8 s; §9 of the spec). |
 | **RPV** | Reactor pressure vessel — the vessel containing the core; its local panel is a walk-to panel in the world. |
 | **Fluke Nukem** | The player character — the operator you walk through the plant. His one-liners are his; never wire them as the Chief's voice. |
 | **The Chief** | The guide/operator character in the small CRT TV window: briefings, reactions, demonstrations (SHOW), takeover narration. Voice: §9. |
-| **dwell** | Standing in front of a panel. Readings pop-ups require **>3 s dwell** (§4.6). |
-| **SHOW** | The Chief demo/follow toggle: green = following, red = stopped (§4.4). |
+| **dwell** | Standing in front of a panel. The readings sheet opens at 1.2 s accumulated presence or instantly on Interact; the on-panel info plate requires **>3 s dwell** (§4.6). |
+| **SHOW** | The Chief walkthrough control: demos the rest of the current level, then auto-advances level by level; green = following, red = stopped (§4.4). |
 | **ship** | One integrated, gated, published release of the game, numbered (`ship #24`). A ship = composed patches + passing suites + publish + APK + log entry + tag + Release. |
 | **patch** | One numbered Python script (`patch<N>.py`) making anchored, exact-count replacements to the game file against a pinned base MD5 (§4.2). The only way the game changes. |
 
