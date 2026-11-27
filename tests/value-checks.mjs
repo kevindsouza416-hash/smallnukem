@@ -1087,6 +1087,10 @@ chk('s25 cine: with cinematics off every offer is dropped at the door - no video
 chk('s25 icon: the Chief icon is ~30% larger (24 -> 31 px, phone 20 -> 26 px) on a 40 px bitmap', html.includes('#guideBarCollapsed canvas { width: 31px; height: 31px;') && html.includes('#guideBarCollapsed canvas { width: 26px; height: 26px; }') && html.includes('<canvas id="portraitMini" width="40" height="40"></canvas>'), '');
 chk('s25 icon: image only - the icon element carries no text, label or title', /<canvas id="portraitMini"[^>]*><\/canvas>/.test(html) && !/<canvas id="portraitMini"[^>]*(title|aria-label|alt)=/.test(html), '');
 chk('s25 icon: the frame mirrors the SHOW follow state (green following / red stopped); it adds no press-and-hold or long-press handler', html.includes("ic173.classList.toggle('follow-on'") && !/portraitMini[^\n]*(long|hold|contextmenu)/i.test(html.slice(html.indexOf('#guideBarCollapsed canvas { width: 31px'), html.indexOf('#guideBarCollapsed canvas { width: 31px') + 600)), '');
+
+// ---- patch174 (SHIP #25 follow-up): the driver stands where the pinned panel is the nearest interactable ----
+chk('p174: snStandX picks a stand position at which the pinned panel wins the game\'s nearest-interactable rule (hypot of centres, < 80)', html.includes('function snStandX(pin, side) {') && html.includes('Math.hypot(it.x + it.w / 2 - sx, it.y + it.h / 2 - py) <= d0') && html.includes('if (d0 >= 80) return false;'), '');
+chk('p174: guideTick uses it instead of the fixed +/-56 px offset', html.includes('SHOWME.flukeStandX = snStandX(pin,') && !html.includes('? 56 : -56);'), '');
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);
 
