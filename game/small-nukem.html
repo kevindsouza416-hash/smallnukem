@@ -4235,7 +4235,9 @@ function handleKeyPress(code, e) {
   // Title screen handling
   if (gameState.phase === 'title') {
     if (code === 'Enter' || code === 'Space') {
-      startGame();
+      const btn166 = e && e.target && e.target.closest ? e.target.closest('button') : null;   // patch166 (B1): a focused button owns Enter/Space
+      if (btn166) { if (code === 'Space') btn166.click(); }   // Enter: the browser's native click; Space: patch153 preventDefault-ed it, so click here
+      else startGame();
     }
     return;
   }
@@ -4255,9 +4257,6 @@ function handleKeyPress(code, e) {
   }
   if (code === 'KeyT') startTakeover();
   if (code === 'Backquote') toggleDebug();
-  if ((code === 'KeyE' || code === 'Enter') && !keys['KeyE_held']) {
-    // interact once on press
-  }
 }
 
 function clearJustPressed() {
@@ -5174,14 +5173,13 @@ function updatePlayer(dt) {
 
   // Gamepad input
   let gp = getGamepad();
-  let gpLeft = 0, gpJump = false, gpUp = false, gpDown = false;
+  let gpLeft = 0, gpUp = false, gpDown = false;
   if (gp) {
     gpLeft = gp.axes[0] || 0;
     if (gp.buttons[14] && gp.buttons[14].pressed) gpLeft = -1;
     if (gp.buttons[15] && gp.buttons[15].pressed) gpLeft = 1;
     if (gp.buttons[12] && gp.buttons[12].pressed) gpUp = true;
     if (gp.buttons[13] && gp.buttons[13].pressed) gpDown = true;
-    gpJump = gp.buttons[0] && gp.buttons[0].pressed;
     if (gp.axes[1] < -0.5) gpUp = true;   // patch163 (G1): OR-ed in - the plain assignment erased the D-pad up/down set above
     if (gp.axes[1] > 0.5) gpDown = true;
   }
@@ -12060,18 +12058,6 @@ document.getElementById('titleScreen').addEventListener('pointerdown', function(
     e.preventDefault();
     startGame();
   }
-});
-
-// =====================================================================
-//  KEYBOARD TRACK (for analog differentiation)
-// =====================================================================
-window.addEventListener('keydown', e => {
-  if (e.code === 'KeyE') keys['KeyE_keyboard'] = true;
-  if (e.code === 'KeyQ') keys['KeyQ_keyboard'] = true;
-});
-window.addEventListener('keyup', e => {
-  if (e.code === 'KeyE') keys['KeyE_keyboard'] = false;
-  if (e.code === 'KeyQ') keys['KeyQ_keyboard'] = false;
 });
 
 // =====================================================================

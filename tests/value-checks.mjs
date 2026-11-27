@@ -1035,6 +1035,10 @@ chk('p164: layoutTopBars parks the overlay below the step bar and clears the inl
   const sm = BWR.summary(S);
   chk('p165: dispatch accuracy for the attentive operator is >= 0.90 (was 0.85 with the stale target and no grace)', sm.acc >= 0.90, sm.acc.toFixed(3));
 }
+
+// ---- patch166 (controls audit): title-screen keys + dead code ----
+chk('p166 B1: on the title screen a focused button owns Enter/Space (the generic start key only fires with nothing focused)', html.includes("const btn166 = e && e.target && e.target.closest ? e.target.closest('button') : null;") && html.includes("if (btn166) { if (code === 'Space') btn166.click(); }") && html.includes('else startGame();'), '');
+chk('p166 C1: dead KEYBOARD TRACK listeners, the empty interact-once branch and the unused gpJump are gone', !html.includes('KeyE_keyboard') && !html.includes('KeyQ_keyboard') && !html.includes('KeyE_held') && !html.includes('gpJump'), '');
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);
 
