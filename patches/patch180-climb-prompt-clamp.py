@@ -17,7 +17,7 @@ below the canvas top (overlap 52 -> 0).  Step bar untouched, 220/122 untouched, 
 Physics untouched.
 """
 from _patchlib import apply
-BASE = 'dabc0f8e7291026dd2bf02fd8ad1f3a3'   # patch179 output (docs-only commits on top do not touch the game file)
+BASE = '5dba04103270a3c44efb1a153954567e'   # patch181 output: authored standalone against dabc0f8e (patch179 output); in shipped history patch180 applies after patch181, whose output is its true base
 E = [("""  ab.style.bottom = (below + clear) + 'px';""",
 """  clear = Math.min(clear, Math.max(0, H - bh - 4)); // patch180: cap EVERY prompt path (CLIMB UP/DOWN, OPEN, WALK TO share snActionLift) so the button top never crosses the canvas top into the step bar - previously only the lift-above-head branch was capped; strict no-op whenever H permits the nominal 220/122 clear
   ab.style.bottom = (below + clear) + 'px';""")]
