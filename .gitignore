@@ -30,3 +30,7 @@ node_modules/
 # Muse GitHub snapshot sync state
 .muse-github-snapshot-sync.json
 .muse-github-snapshot-sync.json.tmp-*
+
+# Python
+__pycache__/
+*.pyc
