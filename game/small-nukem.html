@@ -4756,6 +4756,7 @@ function snFreezeAdjusting() {
     if (pop.grab) return true;   // pointer down on the sheet control (drag / stepper hold / wheel)
     if (pop.tgt) return true;    // released, but the committed target is still travelling — the commit is not done
     if (typeof SN_WASD !== 'undefined' && SN_WASD.kbPanel && (SN_WASD.held['KeyA'] || SN_WASD.held['KeyD'])) return true;   // keyboard panel operate hold
+    if (keys['KeyE'] || keys['KeyQ'] || keys['Enter'] || keys['ShiftLeft']) return true;   // world hold while the sheet is dwell-open: the open sheet must not shadow the world hold (ship #24 W57 defect)
     return false;
   }
   const t = (typeof player !== 'undefined' && player) ? player.interactTarget : null;
