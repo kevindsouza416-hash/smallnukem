@@ -1091,6 +1091,15 @@ chk('s25 icon: the frame mirrors the SHOW follow state (green following / red st
 // ---- patch174 (SHIP #25 follow-up): the driver stands where the pinned panel is the nearest interactable ----
 chk('p174: snStandX picks a stand position at which the pinned panel wins the game\'s nearest-interactable rule (hypot of centres, < 80)', html.includes('function snStandX(pin, side) {') && html.includes('Math.hypot(it.x + it.w / 2 - sx, it.y + it.h / 2 - py) <= d0') && html.includes('if (d0 >= 80) return false;'), '');
 chk('p174: guideTick uses it instead of the fixed +/-56 px offset', html.includes('SHOWME.flukeStandX = snStandX(pin,') && !html.includes('? 56 : -56);'), '');
+
+// ---- patches 175-179 (SHIP #25 support): the demo / takeover / walkthrough driver can finish Level 2 ----
+chk('p175: snDriverUrgent (turbine trip / feedwater lost / p>7.5 / level<85) and boosted-clock stretches skip the driver walk', html.includes('function snDriverUrgent() {') && html.includes('S.turbTrip > 0 || (S.ev && S.ev.tu === 1) || !S.fwOK || S.p > 7.5 || S.level < 85') && html.includes('(snDriverUrgent() || SN_PACE.effective > 1.5) && SHOWME.walkT > 0.25'), '');
+chk('p175: the driver arrives at Level 2\'s scheduled turbine trip at low power (lever 15) and the D20 fix-start cinematic is held back in a live emergency', html.includes("gameState.level === 2 && gameState.l2Stage === 1 && S.phase === 'heatup') leverT = 15;") && html.includes('if (!(SN_WALK.active && snDriverUrgent())) SN_CINE.offer(key);'), '');
+chk('p176: the auto-boost clock never runs while a cinematic holds the player (paceTick) - game-layer pacing only', html.includes("if (typeof CINE_ACTIVE !== 'undefined' && CINE_ACTIVE) { SN_PACE.effective = SN_PACE.player;"), '');
+chk('p176: a walkthrough skips mid-level cinematics (level_complete still plays) and closes a running one when the driver is needed', html.includes("dropped: 'walkthrough_driving'") && html.includes("key !== 'level_complete'") && html.includes('if (!SN_WALK.gap && CINE_ACTIVE && snDriverUrgent())'), '');
+chk('p174/177: snStandX chooses a stand where the pinned panel is the nearest interactable AND Fluke stands on the panel\'s own deck', html.includes('const onDeck = sx => platforms.some(') && html.includes('if (!onDeck(sx)) return false;'), '');
+chk('p178: the operate phase heals a mis-targeted panel by placing Fluke at it (demoPin)', html.includes('if (pin && player.interactTarget !== pin && (TAKEOVER.active || DEMO.active)) demoPin();'), '');
+chk('p179: the driver closes an isolation condenser latched open by an excursion (it capped the plant at 274 MWe < 285)', html.includes("S.phase === 'power' && S.icOpen && S.ctl.ic !== 'off' && S.p < 7.35 && S.turbTrip <= 0) { action = 'iso_condenser'; mode = 'tap'; }"), '');
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);
 
