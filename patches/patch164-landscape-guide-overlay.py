@@ -8,7 +8,7 @@ short landscape the expanded panel is now an overlay anchored just under the ste
 bar, so the world keeps the height it has with the panel collapsed (207 px at
 844x390).  Portrait and desktop CSS / JS paths are unchanged.
 """
-from _patchlib import apply
+from _patchlib import apply, PHYS_SAMIRA
 BASE = 'b64de3302821b131bad5d6c0fe5c9946'   # patch163 output
 E = []
 E.append(("""  #stepBar { margin-top: 6px; flex-wrap: nowrap; }
@@ -30,4 +30,4 @@ E.append(("""  snx.style.top = top + 'px';
     ge.style.top = (land164 && gb && sb && sb.offsetParent) ? Math.max(0, sb.getBoundingClientRect().bottom - gb.getBoundingClientRect().top) + 'px' : '';
   }
   // #stepBar is in-flow (static): it clears the pill via its CSS margin."""))
-apply(164, BASE, E)
+apply(164, BASE, E, phys_before=PHYS_SAMIRA)

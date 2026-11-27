@@ -15,7 +15,7 @@
 
 Base: ship #24 (6dc80315b5ef9fb69d537227c3411ab0).  Physics block untouched.
 """
-from _patchlib import apply
+from _patchlib import apply, PHYS_SAMIRA
 
 BASE = '6dc80315b5ef9fb69d537227c3411ab0'
 
@@ -90,4 +90,4 @@ E.append(("""  const manual = Object.values(KB).some(v => v) || pointers.size > 
 E.append(("""  const active = Object.values(KB).some(v => v) || pointers.size > 0 || Math.abs(player.vx || 0) > 5 || player.onLadder;""",
 """  const active = snAnyKeyHeld() || pointers.size > 0 || Math.abs(player.vx || 0) > 5 || player.onLadder;   // patch161 (D4)"""))
 
-apply(161, BASE, E)
+apply(161, BASE, E, phys_before=PHYS_SAMIRA)

@@ -12,7 +12,8 @@ leaves the default so the block must stay byte-identical.
 """
 import hashlib, os, sys
 
-PHYS_MD5 = 'a3385f4f29207be552c4a1c48b620d9b'          # ship #24 and every earlier ship
+PHYS_SAMIRA = 'a3385f4f29207be552c4a1c48b620d9b'      # her verbatim block: ship #24 and every earlier ship, patches 161-164
+PHYS_MD5 = 'be5a0982bf00617bda59847174d69474'         # current block: patch165 (grid-emergency recovery) onwards
 GAME = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'game', 'small-nukem.html')
 
 

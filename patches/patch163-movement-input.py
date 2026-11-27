@@ -11,7 +11,7 @@
      sheet and no interact target.  ArrowUp jump is unchanged.
 Physics untouched.
 """
-from _patchlib import apply
+from _patchlib import apply, PHYS_SAMIRA
 BASE = '140e2743957dd0c701b0a5847e45dcb2'   # patch162 output
 E = []
 E.append(("""    gpUp = gp.axes[1] < -0.5;
@@ -21,4 +21,4 @@ E.append(("""    gpUp = gp.axes[1] < -0.5;
 E.append(("""    if ((keys['Space'] || (keys['ArrowUp'] && !p.ladderLatch) || (gp && gp.buttons[0] && gp.buttons[0].pressed)) && p.onGround) {""",
 """    const operating163 = !!(SN_TOUCH.pop || p.interactTarget);   // patch163 (J1): Space / A are the operate keys too - no jump while a sheet is open or Fluke stands at a panel
     if (((keys['Space'] && !operating163) || (keys['ArrowUp'] && !p.ladderLatch) || (gp && gp.buttons[0] && gp.buttons[0].pressed && !operating163)) && p.onGround) {"""))
-apply(163, BASE, E)
+apply(163, BASE, E, phys_before=PHYS_SAMIRA)

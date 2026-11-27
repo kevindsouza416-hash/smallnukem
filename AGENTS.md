@@ -150,7 +150,11 @@ and call sites in `docs/WIRING-MANIFEST.md` — use it, don't re-derive):
 
 Breaking any of these is a failed ship, regardless of test results.
 
-1. **Samira's physics block is byte-identical, always.** The `BWR`
+1. **Samira's physics block is byte-identical, always.** *(Audit branch
+   2026-11-27: patch165 made ONE authorised, recorded deviation — the block
+   MD5 on that branch is `be5a0982bf00617bda59847174d69474`; see
+   `docs/MODEL-FIDELITY.md` "Audit-branch physics deviation". Ship #24 and
+   `main` remain `a3385f4f…` until Kevin confirms or reverts it.)* The `BWR`
    block's MD5 is **`a3385f4f29207be552c4a1c48b620d9b`** (Decision 9:
    "There shouldn't be any deliberate differences" — her constants,
    trips, start state, and behaviour are the source of truth; see

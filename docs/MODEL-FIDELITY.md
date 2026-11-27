@@ -139,3 +139,21 @@ real plant. Divergences found against the BWRX-300 deep research
 - **Single-node core.** Her Tc is one lumped temperature with pressure
   saturation-coupled; the real plant distinguishes core inlet (270 °C)
   and outlet (288 °C). Her simplification, kept.
+
+## Audit-branch physics deviation (2026-11-27) — NOT Samira's verbatim block
+
+Decision 9 ("no deliberate differences") is the standing rule. The
+2026-11-27 controls/bug audit branch was explicitly authorised by its task
+owner to change the physics model where it improves gameplay, one physics
+change per commit, gain recorded. **One change was made** (patch165).
+Kevin should confirm or revert it against Decision 9 before it is shipped.
+
+| Item | Samira's `game()` (ship #24) | Audit branch (patch165) |
+|---|---|---|
+| After the Level-3 grid emergency (`S.ev.tu` 2 → 3) | `S.disp` stays at the emergency's 60 MWe until the *next* dispatch segment begins (3–6 s later); no recovery grace | `S.disp` returns to the current segment's target immediately; `S.grace = max(S.grace, min(30, 4 + \|S.disp − 60\| / 5))` — the same grace formula her own segment change uses; one log line |
+| BWR block MD5 | `a3385f4f29207be552c4a1c48b620d9b` | `be5a0982bf00617bda59847174d69474` |
+| Her 33 constants, trips, start state, kinetics, thermal-hydraulics | — | untouched (all 538 original checks still pass) |
+
+Evidence and gameplay gain: `docs/AUDIT-2026-11-27.md` (§ Physics). To revert:
+drop `patches/patch165-physics-grid-recovery.py`'s effect (re-apply patches
+161–164 only) and restore the invariant hash in `AGENTS.md` §4.1.

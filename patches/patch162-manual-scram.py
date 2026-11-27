@@ -16,7 +16,7 @@ and a SCRAM overlay always read '!! AUTOMATIC SCRAM !!'.
    it - it would be wrong).
 Physics block untouched: this only calls her scramNow().
 """
-from _patchlib import apply
+from _patchlib import apply, PHYS_SAMIRA
 
 BASE = '55eeced51c29d0ef3a29abd155a34888'   # patch161 output
 
@@ -96,4 +96,4 @@ E.append(("""      mushroom(cx, r.y + soY(182), srY(44), '#b01515', '#e84a4a');
       ctx.fillStyle = '#9fd8ff'; ctx.font = '11px Courier New'; ctx.fillText('HOLD: SCRAM  \\u00b7  TAP: ARI', cx, r.y + soY(240));
       if (pop.grab && pop.grab.kind === 'hold' && pop.grab.fx === 'scramFire') { ctx.fillStyle = '#e5484d'; ctx.fillRect(cx - 62 - 40, r.y + soY(222), 80 * Math.min(1, (performance.now() - pop.grab.t) / 800), 5); }"""))
 
-apply(162, BASE, E)
+apply(162, BASE, E, phys_before=PHYS_SAMIRA)

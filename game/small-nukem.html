@@ -2724,6 +2724,9 @@ function game(S, dt) {
     if (S.ev.tu === 2 && S.turbTrip <= 0) {
       S.ev.tu = 3; S.score += 250; S.evPass++;
       log(S, 'Turbine back on the grid.', 'ok');
+      S.disp = SEG[S.segI].to;   // patch165: the emergency's 60 MWe target is over - back to the scheduled dispatch
+      S.grace = Math.max(S.grace, Math.min(30, 4 + Math.abs(S.disp - 60) / 5));   // patch165: same recovery grace her segment change grants
+      log(S, 'Grid asks for ' + S.disp + ' MWe again.', 'info');
     }
     const hold = S.ev.fw === 1 || S.ev.tu === 1 || S.ev.tu === 2;
     if (S.grace > 0) S.grace -= dt;
