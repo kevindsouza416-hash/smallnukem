@@ -21,7 +21,7 @@ html, body { width: 100%; height: 100%; overflow: hidden; background: #0a0a0f; f
 #demoBtn { position: static; background: #14303a; color: #7fe3ff; border: 1px solid #2b6a7a; border-radius: 8px; padding: 2px 6px; font: bold 16px 'Courier New', monospace; cursor: pointer; min-height: 48px; white-space: nowrap; }
 #takeoverBtn { position: static; background: #0e2438; color: #9fd8ff;
   border: 1px solid #2a4a6a; border-radius: 3px; font: bold 16px 'Courier New', monospace; padding: 2px 6px; cursor: pointer; min-height: 48px; white-space: normal; line-height: 1.05; }
-#audioBtn { background: #2a1c08; color: #c8a060; border: 1px solid #6a5320; border-radius: 4px; font: 13px 'Courier New', monospace; padding: 5px 8px; cursor: pointer; min-height: 34px; white-space: nowrap; flex-shrink: 0; }
+#audioBtn, #cineBtn { background: #2a1c08; color: #c8a060; border: 1px solid #6a5320; border-radius: 4px; font: 13px 'Courier New', monospace; padding: 5px 8px; cursor: pointer; min-height: 34px; white-space: nowrap; flex-shrink: 0; }
 #sfxBtn { background: #14303a; color: #7fe3ff; border: 1px solid #2b6a7a; border-radius: 4px; font: 13px 'Courier New', monospace; padding: 5px 8px; cursor: pointer; min-height: 34px; white-space: nowrap; flex-shrink: 0; }
 /* patch85 (Kevin, Nov 25 ~23:55): the guide controls are one
    left-anchored row — TOUCH underneath the Chief's portrait, DEMO /
@@ -580,7 +580,7 @@ body.chief-speaking .guide-speech { font-size: 14px; color: #ffffff; }   /* patc
   #guideBarCollapsed canvas { width: 20px; height: 20px; }
   #guideBarCaption { font-size: 11px; }
   #guideBarToggle { min-width: 26px; min-height: 24px; }
-  #audioBtn, #sfxBtn { min-height: 26px; font-size: 11px; padding: 2px 5px; }
+  #audioBtn, #cineBtn, #sfxBtn { min-height: 26px; font-size: 11px; padding: 2px 5px; }
   #menuBtn { min-height: 26px; font-size: 11px; padding: 2px 7px; }
   #guideBarExpanded { padding: 6px 8px 50px; }
   .guide-portrait { width: 84px; height: 71px; }
@@ -782,7 +782,7 @@ body.chief-speaking .guide-speech { font-size: 14px; color: #ffffff; }   /* patc
    over F2's 26 px top-bar compaction at equal specificity. */
 @media (max-width: 500px), (max-height: 500px) and (max-width: 980px) {
   #guideBarCollapsed { height: 48px; }
-  #audioBtn, #sfxBtn, #menuBtn { height: 44px; min-height: 44px; font-size: 13px; }
+  #audioBtn, #cineBtn, #sfxBtn, #menuBtn { height: 44px; min-height: 44px; font-size: 13px; }
   #titleScreen .settings-strip {
     left: 50%; transform: translateX(-50%); width: min(96vw, 560px); height: auto;
     padding: 3px 6px; gap: 4px; align-content: center;
@@ -819,6 +819,7 @@ body.chief-speaking .guide-speech { font-size: 14px; color: #ffffff; }   /* patc
       <span id="guideBarCaption">Ready for startup, chief.</span>
       <span id="guideBarToggle">&#9650;</span>
       <button id="audioBtn" onpointerdown="event.stopPropagation()" onclick="toggleAudio(event)">AUDIO: ON</button>
+      <button id="cineBtn" onpointerdown="event.stopPropagation()" onclick="toggleCine(event)" title="Cinematics: the short achievement videos">CINE: ON</button>
       <button id="sfxBtn" onpointerdown="event.stopPropagation()" onclick="toggleSfx(event)">SFX: ON</button>
       <button id="menuBtn" onpointerdown="event.stopPropagation()" onclick="event.stopPropagation(); quitToMenu()">MENU</button>
     </div>
@@ -5784,7 +5785,7 @@ const SN_WASD = {
   heldLatch: {},   // patch153: per-key latch expiry for the held map, same 170 ms idiom as KB_LATCH
   _holdCode: null, _holdAt: 0, _holdFired: 0, _snapUntil: 0, _opEdge: false,   // patch144 (D1): operate-edge latch for tap-class panel actions
   _pUp: false, _pDn: false,
-  HUD_BTNS: ['helpBtn', 'mapBtn', 'audioBtn', 'sfxBtn', 'paceBtn', 'takeoverBtn'],   // patch134
+  HUD_BTNS: ['helpBtn', 'mapBtn', 'audioBtn', 'cineBtn', 'sfxBtn', 'paceBtn', 'takeoverBtn'],   // patch134
   STEPPERS: { rod_withdraw: 1, raise_power: 1, steam_valve: 1, isolate_leak: 1 },
   mode() {
     if (typeof SN_TOUCH !== 'undefined' && SN_TOUCH.pop) return 'panel';
@@ -8261,6 +8262,7 @@ g.fillStyle = '#f5c81e'; g.beginPath(); g.arc(4, -50, 3, 0, Math.PI * 2); g.fill
   window.addEventListener('keydown', e => { if (e.repeat) return; if (dismissArmed()) { e.stopPropagation(); dismiss(); } }, true);
   function offer(key) {
     const def = DEFS[key]; if (!def) return;
+    if (typeof SN_AUDIO !== 'undefined' && !SN_AUDIO.cine) { state.log.push({ key, dur_s: 0, dismissed: false, dropped: 'cinematics_off' }); return; }   // patch172: cinematics OFF - skipped entirely, no video, no audio
     if (typeof gameState !== 'undefined' && gameState.phase === 'scored') { state.log.push({ key, dur_s: 0, dismissed: false, dropped: 'game_ended' }); return; }   // patch130b: no cinematic starts over the score screen (the deliberate endGame offer precedes the phase flip)
     if (state.played.has(key)) { state.log.push({ key, dur_s: 0, dismissed: false, dropped: 'once_per_run' }); return; }   // patch109: already played this run — the trigger still counts, the video does not replay
     if (state.active && state.active.key === key) return;
@@ -8325,9 +8327,10 @@ window.SN_DUCK = SN_DUCK;
 // (music + ambience + cinematic audio) and SFX (effects + the
 // Chief's voice). CHIEF.muted keeps its long-standing meaning as
 // the SFX-side gate so every existing voice/effect check holds.
-const SN_AUDIO = { audio: true, sfx: true };
+const SN_AUDIO = { audio: true, sfx: true, cine: true };   // patch172: cine = cinematics on/off (default on)
 try {
   SN_AUDIO.audio = localStorage.getItem('sn.audio') !== 'off';
+  SN_AUDIO.cine = localStorage.getItem('sn.cine') !== 'off';   // patch172: persisted the way the audio choice is
   SN_AUDIO.sfx = localStorage.getItem('sn.sfx') !== 'off';
   if (!localStorage.getItem('sn.sfx') && localStorage.getItem('sn_chief_muted') === '1') SN_AUDIO.sfx = false;
 } catch (e) {}
@@ -8446,6 +8449,14 @@ function snSyncAudioBtns() {
   const a = document.getElementById('audioBtn'), s = document.getElementById('sfxBtn');
   if (a) a.textContent = 'AUDIO: ' + (SN_AUDIO.audio ? 'ON' : 'OFF');
   if (s) s.textContent = 'SFX: ' + (SN_AUDIO.sfx ? 'ON' : 'OFF');
+  const c = document.getElementById('cineBtn'); if (c) c.textContent = 'CINE: ' + (SN_AUDIO.cine ? 'ON' : 'OFF');   // patch172
+}
+function toggleCine(ev) {   // patch172 (ship #25): CINE = the achievement / recovery cinematics, video and sound
+  if (ev) ev.stopPropagation();
+  SN_AUDIO.cine = !SN_AUDIO.cine;
+  try { localStorage.setItem('sn.cine', SN_AUDIO.cine ? 'on' : 'off'); } catch (e) {}
+  if (!SN_AUDIO.cine) { try { if (SN_CINE.state.active) SN_CINE.close(false); SN_CINE.state.queue.length = 0; } catch (e) {} }   // switching off closes the running one and empties the queue
+  snSyncAudioBtns();
 }
 function toggleAudio(ev) {   // patch134: AUDIO = music + ambience + cinematic audio
   if (ev) ev.stopPropagation();

@@ -437,7 +437,7 @@ chk('patch84: score screen carries the tap-for-menu hint', html.includes('TAP AN
 chk('patch85: the four guide controls live in one left-anchored row', html.includes('class="guide-btnrow"') && html.includes('.guide-btnrow { position: absolute; left: 10px;'), '');
 chk('patch85: no guide button is right-anchored any more', !html.includes('right: 292px') && !html.includes('right: 196px') && !html.includes('right: 96px') && !html.includes('right: 22px'), '');
 chk('patch85/86+134: guide row is TOUCH, DEMO (SOUND removed by patch134; AUDIO/SFX sit left of MENU)', (() => { const i = html.indexOf('class="guide-btnrow"'); const seg = html.slice(i, html.indexOf('</div>', i)); return seg.indexOf('touchModeBtn') > -1 && seg.indexOf('touchModeBtn') < seg.indexOf('demoBtn') && seg.indexOf('chiefMute') === -1 && seg.indexOf('takeoverBtn') === -1; })(), '');
-chk('patch85+134: row buttons carry the tappable standard (cluster scaled by patch134)', html.includes('#touchModeBtn { position: static;') && html.includes('#takeoverBtn { position: static;') && html.includes('#audioBtn { background: #2a1c08;'), '');
+chk('patch85+134: row buttons carry the tappable standard (cluster scaled by patch134)', html.includes('#touchModeBtn { position: static;') && html.includes('#takeoverBtn { position: static;') && html.includes('#audioBtn, #cineBtn { background: #2a1c08;')   /* ship #25: CINE shares the AUDIO rule */, '');
 
 // ---- 25. Control cluster (patch86, Kevin Nov 25 ~23:57) ----
 chk('patch93: SPEED/TAKEOVER/MAP/ASK share ONE row (orders 1-4, equal flex)', html.includes('#paceBtn { order: 1; flex: 1 1 0;') && html.includes('#takeoverBtn { order: 2; flex: 1.3 1 0;') && html.includes('#mapBtn { order: 3; flex: 0.85 1 0; }') && html.includes('#helpBtn { order: 4; flex: 0.85 1 0; }'), '');
@@ -572,7 +572,7 @@ chk('patch112: SN_WASD module present with route()', html.includes('const SN_WAS
 chk('patch112: WASD modes - panel freeze via freezeKeys in panel and hud modes', (html.match(/this\.freezeKeys\(\);/g) || []).length >= 4, '');
 chk('patch112: bump-open uses SN_TOUCH.openPop from a WASD edge', html.includes('SN_TOUCH.openPop(hit)'), '');
 chk('patch112: hold-repeat timing 380ms delay / 90ms interval / snap 250ms', html.includes('now - this._holdAt >= 380') && html.includes('now - this._holdFired >= 90') && html.includes('this._snapUntil = performance.now() + 250'), '');
-chk('patch112+134: HUD strip is the cluster buttons (AUDIO/SFX replace SOUND)', html.includes("HUD_BTNS: ['helpBtn', 'mapBtn', 'audioBtn', 'sfxBtn', 'paceBtn', 'takeoverBtn']"), '');
+chk('patch112+134: HUD strip is the cluster buttons (AUDIO/SFX replace SOUND)', html.includes("HUD_BTNS: ['helpBtn', 'mapBtn', 'audioBtn', 'cineBtn', 'sfxBtn', 'paceBtn', 'takeoverBtn']")   /* ship #25 */, '');
 chk('patch112: splash element wired to splash-control-room.mp4, z-index above the title screen', html.includes('id="splashVideo" src="splash-control-room.mp4"') && html.includes('z-index:600'), '');
 chk('patch112: splash is not a cinematic (no SN_CINE routing, no once-flag)', html.includes('no once-per-run flag, no SN_CINE'), '');
 chk('patch113: auto-climb state on the player', html.includes('p.climbAuto === -1') && html.includes('p.climbAuto === 1') && html.includes('p.climbAutoWasOn'), '');
@@ -685,7 +685,7 @@ chk('patch133: map unit labels have no backing rect and use white text', !html.i
 // ---- patch134: AUDIO + SFX toggles ----
 chk('patch134: AUDIO and SFX buttons sit immediately left of MENU', (() => { const a = html.indexOf('id="audioBtn"'), s = html.indexOf('id="sfxBtn"'), m = html.indexOf('id="menuBtn"'); return a > 0 && s > a && m > s; })());
 chk('patch134: the old SOUND button is gone from the guide row', !html.includes('id="chiefMute"'));
-chk('patch134: SN_AUDIO persists two independent toggles', html.includes("const SN_AUDIO = { audio: true, sfx: true };") && html.includes("localStorage.getItem('sn.audio')") && html.includes("localStorage.getItem('sn.sfx')"));
+chk('patch134: SN_AUDIO persists two independent toggles', html.includes("const SN_AUDIO = { audio: true, sfx: true, cine: true };")   /* ship #25 */ && html.includes("localStorage.getItem('sn.audio')") && html.includes("localStorage.getItem('sn.sfx')"));
 chk('patch134: beds and music route through the AUDIO bedBus', html.includes('g.connect(bedBus || master)') && html.includes('musicGain.connect(bedBus || master)'));
 chk('patch134: setAudioOn gates the bedBus', html.includes('setAudioOn(on) { if (bedBus && ac)'));
 chk('patch134: SFX mute no longer freezes the beds in update()', html.includes('if (!ac || halted) return;'));
@@ -753,7 +753,7 @@ chk('patch145: the force runs AFTER the persisted SFX read (it overrides the sto
 chk('patch145: AUDIO keeps its persisted behaviour — read intact, no force-off anywhere', html.includes("SN_AUDIO.audio = localStorage.getItem('sn.audio') !== 'off';") && !html.includes('SN_AUDIO.audio = false;'), '');
 chk('patch145: the Chief voice gate still derives from the SFX state', html.includes('muted: !SN_AUDIO.sfx,'), '');
 chk('patch145: the SFX toggle still unmutes in-session and the button label reads SN_AUDIO.sfx', html.includes('SN_AUDIO.sfx = !SN_AUDIO.sfx;') && html.includes("'SFX: ' + (SN_AUDIO.sfx ? 'ON' : 'OFF')"), '');
-const _ai = html.indexOf('const SN_AUDIO = { audio: true, sfx: true };');
+const _ai = html.indexOf('const SN_AUDIO = { audio: true, sfx: true, cine: true };');
 const _aj = html.indexOf('window.SN_AUDIO = SN_AUDIO;', _ai);
 function snAudioBoot(store) {
   const ls = { getItem: k => (k in store ? store[k] : null), setItem: () => {} };
@@ -1076,6 +1076,12 @@ chk('s25 walk: a completed non-final level advances on its own to the next one (
 chk('s25 walk: a finished final level or a trip ends the walkthrough and scores normally', html.includes('SN_WALK.active = false; SN_WALK.gap = false; SN_HELP.showFollow = false;\n  }\n  gameState.phase = \'scored\';'), '');
 chk('s25 walk: steps it completes are DEMO-ASSISTED (+50) through ASSIST.assisted; the marks are now per-run', html.includes('if (SN_WALK.active && ASSIST.assisted.indexOf(i) < 0) ASSIST.assisted.push(i);') && html.includes('ASSIST.assisted.length = 0;'), '');
 chk('s25 walk: the demo mechanics are unchanged - the 30 s cap / pacing layer / takeover driver are still the only drivers (no new physics, no new clock)', html.includes('function takeoverOperate(dt) {') && html.includes('function paceTick() {') && !/SN_WALK[^\n]*updatePhysics/.test(html), '');
+
+// ---- patch172 (SHIP #25): cinematics toggle ----
+chk('s25 cine: a CINE button sits immediately after the AUDIO button and shares its CSS rule, mobile sizes and the keyboard HUD ring', html.includes('onclick="toggleAudio(event)">AUDIO: ON</button>\n      <button id="cineBtn"') && html.includes('#audioBtn, #cineBtn { background: #2a1c08;') && html.includes('#audioBtn, #cineBtn, #sfxBtn { min-height: 26px;') && html.includes('#audioBtn, #cineBtn, #sfxBtn, #menuBtn { height: 44px;') && html.includes("'audioBtn', 'cineBtn', 'sfxBtn'"), '');
+chk('s25 cine (functional): default ON; persisted OFF boots OFF; the audio / SFX boot rules are untouched', (() => { const d = snAudioBoot({}); const o = snAudioBoot({ 'sn.cine': 'off' }); const a = snAudioBoot({ 'sn.sfx': 'on', 'sn.audio': 'on', 'sn.cine': 'on' }); return d.cine === true && o.cine === false && a.cine === true && a.sfx === false && a.audio === true; })(), '');
+chk('s25 cine: toggleCine persists under sn.cine like the audio choice, and switching off closes the running cinematic and empties the queue', html.includes("localStorage.setItem('sn.cine', SN_AUDIO.cine ? 'on' : 'off');") && html.includes('if (SN_CINE.state.active) SN_CINE.close(false); SN_CINE.state.queue.length = 0;'), '');
+chk('s25 cine: with cinematics off every offer is dropped at the door - no video, no audio graph, no queue', html.includes("!SN_AUDIO.cine) { state.log.push({ key, dur_s: 0, dismissed: false, dropped: 'cinematics_off' }); return; }"), '');
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);
 
