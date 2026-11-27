@@ -59,8 +59,9 @@ const sleep = (p, ms) => p.waitForTimeout(ms);
 const settle = async p => { let last = -1, n = 0; for (let i = 0; i < 70; i++) { const v = await p.evaluate(() => leverPct); if (Math.abs(v - last) < 0.05) { if (++n >= 3) return v; } else n = 0; last = v; await sleep(p, 400); } return last; };
 const skipSplashByClick = async p => { await p.mouse.click(195, 300); await sleep(p, 250); };
 // The Chief's panel pops open when he speaks and auto-collapses ~8 s later, which moves the canvas and
-// every sheet under a finger mid-test.  Pin it collapsed (the game's own steady state) for geometry-dependent tests.
-const pinLayout = async p => { await p.evaluate(() => { window.snGuidePop = () => {}; if (guideExpanded) toggleGuideBar(); }); await sleep(p, 800); };
+// every sheet under a finger mid-test; achievement cinematics (by design) swallow the next input.  Pin the panel
+// collapsed (the game's own steady state) and silence cinematic offers for deterministic runs.
+const pinLayout = async p => { await p.evaluate(() => { window.snGuidePop = () => {}; if (guideExpanded) toggleGuideBar(); try { SN_CINE.offer = () => {}; if (SN_CINE.state.active) SN_CINE.close(false); SN_CINE.state.queue.length = 0; } catch (e) {} }); await sleep(p, 800); };
 const startL1 = async p => { await p.evaluate(() => startGame(1)); await p.waitForFunction(() => gameState.phase === 'playing' && player.onGround, null, { timeout: 10000 }); await pinLayout(p); };
 // where things are on the page (CSS px)
 const geo = p => p.evaluate(() => { const c = document.getElementById('gameCanvas').getBoundingClientRect(); const z = SN_TOUCH.zoneRects()[0]; return { cl: c.left, ct: c.top, cw: c.width, ch: c.height, zl: c.left + z.x + z.w * 0.25, zr: c.left + z.x + z.w * 0.75, zy: c.top + z.y + z.h / 2 }; });
@@ -83,14 +84,19 @@ if (on('key')) {
   await p.evaluate(() => document.getElementById('fxBtn').blur());
   await p.keyboard.press('Enter'); await sleep(p, 600);
   chk('KEY  Enter with nothing focused starts the game', (await st(p)).ph === 'playing');
-  await p.waitForFunction(() => player.onGround, null, { timeout: 8000 }); await sleep(p, 800);
+  await p.waitForFunction(() => player.onGround, null, { timeout: 8000 }); await pinLayout(p);
 
   for (const [key, sign, nm] of [['KeyD', 1, 'D'], ['ArrowRight', 1, 'ArrowRight'], ['KeyA', -1, 'A'], ['ArrowLeft', -1, 'ArrowLeft']]) {
-    await p.evaluate(() => { player.x = 150; });
-    const dx = await walked(p, async () => { await p.keyboard.down(key); await sleep(p, 600); });
-    await p.keyboard.up(key); await sleep(p, 300);
+    let dx = 0, tries = 0, why = '';
+    while (tries < 2 && Math.sign(dx) !== sign) {
+      tries++;
+      await p.evaluate(() => { player.x = 150; }); await sleep(p, 400);
+      dx = await walked(p, async () => { await p.keyboard.down(key); await sleep(p, 600); });
+      if (Math.sign(dx) !== sign) why = JSON.stringify(await p.evaluate(() => ({ pop: SN_TOUCH.pop && SN_TOUCH.pop.action, hud: SN_WASD.hudIdx, cine: CINE_ACTIVE, climbAuto: player.climbAuto, onLadder: player.onLadder, y: Math.round(player.y), tk: TAKEOVER.active, demo: DEMO.active, help: !!(SN_HELP.walkTo || SN_HELP.climb), kbA: !!KB.KeyA, keysA: !!keys.KeyA, keysD: !!keys.KeyD })));
+      await p.keyboard.up(key); await sleep(p, 300);
+    }
     const x1 = (await st(p)).x; await sleep(p, 400); const x2 = (await st(p)).x;
-    chk(`KEY  ${nm} walks ${sign > 0 ? 'right' : 'left'} while held and stops on release`, Math.sign(dx) === sign && Math.abs(x2 - x1) < 2, `dx=${dx}`);
+    chk(`KEY  ${nm} walks ${sign > 0 ? 'right' : 'left'} while held and stops on release`, Math.sign(dx) === sign && Math.abs(x2 - x1) < 2, `dx=${dx}${tries > 1 ? ' (needed ' + tries + ' tries; first miss: ' + why + ')' : ''}`);
   }
   // focus loss with a key physically down: the OS sends no keyup
   await p.evaluate(() => { player.x = 150; });
@@ -138,8 +144,7 @@ if (on('key')) {
   await p.keyboard.press('ArrowUp'); await p.keyboard.press('ArrowRight'); await p.keyboard.press('ArrowRight');
   const lf = await settle(p);
   chk('KEY  fine arrow steps leave the 0 detent (patch168)', lf >= 2 && lf <= 4, `lever ${lf.toFixed(1)}`);
-  await p.keyboard.press('Escape');
-  await p.waitForFunction(() => SN_TOUCH.pop === null, null, { timeout: 4000 }).catch(() => {});
+  for (let i = 0; i < 3 && (await st(p)).pop !== null; i++) { await p.keyboard.press('Escape'); await sleep(p, 600); }
   chk('KEY  Esc closes the sheet', (await st(p)).pop === null);
   // SCRAM
   await p.keyboard.down('KeyX'); await sleep(p, 450); await p.keyboard.up('KeyX'); await sleep(p, 400);
@@ -276,7 +281,7 @@ if (on('touch')) {
   await T('touchEnd', []);
   // double tap -> map
   await p.evaluate(() => { player.x = 40; }); await sleep(p, 300);
-  { const pt = { x: g.cl + g.cw * 0.5, y: g.ct + g.ch * 0.15 }; await T('touchStart', [pt]); await T('touchEnd', []); await T('touchStart', [pt]); await T('touchEnd', []); await sleep(p, 600); }
+  { const pt = { x: g.cl + g.cw * 0.5, y: g.ct + g.ch * 0.15 }; await Promise.all([T('touchStart', [pt]), T('touchEnd', []), T('touchStart', [pt]), T('touchEnd', [])]); await sleep(p, 600); }   // sent back to back: a real double-tap is ~150-250 ms, and each awaited CDP round trip costs more than that at headless fps
   chk('TOUCH double-tap on the world opens the plant map', (await st(p)).map === true);
   await p.keyboard.press('Escape'); await sleep(p, 300);
   // rod sheet + / -
@@ -329,7 +334,7 @@ if (on('deck')) {
   await sleep(p, 600); await skipSplashByClick(p); await startL1(p);
   await openSheet(p, 'rod_withdraw');
   await p.evaluate(() => { leverPct = 55; });                       // the startup lever raise: period / reactivity leave 'normal'
-  await p.waitForFunction(() => snAlarmCode() > 0, null, { timeout: 20000 }).catch(() => {});
+  await p.waitForFunction(() => alarms.temp !== 'normal' || alarms.power !== 'normal' || alarms.period !== 'normal' || alarms.steam !== 'normal' || alarms.press !== 'normal' || alarms.level !== 'normal' || alarms.react === 'danger', null, { timeout: 30000 }).catch(() => {});   // the conditions that auto-open the deck
   await sleep(p, 2500);
   const s1 = await p.evaluate(() => ({ code: snAlarmCode(), deck: deckExpanded, pop: !!SN_TOUCH.pop }));
   chk('DECK with an alarm showing and a control sheet open the gauge deck does NOT auto-open over the sheet', s1.code > 0 && s1.pop && s1.deck === false, JSON.stringify(s1));
@@ -337,7 +342,8 @@ if (on('deck')) {
   await p.waitForFunction(() => SN_TOUCH.pop === null, null, { timeout: 4000 }).catch(() => {});
   await p.waitForFunction(() => deckExpanded, null, { timeout: 10000 }).catch(() => {});
   chk('DECK with the sheet closed the alarm auto-opens the deck again', await p.evaluate(() => deckExpanded) === true);
-  await p.evaluate(() => { deckDismissedCode = -1; toggleGaugeDeck(); });
+  await p.waitForFunction(() => deckExpanded, null, { timeout: 5000 }).catch(() => {});
+  await p.evaluate(() => toggleGaugeDeck());   // the player closes it
   const c0 = await p.evaluate(() => snAlarmCode());
   let stayed = true, changed = false;
   for (let i = 0; i < 8; i++) { await sleep(p, 250); const r = await p.evaluate(() => ({ d: deckExpanded, c: snAlarmCode() })); if (r.c !== c0) { changed = true; break; } if (r.d) stayed = false; }

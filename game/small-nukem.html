@@ -4472,9 +4472,11 @@ let deckAutoCloseTimer = 0;
 const SN_ALARM_KEYS = ['temp', 'press', 'power', 'react', 'period', 'steam', 'level'];
 function snAlarmCode() { let c = 0; for (let i = 0; i < SN_ALARM_KEYS.length; i++) { const z = alarms[SN_ALARM_KEYS[i]]; c = c * 3 + (z === 'danger' ? 2 : z === 'caution' ? 1 : 0); } return c; }
 let deckDismissedCode = -1;   // patch169: alarm picture the player closed the deck on (-1 = none)
+let deckAutoOpened = false;   // patch170: the deck is open because the game opened it (not the player)
 function toggleGaugeDeck() {
   deckExpanded = !deckExpanded;
   deckDismissedCode = (!deckExpanded && typeof alarms !== 'undefined') ? snAlarmCode() : -1;   // patch169: a manual close sticks for this alarm picture
+  deckAutoOpened = false;   // patch170: any manual toggle makes the deck the player's
   document.getElementById('gaugeDeckExpanded').style.display = deckExpanded ? 'block' : 'none';
   document.getElementById('deckExpandArrow').innerHTML = deckExpanded ? '&#9660; GAUGES' : '&#9650; GAUGES';
   requestAnimationFrame(deckRelayout);
@@ -4554,7 +4556,7 @@ function autoExpandDeck() {
   if (deckDismissedCode >= 0 && snAlarmCode() === deckDismissedCode) return;   // patch169: the player closed it on exactly this alarm picture
   if (snDemoActive121()) return;   // patch121 (Kevin): no gauge pop-up during the demo - the bottom gauges stay as normal, the deck simply never pops
   if (!deckExpanded) {
-    deckExpanded = true;
+    deckExpanded = true; deckAutoOpened = true;   // patch170
     document.getElementById('gaugeDeckExpanded').style.display = 'block';
     document.getElementById('deckExpandArrow').innerHTML = '&#9660; GAUGES';
     requestAnimationFrame(deckRelayout);
@@ -4563,6 +4565,12 @@ function autoExpandDeck() {
 }
 
 function updateDeckAutoClose(dt) {
+  if (deckExpanded && deckAutoOpened && typeof SN_TOUCH !== 'undefined' && SN_TOUCH.pop) {   // patch170: an auto-opened deck yields to the control sheet being worked
+    deckExpanded = false; deckAutoOpened = false; deckAutoCloseTimer = 0;
+    document.getElementById('gaugeDeckExpanded').style.display = 'none';
+    document.getElementById('deckExpandArrow').innerHTML = '&#9650; GAUGES';
+    requestAnimationFrame(deckRelayout);
+  }
   if (deckAutoCloseTimer > 0) {
     deckAutoCloseTimer -= dt;
     if (deckAutoCloseTimer <= 0 && deckExpanded) {

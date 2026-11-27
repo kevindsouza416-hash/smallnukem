@@ -1062,6 +1062,10 @@ chk('p166 C1: dead KEYBOARD TRACK listeners, the empty interact-once branch and 
 chk('p169: autoExpandDeck never opens the deck while a control sheet is open', html.includes("if (typeof SN_TOUCH !== 'undefined' && SN_TOUCH.pop) return;   // patch169"), '');
 chk('p169: a deck closed by hand stays closed for the same alarm picture (base-3 alarm code, no allocation)', html.includes('function snAlarmCode()') && html.includes('deckDismissedCode = (!deckExpanded && typeof alarms') && html.includes('if (deckDismissedCode >= 0 && snAlarmCode() === deckDismissedCode) return;'), '');
 chk('p169: an all-normal plant re-arms the auto-expand', html.includes('if (hasAlarm) autoExpandDeck(); else deckDismissedCode = -1;'), '');
+
+// ---- patch170 (controls audit): an auto-opened deck yields to the control sheet ----
+chk('p170: autoExpandDeck marks the deck as game-opened; any manual toggle clears the mark', html.includes('deckExpanded = true; deckAutoOpened = true;') && html.includes("deckAutoOpened = false;   // patch170: any manual toggle makes the deck the player's"), '');
+chk('p170: updateDeckAutoClose closes a game-opened deck as soon as a control sheet is open (player-opened decks are left alone)', html.includes('if (deckExpanded && deckAutoOpened && typeof SN_TOUCH !== \'undefined\' && SN_TOUCH.pop) {'), '');
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);
 
