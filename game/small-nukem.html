@@ -6524,6 +6524,7 @@ function snActionLift(ab, lad, ladD) {
       clear = Math.min(H - fy0 + 8, Math.max(clear, H - bh - 4));
     }
   }
+  clear = Math.min(clear, Math.max(0, H - bh - 4)); // patch180: cap EVERY prompt path (CLIMB UP/DOWN, OPEN, WALK TO share snActionLift) so the button top never crosses the canvas top into the step bar - previously only the lift-above-head branch was capped; strict no-op whenever H permits the nominal 220/122 clear
   ab.style.bottom = (below + clear) + 'px';
 }
 function snHelpActionTick(busy) {
