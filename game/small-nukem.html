@@ -5633,6 +5633,7 @@ function bindPointerInput() {
   cv.__snBound = true;
   const frac = e => { const r = cv.getBoundingClientRect(); return { fx: (e.clientX - r.left) / Math.max(1, r.width), fy: (e.clientY - r.top) / Math.max(1, r.height) }; };
   cv.addEventListener('pointerdown', e => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;   // patch161 (D3): right / middle click is not a press
     try { cv.setPointerCapture(e.pointerId); } catch (err) {}
     const { fx, fy } = frac(e);
     SNX.attractT = 0;
@@ -5837,10 +5838,36 @@ window.SN_WASD = SN_WASD;
 window.addEventListener('keydown', e => { if (e.code in SN_WASD.held) { SN_WASD.held[e.code] = true; SN_WASD.heldLatch[e.code] = performance.now() + 170; } });   // patch153: latch stamp mirrors KB_LATCH
 window.addEventListener('keyup', e => { if (e.code in SN_WASD.held) SN_WASD.held[e.code] = false; });
 
+// patch161 (D1): one place that lets go of EVERY input source.  Runs on
+// blur / tab-hidden / pagehide: the OS delivers no keyup / pointerup once
+// focus is gone, so without this a held key or finger sticks until the next
+// real press.  Panel grabs are released through SN_TOUCH.up (snap-on-release
+// still applies), the rest is cleared in place - no allocation.
+function snReleaseAllInput() {
+  for (const k in keys) keys[k] = false;
+  for (const k in KB) KB[k] = false;
+  for (const k in KB_LATCH) KB_LATCH[k] = 0;
+  for (const k in keysJustPressed) delete keysJustPressed[k];
+  for (const k in SN_WASD.held) SN_WASD.held[k] = false;
+  for (const k in SN_WASD.heldLatch) SN_WASD.heldLatch[k] = 0;
+  SN_WASD._holdCode = null; SN_WASD._opEdge = false;
+  for (const [id, p] of pointers) { if (p.role === 'pop') { try { SN_TOUCH.up(id); } catch (e) {} } }
+  pointers.clear();
+  GP.holdE = GP.holdQ = false;
+  syncPointerInput();
+}
+function snAnyKeyHeld() { for (const k in KB) { if (KB[k]) return true; } return false; }   // allocation-free scan of the keyboard state
+window.addEventListener('blur', snReleaseAllInput);
+window.addEventListener('pagehide', snReleaseAllInput);
+document.addEventListener('visibilitychange', () => { if (document.hidden) snReleaseAllInput(); });
+
 function mergeInput() {
   const kbNow153 = performance.now();
   const kbEff153 = c => !!(KB[c] || (KB_LATCH[c] || 0) > kbNow153);   // patch153: held level OR unexpired latch — a tap between frames registers for at least one frame; a hold is level-sampled exactly as before
-  if (Object.values(KB).some(v => v) || Object.values(KB_LATCH).some(t => t > kbNow153)) SN_TOUCH.notePhys();
+  let phys161 = false;   // patch161 (D4): allocation-free scan (was two Object.values arrays per frame)
+  for (const k in KB) { if (KB[k]) { phys161 = true; break; } }
+  if (!phys161) for (const k in KB_LATCH) { if (KB_LATCH[k] > kbNow153) { phys161 = true; break; } }
+  if (phys161) SN_TOUCH.notePhys();
   if (CINE_ACTIVE) { for (const k of ['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','KeyE','KeyQ']) keys[k] = false; INPUT.tapPulse = INPUT.tapAltPulse = false; return; }
   keys['ArrowLeft']  = !!(kbEff153('ArrowLeft')  || INPUT.left);
   keys['ArrowRight'] = !!(kbEff153('ArrowRight') || INPUT.right);
@@ -6383,7 +6410,7 @@ function snActionLift(ab, lad, ladD) {
 }
 function snHelpActionTick(busy) {
   const H = SN_HELP, ab = document.getElementById('actionBtn');
-  const manual = Object.values(KB).some(v => v) || pointers.size > 0;
+  const manual = snAnyKeyHeld() || pointers.size > 0;   // patch161 (D4)
   if (manual && (H.walkTo || H.climb)) { H.walkTo = null; H.climb = null; INPUT.left = INPUT.right = INPUT.up = INPUT.down = false; }
   if (H.climb && !busy) {
     const c = H.climb;
@@ -6452,7 +6479,7 @@ function snHelpTick(dt) {
   H.lastTargetId = tid;
   // Active-input accounting: PURE IDLE NEVER ACCUMULATES. Standing
   // still, reading or thinking is not stuckness (research §5.3).
-  const active = Object.values(KB).some(v => v) || pointers.size > 0 || Math.abs(player.vx || 0) > 5 || player.onLadder;
+  const active = snAnyKeyHeld() || pointers.size > 0 || Math.abs(player.vx || 0) > 5 || player.onLadder;   // patch161 (D4)
   if (active) H.activeNoProg += dt;
   if (H.guidance === 'request') return;
   const fade = 1 + 0.5 * Math.min(2, H.hist['s' + step] || 0);
@@ -11852,6 +11879,7 @@ ASSIST.summon = function () {
   if (cvEl) {
     let lpTimer = 0, lpX = 0, lpY = 0, lastTapT = 0, lastTapX = 0;
     cvEl.addEventListener('pointerdown', e => {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;   // patch161 (D3): a right-button double-click must not open the map
       lpX = e.clientX; lpY = e.clientY;
       const now = performance.now();
       if (now - lastTapT < 330 && Math.abs(e.clientX - lastTapX) < 60) {
@@ -12231,8 +12259,12 @@ window.__SN__ = {
     try { v.pause(); } catch (err) {}
     v.style.display = 'none';
     window.removeEventListener('pointerdown', end, true);
+    window.removeEventListener('keydown', endKey, true);
   }
   window.addEventListener('pointerdown', end, true);
+  // patch161 (D2): a key skips the splash too (browser / OS shortcuts and bare modifiers excepted)
+  const endKey = e => { if (e.ctrlKey || e.metaKey || e.altKey || /^(Shift|Control|Alt|Meta|F\d+)/.test(e.code)) return; end(e); };
+  window.addEventListener('keydown', endKey, true);
   v.addEventListener('ended', () => end());
   setTimeout(() => end(), 7000);
   const p = v.play();
