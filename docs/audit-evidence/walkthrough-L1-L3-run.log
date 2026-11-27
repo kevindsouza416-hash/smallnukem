@@ -1,0 +1,20 @@
+started {"walk":true,"tk":true,"follow":true,"cls":"follow-on"}
+6s {"ph":"playing","lvl":1,"st":0,"walk":true,"gap":false,"tk":true,"sphase":"heatup","ass":"","cine":false}
+12s {"ph":"playing","lvl":1,"st":1,"walk":true,"gap":false,"tk":true,"sphase":"heatup","ass":"0","cine":false}
+48s {"ph":"playing","lvl":1,"st":2,"walk":true,"gap":false,"tk":true,"sphase":"heatup","ass":"01","cine":false}
+60s {"ph":"playing","lvl":1,"st":4,"walk":true,"gap":false,"tk":true,"sphase":"power","ass":"0123","cine":false}
+72s {"ph":"scored","lvl":1,"st":5,"walk":true,"gap":true,"tk":false,"sphase":"grid","ass":"01234","cine":true}
+78s {"ph":"playing","lvl":2,"st":0,"walk":true,"gap":false,"tk":true,"sphase":"heatup","ass":"","cine":false}
+90s {"ph":"playing","lvl":2,"st":1,"walk":true,"gap":false,"tk":true,"sphase":"heatup","ass":"0","cine":false}
+103s {"ph":"playing","lvl":2,"st":2,"walk":true,"gap":false,"tk":true,"sphase":"heatup","ass":"01","cine":false}
+115s {"ph":"playing","lvl":2,"st":4,"walk":true,"gap":false,"tk":true,"sphase":"power","ass":"0123","cine":false}
+235s {"ph":"scored","lvl":2,"st":5,"walk":true,"gap":true,"tk":false,"sphase":"grid","ass":"01234","cine":true}
+241s {"ph":"playing","lvl":3,"st":0,"walk":true,"gap":false,"tk":true,"sphase":"heatup","ass":"","cine":false}
+253s {"ph":"playing","lvl":3,"st":1,"walk":true,"gap":false,"tk":true,"sphase":"heatup","ass":"0","cine":false}
+265s {"ph":"playing","lvl":3,"st":2,"walk":true,"gap":false,"tk":true,"sphase":"heatup","ass":"01","cine":false}
+277s {"ph":"playing","lvl":3,"st":4,"walk":true,"gap":false,"tk":true,"sphase":"power","ass":"0123","cine":false}
+289s {"ph":"playing","lvl":3,"st":4,"walk":true,"gap":false,"tk":true,"sphase":"grid","ass":"0123","cine":false}
+398s {"ph":"scored","lvl":3,"st":5,"walk":false,"gap":false,"tk":true,"sphase":"complete","ass":"01234","cine":true}
+final scored
+score card: 500 assisted=5 steps=5 / 5
+errs []
