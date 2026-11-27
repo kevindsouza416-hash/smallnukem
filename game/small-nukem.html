@@ -5172,8 +5172,8 @@ function updatePlayer(dt) {
     if (gp.buttons[12] && gp.buttons[12].pressed) gpUp = true;
     if (gp.buttons[13] && gp.buttons[13].pressed) gpDown = true;
     gpJump = gp.buttons[0] && gp.buttons[0].pressed;
-    gpUp = gp.axes[1] < -0.5;
-    gpDown = gp.axes[1] > 0.5;
+    if (gp.axes[1] < -0.5) gpUp = true;   // patch163 (G1): OR-ed in - the plain assignment erased the D-pad up/down set above
+    if (gp.axes[1] > 0.5) gpDown = true;
   }
 
   // patch113 (Kevin, Nov 26 ~02:07): press-once AUTO-CLIMB. A
@@ -5258,7 +5258,8 @@ function updatePlayer(dt) {
     if (keys['ArrowDown'] || keys['KeyS'] || gpDown || p.climbAuto === 1) p.vy = LADDER_SPEED;   // patch113
   } else {
     p.vy += GRAVITY * dt;
-    if ((keys['Space'] || (keys['ArrowUp'] && !p.ladderLatch) || (gp && gp.buttons[0] && gp.buttons[0].pressed)) && p.onGround) {   // held Up after a climb must not fire a jump at the top (BUG-001)
+    const operating163 = !!(SN_TOUCH.pop || p.interactTarget);   // patch163 (J1): Space / A are the operate keys too - no jump while a sheet is open or Fluke stands at a panel
+    if (((keys['Space'] && !operating163) || (keys['ArrowUp'] && !p.ladderLatch) || (gp && gp.buttons[0] && gp.buttons[0].pressed && !operating163)) && p.onGround) {   // held Up after a climb must not fire a jump at the top (BUG-001)
       p.vy = JUMP_SPEED; SN_SFX.jump();
       p.onGround = false;
     }

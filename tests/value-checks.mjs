@@ -1000,6 +1000,10 @@ chk('p162: keyboard X and gamepad Back/View hold (1.0 s) with a progress pill; r
 chk('p162: ARI-01 panel carries a SCRAM hold button (left) beside the ARI tap button (right)', html.includes("fx: 'scramFire'") && html.includes("if (pop.grab.fx === 'scramFire')"), '');
 chk('p162: overlay heading distinguishes a manual SCRAM from an automatic one', html.includes('id="scramHead"') && html.includes("'!! MANUAL SCRAM !!'") && html.includes("'!! AUTOMATIC SCRAM !!'"), '');
 chk('p162: the Chief stock automatic-trip line is NOT used for a manual SCRAM', html.includes('} else showCallout(\'scram\');'), '');
+
+// ---- patch163 (controls audit): movement input ----
+chk('p163 G1: the gamepad stick axis is OR-ed into gpUp/gpDown (it used to overwrite the D-pad)', html.includes('if (gp.axes[1] < -0.5) gpUp = true;') && html.includes('if (gp.axes[1] > 0.5) gpDown = true;') && !html.includes('gpUp = gp.axes[1] < -0.5;'), '');
+chk('p163 J1: Space / gamepad A jump only when no sheet is open and no interact target', html.includes('const operating163 = !!(SN_TOUCH.pop || p.interactTarget);') && html.includes("(keys['Space'] && !operating163)"), '');
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);
 
