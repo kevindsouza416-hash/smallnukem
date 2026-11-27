@@ -934,7 +934,7 @@ chk('ship24 interact: the press sets the 148/154 dwell latch for the pressed uni
 chk('ship24 levers: SNAP159 table — rod [0,20,39,58,100], load [0,95,100], bypass/leak end-stops [0,100]', html.includes('const SNAP159 = { rod_withdraw: [0, 20, 39, 58, 100], raise_power: [0, 95, 100], steam_valve: [0, 100], isolate_leak: [0, 100] };'), '');
 chk('ship24 levers: snap window is strictly inside +/-2 (a value exactly 2 away does NOT snap)', html.includes('const SNAP_WIN159 = 2;') && html.includes('for (const p of pts) if (Math.abs(v - p) < SNAP_WIN159) return p;'), '');
 chk('ship24 levers: padStep routes all four results through snapTarget (snap-in-stepper, coarse sizes unchanged)', html.includes("pop.target.lever = snapTarget(a, Math.max(0, Math.min(100, (pop.target.lever ?? leverPct) + dir * 5)));") && html.includes("pop.target.lever = snapTarget(a, Math.max(0, Math.min(100, (pop.target.lever ?? leverPct) + dir * 3)));") && html.includes("pop.target.bypass = snapTarget(a, Math.max(0, Math.min(100, (pop.target.bypass ?? bypassPct) + dir * 4)));") && html.includes("pop.target.leak = snapTarget(a, Math.max(0, Math.min(100, (pop.target.leak ?? pop.leakPct ?? 0) + dir * 5)));"), '');
-chk('ship24 levers: padStepFine (the fine channel) clamps then snaps through snapTarget', html.includes('const v = snapTarget(a, Math.max(0, Math.min(100, abs != null ? abs : cur + d)));') && html.includes("if (a === 'rod_withdraw' || a === 'raise_power') pop.target.lever = v;") && html.includes("else if (a === 'steam_valve') pop.target.bypass = v;") && html.includes('else pop.target.leak = v;'), '');
+chk('ship24 levers: padStepFine (the fine channel) clamps then snaps through snapTarget', html.includes('const v = snapTarget(a, Math.max(0, Math.min(100, abs != null ? abs : cur + d)), abs != null ? null : cur);')   /* patch168: origin passed so a fine step can leave a detent */ && html.includes("if (a === 'rod_withdraw' || a === 'raise_power') pop.target.lever = v;") && html.includes("else if (a === 'steam_valve') pop.target.bypass = v;") && html.includes('else pop.target.leak = v;'), '');
 chk('ship24 levers: snap is confined to step + release — exactly 9 snapTarget( sites (def + 4 padStep + 1 fine + 3 up()) and NO snap call inside sheetMove (mid-drag stays free)', (html.match(/snapTarget\(/g) || []).length === 9 && (() => { const _sm = html.indexOf('function sheetMove(x, y) {'); if (_sm < 0) return false; const _se = html.indexOf('function ', _sm + 20); return _se > _sm && !html.slice(_sm, _se).includes('snapTarget'); })(), '');
 chk('ship24 levers: snap-on-release in up() runs only for the grab owned by the releasing pointer (grab.id match)', html.includes('if (pop.grab && pop.grab.id === id) {   // patch159: snap-on-release'), '');
 chk('ship24 levers: up() snaps the lever for leverV/leverH grabs on release', html.includes("if ((g159.kind === 'leverV' || g159.kind === 'leverH') && pop.target.lever != null) { const s159 = snapTarget(g159.a, pop.target.lever);"), '');
@@ -1039,6 +1039,29 @@ chk('p164: layoutTopBars parks the overlay below the step bar and clears the inl
 // ---- patch166 (controls audit): title-screen keys + dead code ----
 chk('p166 B1: on the title screen a focused button owns Enter/Space (the generic start key only fires with nothing focused)', html.includes("const btn166 = e && e.target && e.target.closest ? e.target.closest('button') : null;") && html.includes("if (btn166) { if (code === 'Space') btn166.click(); }") && html.includes('else startGame();'), '');
 chk('p166 C1: dead KEYBOARD TRACK listeners, the empty interact-once branch and the unused gpJump are gone', !html.includes('KeyE_keyboard') && !html.includes('KeyQ_keyboard') && !html.includes('KeyE_held') && !html.includes('gpJump'), '');
+
+// ---- patch168 (controls audit): fine step vs detent ----
+{
+  // Re-evaluate the game's own snapTarget / padStepFine logic in isolation (extracted from the source text).
+  const m = html.match(/const SNAP159 = [^\n]+\n[\s\S]*?const SNAP_WIN159 = 2;[^\n]*\n\s*function snapTarget\(a, v, from\) \{[\s\S]*?\n  \}/);
+  chk('p168: snapTarget(a, v, from) is present with the SNAP159 table and window', !!m, '');
+  if (m) {
+    const snap = new Function(m[0].replace(/\/\/[^\n]*/g, '') + '\nreturn snapTarget;')();
+    const fine = (a, cur, d) => snap(a, Math.max(0, Math.min(100, cur + d)), cur);
+    chk('p168: from the 0 detent a +1 fine step leaves 0 (it used to snap back to 0 forever)', fine('rod_withdraw', 0, 1) === 1);
+    chk('p168: from the 100 detent a -1 fine step leaves 100', fine('rod_withdraw', 100, -1) === 99 && fine('steam_valve', 100, -1) === 99);
+    chk('p168: from the 39 band-edge detent both fine directions leave it', fine('rod_withdraw', 39, 1) === 40 && fine('rod_withdraw', 39, -1) === 38);
+    chk('p168: the magnet still works - arriving within the window from outside snaps onto the detent', fine('rod_withdraw', 37, 1) === 39 && fine('rod_withdraw', 22, -1) === 20 && fine('raise_power', 94, 1) === 95);
+    chk('p168: coarse / release snaps (no origin) are unchanged', snap('rod_withdraw', 20.7) === 20 && snap('rod_withdraw', 22) === 22 && snap('rod_withdraw', 1.9) === 0);
+    let v = 0; for (let k = 0; k < 40; k++) v = fine('rod_withdraw', v, 1);
+    chk('p168: forty +1 fine steps from 0 travel the whole way to 40 (magnet jumps at most 2 once per detent)', v >= 40, 'reached ' + v);
+  }
+}
+
+// ---- patch169 (controls audit): the auto-expanding gauge deck vs an open control sheet ----
+chk('p169: autoExpandDeck never opens the deck while a control sheet is open', html.includes("if (typeof SN_TOUCH !== 'undefined' && SN_TOUCH.pop) return;   // patch169"), '');
+chk('p169: a deck closed by hand stays closed for the same alarm picture (base-3 alarm code, no allocation)', html.includes('function snAlarmCode()') && html.includes('deckDismissedCode = (!deckExpanded && typeof alarms') && html.includes('if (deckDismissedCode >= 0 && snAlarmCode() === deckDismissedCode) return;'), '');
+chk('p169: an all-normal plant re-arms the auto-expand', html.includes('if (hasAlarm) autoExpandDeck(); else deckDismissedCode = -1;'), '');
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);
 
