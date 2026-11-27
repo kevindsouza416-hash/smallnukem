@@ -1,1 +1,41 @@
-IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoiIiJSZW5kZXIgbWFuaWZlc3QubWQgZnJvbSBtYW5pZmVzdC5qc29uLiIiIgppbXBvcnQganNvbgpmcm9tIGNvbGxlY3Rpb25zIGltcG9ydCBDb3VudGVyCgpPVVQgPSAnL2hvbWUvaGF0Y2gvd29ya3NwYWNlL3NtYWxsLW51a2VtLWNoaWVmLWNsaXBzJwptYW4gPSBqc29uLmxvYWQob3BlbihPVVQgKyAnL21hbmlmZXN0Lmpzb24nKSkKZ3JvdXBzID0gQ291bnRlcihtWydncm91cCddIGZvciBtIGluIG1hbikKdG90YWxfZHVyID0gc3VtKG0uZ2V0KCdkdXJhdGlvbl9zJykgb3IgMCBmb3IgbSBpbiBtYW4pCgpsaW5lcyA9IFtdCmxpbmVzLmFwcGVuZCgnIyBTbWFsbCBOdWtlbSDigJQgVGhlIENoaWVmOiBwcmUtcmVuZGVyZWQgdm9pY2UgY2xpcHMnKQpsaW5lcy5hcHBlbmQoJycpCmxpbmVzLmFwcGVuZCgnVm9pY2U6IGF2b2NhZG9fdjI6bWFnbnVzICh3YXJtIFNjb3R0aXNoIGVuZ2luZWVyIHJlZ2lzdGVyIHBlciBkZWNpc2lvbiBBMiDigJQnKQpsaW5lcy5hcHBlbmQoJ2J1aWx0IGZyb20gZGVzY3JpYmVkIHF1YWxpdGllcywgbm90IGFuIGltaXRhdGlvbiBvZiBhbnkgcGVyc29uKS4nKQpsaW5lcy5hcHBlbmQoJ1NvdXJjZSBidWlsZDogfi9zbWFsbC1udWtlbS9zbWFsbC1udWtlbS5odG1sLCA1MTUsMjQ3IEIsIE1ENSBiMzQ2MjlkNTcwMTlmMzczNjAyNTQ5NmVjYzM3YTMyMy4nKQpsaW5lcy5hcHBlbmQoJycpCmxpbmVzLmFwcGVuZChmJyoqe2xlbihtYW4pfSBjbGlwcyDCtyB0b3RhbCB7dG90YWxfZHVyLzYwOi4xZn0gbWluIG9mIHNwZWVjaCoqJykKbGluZXMuYXBwZW5kKCcnKQpsaW5lcy5hcHBlbmQoJ3wgR3JvdXAgfCBDbGlwcyB8JykKbGluZXMuYXBwZW5kKCd8LS0tfC0tLXwnKQpmb3IgZywgbiBpbiBncm91cHMuaXRlbXMoKToKICAgIGxpbmVzLmFwcGVuZChmJ3wge2d9IHwge259IHwnKQpsaW5lcy5hcHBlbmQoJycpCmxpbmVzLmFwcGVuZCgnYHRleHRgIGlzIHRoZSBjYW5vbmljYWwgbGluZSAobWF0Y2hlcyB0aGUgYnVpbGQgdmVyYmF0aW0gZm9yIGJ1aWxkLXNvdXJjZWQgbGluZXMpLicpCmxpbmVzLmFwcGVuZCgnYHR0c190ZXh0YCBpcyB0aGUgc3Bva2VuIGZvcm0gYWN0dWFsbHkgc3ludGhlc2l6ZWQg4oCUIGlkZW50aWNhbCB0byBgdGV4dGAgdW5sZXNzJykKbGluZXMuYXBwZW5kKCdudW1iZXJzL3VuaXRzIHdlcmUgc3BlbGxlZCBvdXQgZm9yIHByb251bmNpYXRpb24gKE1QYSDihpIgbWVnYXBhc2NhbHMsIE1XZSDihpInKQpsaW5lcy5hcHBlbmQoJ21lZ2F3YXR0cyBlbGVjdHJpYywgMTUwMCBSUE0g4oaSIGZpZnRlZW4gaHVuZHJlZCBSUE0sIEJXUlgtMzAwIOKGkiBCV1JYIHRocmVlJykKbGluZXMuYXBwZW5kKCdodW5kcmVkLCAlIOKGkiBwZXJjZW50LCBtSyDihpIgbWlsbGktaywgYWNyb255bXMgbGV0dGVyLXNwZWxsZWQpLicpCmxpbmVzLmFwcGVuZCgnYHNvdXJjZWA6IGJ1aWxkID0gZXh0cmFjdGVkIHZlcmJhdGltIGZyb20gdGhlIHNoaXBwZWQgYnVpbGQgwrcgYXV0aG9yZWQtdmFyaWFudCA9JykKbGluZXMuYXBwZW5kKCd3cml0dGVuIGZvciB0aGlzIHNldCB0byBzYXRpc2Z5IHRoZSBuby1yZXBlYXQgcnVsZSAoc2FtZSBmYWN0cywgQ2hpZWYgcmVnaXN0ZXIpIMK3JykKbGluZXMuYXBwZW5kKCd0b3VyLXNjcmlwdCAvIHBsYXl0aHJvdWdoLXNjcmlwdCA9IGZyb20gdGhlIHJlY29yZGVkIHRvdXIgLyBkZW1vIG5hcnJhdGlvbiBzY3JpcHRzLicpCmxpbmVzLmFwcGVuZCgnJykKbGluZXMuYXBwZW5kKCd8IGlkIHwgZ3JvdXAgfCBrZXkgfCBzb3VyY2UgfCBmaWxlIHwgZHVyIChzKSB8IHRleHQgfCcpCmxpbmVzLmFwcGVuZCgnfC0tLXwtLS18LS0tfC0tLXwtLS18LS0tfC0tLXwnKQpmb3IgbSBpbiBtYW46CiAgICB0ZXh0ID0gbVsndGV4dCddLnJlcGxhY2UoJ3wnLCAnXFx8JykKICAgIGxpbmVzLmFwcGVuZChmInwge21bJ2lkJ119IHwge21bJ2dyb3VwJ119IHwge21bJ2tleSddfSB8IHttWydzb3VyY2UnXX0gfCB7bVsnZmlsZSddfSB8IHttLmdldCgnZHVyYXRpb25fcycpfSB8IHt0ZXh0fSB8IikKbGluZXMuYXBwZW5kKCcnKQpvcGVuKE9VVCArICcvbWFuaWZlc3QubWQnLCAndycpLndyaXRlKCdcbicuam9pbihsaW5lcykpCnByaW50KCdtYW5pZmVzdC5tZCB3cml0dGVuOicsIGxlbihtYW4pLCAncm93cycpCg==
+#!/usr/bin/env python3
+"""Render manifest.md from manifest.json."""
+import json
+from collections import Counter
+
+OUT = '/home/hatch/workspace/small-nukem-chief-clips'
+man = json.load(open(OUT + '/manifest.json'))
+groups = Counter(m['group'] for m in man)
+total_dur = sum(m.get('duration_s') or 0 for m in man)
+
+lines = []
+lines.append('# Small Nukem — The Chief: pre-rendered voice clips')
+lines.append('')
+lines.append('Voice: avocado_v2:magnus (warm Scottish engineer register per decision A2 —')
+lines.append('built from described qualities, not an imitation of any person).')
+lines.append('Source build: ~/small-nukem/small-nukem.html, 515,247 B, MD5 b34629d57019f3736025496ecc37a323.')
+lines.append('')
+lines.append(f'**{len(man)} clips · total {total_dur/60:.1f} min of speech**')
+lines.append('')
+lines.append('| Group | Clips |')
+lines.append('|---|---|')
+for g, n in groups.items():
+    lines.append(f'| {g} | {n} |')
+lines.append('')
+lines.append('`text` is the canonical line (matches the build verbatim for build-sourced lines).')
+lines.append('`tts_text` is the spoken form actually synthesized — identical to `text` unless')
+lines.append('numbers/units were spelled out for pronunciation (MPa → megapascals, MWe →')
+lines.append('megawatts electric, 1500 RPM → fifteen hundred RPM, BWRX-300 → BWRX three')
+lines.append('hundred, % → percent, mK → milli-k, acronyms letter-spelled).')
+lines.append('`source`: build = extracted verbatim from the shipped build · authored-variant =')
+lines.append('written for this set to satisfy the no-repeat rule (same facts, Chief register) ·')
+lines.append('tour-script / playthrough-script = from the recorded tour / demo narration scripts.')
+lines.append('')
+lines.append('| id | group | key | source | file | dur (s) | text |')
+lines.append('|---|---|---|---|---|---|---|')
+for m in man:
+    text = m['text'].replace('|', '\\|')
+    lines.append(f"| {m['id']} | {m['group']} | {m['key']} | {m['source']} | {m['file']} | {m.get('duration_s')} | {text} |")
+lines.append('')
+open(OUT + '/manifest.md', 'w').write('\n'.join(lines))
+print('manifest.md written:', len(man), 'rows')

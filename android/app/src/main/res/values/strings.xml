@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Small Nukem</string>
+    <string name="shortcut_demo_short">Demo Mode</string>
+    <string name="shortcut_demo_long">Watch the demo — the Chief runs the plant</string>
+    <string name="shortcut_play_short">Play</string>
+    <string name="shortcut_play_long">Start a shift at the BWRX-300</string>
+</resources>

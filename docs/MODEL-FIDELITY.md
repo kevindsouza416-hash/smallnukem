@@ -1,1 +1,141 @@
-IyBTbWFsbCBOdWtlbSDigJQgTW9kZWwgRmlkZWxpdHkgUmVjb3JkIChEZWNpc2lvbiA5KQoKKipSdWxpbmcgKEtldmluLCAyMDI2LTExLTI1IH4wMDo1MCBFU1QpOiAiVGhlcmUgc2hvdWxkbid0IGJlIGFueSBkZWxpYmVyYXRlIGRpZmZlcmVuY2VzLiIqKgoKU2FtaXJhJ3Mgb3JpZ2luYWwgbW9kZWwg4oCUIGByZWZlcmVuY2UvanMvbW9kZWwuanNgLCB0aGUgQldSWC0zMDAgVHJhaW5pbmcKU2ltdWxhdG9yIE1vZGVsIHYyIOKAlCBpcyB0aGUgc291cmNlIG9mIHRydXRoIGZvciBhbGwgcGh5c2ljcyBjb25zdGFudHMsCnRyaXBzLCBhbGFybXMsIHN0YXJ0IHN0YXRlLCBhbmQgYmVoYXZpb3VyIGluIHRoZSBnYW1lLiBBcyBvZiB0aGUKZmlkZWxpdHkgcGF0Y2ggKDIwMjYtMTEtMjUpLCB0aGUgZ2FtZSdzIHNpbXVsYXRpb24gKippcyoqIGhlciBtb2RlbCwKZW1iZWRkZWQgdmVyYmF0aW0gaW4gYHNtYWxsLW51a2VtLmh0bWxgICh0aGUgYEJXUmAgYmxvY2spLiBUaGUgc3BlYydzClI2MyB0YWJsZSBoYXMgYmVlbiBjb3JyZWN0ZWQgdG8gaGVyIHZhbHVlcyBpbiBhbGwgdGhyZWUgY29waWVzLgoKVmVyaWZpY2F0aW9uOiBgdGVzdHMvdmFsdWUtY2hlY2tzLm1qc2Ag4oCUIDg2IGNoZWNrcyBhc3NlcnRpbmcgaGVyCmNvbnN0YW50cyBhbmQgYmVoYXZpb3VycyBhZ2FpbnN0IHRoZSBtb2RlbCBleHRyYWN0ZWQgZnJvbSB0aGUgc2hpcHBlZApmaWxlLiAqKjg2Lzg2IFBBU1MqKiAobG9nOiBgZ2F0ZXMvbWlsZXN0b25lLTIvdmFsdWUtY2hlY2tzLmxvZ2ApLgoKIyMgUmVjb25jaWxpYXRpb24gdGFibGUKCkFjdGlvbiBrZXk6ICoqTUFUQ0gqKiA9IGdhbWUgYWxyZWFkeSBoYWQgaGVyIHZhbHVlIMK3ICoqQ0hBTkdFRCoqID0gZ2FtZQp2YWx1ZSByZXBsYWNlZCBieSBoZXJzIMK3ICoqQURERUQqKiA9IGhlciBtb2RlbCBoYWQgaXQsIGdhbWUgbGFja2VkIGl0LApub3cgaW1wbGVtZW50ZWQgwrcgKipSRU1PVkVEKiogPSBnYW1lIGludmVudGlvbiB3aXRoIG5vIGNvdW50ZXJwYXJ0IGluCmhlciBtb2RlbCwgZGVsZXRlZCDCtyAqKk1BUFBFRCoqID0gaGVyIGJlaGF2aW91ciBjYXJyaWVkIGludG8gdGhlCmdhbWUncyBsZXZlbC9mYXVsdC9jb250cm9sIGRlc2lnbi4KCiMjIyBDb25zdGFudHMgKGFsbCAzMyBvZiBoZXJzLCBub3cgaW4gZm9yY2UgdmVyYmF0aW0pCgp8IEhlcnMgfCBIZXIgdmFsdWUgfCBHYW1lIGJlZm9yZSB8IEFjdGlvbiB8CnwtLS18LS0tfC0tLXwtLS18CnwgTVdUIHwgODcwIE1XdCB8IGltcGxpY2l0IGFyY2FkZSBoZWF0IGZhY3RvciB8IENIQU5HRUQg4oCUIHJhdGVkIHRoZXJtYWwgcG93ZXIsIGhlYXQgYmFsYW5jZSBkZW5vbWluYXRvciB8CnwgTVdFIHwgMzAwIE1XZSB8IDMwMCAobm9taW5hbF9wb3dlcl9NV2UpIHwgTUFUQ0ggfAp8IEVUQSB8IDAuMzQ4IHwg4oCUIHwgQURERUQg4oCUIHR1cmJpbmUgZWZmaWNpZW5jeSBpbiBNV2UgY29udmVyc2lvbiB8CnwgQ1RIIHwgNDUgfCBhcmNhZGUgaGVhdF90cmFuc2Zlcl9yYXRlIHwgQ0hBTkdFRCDigJQgY29yZSB0aGVybWFsIGNhcGFjaXR5IGluIGhlciBoZWF0IGJhbGFuY2UgfAp8IExPU1MgfCAwLjA2IHwg4oCUIHwgQURERUQg4oCUIHZlc3NlbCBoZWF0IGxvc3MgdGVybSB8CnwgUFNFVCB8IDcuMiBNUGEgfCA3LjIgKG5vbWluYWxfcHJlc3MpIHwgTUFUQ0gg4oCUIG9wZXJhdGluZyBzZXRwb2ludCB8CnwgUF9CWVAgfCA3LjQ1IE1QYSB8IOKAlCB8IEFEREVEIOKAlCBieXBhc3MgYXV0by1vcGVuOyBwcmVzc3VyZSBnYXVnZSBjYXV0aW9uIGVkZ2UgfAp8IFBfU0NSQU0gfCA4LjMgTVBhIHwgOC41IHwgKipDSEFOR0VEKiog4oCUIHByZXNzdXJlIHRyaXAsIGhlciByZWFzb24gJ0hpZ2ggc3RlYW0gcHJlc3N1cmUnIHwKfCBQX0lDIHwgOC4wIE1QYSB8IOKAlCB8IEFEREVEIOKAlCBpc29sYXRpb24gY29uZGVuc2VyIGF1dG8tb3BlbiB8CnwgUF9TWU5DIHwgNi4zIE1QYSB8IG1hbnVhbCBzeW5jIGF0IDE3NTAgUlBNIHwgQ0hBTkdFRCDigJQgZ2VuZXJhdG9yIHN5bmNzIGF1dG9tYXRpY2FsbHkgYXQgNi4zIE1QYSB8CnwgUF9PSyB8IDYuOCBNUGEgfCBwcm9jZWR1cmUgdXNlZCB+Ni414oCTNy4yIGxvb3NlbHkgfCBDSEFOR0VEIOKAlCBvcGVyYXRpbmctcHJlc3N1cmUgcGhhc2UgZ2F0ZSB8CnwgVFVSQl9NQVggfCA5MDAgTVd0IHwg4oCUIHwgQURERUQg4oCUIHR1cmJpbmUgc3RlYW0gY2FwIHwKfCBRQl9NQVggfCAyMDAgTVd0IHwg4oCUIHwgQURERUQg4oCUIGJ5cGFzcyBjYXBhY2l0eSB8CnwgSUNfTUFYIHwgNzAgTVd0IHwg4oCUIHwgQURERUQg4oCUIElDIGhlYXQgcmVtb3ZhbCBhdCBmdWxsIM6UVCB8CnwgS1AgfCAwLjEyIHwg4oCUIHwgQURERUQg4oCUIHBvd2VyIGZlZWRiYWNrIGNvZWZmaWNpZW50IHwKfCBLVCB8IDAuMTAgfCB0ZW1wX2NvZWZmIOKIkjAuMDAzIG1LL8KwQyAobGluZWFyLCBpbnZlbnRlZCkgfCBDSEFOR0VEIOKAlCBoZXIgdGVtcGVyYXR1cmUgZmVlZGJhY2sgKG5vcm1hbGlzZWQgVG4pIHwKfCBXT1JUSCB8IDAuNiDOlGsvayB8IHJvZF93b3J0aF90b3RhbCAxMCBtSyArIGNvcmVfZXhjZXNzIDUgbUsgKGludmVudGVkKSB8IENIQU5HRUQg4oCUIGhlciByb2Qgd29ydGggY3VydmUgfAp8IFJDIHwgMC4zMCB8IHJvZHMgc3RhcnRlZCBhdCAwJSBvdXQgfCBDSEFOR0VEIOKAlCBjcml0aWNhbCByb2QgcG9zaXRpb247IHN0YXJ0IHN0YXRlIHwKfCBST0RfUkFURSB8IDAuMDUgL3MgfCByb2QgcmF0ZSA4ICUvcyBkaXJlY3QgfCBDSEFOR0VEIOKAlCBoZXIgYXV0byByb2QgZHJpdmUgcmF0ZSAobWFudWFsIDAuMDIgL3MpIHwKfCBOU1JDIHwgMC4wMDIgfCBwb3dlciBzdGFydGVkIGF0IDAgfCBDSEFOR0VEIOKAlCBzb3VyY2UtcmFuZ2UgcG93ZXIsIGNyaXRpY2FsIGF0IDAuMiUgfAp8IEhFQVRfTElNIHwgMTUwIMKwQy9taW4gfCBubyBoZWF0LXVwIHJhdGUgbGltaXQgfCBBRERFRCDigJQgc2NvcmVkIGR1cmluZyBoZWF0dXAgcGhhc2UgfAp8IFRPTCB8IDEyIE1XZSB8IOKAlCB8IEFEREVEIOKAlCBncmlkIGRpc3BhdGNoIHRvbGVyYW5jZSB8CnwgTFZMX0FMQVJNIHwgODUgJSB8IG5vIGxldmVsIHZhcmlhYmxlIHwgQURERUQg4oCUIGxldmVsIGFsYXJtIHwKfCBMVkxfU0NSQU0gfCA2MiAlIHwgbm8gbGV2ZWwgdmFyaWFibGUgfCBBRERFRCDigJQgbGV2ZWwgdHJpcCAnTG93IHJlYWN0b3Igd2F0ZXIgbGV2ZWwnIHwKfCBOX1NDUkFNIHwgMS4xMiAoMTEyJSkgfCBkYW5nZXIgMTA1JSwgdHJpcCBhdCAxMTAlIHwgKipDSEFOR0VEKiog4oCUIHBvd2VyIHRyaXAgJ0hpZ2ggcmVhY3RvciBwb3dlcicgfAp8IExWTF9GVUVMIHwgMzUgJSB8IOKAlCB8IEFEREVEIOKAlCBwbGFudCBmYWlsdXJlICdDb3JlIHVuY292ZXJlZDogZnVlbCBkYW1hZ2UnIHwKfCBQX1NSViB8IDguNiBNUGEgfCDigJQgfCBBRERFRCDigJQgU1JWIGxpZnQgfAp8IFBfU1JWX1JFU0VBVCB8IDguMCBNUGEgfCDigJQgfCBBRERFRCDigJQgU1JWIHJlc2VhdCAoaHlzdGVyZXNpcykgfAp8IENQT09MIHwgMzAwMCB8IOKAlCB8IEFEREVEIOKAlCBzdXBwcmVzc2lvbiBwb29sIHRoZXJtYWwgY2FwYWNpdHkgfAp8IFBDX0FMQVJNIHwgMzAwIGtQYSB8IOKAlCB8IEFEREVEIOKAlCBjb250YWlubWVudCBwcmVzc3VyZSBhbGFybSB8CnwgUENfVkVOVCB8IDQwMCBrUGEgfCDigJQgfCBBRERFRCDigJQgY29udGFpbm1lbnQgdmVudCB0aHJlc2hvbGQgfAp8IFBDX0ZBSUwgfCA2MDAga1BhIHwg4oCUIHwgQURERUQg4oCUIHBsYW50IGZhaWx1cmUgJ0NvbnRhaW5tZW50IG92ZXJwcmVzc3VyZScgfAp8IFBPT0xfQUxBUk0gfCA2NSDCsEMgfCDigJQgfCBBRERFRCDigJQgc3VwcHJlc3Npb24gcG9vbCB0ZW1wZXJhdHVyZSBhbGFybSB8CgojIyMgTW9kZWwgc3RydWN0dXJlICYgYmVoYXZpb3VyCgp8IEhlcnMgfCBHYW1lIGJlZm9yZSB8IEFjdGlvbiB8CnwtLS18LS0tfC0tLXwKfCBwc2F0IHRhYmxlICgxMiBwb2ludHMsIDIw4oCTMzMwIMKwQyk7IHAgPSBwc2F0KFRjKSB8IGxpbmVhciBwcmVzc3VyZS1mcm9tLXRlbXAgYXBwcm94aW1hdGlvbiB8IENIQU5HRUQg4oCUIHByZXNzdXJlIGlzIHNhdHVyYXRpb24tY291cGxlZCwgZXhhY3RseSBoZXJzIHwKfCBTdGFydCBzdGF0ZTogVGMgMzAgwrBDLCBwIDAuMTAgTVBhLCBuID0gTlNSQywgcm9kID0gUkMsIGxldmVsIDEwMCB8IDI1IMKwQywg4oiSNSBtSywgMCBwb3dlciwgcm9kcyAwJSB8IENIQU5HRUQg4oCUIGhlciBjcmVhdGUoKS9zdGFydCgpIHN0YXRlIGFuZCBsb2cgbGluZXMgfAp8IEtpbmV0aWNzOiBsZXZlciBkZW1hbmQsIGF1dG8gcm9kIGNvbnRyb2wgKHJjIGNsYW1wKSwgZGVsYXllZC1uZXV0cm9uIGxhZyAobkxhZywgOCBzKSwgZGVjYXkgaGVhdCBoIHwgcGVyaW9kLWZvcm11bGEgYXJjYWRlIGtpbmV0aWNzIHwgQ0hBTkdFRCDigJQgaGVyIHBoeXMoKSBraW5ldGljcyB2ZXJiYXRpbSB8CnwgUmVhY3RvciBwZXJpb2Q6IHNtb290aGVkIGQobG4gbikvZHQgKGRsbik7IHBlcmlvZCA9IDEvZGxuIHwgUjYzIHBpZWNld2lzZSBwZXJpb2QgY2FsaWJyYXRpb24gKGludmVudGVkKSB8IFJFTU9WRUQvQ0hBTkdFRCDigJQgZGlzcGxheSBub3cgZGVyaXZlcyBmcm9tIGhlciBkbG4gfAp8IEZlZWRiYWNrczogS1DCt25MYWcgKyBLVMK3VG4gKyAwLjnCt2Jvcm9uICsgMC4wMDPCtyg5NeKIkmxldmVsKSB2b2lkIHwgeGVub24gcG9pc29uaW5nIChpbnZlbnRlZCkgfCBDSEFOR0VEIOKAlCB4ZW5vbiBSRU1PVkVEIChubyB4ZW5vbiBpbiBoZXIgbW9kZWwpOyBoZXIgZm91ciBmZWVkYmFja3MgaW4gZm9yY2UgfAp8IFdhdGVyIGxldmVsOiBib2lsLW9mZiB2cyBmZWVkd2F0ZXIgYXV0byBjb250cm9sIChsdmxTZXQgMTAwKSArIGluamVjdGlvbiB8IGFic2VudCB8IEFEREVEIOKAlCBmaXJzdC1jbGFzcyB2YXJpYWJsZSwgKio3dGggZ2F1Z2UqKiAoUjY1IGNvdW50IHlpZWxkcyB0byBEZWNpc2lvbiA5KSB8CnwgRmVlZHdhdGVyOiBmd01vZGUgYXV0by9tYW4sIHN0YW5kYnkgcHVtcCByZnBTdGJ5ICgwLjggYXZhaWxhYmlsaXR5KSB8IGFic2VudCB8IEFEREVEIOKAlCB3b3JsZCBwYW5lbCBGRUVEIFBVTVAgQiB3b3JrcyBjdGwucmZwU3RieSB8CnwgUkNJQyBhdXRvIChvbiA8ODAsIG9mZiA+OTgpLCBIUENGIGF1dG8gKG9uIDw3Miwgb2ZmID45NSksIFJIUiAocG9vbC9TREMvTFBDSSksIGFsdGVybmF0ZSBpbmplY3Rpb24gfCBhYnNlbnQgfCBBRERFRCDigJQgUkNJQyBwYW5lbCB3aXJlZDsgSFBDRi9SSFIgcnVuIGluIHRoZSBtb2RlbCAocGFuZWxzIGluIE00KSB8CnwgVHVyYmluZTogcm9sbHMvc3luY3MgYXQgUF9TWU5DIGlmIGNvbmRlbnNlciBPSzsgMTUwMCBSUE0gc3luY2hyb25vdXM7IHRyaXAgbG9naWMgKGdyaWQvTVNJVi92YWN1dW0pIHwgbWFudWFsIHZhbHZlICsgMTgwMCBSUE0gKyBtYW51YWwgYnJlYWtlciB8IENIQU5HRUQg4oCUIG1lYXN1cmVkLCBub3QgY29tbWFuZGVkIChhbHNvIFI0NikgfAp8IEJ5cGFzczogYXV0byBhdCBQX0JZUCAoMTIwMMK3KHDiiJJQX0JZUCkgZ2Fpbikgb3IgbWFudWFsIGJ5TWFuLCBjYXAgUUJfTUFYwrdjb25kQ2FwIHwgc3RlYW0gdmFsdmUgYXMgZmxvdyBzb3VyY2UgKGludmVudGVkKSB8IE1BUFBFRCDigJQgdGhlIGdhbWUncyBzdGVhbSB2YWx2ZSBub3cgd29ya3MgaGVyIGJ5cGFzcyAoY3RsLmJ5cGFzcy9ieU1hbikgfAp8IE1TSVY6IGNsb3NlcyAzIHMgYWZ0ZXIgY29uZGVuc2VyIGxvc3MgYWJvdmUgMS41IE1QYSB8IGFic2VudCB8IEFEREVEIOKAlCBpbiBtb2RlbCB8CnwgU1JWICsgQURTOiBTUlYgaHlzdGVyZXNpcyB0byBzdXBwcmVzc2lvbiBwb29sOyBBRFMgbWFudWFsIGRlcHJlc3N1cmlzYXRpb24gPDAuNCBNUGEgcmVzZWF0IHwgYWJzZW50IHwgQURERUQg4oCUIGluIG1vZGVsIChBRFMgY29udHJvbCBsYW5kcyB3aXRoIE00IHBhbmVscykgfAp8IFN1cHByZXNzaW9uIHBvb2wgJiBjb250YWlubWVudDogcFQsIHBjID0gMTAxICsgNsK3KHBU4oiSNDUpLCBmaWx0ZXJlZCB2ZW50ICjiiJIxMDAgc2NvcmUsIHJlbGVhc2UgYWNjb3VudGluZykgfCBhYnNlbnQgfCBBRERFRCDigJQgaW4gbW9kZWwgfAp8IFBvd2VyIHNvdXJjZXM6IEVERyBhdXRvLXN0YXJ0IDggcywgR1RHIDE1IHMsIGJhdHRlcnkgKGNoYXJnZSAwLjMvcywgZHJhaW4gMC40L3MpLCBzdGF0aW9uIGJsYWNrb3V0IHwgYWJzZW50IHwgQURERUQg4oCUIGluIG1vZGVsIHwKfCBTTEMgYm9yb246ICswLjAxMi9zIHdoaWxlIHRhbmsgZHJhaW5zIDEvczsgUldDVSBjbGVhbnVwIOKIkjAuMDAzL3PCt3J3Y3UlIHwgYWJzZW50IHwgQURERUQg4oCUIHdvcmxkIHBhbmVsIFNMQyBCT1JPTiB3b3JrcyBjdGwuc2xjIHwKfCBUcmlwczogcCA+IDguMywgbiA+IDEuMTIsIGxldmVsIDwgNjIgKGhlciByZWFzb24gc3RyaW5ncykgfCBwZXJpb2QgPDMgcywgcCA+IDguNSwgdGVtcCA+IDMyMCDCsEMsIHBvd2VyID4gMTEwJSAoYWxsIGludmVudGVkKSB8IENIQU5HRUQg4oCUIGhlciB0aHJlZSB0cmlwcyBvbmx5OyBwZXJpb2QvdGVtcCB0cmlwcyBSRU1PVkVEIHwKfCBGYWlsdXJlczogcGMgPiA2MDAsIGxldmVsIDwgMzUgKGhlciByZWFzb24gc3RyaW5ncykgfCBub25lIChTQ1JBTSBvbmx5KSB8IEFEREVEIOKAlCBoZXIgZmFpbCgpIGVuZHBvaW50cywgZnJhbWVkIGFzIHBsYW50IGZhaWx1cmUgLyBzYWZlIHNodXRkb3duIHwKfCBNYW51YWwgc2NyYW0gKHNjcmFtTm93KSB8IHRyaWdnZXJTY3JhbSBvbiBpbnZlbnRlZCB0aHJlc2hvbGRzIHwgQ0hBTkdFRCDigJQgaGVyIHNjcmFtTm93L3RyaXAgcGF0aCB8CnwgQVRXUzogcm9kcyBkbyBub3QgaW5zZXJ0IG9uIHRyaXA7IEFSSSBkaXZlcnNlIHBhdGg7IFNMQyArIGxldmVsIGxvd2VyaW5nIGFzIG1pdGlnYXRpb24gfCBhYnNlbnQgfCBBRERFRCDigJQgQVJJIHdvcmxkIGJ1dHRvbiB3b3JrcyBCV1IucHJlc3NBUkkgfAp8IFBoYXNlczogaWRsZSDihpIgaGVhdHVwIOKGkiBwb3dlciDihpIgZ3JpZCDihpIgY29tcGxldGUgKCsgdHJpcHBlZC9mYWlsZWQpIHwgc2luZ2xlIHByb2NlZHVyZSBsaXN0IHwgTUFQUEVEIOKAlCBoZWF0dXArcG93ZXIgPSBMZXZlbCAxICh3aXJlZCBub3cpOyBncmlkIGRpc3BhdGNoID0gTGV2ZWwgMyAoTTkpIHwKfCBHcmlkIGRpc3BhdGNoOiBTRUcgMzAwLzIwMC8zMDAvMTUwLzMwMCBNV2UsIDIxMCBzLCBncmFjZSwgVE9MIDEyIGFjY3VyYWN5IHNjb3JpbmcgfCBhYnNlbnQgfCBNQVBQRUQg4oCUIExldmVsIDMgKE05KTsgcnVucyBpbiB0aGUgbW9kZWwgdG9kYXkgfAp8IEV2ZW50czogZmVlZHdhdGVyIHB1bXAgdHJpcCAoZ3JpZCB04omIMTjigJMyNCBzLCAxOCBzIG91dCwgKzI1MCksIGdyaWQgZW1lcmdlbmN5ICh04omIMTMw4oCTMTM0IHMsIDEyIHMgd2FybmluZywgZGlzcGF0Y2ggNjAsIHR1cmJpbmUgdHJpcCwgKzI1MCkgfCByYW5kb20gc3RlYW0gbGVhayArIHN0dWNrIHJvZCAoaW52ZW50ZWQgcGh5c2ljcykgfCBNQVBQRUQg4oCUIGhlciBldmVudHMgZHJpdmUgTGV2ZWxzIDLigJMzIChNOSk7IHJhbmRvbSBzdGVhbSBsZWFrIFJFTU9WRUQgfAp8IEZhdWx0IGluamVjdGlvbjogaW5qZWN0KCdmdycvJ3R1cmInLydsb29wJy8nc2VhJy8nYXR3cycpIOKAlCBMT09QIGFsc28gdHJpcHMgdGhlIHBsYW50IHwgYWJzZW50IHwgTUFQUEVEIOKAlCBMZXZlbCAyLzMgZmF1bHQgc2V0IChNOSkgfAp8IFNjb3Jpbmc6IGhlciBzY29yZSAoaGVhdHVwIGRpc2NpcGxpbmUgwrEsIGV2ZW50ICsyNTBzLCB2ZW50IOKIkjEwMCwgZGlzcGF0Y2ggYWNjdXJhY3kgMsK3ZHQsIGNvbXBsZXRpb24gKzMwMCkgYW5kIHN1bW1hcnkoKSAoYWNjdXJhY3ksIGhlYXQgZnJhY3Rpb24sIDHigJMzIHN0YXJzKSB8IGFkaGVyZW5jZS90cmFuc2llbnQgc2NvcmUgfCBDSEFOR0VEIOKAlCBlbmQgc2NyZWVuIHJlcG9ydHMgaGVyIHN1bW1hcnkgbWV0cmljcyArIG1vZGVsIHNjb3JlIHwKfCBTdGVhbSBmbG93IGRpc3BsYXkgfCByYXRlZF9zdGVhbV9mbG93IDgwMCBrZy9zIChpbnZlbnRlZCkgfCBSRU1PVkVEIOKAlCBoZXIgbW9kZWwgY2FycmllcyBzdGVhbSBhcyBNV3QgZmxvd3MgKHF0L3FiKTsgZGlzcGxheSA9IChxdCtxYikvODcwIE1XdCBhcyAlIHwKCiMjIyBHYW1lLXNpZGUgcHJlc2VudGF0aW9uIGRlcml2YXRpb25zIChub3QgcGh5c2ljcyDigJQgcmVjb3JkZWQgcGVyIERlY2lzaW9uIDkpCgotIFJlYWN0aXZpdHkgZ2F1Z2U6IGhlciDPgSAozpRrL2spIMOXIDEwMDAg4oaSIG1LLiBVbml0IGNvbnZlcnNpb24gb25seS4KLSBQZXJpb2QgZ2F1Z2U6IDEgLyBoZXIgZGxuLCBzZWNvbmRzLiBIZXIgcXVhbnRpdHksIGludmVydGVkIGZvciBkaXNwbGF5LgotIFJlYWN0aXZpdHkgem9uZSBlZGdlcyDCsTE2LjcgLyDCsTUwIG1LOiBmcm9tIGhlciBraW5ldGljcyBpZGVudGl0eQogIFQgPSAxL8+BIGF0IHRoZSA2MCBzIC8gMjAgcyBwZXJpb2QgZWRnZXMuCi0gVGVtcGVyYXR1cmUgem9uZSBlZGdlcyAyODggLyAyOTcgwrBDOiBzYXR1cmF0aW9uIHRlbXBlcmF0dXJlcyBvZiBoZXIKICBQU0VUIC8gUF9TQ1JBTSBvbiBoZXIgb3duIHBzYXQgdGFibGUuCi0gUHJlc3N1cmUgem9uZXM6IG5vcm1hbCDiiaQgUF9CWVAsIGNhdXRpb24gdG8gUF9TQ1JBTSwgZGFuZ2VyIGFib3ZlLgotIFBvd2VyIHpvbmVzOiBjYXV0aW9uID4xMDAlLCBkYW5nZXIgYXQgaGVyIE5fU0NSQU0gMTEyJSAoZ2F1Z2UgdG8gMTIwJSkuCi0gU3RlYW0gem9uZXM6ICUgb2YgaGVyIE1XVDsgY2F1dGlvbiA+MTAwJSwgZGFuZ2VyID4xMTAlLgotIExldmVsIHpvbmVzOiBkYW5nZXIgPCBMVkxfU0NSQU0gNjIsIGNhdXRpb24gPCBMVkxfQUxBUk0gODUsIHNldHBvaW50IDEwMC4KLSBUaGUgbGV2ZXI6IHRoZSByb2QtZHJpdmUgYW5kIGxvYWQtY29udHJvbCBpbnRlcmFjdGFibGVzIHdvcmsgaGVyCiAgYGxldmVyYCAob3BlcmF0b3IgZGVtYW5kKTsgaGVyIGF1dG8gcm9kIGNvbnRyb2wgbW92ZXMgdGhlIHJvZHMuCi0gRGVjayBkaWFsIHNpemUgZm9yIHRoZSA3LWdhdWdlIGRlY2sgc3RheXMgMTE2IHB4IChncmlkIHNjcm9sbHMpOwogIG1pbmkgZGlhbHMgNTIgcHggKFIxNCByYW5nZSkgw5cgNyBhY3Jvc3MgdGhlIDM5MCBweCBzdHJpcC4KCiMjIERpdmVyZ2VuY2UgZnJvbSB0aGUgUkVBTCBCV1JYLTMwMCAocmVjb3JkZWQsIE5PVCBjb3JyZWN0ZWQpCgpQZXIgS2V2aW4ncyBydWxpbmcsIGhlciBtb2RlbCBnb3Zlcm5zIGV2ZW4gd2hlcmUgaXQgZGVwYXJ0cyBmcm9tIHRoZQpyZWFsIHBsYW50LiBEaXZlcmdlbmNlcyBmb3VuZCBhZ2FpbnN0IHRoZSBCV1JYLTMwMCBkZWVwIHJlc2VhcmNoCigyMDI2LTExLTI1LCBgfi93b3Jrc3BhY2UvcmVzZWFyY2hfbm90ZXMvYndyeC0zMDAtc21yLXJlc2VhcmNoLTIwMjYxMTI1LTA1NTEvcmVwb3J0Lm1kYCk6CgotICoqRVNCV1IgbGluZWFnZSBzeXN0ZW1zLioqIEhlciBtb2RlbCBjYXJyaWVzIGEgc3VwcHJlc3Npb24gcG9vbCwKICBTUlZzIGFuZCBBRFMgKHBsdXMgUkNJQy9IUENGL1JIUikg4oCUIHRoZSByZWFsIEJXUlgtMzAwICplbGltaW5hdGVkKgogIHRoZSBHRENTLCBzdXBwcmVzc2lvbiBwb29sLCBTUlZzIGFuZCBBRFMgb2YgaXRzIEVTQldSIHBhcmVudC4gVGhlCiAgcmVhbCBwbGFudCdzIHBhc3NpdmUgc2FmZXR5IGlzIGEgMy10cmFpbiBJc29sYXRpb24gQ29uZGVuc2VyIFN5c3RlbQogIChwb29scyBhYm92ZSB0aGUgUlBWLCBncmF2aXR5IGNvbmRlbnNhdGUgcmV0dXJuLCBwb29scyBib2lsIHRvCiAgYXRtb3NwaGVyZSkgcGx1cyBQQ0NTLCB3aXRoIDctZGF5IGNvcGluZy4gSGVyIElDIGlzIGEgc2luZ2xlCiAgYWJzdHJhY3Rpb24gKElDX01BWCA3MCBNV3QpLCBub3QgdGhyZWUgdHJhaW5zLiAqKktlcHQgYXMgaGVycy4qKgotICoqU2V0cG9pbnRzIG5vdCBjcm9zcy1jaGVja2FibGUuKiogUmVhbC1wbGFudCB0cmlwL3NjcmFtL0lDUwogIHNldHBvaW50cyBhcmUgbm90IHB1YmxpY2x5IGF2YWlsYWJsZSAocmVkYWN0ZWQgaW4gcHVibGljIGxpY2Vuc2luZwogIGRvY3VtZW50cykuIEhlciBzZXRwb2ludHMgKFBfU0NSQU0gOC4zIE1QYSwgTl9TQ1JBTSAxLjEyLCBMVkxfU0NSQU0KICA2MuKApikgdGhlcmVmb3JlIGNhbm5vdCBiZSB2ZXJpZmllZCBhZ2FpbnN0IHRoZSByZWFsIHBsYW50IOKAlCBhYnNlbmNlCiAgb2YgYSBwdWJsaWMgdmFsdWUgaXMgbm90IGEgbWlzbWF0Y2gsIGFuZCBub25lIGlzIGNsYWltZWQuCi0gKipTdGVhbSBmbG93LioqIFRoZSByZWFsIHBsYW50J3MgcmF0ZWQgc3RlYW0gZmxvdyBpcyB+NDcwIGtnL3MKICAoYWNhZGVtaWMgY29tcGlsYXRpb247IG5vdCBpbiBHRSBWZXJub3ZhIHB1YmxpYyBkb2NzKS4gSGVyIG1vZGVsCiAgc3BlY2lmaWVzIG5vIGtnL3Mgc3RlYW0gZmxvdyAoZmxvd3MgYXJlIE1XdCksIHNvIG5vdGhpbmcgb2YgaGVycyBpcwogIG92ZXJyaWRkZW47IHRoZSBnYW1lJ3MgZm9ybWVyIDgwMCBrZy9zIGNvbnN0YW50IHdhcyB0aGUgZ2FtZSdzIG93bgogIGludmVudGlvbiBhbmQgaGFzIGJlZW4gcmVtb3ZlZC4KLSAqKkNvbnNpc3RlbnQgcG9pbnRzLioqIFJlYWwgUkNTIHByZXNzdXJlIDcuMTcx4oCTNy4yIE1QYSBhYnMgdnMgaGVyCiAgUFNFVCA3LjIg4pyTLiBSZWFsIGNvcmUgb3V0bGV0L3N0ZWFtIH4yODggwrBDIHZzIGhlciBzYXR1cmF0aW9uCiAgdGVtcGVyYXR1cmUgYXQgc2V0cG9pbnQg4omIMjg4IMKwQyDinJMuIDg3MCBNV3QgLyAzMDAgTVdlIOKcky4gUmVhbCBjb3JlOgogIDI0MCBHTkYyIGFzc2VtYmxpZXMgKG1hdGNoZXMgaGVyIGRlc2lnbiByZWZlcmVuY2UpLCA1NyBjcnVjaWZvcm0KICBjb250cm9sIGJsYWRlcyB3aXRoIEZNQ1JEcyArIGh5ZHJhdWxpYyBzY3JhbSDigJQgaGVyIG1vZGVsIGFic3RyYWN0cwogIHRoZSBibGFkZXMgdG8gYSBzaW5nbGUgd29ydGggY3VydmUgKFdPUlRIL1JDL1JPRF9SQVRFKTsgbm8gcGVyLWJsYWRlCiAgYmVoYXZpb3VyIGV4aXN0cyBpbiBoZXIgbW9kZWwgdG8gcmVwcm9kdWNlLgotICoqU2luZ2xlLW5vZGUgY29yZS4qKiBIZXIgVGMgaXMgb25lIGx1bXBlZCB0ZW1wZXJhdHVyZSB3aXRoIHByZXNzdXJlCiAgc2F0dXJhdGlvbi1jb3VwbGVkOyB0aGUgcmVhbCBwbGFudCBkaXN0aW5ndWlzaGVzIGNvcmUgaW5sZXQgKDI3MCDCsEMpCiAgYW5kIG91dGxldCAoMjg4IMKwQykuIEhlciBzaW1wbGlmaWNhdGlvbiwga2VwdC4K
+# Small Nukem — Model Fidelity Record (Decision 9)
+
+**Ruling (Kevin, 2026-11-25 ~00:50 EST): "There shouldn't be any deliberate differences."**
+
+Samira's original model — `reference/js/model.js`, the BWRX-300 Training
+Simulator Model v2 — is the source of truth for all physics constants,
+trips, alarms, start state, and behaviour in the game. As of the
+fidelity patch (2026-11-25), the game's simulation **is** her model,
+embedded verbatim in `small-nukem.html` (the `BWR` block). The spec's
+R63 table has been corrected to her values in all three copies.
+
+Verification: `tests/value-checks.mjs` — 86 checks asserting her
+constants and behaviours against the model extracted from the shipped
+file. **86/86 PASS** (log: `gates/milestone-2/value-checks.log`).
+
+## Reconciliation table
+
+Action key: **MATCH** = game already had her value · **CHANGED** = game
+value replaced by hers · **ADDED** = her model had it, game lacked it,
+now implemented · **REMOVED** = game invention with no counterpart in
+her model, deleted · **MAPPED** = her behaviour carried into the
+game's level/fault/control design.
+
+### Constants (all 33 of hers, now in force verbatim)
+
+| Hers | Her value | Game before | Action |
+|---|---|---|---|
+| MWT | 870 MWt | implicit arcade heat factor | CHANGED — rated thermal power, heat balance denominator |
+| MWE | 300 MWe | 300 (nominal_power_MWe) | MATCH |
+| ETA | 0.348 | — | ADDED — turbine efficiency in MWe conversion |
+| CTH | 45 | arcade heat_transfer_rate | CHANGED — core thermal capacity in her heat balance |
+| LOSS | 0.06 | — | ADDED — vessel heat loss term |
+| PSET | 7.2 MPa | 7.2 (nominal_press) | MATCH — operating setpoint |
+| P_BYP | 7.45 MPa | — | ADDED — bypass auto-open; pressure gauge caution edge |
+| P_SCRAM | 8.3 MPa | 8.5 | **CHANGED** — pressure trip, her reason 'High steam pressure' |
+| P_IC | 8.0 MPa | — | ADDED — isolation condenser auto-open |
+| P_SYNC | 6.3 MPa | manual sync at 1750 RPM | CHANGED — generator syncs automatically at 6.3 MPa |
+| P_OK | 6.8 MPa | procedure used ~6.5–7.2 loosely | CHANGED — operating-pressure phase gate |
+| TURB_MAX | 900 MWt | — | ADDED — turbine steam cap |
+| QB_MAX | 200 MWt | — | ADDED — bypass capacity |
+| IC_MAX | 70 MWt | — | ADDED — IC heat removal at full ΔT |
+| KP | 0.12 | — | ADDED — power feedback coefficient |
+| KT | 0.10 | temp_coeff −0.003 mK/°C (linear, invented) | CHANGED — her temperature feedback (normalised Tn) |
+| WORTH | 0.6 Δk/k | rod_worth_total 10 mK + core_excess 5 mK (invented) | CHANGED — her rod worth curve |
+| RC | 0.30 | rods started at 0% out | CHANGED — critical rod position; start state |
+| ROD_RATE | 0.05 /s | rod rate 8 %/s direct | CHANGED — her auto rod drive rate (manual 0.02 /s) |
+| NSRC | 0.002 | power started at 0 | CHANGED — source-range power, critical at 0.2% |
+| HEAT_LIM | 150 °C/min | no heat-up rate limit | ADDED — scored during heatup phase |
+| TOL | 12 MWe | — | ADDED — grid dispatch tolerance |
+| LVL_ALARM | 85 % | no level variable | ADDED — level alarm |
+| LVL_SCRAM | 62 % | no level variable | ADDED — level trip 'Low reactor water level' |
+| N_SCRAM | 1.12 (112%) | danger 105%, trip at 110% | **CHANGED** — power trip 'High reactor power' |
+| LVL_FUEL | 35 % | — | ADDED — plant failure 'Core uncovered: fuel damage' |
+| P_SRV | 8.6 MPa | — | ADDED — SRV lift |
+| P_SRV_RESEAT | 8.0 MPa | — | ADDED — SRV reseat (hysteresis) |
+| CPOOL | 3000 | — | ADDED — suppression pool thermal capacity |
+| PC_ALARM | 300 kPa | — | ADDED — containment pressure alarm |
+| PC_VENT | 400 kPa | — | ADDED — containment vent threshold |
+| PC_FAIL | 600 kPa | — | ADDED — plant failure 'Containment overpressure' |
+| POOL_ALARM | 65 °C | — | ADDED — suppression pool temperature alarm |
+
+### Model structure & behaviour
+
+| Hers | Game before | Action |
+|---|---|---|
+| psat table (12 points, 20–330 °C); p = psat(Tc) | linear pressure-from-temp approximation | CHANGED — pressure is saturation-coupled, exactly hers |
+| Start state: Tc 30 °C, p 0.10 MPa, n = NSRC, rod = RC, level 100 | 25 °C, −5 mK, 0 power, rods 0% | CHANGED — her create()/start() state and log lines |
+| Kinetics: lever demand, auto rod control (rc clamp), delayed-neutron lag (nLag, 8 s), decay heat h | period-formula arcade kinetics | CHANGED — her phys() kinetics verbatim |
+| Reactor period: smoothed d(ln n)/dt (dln); period = 1/dln | R63 piecewise period calibration (invented) | REMOVED/CHANGED — display now derives from her dln |
+| Feedbacks: KP·nLag + KT·Tn + 0.9·boron + 0.003·(95−level) void | xenon poisoning (invented) | CHANGED — xenon REMOVED (no xenon in her model); her four feedbacks in force |
+| Water level: boil-off vs feedwater auto control (lvlSet 100) + injection | absent | ADDED — first-class variable, **7th gauge** (R65 count yields to Decision 9) |
+| Feedwater: fwMode auto/man, standby pump rfpStby (0.8 availability) | absent | ADDED — world panel FEED PUMP B works ctl.rfpStby |
+| RCIC auto (on <80, off >98), HPCF auto (on <72, off >95), RHR (pool/SDC/LPCI), alternate injection | absent | ADDED — RCIC panel wired; HPCF/RHR run in the model (panels in M4) |
+| Turbine: rolls/syncs at P_SYNC if condenser OK; 1500 RPM synchronous; trip logic (grid/MSIV/vacuum) | manual valve + 1800 RPM + manual breaker | CHANGED — measured, not commanded (also R46) |
+| Bypass: auto at P_BYP (1200·(p−P_BYP) gain) or manual byMan, cap QB_MAX·condCap | steam valve as flow source (invented) | MAPPED — the game's steam valve now works her bypass (ctl.bypass/byMan) |
+| MSIV: closes 3 s after condenser loss above 1.5 MPa | absent | ADDED — in model |
+| SRV + ADS: SRV hysteresis to suppression pool; ADS manual depressurisation <0.4 MPa reseat | absent | ADDED — in model (ADS control lands with M4 panels) |
+| Suppression pool & containment: pT, pc = 101 + 6·(pT−45), filtered vent (−100 score, release accounting) | absent | ADDED — in model |
+| Power sources: EDG auto-start 8 s, GTG 15 s, battery (charge 0.3/s, drain 0.4/s), station blackout | absent | ADDED — in model |
+| SLC boron: +0.012/s while tank drains 1/s; RWCU cleanup −0.003/s·rwcu% | absent | ADDED — world panel SLC BORON works ctl.slc |
+| Trips: p > 8.3, n > 1.12, level < 62 (her reason strings) | period <3 s, p > 8.5, temp > 320 °C, power > 110% (all invented) | CHANGED — her three trips only; period/temp trips REMOVED |
+| Failures: pc > 600, level < 35 (her reason strings) | none (SCRAM only) | ADDED — her fail() endpoints, framed as plant failure / safe shutdown |
+| Manual scram (scramNow) | triggerScram on invented thresholds | CHANGED — her scramNow/trip path |
+| ATWS: rods do not insert on trip; ARI diverse path; SLC + level lowering as mitigation | absent | ADDED — ARI world button works BWR.pressARI |
+| Phases: idle → heatup → power → grid → complete (+ tripped/failed) | single procedure list | MAPPED — heatup+power = Level 1 (wired now); grid dispatch = Level 3 (M9) |
+| Grid dispatch: SEG 300/200/300/150/300 MWe, 210 s, grace, TOL 12 accuracy scoring | absent | MAPPED — Level 3 (M9); runs in the model today |
+| Events: feedwater pump trip (grid t≈18–24 s, 18 s out, +250), grid emergency (t≈130–134 s, 12 s warning, dispatch 60, turbine trip, +250) | random steam leak + stuck rod (invented physics) | MAPPED — her events drive Levels 2–3 (M9); random steam leak REMOVED |
+| Fault injection: inject('fw'/'turb'/'loop'/'sea'/'atws') — LOOP also trips the plant | absent | MAPPED — Level 2/3 fault set (M9) |
+| Scoring: her score (heatup discipline ±, event +250s, vent −100, dispatch accuracy 2·dt, completion +300) and summary() (accuracy, heat fraction, 1–3 stars) | adherence/transient score | CHANGED — end screen reports her summary metrics + model score |
+| Steam flow display | rated_steam_flow 800 kg/s (invented) | REMOVED — her model carries steam as MWt flows (qt/qb); display = (qt+qb)/870 MWt as % |
+
+### Game-side presentation derivations (not physics — recorded per Decision 9)
+
+- Reactivity gauge: her ρ (Δk/k) × 1000 → mK. Unit conversion only.
+- Period gauge: 1 / her dln, seconds. Her quantity, inverted for display.
+- Reactivity zone edges ±16.7 / ±50 mK: from her kinetics identity
+  T = 1/ρ at the 60 s / 20 s period edges.
+- Temperature zone edges 288 / 297 °C: saturation temperatures of her
+  PSET / P_SCRAM on her own psat table.
+- Pressure zones: normal ≤ P_BYP, caution to P_SCRAM, danger above.
+- Power zones: caution >100%, danger at her N_SCRAM 112% (gauge to 120%).
+- Steam zones: % of her MWT; caution >100%, danger >110%.
+- Level zones: danger < LVL_SCRAM 62, caution < LVL_ALARM 85, setpoint 100.
+- The lever: the rod-drive and load-control interactables work her
+  `lever` (operator demand); her auto rod control moves the rods.
+- Deck dial size for the 7-gauge deck stays 116 px (grid scrolls);
+  mini dials 52 px (R14 range) × 7 across the 390 px strip.
+
+## Divergence from the REAL BWRX-300 (recorded, NOT corrected)
+
+Per Kevin's ruling, her model governs even where it departs from the
+real plant. Divergences found against the BWRX-300 deep research
+(2026-11-25, `~/workspace/research_notes/bwrx-300-smr-research-20261125-0551/report.md`):
+
+- **ESBWR lineage systems.** Her model carries a suppression pool,
+  SRVs and ADS (plus RCIC/HPCF/RHR) — the real BWRX-300 *eliminated*
+  the GDCS, suppression pool, SRVs and ADS of its ESBWR parent. The
+  real plant's passive safety is a 3-train Isolation Condenser System
+  (pools above the RPV, gravity condensate return, pools boil to
+  atmosphere) plus PCCS, with 7-day coping. Her IC is a single
+  abstraction (IC_MAX 70 MWt), not three trains. **Kept as hers.**
+- **Setpoints not cross-checkable.** Real-plant trip/scram/ICS
+  setpoints are not publicly available (redacted in public licensing
+  documents). Her setpoints (P_SCRAM 8.3 MPa, N_SCRAM 1.12, LVL_SCRAM
+  62…) therefore cannot be verified against the real plant — absence
+  of a public value is not a mismatch, and none is claimed.
+- **Steam flow.** The real plant's rated steam flow is ~470 kg/s
+  (academic compilation; not in GE Vernova public docs). Her model
+  specifies no kg/s steam flow (flows are MWt), so nothing of hers is
+  overridden; the game's former 800 kg/s constant was the game's own
+  invention and has been removed.
+- **Consistent points.** Real RCS pressure 7.171–7.2 MPa abs vs her
+  PSET 7.2 ✓. Real core outlet/steam ~288 °C vs her saturation
+  temperature at setpoint ≈288 °C ✓. 870 MWt / 300 MWe ✓. Real core:
+  240 GNF2 assemblies (matches her design reference), 57 cruciform
+  control blades with FMCRDs + hydraulic scram — her model abstracts
+  the blades to a single worth curve (WORTH/RC/ROD_RATE); no per-blade
+  behaviour exists in her model to reproduce.
+- **Single-node core.** Her Tc is one lumped temperature with pressure
+  saturation-coupled; the real plant distinguishes core inlet (270 °C)
+  and outlet (288 °C). Her simplification, kept.

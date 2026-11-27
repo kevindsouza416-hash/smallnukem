@@ -1,0 +1,37 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  value-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      # No package.json / engines field exists in the source tree
+      # (Mac ~/small-nukem) or in this repo, so Node 20 is used.
+      # The suite uses only node:fs, `new URL(..., import.meta.url)`
+      # and `new Function` — no dependencies to install.
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # tests/value-checks.mjs locates the game file as
+      #   readFileSync(new URL('../game/small-nukem.html', import.meta.url), 'utf8')
+      # i.e. <repo-root>/game/small-nukem.html relative to tests/.
+      # No shim/copy step is needed in this repo layout.
+
+      # This suite IS the physics-invariant / model-fidelity check
+      # (docs/MODEL-FIDELITY.md, Decision 9): it extracts Samira's BWR
+      # model verbatim from the game file — from 'const BWR = (() => {'
+      # to the closing '})();' — and asserts her constants, saturation
+      # table, start state, trips, alarms and behaviours against it.
+      # No separate physics step is added; a duplicate extraction step
+      # would only drift from the one in the suite.
+      # Exit code: 0 = all pass, 1 = any failure.
+      - name: Run value checks (incl. Samira physics / model fidelity)
+        run: node tests/value-checks.mjs

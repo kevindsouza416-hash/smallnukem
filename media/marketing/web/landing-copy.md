@@ -1,1 +1,22 @@
-IyBMYW5kaW5nIFBhZ2UgQ29weSDigJQgbnVrZS5hYnNvbHV0ZWpva2VyLmNhIChEUkFGVCkKCkhlcm8gYmFubmVyIGltYWdlOiBgaGVyby1iYW5uZXItMTkyMHg2NDAucG5nYAoKLS0tCgoqKkhlYWRsaW5lOioqClN0YXJ0IHVwIGEgcmVhbCBudWNsZWFyIHJlYWN0b3Ig4oCUIGZyb20geW91ciBwaG9uZS4KCioqU3ViaGVhZDoqKgpTTUFMTCBOVUtFTSBpcyBhIGZyZWUgYnJvd3NlciBnYW1lIHRoYXQgcHV0cyB5b3Ugb24gc2hpZnQgYXMgRmx1a2UgTnVrZW0sIHJvb2tpZSBvcGVyYXRvciwgYnJpbmdpbmcgYSBCV1JYLTMwMCBzbWFsbCBtb2R1bGFyIHJlYWN0b3IgZnJvbSBjb2xkIHNodXRkb3duIHRvIGNyaXRpY2FsIOKAlCByZWFsIHByb2NlZHVyZXMsIHJlYWwgcGh5c2ljcywgYW5kIGEgQ2hpZWYgd2hvIHNob3dzIHlvdSBob3cgaXQncyBkb25lLgoKKipGZWF0dXJlIGJ1bGxldHM6KioKLSAqKkEgcmVhbCBwbGFudCwgcGxheWFibGUqKiDigJQgYnVpbHQgb24gYSByZWFsIEJXUlgtMzAwIHBsYW50IG1vZGVsOiB0aGUgcHJvY2VkdXJlcywgcGh5c2ljcywgYW5kIHNhZmV0eSBzeXN0ZW1zIGFyZSB0aGUgcmVhbCB0aGluZywgYWNyb3NzIDMgbGV2ZWxzIGZyb20gZmlyc3Qgc3RhcnR1cCB0byBhIGNvbnRyb2wgcm9vbSBmdWxsIG9mIGNhc2NhZGluZyBmYWlsdXJlcy4KLSAqKlN0dWNrPyBUaGUgQ2hpZWYgc2hvd3MgeW91Kiog4oCUIGhpdCBTSE9XIGFuZCB0aGUgQ2hpZWYgZGVtb25zdHJhdGVzIHRoZSB0YXNrIG9uIHRoZSByZWFsIGNvbnRyb2xzLCB3aGlsZSBsaXZlIHN0ZWFtIHZlbnRzIGV4YWN0bHkgd2hlcmUgdGhlIHBoeXNpY3Mgc2F5cyBpdCBzaG91bGQuCi0gKipGcmVlLCBmdWxsIHN0b3AqKiDigJQgbm8gZG93bmxvYWRzIGZvciB3ZWIgcGxheSwgbm8gYWRzLCBubyBpbi1hcHAgcHVyY2hhc2VzLiBGYWlsdXJlcyBlbmQgaW4gYSBzYWZlIHNodXRkb3duLCBuZXZlciBhbiBleHBsb3Npb24uCgoqKkhvdyB0byBwbGF5OioqCk9wZW4gdGhpcyBwYWdlIG9uIHlvdXIgcGhvbmUgKGlPUyBTYWZhcmkgb3IgQW5kcm9pZCkgb3IgZGVza3RvcCBicm93c2VyIGFuZCB0YXAgUGxheSDigJQgdGhlIHdob2xlIGdhbWUgaXMgb25lIHBhZ2UsIG5vdGhpbmcgdG8gaW5zdGFsbC4gQWxzbyBhdmFpbGFibGUgYXMgYW4gQW5kcm9pZCBhcHAuCgoqKkZvb3RlciBjcmVkaXQgbGluZToqKgpTbWFsbCBOdWtlbSDigJQgQldSWC0zMDAgU3RhcnR1cCBTaW11bGF0b3IuIFRoZSBCV1JYLTMwMCBwbGFudCBtb2RlbCBpcyBiYXNlZCBvbiBTYW1pcmEncyBCV1JYLTMwMCBzaW11bGF0b3Igd29yay4gQldSWC0zMDAgaXMgYSBHRSBWZXJub3ZhIEhpdGFjaGkgZGVzaWduOyB0aGlzIGlzIGEgZmFuLW1hZGUgZWR1Y2F0aW9uYWwgZ2FtZSwgbm90IGFmZmlsaWF0ZWQgd2l0aCBHRSBWZXJub3ZhLCBIaXRhY2hpLCBvciBPUEcuCg==
+# Landing Page Copy — nuke.absolutejoker.ca (DRAFT)
+
+Hero banner image: `hero-banner-1920x640.png`
+
+---
+
+**Headline:**
+Start up a real nuclear reactor — from your phone.
+
+**Subhead:**
+SMALL NUKEM is a free browser game that puts you on shift as Fluke Nukem, rookie operator, bringing a BWRX-300 small modular reactor from cold shutdown to critical — real procedures, real physics, and a Chief who shows you how it's done.
+
+**Feature bullets:**
+- **A real plant, playable** — built on a real BWRX-300 plant model: the procedures, physics, and safety systems are the real thing, across 3 levels from first startup to a control room full of cascading failures.
+- **Stuck? The Chief shows you** — hit SHOW and the Chief demonstrates the task on the real controls, while live steam vents exactly where the physics says it should.
+- **Free, full stop** — no downloads for web play, no ads, no in-app purchases. Failures end in a safe shutdown, never an explosion.
+
+**How to play:**
+Open this page on your phone (iOS Safari or Android) or desktop browser and tap Play — the whole game is one page, nothing to install. Also available as an Android app.
+
+**Footer credit line:**
+Small Nukem — BWRX-300 Startup Simulator. The BWRX-300 plant model is based on Samira's BWRX-300 simulator work. BWRX-300 is a GE Vernova Hitachi design; this is a fan-made educational game, not affiliated with GE Vernova, Hitachi, or OPG.

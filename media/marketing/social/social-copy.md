@@ -1,1 +1,91 @@
-IyBTbWFsbCBOdWtlbSDigJQgU29jaWFsIENvcHkgKERSQUZUUyDigJQgbm90IHBvc3RlZCkKCkdhbWU6ICoqU21hbGwgTnVrZW0g4oCUIEJXUlgtMzAwIFN0YXJ0dXAgU2ltdWxhdG9yKioKUGxheSBmcmVlOiBodHRwczovL251a2UuYWJzb2x1dGVqb2tlci5jYQpUb25lOiBwbGF5ZnVsLCBmYW1pbHktc2FmZS4gRXZlcnkgcG9zdCBjYXJyaWVzIHRoZSBVUkwuCgotLS0KCiMjIFgg4oCUIEFubm91bmNlbWVudCBwb3N0IChzaW5nbGUpCgo+IFN0YXJ0IHVwIGEgcmVhbCBudWNsZWFyIHJlYWN0b3IgZnJvbSB5b3VyIHBob25lLiDimKLvuI8KPgo+IFNNQUxMIE5VS0VNIGlzIGxpdmUgYW5kIGZyZWU6IHlvdSdyZSBGbHVrZSBOdWtlbSwgcm9va2llIG9wZXJhdG9yLCB0YWtpbmcgYSBCV1JYLTMwMCByZWFjdG9yIGZyb20gY29sZCBzaHV0ZG93biB0byBjcml0aWNhbCDigJQgcmVhbCBwcm9jZWR1cmVzLCByZWFsIHBoeXNpY3MsIGFuZCBhIENoaWVmIHdobydsbCBzaG93IHlvdSBob3cgaXQncyBkb25lIHdoZW4geW91J3JlIHN0dWNrLgo+Cj4gUGxheSBub3c6IGh0dHBzOi8vbnVrZS5hYnNvbHV0ZWpva2VyLmNhCgpBdHRhY2g6IGB4LWNhcmQtMTYwMHg5MDAuanBnYAoKIyMgWCDigJQgVGhyZWFkICg0IHBvc3RzKQoKKioxLzQqKgo+IFN0YXJ0IHVwIGEgcmVhbCBudWNsZWFyIHJlYWN0b3IgZnJvbSB5b3VyIHBob25lLiDimKLvuI8KPgo+IFNNQUxMIE5VS0VNIOKAlCBCV1JYLTMwMCBTdGFydHVwIFNpbXVsYXRvciBpcyBsaXZlIGFuZCBmcmVlIHRvIHBsYXkgaW4geW91ciBicm93c2VyLiBObyBkb3dubG9hZHMsIG5vIGFkcywgbm8gaW4tYXBwIHB1cmNoYXNlcy4KPgo+IGh0dHBzOi8vbnVrZS5hYnNvbHV0ZWpva2VyLmNhCgoqKjIvNCoqCj4gWW91IHBsYXkgRmx1a2UgTnVrZW0sIGEgcm9va2llIG9wZXJhdG9yIG9uIGhpcyBmaXJzdCBzdGFydHVwOiBMZXZlbCAxIHRha2VzIGEgQldSWC0zMDAgc21hbGwgbW9kdWxhciByZWFjdG9yIGZyb20gY29sZCBzaHV0ZG93biBhbGwgdGhlIHdheSB0byBjcml0aWNhbCwgb25lIHJlYWwgcHJvY2VkdXJlIHN0ZXAgYXQgYSB0aW1lLgo+Cj4gVGhlIHBsYW50IG1vZGVsIGlzIHRoZSByZWFsIHRoaW5nIOKAlCB0aGUgQldSWC0zMDAgaXMgdGhlIDMwMCBNV2UgU01SIGRlc2lnbiBiZWluZyBidWlsdCBhdCBEYXJsaW5ndG9uLgoKKiozLzQqKgo+IFN0dWNrPyBIaXQgU0hPVy4gVGhlIENoaWVmIOKAlCBhbiBvbGQtc2Nob29sIGNoaWVmIGVuZ2luZWVyIHdhdGNoaW5nIGZyb20gaGlzIFRWIHdpbmRvdywgY29mZmVlIGluIGhhbmQg4oCUIHdhbGtzIHRvIHRoZSBwYW5lbCBhbmQgZGVtb25zdHJhdGVzIHRoZSByZWFsIHRhc2sgb24gdGhlIHJlYWwgY29udHJvbHMuCj4KPiBTdGVhbSB2ZW50cyB3aGVyZSB0aGUgcGh5c2ljcyBzYXlzIGl0IHNob3VsZC4gV0hNSVMgc2FmZXR5IGNhcmRzIHVzZSB0aGUgZXhhY3Qgb2ZmaWNpYWwgcGljdG9ncmFtcy4KCioqNC80KioKPiBMZXZlbCAyIGlzIG1haW50ZW5hbmNlIHJvdW5kcy4gVGhlIGZpbmFsIGxldmVsOiB0aGUgY29udHJvbCByb29tLCB3aXRoIGZhaWx1cmVzIGNhc2NhZGluZy4KPgo+IEZhaWx1cmVzIGVuZCBpbiBhIHNhZmUgc2h1dGRvd24g4oCUIG5ldmVyIGFuIGV4cGxvc2lvbi4gVGhhdCdzIHRoZSBqb2IuCj4KPiBGcmVlIG9uIGlPUyBTYWZhcmkgYW5kIEFuZHJvaWQsIHBsdXMgYW4gQW5kcm9pZCBhcHA6IGh0dHBzOi8vbnVrZS5hYnNvbHV0ZWpva2VyLmNhCgpBdHRhY2ggdG8gMS80OiBgeC1jYXJkLTE2MDB4OTAwLmpwZ2AKCi0tLQoKIyMgSW5zdGFncmFtIOKAlCBGZWVkIHBvc3QKCkltYWdlOiBgaW5zdGFncmFtLWZlZWQtMTA4MHgxMzUwLmpwZ2AKCkNhcHRpb246Cgo+IFN0YXJ0IHVwIGEgcmVhbCBudWNsZWFyIHJlYWN0b3IgZnJvbSB5b3VyIHBob25lLiDimKLvuI/wn5OxCj4KPiBNZWV0IEZsdWtlIE51a2VtIOKAlCByb29raWUgb3BlcmF0b3IsIGZpcnN0IHNoaWZ0LCBvbmUgdmVyeSByZWFsIHJlYWN0b3IuIFNNQUxMIE5VS0VNIHdhbGtzIHlvdSB0aHJvdWdoIGEgZnVsbCBCV1JYLTMwMCBzdGFydHVwOiBjb2xkIHNodXRkb3duIHRvIGNyaXRpY2FsLCByZWFsIHByb2NlZHVyZXMsIHJlYWwgcGh5c2ljcywgbGl2ZSBzdGVhbSwgYW5kIGEgQ2hpZWYgaW4gdGhlIFRWIHdpbmRvdyB3aG8gZGVtb25zdHJhdGVzIHRoZSB0YXNrIG9uIHRoZSByZWFsIGNvbnRyb2xzIHdoZW4geW91J3JlIHN0dWNrLgo+Cj4gMyBsZXZlbHMuIEZhaWx1cmVzIGVuZCBpbiBzYWZlIHNodXRkb3duLCBuZXZlciBleHBsb3Npb24uCj4KPiBGcmVlIHRvIHBsYXkgaW4geW91ciBicm93c2VyIOKAlCBubyBkb3dubG9hZHMsIG5vIGFkcywgbm8gaW4tYXBwIHB1cmNoYXNlcy4gTGluazogbnVrZS5hYnNvbHV0ZWpva2VyLmNhCj4KPiAjSW5kaWVHYW1lICNCcm93c2VyR2FtZSAjTnVjbGVhckVuZXJneSAjU01SICNTaW11bGF0aW9uR2FtZSAjU1RFTSAjSW5kaWVEZXYgI1dlYkdhbWUgI0ZyZWVHYW1lICNTY2lGaUdhbWVzCgotLS0KCiMjIEZhY2Vib29rIOKAlCBQb3N0CgpJbWFnZTogYGZhY2Vib29rLTEyMDB4NjMwLmpwZ2AKCj4gU3RhcnQgdXAgYSByZWFsIG51Y2xlYXIgcmVhY3RvciBmcm9tIHlvdXIgcGhvbmUuIOKYou+4jwo+Cj4gU01BTEwgTlVLRU0g4oCUIEJXUlgtMzAwIFN0YXJ0dXAgU2ltdWxhdG9yIGlzIGxpdmUgYW5kIGZyZWUuIFlvdSBwbGF5IEZsdWtlIE51a2VtLCBhIHJvb2tpZSBvcGVyYXRvciBicmluZ2luZyBhIEJXUlgtMzAwIHNtYWxsIG1vZHVsYXIgcmVhY3RvciBmcm9tIGNvbGQgc2h1dGRvd24gdG8gY3JpdGljYWwsIGd1aWRlZCBieSB0aGUgQ2hpZWYsIGFuIG9sZC1zY2hvb2wgY2hpZWYgZW5naW5lZXIgaW4gYSBUViB3aW5kb3cuCj4KPiBJdCdzIGJ1aWx0IG9uIGEgcmVhbCBwbGFudCBtb2RlbCDigJQgdGhlIEJXUlgtMzAwIGlzIHRoZSBkZXNpZ24gT1BHIGlzIGJ1aWxkaW5nIGF0IERhcmxpbmd0b24g4oCUIHdpdGggcmVhbCBwcm9jZWR1cmVzIGFuZCByZWFsIHBoeXNpY3MgYWNyb3NzIDMgbGV2ZWxzLiBTdHVjayBvbiBhIHN0ZXA/IFRoZSBDaGllZiBkZW1vbnN0cmF0ZXMgaXQgb24gdGhlIHJlYWwgY29udHJvbHMuIEFuZCBpZiBpdCBnb2VzIHdyb25nLCBpdCBlbmRzIHRoZSB3YXkgaXQgc2hvdWxkOiBhIHNhZmUgc2h1dGRvd24uCj4KPiBQbGF5cyBmcmVlIGluIHlvdXIgYnJvd3NlciBvbiBpT1MgYW5kIEFuZHJvaWQgKHRoZXJlJ3MgYW4gQW5kcm9pZCBhcHAgdG9vKS4gTm8gYWRzLCBubyBpbi1hcHAgcHVyY2hhc2VzLgo+Cj4gUGxheSBoZXJlOiBodHRwczovL251a2UuYWJzb2x1dGVqb2tlci5jYQoKLS0tCgojIyBUaHJlYWRzIOKAlCBQb3N0CgpJbWFnZTogYHRocmVhZHMtMTA4MHgxMDgwLmpwZ2AKCj4gU3RhcnQgdXAgYSByZWFsIG51Y2xlYXIgcmVhY3RvciBmcm9tIHlvdXIgcGhvbmUg4pii77iPCj4KPiBTTUFMTCBOVUtFTSBpcyBhIGZyZWUgYnJvd3NlciBnYW1lOiByb29raWUgb3BlcmF0b3IgRmx1a2UgTnVrZW0sIGEgcmVhbCBCV1JYLTMwMCBwbGFudCBtb2RlbCwgMyBsZXZlbHMgZnJvbSBjb2xkIHN0YXJ0dXAgdG8gYSBjb250cm9sIHJvb20gZnVsbCBvZiBjYXNjYWRpbmcgZmFpbHVyZXMg4oCUIGFuZCBhIENoaWVmIHdobyBzaG93cyB5b3UgdGhlIHRhc2sgb24gdGhlIHJlYWwgY29udHJvbHMgd2hlbiB5b3UncmUgc3R1Y2suCj4KPiBGcmVlLCBubyBhZHMsIG5vIGRvd25sb2FkcyBmb3Igd2ViIHBsYXk6IGh0dHBzOi8vbnVrZS5hYnNvbHV0ZWpva2VyLmNhCg==
+# Small Nukem — Social Copy (DRAFTS — not posted)
+
+Game: **Small Nukem — BWRX-300 Startup Simulator**
+Play free: https://nuke.absolutejoker.ca
+Tone: playful, family-safe. Every post carries the URL.
+
+---
+
+## X — Announcement post (single)
+
+> Start up a real nuclear reactor from your phone. ☢️
+>
+> SMALL NUKEM is live and free: you're Fluke Nukem, rookie operator, taking a BWRX-300 reactor from cold shutdown to critical — real procedures, real physics, and a Chief who'll show you how it's done when you're stuck.
+>
+> Play now: https://nuke.absolutejoker.ca
+
+Attach: `x-card-1600x900.jpg`
+
+## X — Thread (4 posts)
+
+**1/4**
+> Start up a real nuclear reactor from your phone. ☢️
+>
+> SMALL NUKEM — BWRX-300 Startup Simulator is live and free to play in your browser. No downloads, no ads, no in-app purchases.
+>
+> https://nuke.absolutejoker.ca
+
+**2/4**
+> You play Fluke Nukem, a rookie operator on his first startup: Level 1 takes a BWRX-300 small modular reactor from cold shutdown all the way to critical, one real procedure step at a time.
+>
+> The plant model is the real thing — the BWRX-300 is the 300 MWe SMR design being built at Darlington.
+
+**3/4**
+> Stuck? Hit SHOW. The Chief — an old-school chief engineer watching from his TV window, coffee in hand — walks to the panel and demonstrates the real task on the real controls.
+>
+> Steam vents where the physics says it should. WHMIS safety cards use the exact official pictograms.
+
+**4/4**
+> Level 2 is maintenance rounds. The final level: the control room, with failures cascading.
+>
+> Failures end in a safe shutdown — never an explosion. That's the job.
+>
+> Free on iOS Safari and Android, plus an Android app: https://nuke.absolutejoker.ca
+
+Attach to 1/4: `x-card-1600x900.jpg`
+
+---
+
+## Instagram — Feed post
+
+Image: `instagram-feed-1080x1350.jpg`
+
+Caption:
+
+> Start up a real nuclear reactor from your phone. ☢️📱
+>
+> Meet Fluke Nukem — rookie operator, first shift, one very real reactor. SMALL NUKEM walks you through a full BWRX-300 startup: cold shutdown to critical, real procedures, real physics, live steam, and a Chief in the TV window who demonstrates the task on the real controls when you're stuck.
+>
+> 3 levels. Failures end in safe shutdown, never explosion.
+>
+> Free to play in your browser — no downloads, no ads, no in-app purchases. Link: nuke.absolutejoker.ca
+>
+> #IndieGame #BrowserGame #NuclearEnergy #SMR #SimulationGame #STEM #IndieDev #WebGame #FreeGame #SciFiGames
+
+---
+
+## Facebook — Post
+
+Image: `facebook-1200x630.jpg`
+
+> Start up a real nuclear reactor from your phone. ☢️
+>
+> SMALL NUKEM — BWRX-300 Startup Simulator is live and free. You play Fluke Nukem, a rookie operator bringing a BWRX-300 small modular reactor from cold shutdown to critical, guided by the Chief, an old-school chief engineer in a TV window.
+>
+> It's built on a real plant model — the BWRX-300 is the design OPG is building at Darlington — with real procedures and real physics across 3 levels. Stuck on a step? The Chief demonstrates it on the real controls. And if it goes wrong, it ends the way it should: a safe shutdown.
+>
+> Plays free in your browser on iOS and Android (there's an Android app too). No ads, no in-app purchases.
+>
+> Play here: https://nuke.absolutejoker.ca
+
+---
+
+## Threads — Post
+
+Image: `threads-1080x1080.jpg`
+
+> Start up a real nuclear reactor from your phone ☢️
+>
+> SMALL NUKEM is a free browser game: rookie operator Fluke Nukem, a real BWRX-300 plant model, 3 levels from cold startup to a control room full of cascading failures — and a Chief who shows you the task on the real controls when you're stuck.
+>
+> Free, no ads, no downloads for web play: https://nuke.absolutejoker.ca

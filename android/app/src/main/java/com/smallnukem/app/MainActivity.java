@@ -1,1 +1,203 @@
-cGFja2FnZSBjb20uc21hbGxudWtlbS5hcHA7CgppbXBvcnQgYW5kcm9pZC5hcHAuQWN0aXZpdHk7CmltcG9ydCBhbmRyb2lkLmNvbnRlbnQuSW50ZW50OwppbXBvcnQgYW5kcm9pZC5ncmFwaGljcy5Db2xvcjsKaW1wb3J0IGFuZHJvaWQubmV0LlVyaTsKaW1wb3J0IGFuZHJvaWQub3MuQnVpbGQ7CmltcG9ydCBhbmRyb2lkLm9zLkJ1bmRsZTsKaW1wb3J0IGFuZHJvaWQudXRpbC5Mb2c7CmltcG9ydCBhbmRyb2lkLnZpZXcuRGlzcGxheTsKaW1wb3J0IGFuZHJvaWQudmlldy5WaWV3OwppbXBvcnQgYW5kcm9pZC52aWV3LldpbmRvdzsKaW1wb3J0IGFuZHJvaWQudmlldy5XaW5kb3dJbnNldHM7CmltcG9ydCBhbmRyb2lkLnZpZXcuV2luZG93SW5zZXRzQ29udHJvbGxlcjsKaW1wb3J0IGFuZHJvaWQudmlldy5XaW5kb3dNYW5hZ2VyOwppbXBvcnQgYW5kcm9pZC53ZWJraXQuV2ViU2V0dGluZ3M7CmltcG9ydCBhbmRyb2lkLndlYmtpdC5XZWJWaWV3OwppbXBvcnQgYW5kcm9pZC53ZWJraXQuV2ViVmlld0NsaWVudDsKaW1wb3J0IGFuZHJvaWQud2luZG93Lk9uQmFja0ludm9rZWRDYWxsYmFjazsKaW1wb3J0IGFuZHJvaWQud2luZG93Lk9uQmFja0ludm9rZWREaXNwYXRjaGVyOwoKLyoqCiAqIFNtYWxsIE51a2VtIOKAlCBuYXRpdmUgc2hlbGwgZm9yIHRoZSBnYXRlZCB3ZWIgYnVpbGQuCiAqCiAqIFRoZSBzaGVsbCdzIGpvYiBpcyB0byBkaXNhcHBlYXI6IGxvYWQgdGhlIGJ1bmRsZWQgZ2FtZSBmdWxsLXNjcmVlbiwKICoga2VlcCB0aGUgc2NyZWVuIGF3YWtlIHRocm91Z2ggYSBzaGlmdCwgaG9ub3VyIGl0cyBvbmUgYnJpZGdlIGNhbGwKICogKFNOQW5kcm9pZC5oYXB0aWMpLCBhbmQgbmV2ZXIgZ2V0IGluIHRoZSB3YXkuIFRoZSBnYW1lIHNoaXBzIGluCiAqIGFzc2V0cy8gYW5kIHRoZSBhcHAgaG9sZHMgbm8gSU5URVJORVQgcGVybWlzc2lvbiDigJQgZnVsbHkgb2ZmbGluZS4KICovCnB1YmxpYyBjbGFzcyBNYWluQWN0aXZpdHkgZXh0ZW5kcyBBY3Rpdml0eSB7CgogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgU3RyaW5nIFRBRyA9ICJTbWFsbE51a2VtIjsKICAgIHByaXZhdGUgV2ViVmlldyB3ZWJWaWV3OwogICAgcHJpdmF0ZSBPbkJhY2tJbnZva2VkQ2FsbGJhY2sgYmFja0NhbGxiYWNrOwoKICAgIEBPdmVycmlkZQogICAgcHJvdGVjdGVkIHZvaWQgb25DcmVhdGUoQnVuZGxlIHNhdmVkSW5zdGFuY2VTdGF0ZSkgewogICAgICAgIHN1cGVyLm9uQ3JlYXRlKHNhdmVkSW5zdGFuY2VTdGF0ZSk7CgogICAgICAgIFdpbmRvdyB3aW5kb3cgPSBnZXRXaW5kb3coKTsKCiAgICAgICAgLy8gV2FrZSBsb2NrOiB0aGUgc2NyZWVuIG5ldmVyIGRpbXMgbWlkLXN0YXJ0dXAgd2hpbGUgdGhlIHBsYXllcgogICAgICAgIC8vIHdhdGNoZXMgYSBzbG93IHByZXNzdXJlIHJpc2UuIFJlbGVhc2VkIGF1dG9tYXRpY2FsbHkgb24gYmFja2dyb3VuZC4KICAgICAgICB3aW5kb3cuYWRkRmxhZ3MoV2luZG93TWFuYWdlci5MYXlvdXRQYXJhbXMuRkxBR19LRUVQX1NDUkVFTl9PTik7CgogICAgICAgIC8vIERyYXcgaW50byB0aGUgZGlzcGxheS1jdXRvdXQgYXJlYSAoZm9yY2VkIGVkZ2UtdG8tZWRnZSBhdAogICAgICAgIC8vIHRhcmdldFNkayAzNik7IHRoZSBnYW1lIGtlZXBzIEhVRCBlbGVtZW50cyBpbnNpZGUgc2FmZS1hcmVhIGluc2V0cy4KICAgICAgICBpZiAoQnVpbGQuVkVSU0lPTi5TREtfSU5UID49IDI4KSB7CiAgICAgICAgICAgIFdpbmRvd01hbmFnZXIuTGF5b3V0UGFyYW1zIGxwID0gd2luZG93LmdldEF0dHJpYnV0ZXMoKTsKICAgICAgICAgICAgbHAubGF5b3V0SW5EaXNwbGF5Q3V0b3V0TW9kZSA9CiAgICAgICAgICAgICAgICAgICAgV2luZG93TWFuYWdlci5MYXlvdXRQYXJhbXMuTEFZT1VUX0lOX0RJU1BMQVlfQ1VUT1VUX01PREVfU0hPUlRfRURHRVM7CiAgICAgICAgICAgIHdpbmRvdy5zZXRBdHRyaWJ1dGVzKGxwKTsKICAgICAgICB9CgogICAgICAgIC8vIEhpZ2gtcmVmcmVzaCByZXF1ZXN0OiBwcmVmZXIgdGhlIGZhc3Rlc3QgZGlzcGxheSBtb2RlIGF0IHRoZQogICAgICAgIC8vIGN1cnJlbnQgcmVzb2x1dGlvbiAoUGl4ZWwgMTA6IDEyMCBIeikuIEEgcmVxdWVzdCwgbmV2ZXIgYW4KICAgICAgICAvLyBhc3N1bXB0aW9uIOKAlCB0aGUgc3lzdGVtIHN0aWxsIG93bnMgdGhlcm1hbC9iYXR0ZXJ5IG92ZXJyaWRlcy4KICAgICAgICB0cnkgewogICAgICAgICAgICBEaXNwbGF5IGRpc3BsYXkgPSAoQnVpbGQuVkVSU0lPTi5TREtfSU5UID49IDMwKQogICAgICAgICAgICAgICAgICAgID8gZ2V0RGlzcGxheSgpIDogd2luZG93LmdldFdpbmRvd01hbmFnZXIoKS5nZXREZWZhdWx0RGlzcGxheSgpOwogICAgICAgICAgICBpZiAoZGlzcGxheSAhPSBudWxsKSB7CiAgICAgICAgICAgICAgICBEaXNwbGF5Lk1vZGUgY3VycmVudCA9IGRpc3BsYXkuZ2V0TW9kZSgpOwogICAgICAgICAgICAgICAgRGlzcGxheS5Nb2RlIGJlc3QgPSBjdXJyZW50OwogICAgICAgICAgICAgICAgZm9yIChEaXNwbGF5Lk1vZGUgbSA6IGRpc3BsYXkuZ2V0U3VwcG9ydGVkTW9kZXMoKSkgewogICAgICAgICAgICAgICAgICAgIGlmIChtLmdldFBoeXNpY2FsV2lkdGgoKSA9PSBjdXJyZW50LmdldFBoeXNpY2FsV2lkdGgoKQogICAgICAgICAgICAgICAgICAgICAgICAgICAgJiYgbS5nZXRQaHlzaWNhbEhlaWdodCgpID09IGN1cnJlbnQuZ2V0UGh5c2ljYWxIZWlnaHQoKQogICAgICAgICAgICAgICAgICAgICAgICAgICAgJiYgbS5nZXRSZWZyZXNoUmF0ZSgpID4gYmVzdC5nZXRSZWZyZXNoUmF0ZSgpKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIGJlc3QgPSBtOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIFdpbmRvd01hbmFnZXIuTGF5b3V0UGFyYW1zIGxwID0gd2luZG93LmdldEF0dHJpYnV0ZXMoKTsKICAgICAgICAgICAgICAgIGxwLnByZWZlcnJlZERpc3BsYXlNb2RlSWQgPSBiZXN0LmdldE1vZGVJZCgpOwogICAgICAgICAgICAgICAgbHAucHJlZmVycmVkUmVmcmVzaFJhdGUgPSBiZXN0LmdldFJlZnJlc2hSYXRlKCk7CiAgICAgICAgICAgICAgICB3aW5kb3cuc2V0QXR0cmlidXRlcyhscCk7CiAgICAgICAgICAgIH0KICAgICAgICB9IGNhdGNoIChFeGNlcHRpb24gaWdub3JlZCkgewogICAgICAgIH0KCiAgICAgICAgd2ViVmlldyA9IG5ldyBXZWJWaWV3KHRoaXMpOwogICAgICAgIHdlYlZpZXcuc2V0QmFja2dyb3VuZENvbG9yKENvbG9yLkJMQUNLKTsKICAgICAgICBzZXRDb250ZW50Vmlldyh3ZWJWaWV3KTsKCiAgICAgICAgV2ViU2V0dGluZ3MgcyA9IHdlYlZpZXcuZ2V0U2V0dGluZ3MoKTsKICAgICAgICBzLnNldEphdmFTY3JpcHRFbmFibGVkKHRydWUpOwogICAgICAgIHMuc2V0RG9tU3RvcmFnZUVuYWJsZWQodHJ1ZSk7ICAgICAgICAgICAgICAvLyBzYXZlcy9zZXR0aW5ncyBwZXJzaXN0IGluIGFwcC1wcml2YXRlIGRhdGEKICAgICAgICBzLnNldE1lZGlhUGxheWJhY2tSZXF1aXJlc1VzZXJHZXN0dXJlKGZhbHNlKTsKICAgICAgICBzLnNldEFsbG93RmlsZUFjY2Vzcyh0cnVlKTsKICAgICAgICAvLyBCdW5kbGVkLWdhbWUgb3JpZ2luIGZpeCAoTm92IDI1KTogdGhlIGdhbWUgZHJhd3MgaXRzIHNwcml0ZSBQTkdzCiAgICAgICAgLy8gKGZpbGU6Ly8vYW5kcm9pZF9hc3NldC9zcHJpdGVzLy4uLikgaW50byBhIDJEIGF0bGFzIGNhbnZhcyBhbmQKICAgICAgICAvLyB1cGxvYWRzIGl0IHdpdGggV2ViR0wgdGV4SW1hZ2UyRC4gV2l0aCB0aGUgZGVmYXVsdCBmaWxlOi8vIG9yaWdpbgogICAgICAgIC8vIHBvbGljeSB0aG9zZSBpbWFnZXMgdGFpbnQgdGhlIGF0bGFzLCB0ZXhJbWFnZTJEIHRocm93cyBhbiB1bmNhdWdodAogICAgICAgIC8vIFNlY3VyaXR5RXJyb3IsIGFuZCB0aGUgd2hvbGUgR0wgd29ybGQgcmVuZGVycyBibGFjayAoRE9NLzJEIEhVRAogICAgICAgIC8vIHVuYWZmZWN0ZWQpLiBUaGUgYXBwIGlzIGZ1bGx5IG9mZmxpbmUgd2l0aCBubyBJTlRFUk5FVCBwZXJtaXNzaW9uCiAgICAgICAgLy8gYW5kIG9ubHkgZXZlciBsb2FkcyBpdHMgb3duIGFzc2V0cywgc28gZmlsZS1vcmlnaW4gYWNjZXNzIGlzIHNhZmUuCiAgICAgICAgcy5zZXRBbGxvd0ZpbGVBY2Nlc3NGcm9tRmlsZVVSTHModHJ1ZSk7CiAgICAgICAgcy5zZXRBbGxvd1VuaXZlcnNhbEFjY2Vzc0Zyb21GaWxlVVJMcyh0cnVlKTsKICAgICAgICBzLnNldEJ1aWx0SW5ab29tQ29udHJvbHMoZmFsc2UpOwogICAgICAgIHMuc2V0RGlzcGxheVpvb21Db250cm9scyhmYWxzZSk7CiAgICAgICAgLy8gV2ViR0wgcmVxdWlyZXMgaGFyZHdhcmUgYWNjZWxlcmF0aW9uIChtYW5pZmVzdCkg4oCUIG5vdGhpbmcgZWxzZSB0byB0dW5lLgoKICAgICAgICB3ZWJWaWV3LnNldFdlYlZpZXdDbGllbnQobmV3IFdlYlZpZXdDbGllbnQoKSB7CiAgICAgICAgICAgIEBPdmVycmlkZQogICAgICAgICAgICBwdWJsaWMgYm9vbGVhbiBzaG91bGRPdmVycmlkZVVybExvYWRpbmcoV2ViVmlldyB2aWV3LCBTdHJpbmcgdXJsKSB7CiAgICAgICAgICAgICAgICBpZiAodXJsLnN0YXJ0c1dpdGgoImZpbGU6IikpIHJldHVybiBmYWxzZTsgICAgICAvLyB0aGUgZ2FtZSBpdHNlbGYKICAgICAgICAgICAgICAgIC8vIEFueXRoaW5nIGVsc2UgKHRoZXJlIHNob3VsZCBiZSBub3RoaW5nLCBvZmZsaW5lKSBnb2VzIHRvIHRoZSBicm93c2VyLgogICAgICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgICAgICBzdGFydEFjdGl2aXR5KG5ldyBJbnRlbnQoSW50ZW50LkFDVElPTl9WSUVXLCBVcmkucGFyc2UodXJsKSkpOwogICAgICAgICAgICAgICAgfSBjYXRjaCAoRXhjZXB0aW9uIGlnbm9yZWQpIHsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIHJldHVybiB0cnVlOwogICAgICAgICAgICB9CiAgICAgICAgfSk7CgogICAgICAgIC8vIFRoZSBvbmUgYnJpZGdlIHRoZSBnYXRlZCBidWlsZCB0YWxrcyB0by4KICAgICAgICB3ZWJWaWV3LmFkZEphdmFzY3JpcHRJbnRlcmZhY2UobmV3IFNOQnJpZGdlKHRoaXMpLCAiU05BbmRyb2lkIik7CgogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGFuZHJvaWQuY29udGVudC5wbS5QYWNrYWdlSW5mbyBwaSA9IFdlYlZpZXcuZ2V0Q3VycmVudFdlYlZpZXdQYWNrYWdlKCk7CiAgICAgICAgICAgIExvZy5pKFRBRywgIldlYlZpZXcgcGFja2FnZTogIiArIChwaSA9PSBudWxsID8gInVua25vd24iCiAgICAgICAgICAgICAgICAgICAgOiBwaS5wYWNrYWdlTmFtZSArICIgIiArIHBpLnZlcnNpb25OYW1lKSk7CiAgICAgICAgfSBjYXRjaCAoRXhjZXB0aW9uIGlnbm9yZWQpIHsKICAgICAgICB9CgogICAgICAgIGhpZGVTeXN0ZW1CYXJzKCk7CgogICAgICAgIC8vIFByZWRpY3RpdmUgYmFjayAodGFyZ2V0U2RrIDM2KTogb25CYWNrUHJlc3NlZCgpIGlzIG5ldmVyIGNhbGxlZC4KICAgICAgICAvLyBUaGUgZ2F0ZWQgYnVpbGQgZXhwb3NlcyBubyBiYWNrIGhvb2ssIHNvIEJhY2sgYmFja2dyb3VuZHMgdGhlIHRhc2sKICAgICAgICAvLyBpbnN0ZWFkIG9mIGRlc3Ryb3lpbmcgdGhlIGFjdGl2aXR5IG1pZC1zaGlmdCDigJQgc2FtZSBhcyBIb21lLgogICAgICAgIGlmIChCdWlsZC5WRVJTSU9OLlNES19JTlQgPj0gMzMpIHsKICAgICAgICAgICAgYmFja0NhbGxiYWNrID0gKCkgLT4gbW92ZVRhc2tUb0JhY2sodHJ1ZSk7CiAgICAgICAgICAgIGdldE9uQmFja0ludm9rZWREaXNwYXRjaGVyKCkucmVnaXN0ZXJPbkJhY2tJbnZva2VkQ2FsbGJhY2soCiAgICAgICAgICAgICAgICAgICAgT25CYWNrSW52b2tlZERpc3BhdGNoZXIuUFJJT1JJVFlfREVGQVVMVCwgYmFja0NhbGxiYWNrKTsKICAgICAgICB9CgogICAgICAgIFN0cmluZyB1cmwgPSAiZmlsZTovLy9hbmRyb2lkX2Fzc2V0L2luZGV4Lmh0bWwiOwogICAgICAgIFN0cmluZyBtb2RlID0gbnVsbDsKICAgICAgICBJbnRlbnQgaW50ZW50ID0gZ2V0SW50ZW50KCk7CiAgICAgICAgaWYgKGludGVudCAhPSBudWxsKSB7CiAgICAgICAgICAgIGlmIChpbnRlbnQuaGFzRXh0cmEoInN0YXJ0TW9kZSIpKSBtb2RlID0gaW50ZW50LmdldFN0cmluZ0V4dHJhKCJzdGFydE1vZGUiKTsKICAgICAgICAgICAgVXJpIGRhdGEgPSBpbnRlbnQuZ2V0RGF0YSgpOwogICAgICAgICAgICBpZiAoZGF0YSAhPSBudWxsICYmIGRhdGEuZ2V0UXVlcnlQYXJhbWV0ZXIoIm1vZGUiKSAhPSBudWxsKSB7CiAgICAgICAgICAgICAgICBtb2RlID0gZGF0YS5nZXRRdWVyeVBhcmFtZXRlcigibW9kZSIpOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIGlmIChtb2RlICE9IG51bGwgJiYgbW9kZS5tYXRjaGVzKCJbYS16XSsiKSkgewogICAgICAgICAgICB1cmwgKz0gIj9tb2RlPSIgKyBtb2RlOwogICAgICAgIH0KICAgICAgICB3ZWJWaWV3LmxvYWRVcmwodXJsKTsKICAgIH0KCiAgICBwcml2YXRlIHZvaWQgaGlkZVN5c3RlbUJhcnMoKSB7CiAgICAgICAgV2luZG93IHdpbmRvdyA9IGdldFdpbmRvdygpOwogICAgICAgIGlmIChCdWlsZC5WRVJTSU9OLlNES19JTlQgPj0gMzApIHsKICAgICAgICAgICAgV2luZG93SW5zZXRzQ29udHJvbGxlciBjID0gd2luZG93LmdldEluc2V0c0NvbnRyb2xsZXIoKTsKICAgICAgICAgICAgaWYgKGMgIT0gbnVsbCkgewogICAgICAgICAgICAgICAgYy5oaWRlKFdpbmRvd0luc2V0cy5UeXBlLnN5c3RlbUJhcnMoKSk7CiAgICAgICAgICAgICAgICBjLnNldFN5c3RlbUJhcnNCZWhhdmlvcigKICAgICAgICAgICAgICAgICAgICAgICAgV2luZG93SW5zZXRzQ29udHJvbGxlci5CRUhBVklPUl9TSE9XX1RSQU5TSUVOVF9CQVJTX0JZX1NXSVBFKTsKICAgICAgICAgICAgfQogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgIGdldFdpbmRvdygpLmdldERlY29yVmlldygpLnNldFN5c3RlbVVpVmlzaWJpbGl0eSgKICAgICAgICAgICAgICAgICAgICBWaWV3LlNZU1RFTV9VSV9GTEFHX0lNTUVSU0lWRV9TVElDS1kKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHwgVmlldy5TWVNURU1fVUlfRkxBR19GVUxMU0NSRUVOCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB8IFZpZXcuU1lTVEVNX1VJX0ZMQUdfSElERV9OQVZJR0FUSU9OCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB8IFZpZXcuU1lTVEVNX1VJX0ZMQUdfTEFZT1VUX0ZVTExTQ1JFRU4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIHwgVmlldy5TWVNURU1fVUlfRkxBR19MQVlPVVRfSElERV9OQVZJR0FUSU9OCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB8IFZpZXcuU1lTVEVNX1VJX0ZMQUdfTEFZT1VUX1NUQUJMRSk7CiAgICAgICAgfQogICAgfQoKICAgIEBPdmVycmlkZQogICAgcHVibGljIHZvaWQgb25XaW5kb3dGb2N1c0NoYW5nZWQoYm9vbGVhbiBoYXNGb2N1cykgewogICAgICAgIHN1cGVyLm9uV2luZG93Rm9jdXNDaGFuZ2VkKGhhc0ZvY3VzKTsKICAgICAgICBpZiAoaGFzRm9jdXMpIGhpZGVTeXN0ZW1CYXJzKCk7CiAgICB9CgogICAgQE92ZXJyaWRlCiAgICBwcm90ZWN0ZWQgdm9pZCBvblBhdXNlKCkgewogICAgICAgIHN1cGVyLm9uUGF1c2UoKTsKICAgICAgICBpZiAod2ViVmlldyAhPSBudWxsKSB3ZWJWaWV3Lm9uUGF1c2UoKTsKICAgIH0KCiAgICBAT3ZlcnJpZGUKICAgIHByb3RlY3RlZCB2b2lkIG9uUmVzdW1lKCkgewogICAgICAgIHN1cGVyLm9uUmVzdW1lKCk7CiAgICAgICAgaWYgKHdlYlZpZXcgIT0gbnVsbCkgd2ViVmlldy5vblJlc3VtZSgpOwogICAgfQoKICAgIEBPdmVycmlkZQogICAgcHJvdGVjdGVkIHZvaWQgb25EZXN0cm95KCkgewogICAgICAgIGlmIChCdWlsZC5WRVJTSU9OLlNES19JTlQgPj0gMzMgJiYgYmFja0NhbGxiYWNrICE9IG51bGwpIHsKICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgIGdldE9uQmFja0ludm9rZWREaXNwYXRjaGVyKCkudW5yZWdpc3Rlck9uQmFja0ludm9rZWRDYWxsYmFjayhiYWNrQ2FsbGJhY2spOwogICAgICAgICAgICB9IGNhdGNoIChFeGNlcHRpb24gaWdub3JlZCkgewogICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIGlmICh3ZWJWaWV3ICE9IG51bGwpIHsKICAgICAgICAgICAgd2ViVmlldy5kZXN0cm95KCk7CiAgICAgICAgICAgIHdlYlZpZXcgPSBudWxsOwogICAgICAgIH0KICAgICAgICBzdXBlci5vbkRlc3Ryb3koKTsKICAgIH0KfQo=
+package com.smallnukem.app;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Color;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Display;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
+import android.view.WindowManager;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.window.OnBackInvokedCallback;
+import android.window.OnBackInvokedDispatcher;
+
+/**
+ * Small Nukem — native shell for the gated web build.
+ *
+ * The shell's job is to disappear: load the bundled game full-screen,
+ * keep the screen awake through a shift, honour its one bridge call
+ * (SNAndroid.haptic), and never get in the way. The game ships in
+ * assets/ and the app holds no INTERNET permission — fully offline.
+ */
+public class MainActivity extends Activity {
+
+    private static final String TAG = "SmallNukem";
+    private WebView webView;
+    private OnBackInvokedCallback backCallback;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        Window window = getWindow();
+
+        // Wake lock: the screen never dims mid-startup while the player
+        // watches a slow pressure rise. Released automatically on background.
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        // Draw into the display-cutout area (forced edge-to-edge at
+        // targetSdk 36); the game keeps HUD elements inside safe-area insets.
+        if (Build.VERSION.SDK_INT >= 28) {
+            WindowManager.LayoutParams lp = window.getAttributes();
+            lp.layoutInDisplayCutoutMode =
+                    WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES;
+            window.setAttributes(lp);
+        }
+
+        // High-refresh request: prefer the fastest display mode at the
+        // current resolution (Pixel 10: 120 Hz). A request, never an
+        // assumption — the system still owns thermal/battery overrides.
+        try {
+            Display display = (Build.VERSION.SDK_INT >= 30)
+                    ? getDisplay() : window.getWindowManager().getDefaultDisplay();
+            if (display != null) {
+                Display.Mode current = display.getMode();
+                Display.Mode best = current;
+                for (Display.Mode m : display.getSupportedModes()) {
+                    if (m.getPhysicalWidth() == current.getPhysicalWidth()
+                            && m.getPhysicalHeight() == current.getPhysicalHeight()
+                            && m.getRefreshRate() > best.getRefreshRate()) {
+                        best = m;
+                    }
+                }
+                WindowManager.LayoutParams lp = window.getAttributes();
+                lp.preferredDisplayModeId = best.getModeId();
+                lp.preferredRefreshRate = best.getRefreshRate();
+                window.setAttributes(lp);
+            }
+        } catch (Exception ignored) {
+        }
+
+        webView = new WebView(this);
+        webView.setBackgroundColor(Color.BLACK);
+        setContentView(webView);
+
+        WebSettings s = webView.getSettings();
+        s.setJavaScriptEnabled(true);
+        s.setDomStorageEnabled(true);              // saves/settings persist in app-private data
+        s.setMediaPlaybackRequiresUserGesture(false);
+        s.setAllowFileAccess(true);
+        // Bundled-game origin fix (Nov 25): the game draws its sprite PNGs
+        // (file:///android_asset/sprites/...) into a 2D atlas canvas and
+        // uploads it with WebGL texImage2D. With the default file:// origin
+        // policy those images taint the atlas, texImage2D throws an uncaught
+        // SecurityError, and the whole GL world renders black (DOM/2D HUD
+        // unaffected). The app is fully offline with no INTERNET permission
+        // and only ever loads its own assets, so file-origin access is safe.
+        s.setAllowFileAccessFromFileURLs(true);
+        s.setAllowUniversalAccessFromFileURLs(true);
+        s.setBuiltInZoomControls(false);
+        s.setDisplayZoomControls(false);
+        // WebGL requires hardware acceleration (manifest) — nothing else to tune.
+
+        webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                if (url.startsWith("file:")) return false;      // the game itself
+                // Anything else (there should be nothing, offline) goes to the browser.
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                } catch (Exception ignored) {
+                }
+                return true;
+            }
+        });
+
+        // The one bridge the gated build talks to.
+        webView.addJavascriptInterface(new SNBridge(this), "SNAndroid");
+
+        try {
+            android.content.pm.PackageInfo pi = WebView.getCurrentWebViewPackage();
+            Log.i(TAG, "WebView package: " + (pi == null ? "unknown"
+                    : pi.packageName + " " + pi.versionName));
+        } catch (Exception ignored) {
+        }
+
+        hideSystemBars();
+
+        // Predictive back (targetSdk 36): onBackPressed() is never called.
+        // The gated build exposes no back hook, so Back backgrounds the task
+        // instead of destroying the activity mid-shift — same as Home.
+        if (Build.VERSION.SDK_INT >= 33) {
+            backCallback = () -> moveTaskToBack(true);
+            getOnBackInvokedDispatcher().registerOnBackInvokedCallback(
+                    OnBackInvokedDispatcher.PRIORITY_DEFAULT, backCallback);
+        }
+
+        String url = "file:///android_asset/index.html";
+        String mode = null;
+        Intent intent = getIntent();
+        if (intent != null) {
+            if (intent.hasExtra("startMode")) mode = intent.getStringExtra("startMode");
+            Uri data = intent.getData();
+            if (data != null && data.getQueryParameter("mode") != null) {
+                mode = data.getQueryParameter("mode");
+            }
+        }
+        if (mode != null && mode.matches("[a-z]+")) {
+            url += "?mode=" + mode;
+        }
+        webView.loadUrl(url);
+    }
+
+    private void hideSystemBars() {
+        Window window = getWindow();
+        if (Build.VERSION.SDK_INT >= 30) {
+            WindowInsetsController c = window.getInsetsController();
+            if (c != null) {
+                c.hide(WindowInsets.Type.systemBars());
+                c.setSystemBarsBehavior(
+                        WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+            }
+        } else {
+            getWindow().getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+        }
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) hideSystemBars();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (webView != null) webView.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (webView != null) webView.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (Build.VERSION.SDK_INT >= 33 && backCallback != null) {
+            try {
+                getOnBackInvokedDispatcher().unregisterOnBackInvokedCallback(backCallback);
+            } catch (Exception ignored) {
+            }
+        }
+        if (webView != null) {
+            webView.destroy();
+            webView = null;
+        }
+        super.onDestroy();
+    }
+}

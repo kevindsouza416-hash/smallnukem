@@ -1,1 +1,80 @@
-Ly8gRXh0cmFjdCB0aGUgQ2hpZWYncyBsaW5lIHN0cnVjdHVyZXMgZnJvbSB0aGUgYnVpbGQgY29weSAocmVhZC1vbmx5KS4KY29uc3QgZnMgPSByZXF1aXJlKCdmcycpOwpjb25zdCBzcmMgPSBmcy5yZWFkRmlsZVN5bmMoX19kaXJuYW1lICsgJy9zbWFsbC1udWtlbS1idWlsZC5odG1sJywgJ3V0ZjgnKTsKCmZ1bmN0aW9uIGdyYWIobWFya2VyLCBlbmRNYXJrZXIpIHsKICBjb25zdCBpID0gc3JjLmluZGV4T2YobWFya2VyKTsKICBpZiAoaSA8IDApIHRocm93IG5ldyBFcnJvcignbWFya2VyIG5vdCBmb3VuZDogJyArIG1hcmtlcik7CiAgY29uc3QgaiA9IHNyYy5pbmRleE9mKGVuZE1hcmtlciwgaSk7CiAgaWYgKGogPCAwKSB0aHJvdyBuZXcgRXJyb3IoJ2VuZCBtYXJrZXIgbm90IGZvdW5kIGZvcjogJyArIG1hcmtlcik7CiAgcmV0dXJuIHNyYy5zbGljZShpLCBqICsgZW5kTWFya2VyLmxlbmd0aCk7Cn0KZnVuY3Rpb24gZXZhbE9iaihjb2RlLCBuYW1lKSB7CiAgY29uc3QgZm4gPSBuZXcgRnVuY3Rpb24oY29kZSArICc7IHJldHVybiAnICsgbmFtZSArICc7Jyk7CiAgcmV0dXJuIGZuKCk7Cn0KCmNvbnN0IG91dCA9IHt9OwoKLy8gQ0FMTE9VVFMKb3V0LkNBTExPVVRTID0gZXZhbE9iaihncmFiKCdjb25zdCBDQUxMT1VUUyA9IHsnLCAnfTsnKSwgJ0NBTExPVVRTJyk7Ci8vIFJFQUNUSU9OUwpvdXQuUkVBQ1RJT05TID0gZXZhbE9iaihncmFiKCdjb25zdCBSRUFDVElPTlMgPSB7JywgJ307JyksICdSRUFDVElPTlMnKTsKLy8gQVNTSVNUX1RFQUNIIC8gQVNTSVNUX0VYUExBSU4Kb3V0LkFTU0lTVF9URUFDSCA9IGV2YWxPYmooZ3JhYignY29uc3QgQVNTSVNUX1RFQUNIID0gWycsICddOycpLCAnQVNTSVNUX1RFQUNIJyk7Cm91dC5BU1NJU1RfRVhQTEFJTiA9IGV2YWxPYmooZ3JhYignY29uc3QgQVNTSVNUX0VYUExBSU4gPSBbJywgJ107JyksICdBU1NJU1RfRVhQTEFJTicpOwovLyBTSE9XTUVfTElORVMKb3V0LlNIT1dNRV9MSU5FUyA9IGV2YWxPYmooZ3JhYignY29uc3QgU0hPV01FX0xJTkVTID0geycsICd9OycpLCAnU0hPV01FX0xJTkVTJyk7Ci8vIFNOWF9ISU5UUwpvdXQuU05YX0hJTlRTID0gZXZhbE9iaihncmFiKCdjb25zdCBTTlhfSElOVFMgPSB7JywgJ307JyksICdTTlhfSElOVFMnKTsKCi8vIFNOX0NJTkUgREVGUzogcHVsbCBsaW5lL3RlYWNoIHBlciBzY2VuZSBieSByZWdleCBvdmVyIHRoZSBERUZTIHJlZ2lvbgpjb25zdCBkZWZzU3RhcnQgPSBzcmMuaW5kZXhPZignY29uc3QgREVGUyA9IHsnKTsKY29uc3QgZGVmc1JlZ2lvbiA9IHNyYy5zbGljZShkZWZzU3RhcnQsIGRlZnNTdGFydCArIDgwMDAwKTsKY29uc3Qgc2NlbmVSZSA9IC9eXHN7NH0oXHcrKTogXHsgdGl0bGU6L2dtOwpjb25zdCBzY2VuZXMgPSBbXTsKbGV0IG07CndoaWxlICgobSA9IHNjZW5lUmUuZXhlYyhkZWZzUmVnaW9uKSkpIHNjZW5lcy5wdXNoKHsgbmFtZTogbVsxXSwgaWR4OiBtLmluZGV4IH0pOwpjb25zdCBjaW5lID0ge307CnNjZW5lcy5mb3JFYWNoKChzLCBrKSA9PiB7CiAgY29uc3Qgc2VnID0gZGVmc1JlZ2lvbi5zbGljZShzLmlkeCwgayArIDEgPCBzY2VuZXMubGVuZ3RoID8gc2NlbmVzW2sgKyAxXS5pZHggOiBzLmlkeCArIDQwMDApOwogIGNvbnN0IGxpbmVNID0gc2VnLm1hdGNoKC9saW5lOiAoIig/OlteIlxcXXxcXC4pKiJ8Jyg/OlteJ1xcXXxcXC4pKicpLyk7CiAgY29uc3QgdGVhY2hNID0gc2VnLm1hdGNoKC90ZWFjaDogKCIoPzpbXiJcXF18XFwuKSoifCcoPzpbXidcXF18XFwuKSonKS8pOwogIGNvbnN0IHRpdGxlTSA9IHNlZy5tYXRjaCgvdGl0bGU6ICcoW14nXSspJy8pOwogIGNpbmVbcy5uYW1lXSA9IHsKICAgIHRpdGxlOiB0aXRsZU0gPyB0aXRsZU1bMV0gOiBzLm5hbWUsCiAgICBsaW5lOiBsaW5lTSA/IGV2YWwobGluZU1bMV0pIDogbnVsbCwKICAgIHRlYWNoOiB0ZWFjaE0gPyBldmFsKHRlYWNoTVsxXSkgOiBudWxsLAogIH07Cn0pOwpvdXQuQ0lORSA9IGNpbmU7CgovLyBERU1PX1RPVVIgc2F5KCkgbGluZXMKY29uc3QgdG91ciA9IFtdOwpjb25zdCB0b3VyUmUgPSAvc2F5XCgnKFx3KyknLFxzKiIoKD86W14iXFxdfFxcLikqKSJcKS9nOwpjb25zdCB0b3VyU3RhcnQgPSBzcmMuaW5kZXhPZignZnVuY3Rpb24gZGVtb1RvdXJUaWNrKCknKTsKY29uc3QgdG91clJlZ2lvbiA9IHNyYy5zbGljZSh0b3VyU3RhcnQsIHRvdXJTdGFydCArIDMwMDApOwp3aGlsZSAoKG0gPSB0b3VyUmUuZXhlYyh0b3VyUmVnaW9uKSkpIHRvdXIucHVzaCh7IGtleTogbVsxXSwgdGV4dDogZXZhbCgnIicgKyBtWzJdICsgJyInKSB9KTsKb3V0LkRFTU9fVE9VUiA9IHRvdXI7CgovLyBGaXhlZCBzcG9rZW4vY2FwdGlvbiBzdHJpbmdzIGVsc2V3aGVyZQpvdXQuRklYRUQgPSB7CiAgdGFrZW92ZXJfYW5ub3VuY2U6ICdXYXRjaCDigJQgSVwnbGwgdGFrZSBpdCBmcm9tIGhlcmUuIEZpcnN0LCBJIGRpYWdub3NlIHdoYXQgeW91XCd2ZSBoYW5kZWQgbWXigKYnLAogIGFzc2lzdF9hbm5vdW5jZTogIlN0ZXAgYXNpZGUsIGtpZCDigJQgSSdsbCB0YWtlIHRoaXMgb25lIGFuZCBzaG93IHlvdSBob3cgaXQncyBkb25lLiIsCiAgYXNzaXN0X2hhbmRiYWNrOiAnWW91ciBwbGFudC4gTmV4dCBvbmVcJ3MgeW91cnMuJywKICBhc3Npc3RfY29hY2hfbGluZTogIldhdGNoIGhvdyBpdCdzIGRvbmUsIGtpZC4iLAogIGRlbW9fb246ICdEZW1vIG1vZGUuIFdhdGNoIEZsdWtlIHdvcmsgdGhlIHN0YXJ0dXAg4oCUIHRvdWNoIGFueXRoaW5nIHRvIHRha2UgdGhlIHBsYW50IHlvdXJzZWxmLicsCiAgZGVtb19vZmY6ICdEZW1vIG9mZi4gVGhlIHBsYW50IGlzIHlvdXJzLCBvcGVyYXRvci4nLAogIHRha2VvdmVyX29mZjogJ1Rha2VvdmVyIG9mZi4gWW91ciBwbGFudCwgb3BlcmF0b3Ig4oCUIGl0IHN0YXlzIGFzIHRoZSBkcml2ZXIgbGVmdCBpdC4nLAp9OwoKZnMud3JpdGVGaWxlU3luYyhfX2Rpcm5hbWUgKyAnL2V4dHJhY3RlZC5qc29uJywgSlNPTi5zdHJpbmdpZnkob3V0LCBudWxsLCAyKSk7CmxldCBuID0gMDsKY29uc3QgY291bnQgPSAobykgPT4geyBpZiAodHlwZW9mIG8gPT09ICdzdHJpbmcnKSBuKys7IGVsc2UgaWYgKG8gJiYgdHlwZW9mIG8gPT09ICdvYmplY3QnKSBPYmplY3QudmFsdWVzKG8pLmZvckVhY2goY291bnQpOyB9Owpjb3VudChvdXQpOwpjb25zb2xlLmxvZygnc3RydWN0dXJlcyBleHRyYWN0ZWQ7IHRvdGFsIHN0cmluZ3M6Jywgbik7CmNvbnNvbGUubG9nKCdDQUxMT1VUUyBrZXlzOicsIE9iamVjdC5rZXlzKG91dC5DQUxMT1VUUykubGVuZ3RoKTsKY29uc29sZS5sb2coJ1JFQUNUSU9OUyBrZXlzOicsIE9iamVjdC5rZXlzKG91dC5SRUFDVElPTlMpLmxlbmd0aCk7CmNvbnNvbGUubG9nKCdTSE9XTUUga2V5czonLCBPYmplY3Qua2V5cyhvdXQuU0hPV01FX0xJTkVTKS5sZW5ndGgpOwpjb25zb2xlLmxvZygnQ0lORSBzY2VuZXM6JywgT2JqZWN0LmtleXMob3V0LkNJTkUpLmxlbmd0aCk7CmNvbnNvbGUubG9nKCdERU1PX1RPVVIgbGluZXM6Jywgb3V0LkRFTU9fVE9VUi5sZW5ndGgpOwo=
+// Extract the Chief's line structures from the build copy (read-only).
+const fs = require('fs');
+const src = fs.readFileSync(__dirname + '/small-nukem-build.html', 'utf8');
+
+function grab(marker, endMarker) {
+  const i = src.indexOf(marker);
+  if (i < 0) throw new Error('marker not found: ' + marker);
+  const j = src.indexOf(endMarker, i);
+  if (j < 0) throw new Error('end marker not found for: ' + marker);
+  return src.slice(i, j + endMarker.length);
+}
+function evalObj(code, name) {
+  const fn = new Function(code + '; return ' + name + ';');
+  return fn();
+}
+
+const out = {};
+
+// CALLOUTS
+out.CALLOUTS = evalObj(grab('const CALLOUTS = {', '};'), 'CALLOUTS');
+// REACTIONS
+out.REACTIONS = evalObj(grab('const REACTIONS = {', '};'), 'REACTIONS');
+// ASSIST_TEACH / ASSIST_EXPLAIN
+out.ASSIST_TEACH = evalObj(grab('const ASSIST_TEACH = [', '];'), 'ASSIST_TEACH');
+out.ASSIST_EXPLAIN = evalObj(grab('const ASSIST_EXPLAIN = [', '];'), 'ASSIST_EXPLAIN');
+// SHOWME_LINES
+out.SHOWME_LINES = evalObj(grab('const SHOWME_LINES = {', '};'), 'SHOWME_LINES');
+// SNX_HINTS
+out.SNX_HINTS = evalObj(grab('const SNX_HINTS = {', '};'), 'SNX_HINTS');
+
+// SN_CINE DEFS: pull line/teach per scene by regex over the DEFS region
+const defsStart = src.indexOf('const DEFS = {');
+const defsRegion = src.slice(defsStart, defsStart + 80000);
+const sceneRe = /^\s{4}(\w+): \{ title:/gm;
+const scenes = [];
+let m;
+while ((m = sceneRe.exec(defsRegion))) scenes.push({ name: m[1], idx: m.index });
+const cine = {};
+scenes.forEach((s, k) => {
+  const seg = defsRegion.slice(s.idx, k + 1 < scenes.length ? scenes[k + 1].idx : s.idx + 4000);
+  const lineM = seg.match(/line: ("(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*')/);
+  const teachM = seg.match(/teach: ("(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*')/);
+  const titleM = seg.match(/title: '([^']+)'/);
+  cine[s.name] = {
+    title: titleM ? titleM[1] : s.name,
+    line: lineM ? eval(lineM[1]) : null,
+    teach: teachM ? eval(teachM[1]) : null,
+  };
+});
+out.CINE = cine;
+
+// DEMO_TOUR say() lines
+const tour = [];
+const tourRe = /say\('(\w+)',\s*"((?:[^"\\]|\\.)*)"\)/g;
+const tourStart = src.indexOf('function demoTourTick()');
+const tourRegion = src.slice(tourStart, tourStart + 3000);
+while ((m = tourRe.exec(tourRegion))) tour.push({ key: m[1], text: eval('"' + m[2] + '"') });
+out.DEMO_TOUR = tour;
+
+// Fixed spoken/caption strings elsewhere
+out.FIXED = {
+  takeover_announce: 'Watch — I\'ll take it from here. First, I diagnose what you\'ve handed me…',
+  assist_announce: "Step aside, kid — I'll take this one and show you how it's done.",
+  assist_handback: 'Your plant. Next one\'s yours.',
+  assist_coach_line: "Watch how it's done, kid.",
+  demo_on: 'Demo mode. Watch Fluke work the startup — touch anything to take the plant yourself.',
+  demo_off: 'Demo off. The plant is yours, operator.',
+  takeover_off: 'Takeover off. Your plant, operator — it stays as the driver left it.',
+};
+
+fs.writeFileSync(__dirname + '/extracted.json', JSON.stringify(out, null, 2));
+let n = 0;
+const count = (o) => { if (typeof o === 'string') n++; else if (o && typeof o === 'object') Object.values(o).forEach(count); };
+count(out);
+console.log('structures extracted; total strings:', n);
+console.log('CALLOUTS keys:', Object.keys(out.CALLOUTS).length);
+console.log('REACTIONS keys:', Object.keys(out.REACTIONS).length);
+console.log('SHOWME keys:', Object.keys(out.SHOWME_LINES).length);
+console.log('CINE scenes:', Object.keys(out.CINE).length);
+console.log('DEMO_TOUR lines:', out.DEMO_TOUR.length);

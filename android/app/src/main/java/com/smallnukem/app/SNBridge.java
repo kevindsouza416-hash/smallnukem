@@ -1,1 +1,108 @@
-cGFja2FnZSBjb20uc21hbGxudWtlbS5hcHA7CgppbXBvcnQgYW5kcm9pZC5jb250ZW50LkNvbnRleHQ7CmltcG9ydCBhbmRyb2lkLm9zLkJ1aWxkOwppbXBvcnQgYW5kcm9pZC5vcy5WaWJyYXRpb25FZmZlY3Q7CmltcG9ydCBhbmRyb2lkLm9zLlZpYnJhdG9yOwppbXBvcnQgYW5kcm9pZC5vcy5WaWJyYXRvck1hbmFnZXI7CmltcG9ydCBhbmRyb2lkLndlYmtpdC5KYXZhc2NyaXB0SW50ZXJmYWNlOwoKLyoqCiAqIFRoZSBTTkFuZHJvaWQgYnJpZGdlIOKAlCB0aGUgb25lIEphdmFzY3JpcHRJbnRlcmZhY2UgdGhlIGdhdGVkIHdlYiBidWlsZAogKiB0YWxrcyB0byAoRDE3KS4gVGhlIGdhbWUgY2FsbHMgU05BbmRyb2lkLmhhcHRpYyhuYW1lKSB3aXRoIHNlbWFudGljCiAqIG5hbWVzIG9ubHk7IHRoZSBzaGVsbCBvd25zIHRoZSBkZXZpY2Utc3BlY2lmaWMgdHVuaW5nLgogKgogKiBOYW1lcyBmaXJlZCBieSB0aGUgZ2FtZSAodmVyaWZpZWQgaW4gdGhlIGdhdGVkIGJ1aWxkKToKICogICBzY3JhbSwgZGV0ZW50LCBhbGFybVB1bHNlLCB1aVRhcCwgYWNoaWV2ZW1lbnQKICovCnB1YmxpYyBjbGFzcyBTTkJyaWRnZSB7CgogICAgcHJpdmF0ZSBmaW5hbCBWaWJyYXRvciB2aWJyYXRvcjsKICAgIHByaXZhdGUgbG9uZyBsYXN0RGV0ZW50TXMgPSAwOwoKICAgIFNOQnJpZGdlKENvbnRleHQgY29udGV4dCkgewogICAgICAgIFZpYnJhdG9yIHYgPSBudWxsOwogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGlmIChCdWlsZC5WRVJTSU9OLlNES19JTlQgPj0gMzEpIHsKICAgICAgICAgICAgICAgIFZpYnJhdG9yTWFuYWdlciB2bSA9CiAgICAgICAgICAgICAgICAgICAgICAgIChWaWJyYXRvck1hbmFnZXIpIGNvbnRleHQuZ2V0U3lzdGVtU2VydmljZShDb250ZXh0LlZJQlJBVE9SX01BTkFHRVJfU0VSVklDRSk7CiAgICAgICAgICAgICAgICBpZiAodm0gIT0gbnVsbCkgdiA9IHZtLmdldERlZmF1bHRWaWJyYXRvcigpOwogICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgdiA9IChWaWJyYXRvcikgY29udGV4dC5nZXRTeXN0ZW1TZXJ2aWNlKENvbnRleHQuVklCUkFUT1JfU0VSVklDRSk7CiAgICAgICAgICAgIH0KICAgICAgICB9IGNhdGNoIChFeGNlcHRpb24gaWdub3JlZCkgewogICAgICAgIH0KICAgICAgICB2aWJyYXRvciA9IHY7CiAgICB9CgogICAgQEphdmFzY3JpcHRJbnRlcmZhY2UKICAgIHB1YmxpYyB2b2lkIGhhcHRpYyhTdHJpbmcgbmFtZSkgewogICAgICAgIGlmICh2aWJyYXRvciA9PSBudWxsKSByZXR1cm47CiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgaWYgKCF2aWJyYXRvci5oYXNWaWJyYXRvcigpKSByZXR1cm47CiAgICAgICAgICAgIGlmIChuYW1lID09IG51bGwpIG5hbWUgPSAiIjsKICAgICAgICAgICAgc3dpdGNoIChuYW1lKSB7CiAgICAgICAgICAgICAgICBjYXNlICJzY3JhbSI6CiAgICAgICAgICAgICAgICAgICAgLy8gVGhlIHJvZHMgZHJvcDogb25lIGhlYXZ5IHR3by1zdGFnZSB0aHVtcC4KICAgICAgICAgICAgICAgICAgICBpZiAodmlicmF0b3IuaGFzQW1wbGl0dWRlQ29udHJvbCgpKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIHZpYnJhdG9yLnZpYnJhdGUoVmlicmF0aW9uRWZmZWN0LmNyZWF0ZVdhdmVmb3JtKAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5ldyBsb25nW117MCwgNDUsIDM1LCAxMzB9LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5ldyBpbnRbXXswLCAyMDAsIDAsIDI1NX0sIC0xKSk7CiAgICAgICAgICAgICAgICAgICAgfSBlbHNlIGlmIChCdWlsZC5WRVJTSU9OLlNES19JTlQgPj0gMjkpIHsKICAgICAgICAgICAgICAgICAgICAgICAgdmlicmF0b3IudmlicmF0ZShWaWJyYXRpb25FZmZlY3QuY3JlYXRlUHJlZGVmaW5lZCgKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBWaWJyYXRpb25FZmZlY3QuRUZGRUNUX0hFQVZZX0NMSUNLKSk7CiAgICAgICAgICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgICAgICAgICAgdmlicmF0b3IudmlicmF0ZSgxNjApOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICBicmVhazsKICAgICAgICAgICAgICAgIGNhc2UgImFsYXJtUHVsc2UiOgogICAgICAgICAgICAgICAgICAgIC8vIE9uZSBkb3VibGUtcHVsc2UgcGVyIGNhbGw7IHRoZSBnYW1lIHJlLWZpcmVzIHdoaWxlIHRoZQogICAgICAgICAgICAgICAgICAgIC8vIGFsYXJtIHN0YXRlIGhvbGRzIOKAlCB0aGUgc2hlbGwgbmV2ZXIgbG9vcHMgb24gaXRzIG93bi4KICAgICAgICAgICAgICAgICAgICBpZiAodmlicmF0b3IuaGFzQW1wbGl0dWRlQ29udHJvbCgpKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIHZpYnJhdG9yLnZpYnJhdGUoVmlicmF0aW9uRWZmZWN0LmNyZWF0ZVdhdmVmb3JtKAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5ldyBsb25nW117MCwgMzAsIDQ1LCAzMH0sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbmV3IGludFtdezAsIDI1NSwgMCwgMjU1fSwgLTEpKTsKICAgICAgICAgICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgICAgICAgICB2aWJyYXRvci52aWJyYXRlKG5ldyBsb25nW117MCwgMjUsIDQwLCAyNX0sIC0xKTsKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgICAgICAgICBjYXNlICJkZXRlbnQiOgogICAgICAgICAgICAgICAgICAgIC8vIFZhbHZlL3JvZCBub3RjaCB0aWNrLCB0aHJvdHRsZWQgc2hlbGwtc2lkZSB0byA+PTQwIG1zLgogICAgICAgICAgICAgICAgICAgIGxvbmcgbm93ID0gU3lzdGVtLmN1cnJlbnRUaW1lTWlsbGlzKCk7CiAgICAgICAgICAgICAgICAgICAgaWYgKG5vdyAtIGxhc3REZXRlbnRNcyA8IDQwKSByZXR1cm47CiAgICAgICAgICAgICAgICAgICAgbGFzdERldGVudE1zID0gbm93OwogICAgICAgICAgICAgICAgICAgIGlmIChCdWlsZC5WRVJTSU9OLlNES19JTlQgPj0gMjkpIHsKICAgICAgICAgICAgICAgICAgICAgICAgdmlicmF0b3IudmlicmF0ZShWaWJyYXRpb25FZmZlY3QuY3JlYXRlUHJlZGVmaW5lZCgKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBWaWJyYXRpb25FZmZlY3QuRUZGRUNUX1RJQ0spKTsKICAgICAgICAgICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgICAgICAgICB2aWJyYXRvci52aWJyYXRlKDEyKTsKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgICAgICAgICBjYXNlICJhY2hpZXZlbWVudCI6CiAgICAgICAgICAgICAgICAgICAgLy8gT25lIGNvbmZpZGVudCBkb3VibGUtY2xpY2sgdW5kZXIgdGhlIGNpbmVtYXRpYy4KICAgICAgICAgICAgICAgICAgICBpZiAodmlicmF0b3IuaGFzQW1wbGl0dWRlQ29udHJvbCgpKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIHZpYnJhdG9yLnZpYnJhdGUoVmlicmF0aW9uRWZmZWN0LmNyZWF0ZVdhdmVmb3JtKAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5ldyBsb25nW117MCwgMTgsIDMyLCAxOH0sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbmV3IGludFtdezAsIDIzMCwgMCwgMjMwfSwgLTEpKTsKICAgICAgICAgICAgICAgICAgICB9IGVsc2UgaWYgKEJ1aWxkLlZFUlNJT04uU0RLX0lOVCA+PSAyOSkgewogICAgICAgICAgICAgICAgICAgICAgICB2aWJyYXRvci52aWJyYXRlKFZpYnJhdGlvbkVmZmVjdC5jcmVhdGVQcmVkZWZpbmVkKAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFZpYnJhdGlvbkVmZmVjdC5FRkZFQ1RfRE9VQkxFX0NMSUNLKSk7CiAgICAgICAgICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgICAgICAgICAgdmlicmF0b3IudmlicmF0ZShuZXcgbG9uZ1tdezAsIDE1LCAzMCwgMTV9LCAtMSk7CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgIGJyZWFrOwogICAgICAgICAgICAgICAgY2FzZSAidWlUYXAiOgogICAgICAgICAgICAgICAgZGVmYXVsdDoKICAgICAgICAgICAgICAgICAgICBpZiAoQnVpbGQuVkVSU0lPTi5TREtfSU5UID49IDI5KSB7CiAgICAgICAgICAgICAgICAgICAgICAgIHZpYnJhdG9yLnZpYnJhdGUoVmlicmF0aW9uRWZmZWN0LmNyZWF0ZVByZWRlZmluZWQoCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgVmlicmF0aW9uRWZmZWN0LkVGRkVDVF9DTElDSykpOwogICAgICAgICAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICAgICAgICAgIHZpYnJhdG9yLnZpYnJhdGUoMTApOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICBicmVhazsKICAgICAgICAgICAgfQogICAgICAgIH0gY2F0Y2ggKEV4Y2VwdGlvbiBpZ25vcmVkKSB7CiAgICAgICAgICAgIC8vIEhhcHRpY3MgYXJlIGZpcmUtYW5kLWZvcmdldDogbmV2ZXIgbGV0IGEgZGV2aWNlIHF1aXJrIHJlYWNoIHRoZSBnYW1lLgogICAgICAgIH0KICAgIH0KfQo=
+package com.smallnukem.app;
+
+import android.content.Context;
+import android.os.Build;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
+import android.os.VibratorManager;
+import android.webkit.JavascriptInterface;
+
+/**
+ * The SNAndroid bridge — the one JavascriptInterface the gated web build
+ * talks to (D17). The game calls SNAndroid.haptic(name) with semantic
+ * names only; the shell owns the device-specific tuning.
+ *
+ * Names fired by the game (verified in the gated build):
+ *   scram, detent, alarmPulse, uiTap, achievement
+ */
+public class SNBridge {
+
+    private final Vibrator vibrator;
+    private long lastDetentMs = 0;
+
+    SNBridge(Context context) {
+        Vibrator v = null;
+        try {
+            if (Build.VERSION.SDK_INT >= 31) {
+                VibratorManager vm =
+                        (VibratorManager) context.getSystemService(Context.VIBRATOR_MANAGER_SERVICE);
+                if (vm != null) v = vm.getDefaultVibrator();
+            } else {
+                v = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+            }
+        } catch (Exception ignored) {
+        }
+        vibrator = v;
+    }
+
+    @JavascriptInterface
+    public void haptic(String name) {
+        if (vibrator == null) return;
+        try {
+            if (!vibrator.hasVibrator()) return;
+            if (name == null) name = "";
+            switch (name) {
+                case "scram":
+                    // The rods drop: one heavy two-stage thump.
+                    if (vibrator.hasAmplitudeControl()) {
+                        vibrator.vibrate(VibrationEffect.createWaveform(
+                                new long[]{0, 45, 35, 130},
+                                new int[]{0, 200, 0, 255}, -1));
+                    } else if (Build.VERSION.SDK_INT >= 29) {
+                        vibrator.vibrate(VibrationEffect.createPredefined(
+                                VibrationEffect.EFFECT_HEAVY_CLICK));
+                    } else {
+                        vibrator.vibrate(160);
+                    }
+                    break;
+                case "alarmPulse":
+                    // One double-pulse per call; the game re-fires while the
+                    // alarm state holds — the shell never loops on its own.
+                    if (vibrator.hasAmplitudeControl()) {
+                        vibrator.vibrate(VibrationEffect.createWaveform(
+                                new long[]{0, 30, 45, 30},
+                                new int[]{0, 255, 0, 255}, -1));
+                    } else {
+                        vibrator.vibrate(new long[]{0, 25, 40, 25}, -1);
+                    }
+                    break;
+                case "detent":
+                    // Valve/rod notch tick, throttled shell-side to >=40 ms.
+                    long now = System.currentTimeMillis();
+                    if (now - lastDetentMs < 40) return;
+                    lastDetentMs = now;
+                    if (Build.VERSION.SDK_INT >= 29) {
+                        vibrator.vibrate(VibrationEffect.createPredefined(
+                                VibrationEffect.EFFECT_TICK));
+                    } else {
+                        vibrator.vibrate(12);
+                    }
+                    break;
+                case "achievement":
+                    // One confident double-click under the cinematic.
+                    if (vibrator.hasAmplitudeControl()) {
+                        vibrator.vibrate(VibrationEffect.createWaveform(
+                                new long[]{0, 18, 32, 18},
+                                new int[]{0, 230, 0, 230}, -1));
+                    } else if (Build.VERSION.SDK_INT >= 29) {
+                        vibrator.vibrate(VibrationEffect.createPredefined(
+                                VibrationEffect.EFFECT_DOUBLE_CLICK));
+                    } else {
+                        vibrator.vibrate(new long[]{0, 15, 30, 15}, -1);
+                    }
+                    break;
+                case "uiTap":
+                default:
+                    if (Build.VERSION.SDK_INT >= 29) {
+                        vibrator.vibrate(VibrationEffect.createPredefined(
+                                VibrationEffect.EFFECT_CLICK));
+                    } else {
+                        vibrator.vibrate(10);
+                    }
+                    break;
+            }
+        } catch (Exception ignored) {
+            // Haptics are fire-and-forget: never let a device quirk reach the game.
+        }
+    }
+}

@@ -1,1 +1,36 @@
-IyBTdG9yZS1TdHlsZSBMaXN0aW5nIENvcHkgKERSQUZUIOKAlCBhcyBpZiBmb3IgR29vZ2xlIFBsYXkpCgoqKlRpdGxlOioqIFNtYWxsIE51a2VtIOKAlCBCV1JYLTMwMCBTdGFydHVwIFNpbXVsYXRvcgoKKipTdWJ0aXRsZSAvIHNob3J0IGRlc2NyaXB0aW9uICg4MCBjaGFycyk6KioKU3RhcnQgdXAgYSByZWFsIG51Y2xlYXIgcmVhY3RvciBmcm9tIHlvdXIgcGhvbmUuIEZyZWUsIG5vIGFkcy4KCioqRnVsbCBkZXNjcmlwdGlvbjoqKgoKU3RhcnQgdXAgYSByZWFsIG51Y2xlYXIgcmVhY3RvciBmcm9tIHlvdXIgcGhvbmUuCgpZb3UgYXJlIEZsdWtlIE51a2VtLCBhIHJvb2tpZSBvcGVyYXRvciBvbiBoaXMgZmlyc3Qgc2hpZnQuIFlvdXIgam9iOiBicmluZyBhIEJXUlgtMzAwIHNtYWxsIG1vZHVsYXIgcmVhY3RvciBmcm9tIGNvbGQgc2h1dGRvd24gYWxsIHRoZSB3YXkgdG8gY3JpdGljYWwg4oCUIHRoZW4ga2VlcCBpdCB0aGVyZS4KClNNQUxMIE5VS0VNIGlzIGJ1aWx0IG9uIGEgcmVhbCBwbGFudCBtb2RlbCBvZiB0aGUgQldSWC0zMDAsIHRoZSAzMDAgTVdlIFNNUiBkZXNpZ24gR0UgVmVybm92YSBIaXRhY2hpIGRldmVsb3BlZCBhbmQgT1BHIGlzIGJ1aWxkaW5nIGF0IERhcmxpbmd0b24uIFRoZSBwcm9jZWR1cmVzIGFyZSByZWFsLiBUaGUgcGh5c2ljcyBjb25zdGFudHMgYXJlIHJlYWwuIFRoZSBzYWZldHkgc3lzdGVtcyBhcmUgcmVhbC4gV2hlbiBzb21ldGhpbmcgZmFpbHMsIGl0IGVuZHMgdGhlIHdheSBhIHJlYWwgcGxhbnQgZW5kcyBpdDogYSBzYWZlIHNodXRkb3duLCBuZXZlciBhbiBleHBsb3Npb24uCgpZb3UncmUgbm90IGFsb25lIG9uIHNoaWZ0LiBUaGUgQ2hpZWYg4oCUIGFuIG9sZC1zY2hvb2wgY2hpZWYgZW5naW5lZXIgd2F0Y2hpbmcgZnJvbSBoaXMgVFYgd2luZG93LCBjb2ZmZWUgbXVnIGluIGhhbmQg4oCUIHRhbGtzIHlvdSB0aHJvdWdoIHRoZSBwbGFudC4gR2V0IHN0dWNrIG9uIGEgc3RlcCBhbmQgaGl0IFNIT1c6IGhlIGNvbWVzIGRvd24sIHdhbGtzIHRvIHRoZSBwYW5lbCwgYW5kIGRlbW9uc3RyYXRlcyB0aGUgcmVhbCB0YXNrIG9uIHRoZSByZWFsIGNvbnRyb2xzLgoKVEhSRUUgTEVWRUxTCuKAoiBMZXZlbCAxIOKAlCBPcGVyYXRvciBzdGFydHVwOiBjb2xkIHNodXRkb3duIHRvIGNyaXRpY2FsLCBzdGVwIGJ5IHN0ZXAK4oCiIExldmVsIDIg4oCUIE1haW50ZW5hbmNlIHJvdW5kcyBhY3Jvc3MgdGhlIHBsYW50CuKAoiBGaW5hbCBsZXZlbCDigJQgVGhlIGNvbnRyb2wgcm9vbSwgd2l0aCBmYWlsdXJlcyBjYXNjYWRpbmcKCkZFQVRVUkVTCuKAoiBBIHBsYXlhYmxlIEJXUlgtMzAwIHN0YXJ0dXAgYnVpbHQgb24gYSByZWFsIHBsYW50IG1vZGVsIOKAlCByZWFsIHByb2NlZHVyZXMsIHJlYWwgcGh5c2ljcywgcmVhbCBzYWZldHkgc3lzdGVtcwrigKIgVGhlIENoaWVmIGRlbW9uc3RyYXRlcyBhbnkgdGFzayBvbiB0aGUgcmVhbCBjb250cm9scyB3aGVuIHlvdSdyZSBzdHVjayAoU0hPVykK4oCiIFBob3RvcmVhbGlzdGljIGNoYXJhY3RlcnM6IEZsdWtlIGFuZCB0aGUgQ2hpZWYsIGluIHRoZSBwbGFudCBhbmQgb24gdGhlIFRWIHdpbmRvdwrigKIgTGl2ZSBzdGVhbSBwaHlzaWNzIOKAlCBzdGVhbSB2ZW50cyBhdCBqb2ludHMsIGZsYW5nZXMsIGFuZCB2YWx2ZXMsIGRyaXZlbiBieSB0aGUgc2ltdWxhdG9yJ3MgcHJlc3N1cmUgYW5kIGZsb3cK4oCiIFdITUlTIHNhZmV0eSBjYXJkcyB3aXRoIHRoZSBleGFjdCBvZmZpY2lhbCBwaWN0b2dyYW1zLCBpbmNsdWRpbmcgdGhlIENOU0MgcmFkaWF0aW9uIHRyZWZvaWwK4oCiIFByb2R1Y2VkIHZpZGVvIGNpbmVtYXRpY3MgYW5kIGEgY29udHJvbC1yb29tIGxpZ2h0LXVwIHNwbGFzaCBzY3JlZW4K4oCiIFBsYXlzIGluIHlvdXIgYnJvd3NlciBvbiBpT1MgU2FmYXJpIGFuZCBBbmRyb2lkIOKAlCBubyBkb3dubG9hZCBuZWVkZWQgZm9yIHdlYiBwbGF5CuKAoiBGcmVlLiBObyBhZHMuIE5vIGluLWFwcCBwdXJjaGFzZXMuCgpQbGF5IGZyZWUgb24gdGhlIHdlYjogaHR0cHM6Ly9udWtlLmFic29sdXRlam9rZXIuY2EKCioqV2hhdCdzIG5ldzoqKgpJbml0aWFsIHJlbGVhc2Ug4oCUIHRoZSBmdWxsIDMtbGV2ZWwgZ2FtZTogTGV2ZWwgMSBzdGFydHVwLCBMZXZlbCAyIG1haW50ZW5hbmNlIHJvdW5kcywgYW5kIHRoZSBjb250cm9sIHJvb20gZmluYWxlLiBQaG90b3JlYWwgY2hhcmFjdGVycywgbmV3IFBhZG1hLXJlbmRlcmVkIHBsYW50IGFydHdvcmsgaW4gZXZlcnkgYXJlYSwgYW5kIHRoZSBjb250cm9sLXJvb20gbGlnaHQtdXAgc3BsYXNoIHNjcmVlbi4K
+# Store-Style Listing Copy (DRAFT — as if for Google Play)
+
+**Title:** Small Nukem — BWRX-300 Startup Simulator
+
+**Subtitle / short description (80 chars):**
+Start up a real nuclear reactor from your phone. Free, no ads.
+
+**Full description:**
+
+Start up a real nuclear reactor from your phone.
+
+You are Fluke Nukem, a rookie operator on his first shift. Your job: bring a BWRX-300 small modular reactor from cold shutdown all the way to critical — then keep it there.
+
+SMALL NUKEM is built on a real plant model of the BWRX-300, the 300 MWe SMR design GE Vernova Hitachi developed and OPG is building at Darlington. The procedures are real. The physics constants are real. The safety systems are real. When something fails, it ends the way a real plant ends it: a safe shutdown, never an explosion.
+
+You're not alone on shift. The Chief — an old-school chief engineer watching from his TV window, coffee mug in hand — talks you through the plant. Get stuck on a step and hit SHOW: he comes down, walks to the panel, and demonstrates the real task on the real controls.
+
+THREE LEVELS
+• Level 1 — Operator startup: cold shutdown to critical, step by step
+• Level 2 — Maintenance rounds across the plant
+• Final level — The control room, with failures cascading
+
+FEATURES
+• A playable BWRX-300 startup built on a real plant model — real procedures, real physics, real safety systems
+• The Chief demonstrates any task on the real controls when you're stuck (SHOW)
+• Photorealistic characters: Fluke and the Chief, in the plant and on the TV window
+• Live steam physics — steam vents at joints, flanges, and valves, driven by the simulator's pressure and flow
+• WHMIS safety cards with the exact official pictograms, including the CNSC radiation trefoil
+• Produced video cinematics and a control-room light-up splash screen
+• Plays in your browser on iOS Safari and Android — no download needed for web play
+• Free. No ads. No in-app purchases.
+
+Play free on the web: https://nuke.absolutejoker.ca
+
+**What's new:**
+Initial release — the full 3-level game: Level 1 startup, Level 2 maintenance rounds, and the control room finale. Photoreal characters, new Padma-rendered plant artwork in every area, and the control-room light-up splash screen.

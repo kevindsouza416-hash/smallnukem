@@ -1,1 +1,98 @@
-IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwojIHBhdGNoLXRlc3RzMTQ4IOKAlCB0ZXN0IGxvY2tzIGZvciBwYXRjaDE0OCAoc2hpcCAjMjQsIGR3ZWxsIHNoZWV0LW9wZW4pLgojCiMgRWRpdHMgdGVzdHMvdmFsdWUtY2hlY2tzLm1qcyBPTkxZLiBQYXR0ZXJuOiBhbmNob3JlZCBleGFjdC1jb3VudAojIGluc2VydGlvbiAoYXNzZXJ0IGNvdW50ID09IDEpIGJlZm9yZSB0aGUgc3VpdGUncyBzdW1tYXJ5IGxpbmUsCiMgaW5wdXQgTUQ1IHBpbm5lZCwgb3V0cHV0IHdyaXR0ZW4gb25seSBvbiBzdWNjZXNzLgojCiMgV0hZIE5PIFVQREFURSBUTyBDSEVDS1MgNTgxLzcwMjogQTE2IHByZWRpY3RlZCA1ODEvNzAyIHdvdWxkIG5lZWQKIyB1cGRhdGluZyBPTkxZIGlmIHBhdGNoMTQ4IGNoYW5nZWQgdGhlIGxpdGVyYWwKIyAncmV0dXJuIHRoaXMuZHdlbGxba2V5XSA+IDM7Jy4gSXQgZGlkIG5vdCDigJQgcGF0Y2gxNDggZWRpdGVkIGFsbG93KCkncwojID42MDAgbXMgcmVzZXQgYnJhbmNoIGFuZCB0aGUgZHJhd0VxdWlwbWVudCBkd2VsbCBicmFuY2g7IHRoZQojIHRocmVzaG9sZCBsaXRlcmFsIGlzIGJ5dGUtaWRlbnRpY2FsLiBNZWFzdXJlZCBvbiB0aGUgVk0gc3RhZ2luZwojIGJ1aWxkICgxNDgtPjE0OS0+MTUxKTogc3VpdGUgNDQzLzQ0MyB3aXRoIHRoZSBVTk1PRElGSUVEIHN1aXRlLCBhbmQKIyA0NDMvNDQzIG9uIHRoZSB1bnBhdGNoZWQgc2hpcCAjMjMgY29udHJvbC4gU28gNTgxLzcwMiBzdGF5IGFzLWlzLgojCiMgUkVGUkVTSCAocG9zdC1hbWVuZG1lbnQpOiBwYXRjaDE0OCB3YXMgYW1lbmRlZCDigJQgRWRpdCAyJ3Mgc2luZ2xlLWZyYW1lCiMgbGF0Y2ggY2xlYXIgd2FzIHJlcGxhY2VkIGJ5IGEgUFJFU0VOQ0UgdHJhY2tlciAoX25lYXJLZXkvX25lYXJTaW5jZS8KIyBfbmVhckxhc3QsIGtleTE0OCkgYW5kIHRoZSBmaXJlIGxpbmUgZ2FpbmVkIHByZXNlbmNlIHRlcm1zCiMgKF9uZWFyS2V5ID09PSBrZXkxNDggJiYgKG5vdzE0OCAtIF9uZWFyU2luY2UpID4gMzAwMCkuIFRoZSBzdHJpbmcKIyBsb2NrcyBiZWxvdyBwaW4gdGhlIEFNRU5ERUQgdGV4dDsgRWRpdCAxIChkd2VsbC1yZXNldCBiYWNrc3RvcCkgaXMKIyBieXRlLWlkZW50aWNhbCB0byB2MSBhbmQgaXRzIGxvY2sgaXMgdW5jaGFuZ2VkLgojCiMgTkVXIExPQ0tTIChBMTYgc2VjdGlvbiAyKTogZnVuY3Rpb25hbCBleHRyYWN0LWFuZC1ydW4gZHdlbGwgY2hlY2tzCiMgaW4gdGhlIHBhdGNoMTQ1L3BhdGNoMTQ2IGlkaW9tIChTTl9VTklUSU5GTy5hbGxvdyhpdGVtLCB0Tm93KSB0YWtlcwojIHN5bnRoZXRpYyB0aW1lc3RhbXBzLCBzbyBkd2VsbCBpcyBkcml2ZW4gZGV0ZXJtaW5pc3RpY2FsbHkpLCBwbHVzCiMgc3RyaW5nIGxvY2tzIGZvciB0aGUgc2hlZXQtb3BlbiBsYXRjaCBhbmQgaXRzIGd1YXJkcyAodGhlIG9wZW5Qb3AKIyB3aXJpbmcgbGl2ZXMgaW4gZHJhd0VxdWlwbWVudCwgd2hpY2ggdGhlIHN1aXRlJ3MgaWRpb20gY2Fubm90IHJ1biDigJQKIyBzdHJpbmcgbG9ja3MgYXJlIHRoZSBjbG9zZXN0IGZhaXRoZnVsIGZvcm0gdGhlcmUpLgojCiMgVXNhZ2U6IHB5dGhvbjMgcGF0Y2gtdGVzdHMxNDgucHkgW3N1aXRlX3BhdGhdIFtleHBlY3RlZF9pbnB1dF9tZDVdCiMgICBleHBlY3RlZCBkZWZhdWx0cyB0byB0aGUgcHJpc3RpbmUgc3VpdGUgTUQ1OyBwYXNzIHRoZSBhY3R1YWwKIyAgIHByZS1lZGl0IE1ENSB3aGVuIGNoYWluaW5nLCBvciAnbm9uZScgdG8gc2tpcCB0aGUgcGluLgppbXBvcnQgaGFzaGxpYgppbXBvcnQgc3lzCgpQQVRIID0gc3lzLmFyZ3ZbMV0gaWYgbGVuKHN5cy5hcmd2KSA+IDEgZWxzZSAndGVzdHMvdmFsdWUtY2hlY2tzLm1qcycKRVhQRUNURUQgPSBzeXMuYXJndlsyXSBpZiBsZW4oc3lzLmFyZ3YpID4gMiBlbHNlICc1ZTUyMTRmYWU5Y2IyZGYwYjZiNGNhMzc3Zjc4YWM4NScKCnRleHQgPSBvcGVuKFBBVEgsIGVuY29kaW5nPSd1dGYtOCcpLnJlYWQoKQppbl9tZDUgPSBoYXNobGliLm1kNSh0ZXh0LmVuY29kZSgpKS5oZXhkaWdlc3QoKQppZiBFWFBFQ1RFRC5sb3dlcigpICE9ICdub25lJzoKICAgIGFzc2VydCBpbl9tZDUgPT0gRVhQRUNURUQsICdwYXRjaC10ZXN0czE0OCBpbnB1dCBNRDUgJXMgIT0gcGluICVzJyAlIChpbl9tZDUsIEVYUEVDVEVEKQogICAgcHJpbnQoJ2lucHV0IE1ENSBwaW4gT0s6JywgaW5fbWQ1KQplbHNlOgogICAgcHJpbnQoJ2lucHV0IE1ENSBwaW4gc2tpcHBlZDsgYWN0dWFsOicsIGluX21kNSkKCkFOQ0hPUiA9ICIiImNvbnNvbGUubG9nKCdcXG4nICsgcGFzcyArICcgcGFzc2VkLCAnICsgZmFpbCArICcgZmFpbGVkJyk7IiIiCmFzc2VydCB0ZXh0LmNvdW50KEFOQ0hPUikgPT0gMSwgJ3N1bW1hcnkgYW5jaG9yIGNvdW50ICVkJyAlIHRleHQuY291bnQoQU5DSE9SKQoKQkxPQ0sgPSByJycnCi8vIC0tLS0gcGF0Y2gxNDggKHNoaXAgIzI0KTogZHdlbGwgPiAzIHMgb3BlbnMgdGhlIHJlYWRpbmdzIHNoZWV0IC0tLS0KLy8gRnVuY3Rpb25hbCBkd2VsbCBsb2NrczogZXh0cmFjdCBTTl9VTklUSU5GTyBhbmQgZHJpdmUgYWxsb3coaXRlbSwgdCkKLy8gd2l0aCBzeW50aGV0aWMgdGltZXN0YW1wcyAoMTAwIG1zIGZyYW1lcywgdGhlIHN1aXRlJ3Mgb3duIGR0IGlkaW9tKS4KY29uc3QgX3VpID0gaHRtbC5pbmRleE9mKCdjb25zdCBTTl9VTklUSU5GTyA9IHsnKTsKY29uc3QgX3VqID0gaHRtbC5pbmRleE9mKCd3aW5kb3cuU05fVU5JVElORk8gPSBTTl9VTklUSU5GTzsnLCBfdWkpOwpmdW5jdGlvbiBzblVuaXRJbmZvKCkgewogIHJldHVybiBuZXcgRnVuY3Rpb24oJ3dpbmRvdycsIGh0bWwuc2xpY2UoX3VpLCBfdWogKyAnd2luZG93LlNOX1VOSVRJTkZPID0gU05fVU5JVElORk87Jy5sZW5ndGgpICsgJ1xucmV0dXJuIFNOX1VOSVRJTkZPOycpKHt9KTsKfQpjb25zdCBfaXRBID0geyBhcmVhOiAnYScsIGFjdGlvbjogJ3gnLCB4OiAxMDAgfTsKY29uc3QgX2l0QiA9IHsgYXJlYTogJ2EnLCBhY3Rpb246ICd4JywgeDogMjAwIH07CmNoaygnc2hpcDI0IGR3ZWxsIChmdW5jdGlvbmFsKTogY2xvc2VkIGF0IDw9MyBzIG9mIGNvbnRpbnVvdXMgcHJlc2VuY2UsIG9wZW4gYXQgPjMgcycsICgoKSA9PiB7CiAgY29uc3QgVSA9IHNuVW5pdEluZm8oKTsgbGV0IHIgPSB0cnVlOwogIGZvciAobGV0IGsgPSAwOyBrIDwgMzA7IGsrKykgciA9IFUuYWxsb3coX2l0QSwgMTAwMDAgKyBrICogMTAwKTsgICAvLyAzLjAgcyBhY2N1bXVsYXRlZAogIHJldHVybiByID09PSBmYWxzZSAmJiBVLmFsbG93KF9pdEEsIDEzMDAwKSA9PT0gdHJ1ZTsgICAgICAgICAgICAgICAvLyAzLjEgcyBjcm9zc2VzCn0pKCksICcnKTsKY2hrKCdzaGlwMjQgZHdlbGwgKGZ1bmN0aW9uYWwpOiBkd2VsbCBpcyBwZXItdW5pdCDigJQgYWx0ZXJuYXRpbmcgdW5pdHMgbmV2ZXIgc3VtJywgKCgpID0+IHsKICBjb25zdCBVID0gc25Vbml0SW5mbygpOyBsZXQgcmEgPSB0cnVlLCByYiA9IHRydWU7CiAgZm9yIChsZXQgayA9IDA7IGsgPCA0MDsgaysrKSB7IGNvbnN0IGl0ID0gayAlIDIgPyBfaXRCIDogX2l0QTsgY29uc3QgciA9IFUuYWxsb3coaXQsIDEwMDAwICsgayAqIDEwMCk7IGlmIChrICUgMikgcmIgPSByOyBlbHNlIHJhID0gcjsgfQogIHJldHVybiByYSA9PT0gZmFsc2UgJiYgcmIgPT09IGZhbHNlOyAgIC8vIDQgcyBlbGFwc2VkLCBlYWNoIHVuaXQgb25seSAyLjAgcwp9KSgpLCAnJyk7CmNoaygnc2hpcDI0IGR3ZWxsIChmdW5jdGlvbmFsKTogYWJzZW5jZSA+NjAwIG1zIHJlc2V0cyB0aGUgdW5pdCBkd2VsbCB0byB6ZXJvJywgKCgpID0+IHsKICBjb25zdCBVID0gc25Vbml0SW5mbygpOwogIGZvciAobGV0IGsgPSAwOyBrIDwgMjA7IGsrKykgVS5hbGxvdyhfaXRBLCAxMDAwMCArIGsgKiAxMDApOyAgICAgICAvLyAyLjAgcyBiYW5rZWQKICBjb25zdCByID0gVS5hbGxvdyhfaXRBLCAxMjkwMCArIDEwMDApOyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgLy8gcmV0dXJuIGFmdGVyIDEgcyBhd2F5CiAgcmV0dXJuIHIgPT09IGZhbHNlICYmIE1hdGguYWJzKFUuZHdlbGxbJ2E6eDoxMDAnXSAtIDAuMSkgPCAxZS05Owp9KSgpLCAnJyk7CmNoaygnc2hpcDI0IGR3ZWxsIChmdW5jdGlvbmFsKTogYSBzaW5nbGUgNSBzIHRpbWVzdGFtcCBqdW1wIGNhbm5vdCBvcGVuIChmcmFtZS1kdCBjbGFtcCArIHJlc2V0KScsICgoKSA9PiB7CiAgY29uc3QgVSA9IHNuVW5pdEluZm8oKTsKICBVLmFsbG93KF9pdEEsIDEwMDAwKTsKICByZXR1cm4gVS5hbGxvdyhfaXRBLCAxNTAwMCkgPT09IGZhbHNlICYmIFUuZHdlbGxbJ2E6eDoxMDAnXSA8PSAwLjEgKyAxZS05Owp9KSgpLCAnJyk7Ci8vIFNoZWV0LW9wZW4gd2lyaW5nIChkcmF3RXF1aXBtZW50IOKAlCBzdHJpbmcgbG9ja3M7IHRoZSBkcmF3IHBhdGggaXMgbm90Ci8vIGV4dHJhY3RhYmxlIGluIHRoZSBzdWl0ZSdzIGlkaW9tKTogZXhhY3RseSBvbmUgZHdlbGwtZHJpdmVuIG9wZW5Qb3AsCi8vIGxhdGNoZWQgcGVyIHVuaXQsIHJlLWFybWVkIG9uIHJlc2V0IGFuZCBvbiB0YXJnZXQgY2hhbmdlLCBhbmQgZ2F0ZWQKLy8gYWdhaW5zdCBwb3Atb3BlbiAvIG5vbi1wbGF5aW5nIC8gY2luZW1hdGljIC8gZGVtbyAvIHRha2VvdmVyLgpjaGsoJ3NoaXAyNCBkd2VsbDogdGhlIHNoZWV0IG9wZW5zIGV4YWN0bHkgb25jZSBmcm9tIHRoZSBkd2VsbCBicmFuY2ggKHNpbmdsZSBvcGVuUG9wKGl0ZW0pIHNpdGUpJywgKGh0bWwubWF0Y2goL1NOX1RPVUNIXC5vcGVuUG9wXChpdGVtXCkvZykgfHwgW10pLmxlbmd0aCA9PT0gMSAmJiBodG1sLmluY2x1ZGVzKCdTTl9UT1VDSC5vcGVuUG9wKGl0ZW0pOyB9JyksICcnKTsKY2hrKCdzaGlwMjQgZHdlbGw6IHRoZSBkd2VsbC1vcGVuIGlzIGxhdGNoZWQgcGVyIHVuaXQgKF9vcGVuZWRLZXkgZ3VhcmQgb24ga2V5MTQ4KScsIGh0bWwuaW5jbHVkZXMoJ1NOX1VOSVRJTkZPLl9vcGVuZWRLZXkgIT09IGtleTE0OCcpICYmIGh0bWwuaW5jbHVkZXMoJ1NOX1VOSVRJTkZPLl9vcGVuZWRLZXkgPSBrZXkxNDg7IFNOX1RPVUNILm9wZW5Qb3AoaXRlbSk7JyksICcnKTsKY2hrKCdzaGlwMjQgZHdlbGw6IGEgZHdlbGwgcmVzZXQgcmUtYXJtcyB0aGUgbGF0Y2ggKEVkaXQgMSBiYWNrc3RvcCknLCBodG1sLmluY2x1ZGVzKCdpZiAodGhpcy5fb3BlbmVkS2V5ID09PSBrZXkpIHRoaXMuX29wZW5lZEtleSA9IG51bGw7JyksICcnKTsKY2hrKCdzaGlwMjQgZHdlbGw6IHRoZSBQUkVTRU5DRSB0cmFja2VyIGV4aXN0cyBleGFjdGx5IG9uY2UgKGtleTE0OCAvIF9uZWFyS2V5IC8gX25lYXJTaW5jZSAvIF9uZWFyTGFzdCknLCAoaHRtbC5tYXRjaCgvY29uc3Qga2V5MTQ4ID0gaXRlbVwuYXJlYS9nKSB8fCBbXSkubGVuZ3RoID09PSAxICYmIGh0bWwuaW5jbHVkZXMoJ1NOX1VOSVRJTkZPLl9uZWFyS2V5ID0ga2V5MTQ4OyBTTl9VTklUSU5GTy5fbmVhclNpbmNlID0gbm93MTQ4OycpICYmIGh0bWwuaW5jbHVkZXMoJ1NOX1VOSVRJTkZPLl9uZWFyTGFzdCA9IG5vdzE0ODsnKSwgJycpOwpjaGsoJ3NoaXAyNCBkd2VsbDogYWJzZW5jZSA+NjAwIG1zIGNsZWFycyBwcmVzZW5jZSBBTkQgdGhlIGxhdGNoIChubyBmbGlja2VyIHJlLW9wZW4sIG5vIHN0YWxlIHByZXNlbmNlKScsIGh0bWwuaW5jbHVkZXMoJ1NOX1VOSVRJTkZPLl9uZWFyS2V5ID0gbnVsbDsgU05fVU5JVElORk8uX25lYXJTaW5jZSA9IDA7IGlmIChTTl9VTklUSU5GTy5fb3BlbmVkS2V5ID09PSBrZXkxNDgpIFNOX1VOSVRJTkZPLl9vcGVuZWRLZXkgPSBudWxsOycpLCAnJyk7CmNoaygnc2hpcDI0IGR3ZWxsOiBzd2l0Y2hpbmcgdW5pdHMgcmVzdGFydHMgcHJlc2VuY2UgYW5kIGNsZWFycyB0aGUgcHJldmlvdXMgdW5pdCBsYXRjaCcsIGh0bWwuaW5jbHVkZXMoJ2lmIChTTl9VTklUSU5GTy5fbmVhcktleSAhPT0ga2V5MTQ4KSB7IGlmIChTTl9VTklUSU5GTy5fb3BlbmVkS2V5ID09PSBTTl9VTklUSU5GTy5fbmVhcktleSkgU05fVU5JVElORk8uX29wZW5lZEtleSA9IG51bGw7JyksICcnKTsKY2hrKCdzaGlwMjQgZHdlbGw6IHRoZSBmaXJlIGNvbmRpdGlvbiBjYXJyaWVzIHRoZSBwcmVzZW5jZSB0ZXJtcyAoPjMwMDAgbXMgYXQgdGhpcyB1bml0KScsIGh0bWwuaW5jbHVkZXMoJ2lmIChpc05lYXIgJiYgU05fVU5JVElORk8uX25lYXJLZXkgPT09IGtleTE0OCAmJiAobm93MTQ4IC0gU05fVU5JVElORk8uX25lYXJTaW5jZSkgPiAzMDAwICYmICFTTl9UT1VDSC5wb3AnKSwgJycpOwpjaGsoJ3NoaXAyNCBkd2VsbDogc2hlZXQgbmV2ZXIgb3BlbnMgZHVyaW5nIGRlbW8vY2luZW1hdGljL3Rha2VvdmVyLCBvdmVyIGFuIG9wZW4gcG9wLCBvciB3aGVuIG5vdCBzdGFuZGluZyBhdCB0aGUgcGFuZWwnLCBodG1sLmluY2x1ZGVzKCJnYW1lU3RhdGUucGhhc2UgPT09ICdwbGF5aW5nJyIpICYmIGh0bWwuaW5jbHVkZXMoJ0NJTkVfQUNUSVZFJykgJiYgaHRtbC5pbmNsdWRlcygnREVNTy5hY3RpdmUnKSAmJiBodG1sLmluY2x1ZGVzKCdUQUtFT1ZFUi5hY3RpdmUnKSAmJiBodG1sLmluY2x1ZGVzKCdTTl9VTklUSU5GTy5fb3BlbmVkS2V5ICE9PSBrZXkxNDgnKSwgJycpOwoKJycnCnRleHQgPSB0ZXh0LnJlcGxhY2UoQU5DSE9SLCBCTE9DSyArIEFOQ0hPUiwgMSkKb3BlbihQQVRILCAndycsIGVuY29kaW5nPSd1dGYtOCcpLndyaXRlKHRleHQpCnByaW50KCdwYXRjaC10ZXN0czE0OCBhcHBsaWVkIE9LLCBvdXRwdXQgTUQ1JywgaGFzaGxpYi5tZDUodGV4dC5lbmNvZGUoKSkuaGV4ZGlnZXN0KCkpCg==
+#!/usr/bin/env python3
+# patch-tests148 — test locks for patch148 (ship #24, dwell sheet-open).
+#
+# Edits tests/value-checks.mjs ONLY. Pattern: anchored exact-count
+# insertion (assert count == 1) before the suite's summary line,
+# input MD5 pinned, output written only on success.
+#
+# WHY NO UPDATE TO CHECKS 581/702: A16 predicted 581/702 would need
+# updating ONLY if patch148 changed the literal
+# 'return this.dwell[key] > 3;'. It did not — patch148 edited allow()'s
+# >600 ms reset branch and the drawEquipment dwell branch; the
+# threshold literal is byte-identical. Measured on the VM staging
+# build (148->149->151): suite 443/443 with the UNMODIFIED suite, and
+# 443/443 on the unpatched ship #23 control. So 581/702 stay as-is.
+#
+# REFRESH (post-amendment): patch148 was amended — Edit 2's single-frame
+# latch clear was replaced by a PRESENCE tracker (_nearKey/_nearSince/
+# _nearLast, key148) and the fire line gained presence terms
+# (_nearKey === key148 && (now148 - _nearSince) > 3000). The string
+# locks below pin the AMENDED text; Edit 1 (dwell-reset backstop) is
+# byte-identical to v1 and its lock is unchanged.
+#
+# NEW LOCKS (A16 section 2): functional extract-and-run dwell checks
+# in the patch145/patch146 idiom (SN_UNITINFO.allow(item, tNow) takes
+# synthetic timestamps, so dwell is driven deterministically), plus
+# string locks for the sheet-open latch and its guards (the openPop
+# wiring lives in drawEquipment, which the suite's idiom cannot run —
+# string locks are the closest faithful form there).
+#
+# Usage: python3 patch-tests148.py [suite_path] [expected_input_md5]
+#   expected defaults to the pristine suite MD5; pass the actual
+#   pre-edit MD5 when chaining, or 'none' to skip the pin.
+import hashlib
+import sys
+
+PATH = sys.argv[1] if len(sys.argv) > 1 else 'tests/value-checks.mjs'
+EXPECTED = sys.argv[2] if len(sys.argv) > 2 else '5e5214fae9cb2df0b6b4ca377f78ac85'
+
+text = open(PATH, encoding='utf-8').read()
+in_md5 = hashlib.md5(text.encode()).hexdigest()
+if EXPECTED.lower() != 'none':
+    assert in_md5 == EXPECTED, 'patch-tests148 input MD5 %s != pin %s' % (in_md5, EXPECTED)
+    print('input MD5 pin OK:', in_md5)
+else:
+    print('input MD5 pin skipped; actual:', in_md5)
+
+ANCHOR = """console.log('\\n' + pass + ' passed, ' + fail + ' failed');"""
+assert text.count(ANCHOR) == 1, 'summary anchor count %d' % text.count(ANCHOR)
+
+BLOCK = r'''
+// ---- patch148 (ship #24): dwell > 3 s opens the readings sheet ----
+// Functional dwell locks: extract SN_UNITINFO and drive allow(item, t)
+// with synthetic timestamps (100 ms frames, the suite's own dt idiom).
+const _ui = html.indexOf('const SN_UNITINFO = {');
+const _uj = html.indexOf('window.SN_UNITINFO = SN_UNITINFO;', _ui);
+function snUnitInfo() {
+  return new Function('window', html.slice(_ui, _uj + 'window.SN_UNITINFO = SN_UNITINFO;'.length) + '\nreturn SN_UNITINFO;')({});
+}
+const _itA = { area: 'a', action: 'x', x: 100 };
+const _itB = { area: 'a', action: 'x', x: 200 };
+chk('ship24 dwell (functional): closed at <=3 s of continuous presence, open at >3 s', (() => {
+  const U = snUnitInfo(); let r = true;
+  for (let k = 0; k < 30; k++) r = U.allow(_itA, 10000 + k * 100);   // 3.0 s accumulated
+  return r === false && U.allow(_itA, 13000) === true;               // 3.1 s crosses
+})(), '');
+chk('ship24 dwell (functional): dwell is per-unit — alternating units never sum', (() => {
+  const U = snUnitInfo(); let ra = true, rb = true;
+  for (let k = 0; k < 40; k++) { const it = k % 2 ? _itB : _itA; const r = U.allow(it, 10000 + k * 100); if (k % 2) rb = r; else ra = r; }
+  return ra === false && rb === false;   // 4 s elapsed, each unit only 2.0 s
+})(), '');
+chk('ship24 dwell (functional): absence >600 ms resets the unit dwell to zero', (() => {
+  const U = snUnitInfo();
+  for (let k = 0; k < 20; k++) U.allow(_itA, 10000 + k * 100);       // 2.0 s banked
+  const r = U.allow(_itA, 12900 + 1000);                             // return after 1 s away
+  return r === false && Math.abs(U.dwell['a:x:100'] - 0.1) < 1e-9;
+})(), '');
+chk('ship24 dwell (functional): a single 5 s timestamp jump cannot open (frame-dt clamp + reset)', (() => {
+  const U = snUnitInfo();
+  U.allow(_itA, 10000);
+  return U.allow(_itA, 15000) === false && U.dwell['a:x:100'] <= 0.1 + 1e-9;
+})(), '');
+// Sheet-open wiring (drawEquipment — string locks; the draw path is not
+// extractable in the suite's idiom): exactly one dwell-driven openPop,
+// latched per unit, re-armed on reset and on target change, and gated
+// against pop-open / non-playing / cinematic / demo / takeover.
+chk('ship24 dwell: the sheet opens exactly once from the dwell branch (single openPop(item) site)', (html.match(/SN_TOUCH\.openPop\(item\)/g) || []).length === 1 && html.includes('SN_TOUCH.openPop(item); }'), '');
+chk('ship24 dwell: the dwell-open is latched per unit (_openedKey guard on key148)', html.includes('SN_UNITINFO._openedKey !== key148') && html.includes('SN_UNITINFO._openedKey = key148; SN_TOUCH.openPop(item);'), '');
+chk('ship24 dwell: a dwell reset re-arms the latch (Edit 1 backstop)', html.includes('if (this._openedKey === key) this._openedKey = null;'), '');
+chk('ship24 dwell: the PRESENCE tracker exists exactly once (key148 / _nearKey / _nearSince / _nearLast)', (html.match(/const key148 = item\.area/g) || []).length === 1 && html.includes('SN_UNITINFO._nearKey = key148; SN_UNITINFO._nearSince = now148;') && html.includes('SN_UNITINFO._nearLast = now148;'), '');
+chk('ship24 dwell: absence >600 ms clears presence AND the latch (no flicker re-open, no stale presence)', html.includes('SN_UNITINFO._nearKey = null; SN_UNITINFO._nearSince = 0; if (SN_UNITINFO._openedKey === key148) SN_UNITINFO._openedKey = null;'), '');
+chk('ship24 dwell: switching units restarts presence and clears the previous unit latch', html.includes('if (SN_UNITINFO._nearKey !== key148) { if (SN_UNITINFO._openedKey === SN_UNITINFO._nearKey) SN_UNITINFO._openedKey = null;'), '');
+chk('ship24 dwell: the fire condition carries the presence terms (>3000 ms at this unit)', html.includes('if (isNear && SN_UNITINFO._nearKey === key148 && (now148 - SN_UNITINFO._nearSince) > 3000 && !SN_TOUCH.pop'), '');
+chk('ship24 dwell: sheet never opens during demo/cinematic/takeover, over an open pop, or when not standing at the panel', html.includes("gameState.phase === 'playing'") && html.includes('CINE_ACTIVE') && html.includes('DEMO.active') && html.includes('TAKEOVER.active') && html.includes('SN_UNITINFO._openedKey !== key148'), '');
+
+'''
+text = text.replace(ANCHOR, BLOCK + ANCHOR, 1)
+open(PATH, 'w', encoding='utf-8').write(text)
+print('patch-tests148 applied OK, output MD5', hashlib.md5(text.encode()).hexdigest())

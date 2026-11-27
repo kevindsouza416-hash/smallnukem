@@ -1,1 +1,21 @@
-IyBTbWFsbCBOdWtlbSDigJQgR2VtaW5pIC8gQW50aWdyYXZpdHkKClNtYWxsIE51a2VtIGlzIGEgc2luZ2xlLXBsYXllciAyRCBicm93c2VyIGdhbWUgYWJvdXQgb3BlcmF0aW5nIGEgQldSWC0zMDAKcmVhY3RvciwgYnVpbHQgb24gU2FtaXJhIEQnU291emEncyBwbGFudCBtb2RlbCBhbmQgc2hpcHBlZCBhcyBvbmUKc2VsZi1jb250YWluZWQgSFRNTCBmaWxlIChgZ2FtZS9zbWFsbC1udWtlbS5odG1sYCk7IG9uIHRoaXMgcHJvamVjdCB0aGUKR2VtaW5pIC8gQW50aWdyYXZpdHkgc2VhdCBpcyB0aGUgaW5kZXBlbmRlbnQgcmV2aWV3ZXIg4oCUIGl0IHJldmlld3Mgc3BlY3MsCmdhdGUgZXZpZGVuY2UsIGFuZCBidWlsZHMsIGFuZCBuZXZlciB3cml0ZXMgdGhlIGdhbWUgZmlsZSBvciB0aGUgZXZpZGVuY2UuCgpSZWFkIEFHRU5UUy5tZCDigJQgaXQgaXMgdGhlIGNhbm9uaWNhbCBpbnN0cnVjdGlvbiBmaWxlIGZvciBhbGwgY29kaW5nIGFnZW50cyBvbiB0aGlzIHByb2plY3QuCgojIyBSZWFkIG9yZGVyCgpSZWFkIGluIHRoaXMgb3JkZXIsIGluIGZ1bGwsIGJlZm9yZSB0b3VjaGluZyBhbnl0aGluZyAocGVyIGBBR0VOVFMubWRgIMKnMSk6CgoxLiBgQUdFTlRTLm1kYCDigJQgaW52YXJpYW50cywgY29tbWFuZHMsIGNvbnZlbnRpb25zLgoyLiBgZG9jcy9XSVJJTkctTUFOSUZFU1QubWRgIOKAlCB3aGVyZSBldmVyeSBzeXN0ZW0sIGxpbmUgdGFibGUsIHZvaWNlIGNsaXAsIGFuZCBjaW5lbWF0aWMgaXMgd2lyZWQgaW4gdGhlIGdhbWUgZmlsZS4KMy4gYGRvY3MvREVDSVNJT05TLm1kYCDigJQgS2V2aW4ncyBiaW5kaW5nIGRlY2lzaW9uczsgdGhleSBvdmVycmlkZSB0aGUgc3BlYyBhbmQgYW55IGRlZmF1bHQuCjQuIGBkb2NzL1NISVAtTE9HLm1kYCDigJQgb25lIGVudHJ5IHBlciBzaGlwOiBiYXNlIE1ENSwgcGF0Y2hlcyBpbiBjb21wb3NpdGlvbiBvcmRlciwgZmluYWwgc2l6ZSArIE1ENSwgZ2F0ZSB0YWxsaWVzLCBwdWJsaXNoIHZlcmlmaWNhdGlvbiwgQVBLIHNpemUvTUQ1Lgo1LiBgZG9jcy9NT0RFTC1GSURFTElUWS5tZGAg4oCUIHRoZSBmdWxsIHJlY29uY2lsaWF0aW9uIG9mIHRoZSBnYW1lIGFnYWluc3QgU2FtaXJhJ3MgbW9kZWwuCgpUaGVuLCBhcyBuZWVkZWQ6IGBkb2NzL3NwZWMubWRgICh0aGUgZnVsbCBnYW1lIHNwZWNpZmljYXRpb24pLCBgZG9jcy9yZXNlYXJjaC9gIChjYW1lcmEsIGNvbnRyb2xzKSwgYGRvY3Mvb3BzLm1kYCAocHVibGlzaGluZyAvIGhvc3Rpbmcgb3BlcmF0aW9ucyksIGFuZCBgZG9jcy9JTkRFWC5tZGAgKHRoZSBvbmUtcGFnZSBtYXAgb2YgYGRvY3MvYCkuCg==
+# Small Nukem — Gemini / Antigravity
+
+Small Nukem is a single-player 2D browser game about operating a BWRX-300
+reactor, built on Samira D'Souza's plant model and shipped as one
+self-contained HTML file (`game/small-nukem.html`); on this project the
+Gemini / Antigravity seat is the independent reviewer — it reviews specs,
+gate evidence, and builds, and never writes the game file or the evidence.
+
+Read AGENTS.md — it is the canonical instruction file for all coding agents on this project.
+
+## Read order
+
+Read in this order, in full, before touching anything (per `AGENTS.md` §1):
+
+1. `AGENTS.md` — invariants, commands, conventions.
+2. `docs/WIRING-MANIFEST.md` — where every system, line table, voice clip, and cinematic is wired in the game file.
+3. `docs/DECISIONS.md` — Kevin's binding decisions; they override the spec and any default.
+4. `docs/SHIP-LOG.md` — one entry per ship: base MD5, patches in composition order, final size + MD5, gate tallies, publish verification, APK size/MD5.
+5. `docs/MODEL-FIDELITY.md` — the full reconciliation of the game against Samira's model.
+
+Then, as needed: `docs/spec.md` (the full game specification), `docs/research/` (camera, controls), `docs/ops.md` (publishing / hosting operations), and `docs/INDEX.md` (the one-page map of `docs/`).

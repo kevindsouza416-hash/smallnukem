@@ -1,1 +1,144 @@
-IyBTbWFsbCBOdWtlbSDigJQgT3BlcmF0aW9ucyAoc2VydmluZywgcHVibGlzaGluZywgdmVyaWZpY2F0aW9uKQoKSG93IHRoZSBzaGlwcGVkIGJ1aWxkIHJlYWNoZXMgcGxheWVycywgYW5kIGhvdyBhIHB1Ymxpc2ggaXMgdmVyaWZpZWQuClRoZSBsaXZlIGJ1aWxkIGlzIGEgc2luZ2xlIEhUTUwgZmlsZTogYH4vc21hbGwtbnVrZW0vc21hbGwtbnVrZW0uaHRtbGAgb24KS2V2aW4ncyBNYWMgKGAvVXNlcnMva2Rzb3V6YS9zbWFsbC1udWtlbS9zbWFsbC1udWtlbS5odG1sYCkuCgojIyBTZXJ2aW5nIGNoYWluCgpgYGAKYnVpbGQgZmlsZSAgfi9zbWFsbC1udWtlbS9zbWFsbC1udWtlbS5odG1sICAgICAgICAgIChNYWMpCiAgICDilIIgIHRvb2xzL3B1Ymxpc2guc2gg4oCUIGF0b21pYyBjb3B5IChzZWUgYmVsb3cpCiAgICDilrwKcHVibGlzaCBmb2xkZXIgIH4vc21hbGwtbnVrZW0tcHVibGlzaC8gICAgICAgICAgICAgIChNYWMpCiAgICBpbmRleC5odG1sICsgc2libGluZyBhc3NldHMgKHBsYXRlcy8gdm9pY2UvIGNpbmUvIGNoaWVmLXR2LyBzcHJpdGVzLwogICAgbWVudS1jb25zb2xlLndlYnAsIHNjb3JlY2FyZC1zaGlmdGxvZy53ZWJwLCBzcGxhc2gtY29udHJvbC1yb29tLm1wNCkKICAgIOKUgiAgcHl0aG9uMyAtbSBodHRwLnNlcnZlciA4OTMxIC0tYmluZCAxMjcuMC4wLjEgLS1kaXJlY3Rvcnkgfi9zbWFsbC1udWtlbS1wdWJsaXNoCiAgICDilIIgIExhdW5jaEFnZW50IGNvbS5wYWRtYS5zbWFsbC1udWtlbS1zaXRlIChSdW5BdExvYWQgKyBLZWVwQWxpdmUsCiAgICDilIIgIGxvZyB+L3NtYWxsLW51a2VtLXB1Ymxpc2gvc2VydmVyLmxvZykKICAgIOKWvApvcmlnaW4gIGh0dHA6Ly8xMjcuMC4wLjE6ODkzMS8gICAgICAgICAgICAgICAgICAgICAgIChNYWMsIGxvb3BiYWNrIG9ubHkpCiAgICDilIIgIENhZGR5IHJldmVyc2UgcHJveHkgZnJvbnRzIHRoZSBvcmlnaW4KICAgIOKUgiAgKGxpdmUgcmVzcG9uc2VzIGNhcnJ5IGBWaWE6IDEuMCBDYWRkeWAgYW5kCiAgICDilIIgICBgU2VydmVyOiBTaW1wbGVIVFRQLzAuNiBQeXRob24vMy45LjZgKQogICAg4pa8CnB1YmxpYyAgaHR0cHM6Ly9udWtlLmFic29sdXRlam9rZXIuY2EvCmBgYAoKLSBUaGUgYXBleCBzaXRlIGBhYnNvbHV0ZWpva2VyLmNhYCBpcyBhIHNlcGFyYXRlIHNpdGUgYW5kIGlzICoqdW50b3VjaGVkKioKICBieSB0aGlzIGNoYWluIOKAlCBvbmx5IHRoZSBgbnVrZS5gIHN1YmRvbWFpbiBzZXJ2ZXMgdGhlIGdhbWUuCi0gUHVibGlzaGluZyBpcyBhICoqY29weSoqLCBub3QgdGhlIGxpdmUgcGF0aDogZWRpdGluZyB0aGUgYnVpbGQgZmlsZSBkb2VzCiAgbm90aGluZyB0byB0aGUgc2VydmVkIHNpdGUgdW50aWwgYHRvb2xzL3B1Ymxpc2guc2hgIHJ1bnMuCi0gTmV3IG9yIGNoYW5nZWQgc2libGluZyBhc3NldHMgKHBsYXRlcywgV2ViUHMsIG1lZGlhKSBhcmUgKipub3QqKiBjb3BpZWQgYnkKICBgcHVibGlzaC5zaGAg4oCUIGl0IGNvcGllcyBvbmx5IHRoZSBIVE1MLiBDb3B5IG5ldyBhc3NldHMgaW50bwogIGB+L3NtYWxsLW51a2VtLXB1Ymxpc2gvYCBieSBoYW5kLCBhbmQgdmVyaWZ5IGVhY2ggb25lIHNlcnZlcyBmcm9tIHRoZQogIG9yaWdpbiAoc2VlIHZlcmlmaWNhdGlvbiBiZWxvdykuCgojIyBUZXN0ZXIgbGluayAoVGFpbHNjYWxlIEZ1bm5lbCkKClRoZSBzYW1lIHB1Ymxpc2ggZm9sZGVyIGlzIGFsc28gZXhwb3NlZCB0byB0ZXN0ZXJzIHRocm91Z2ggYSBUYWlsc2NhbGUKRnVubmVsLCBrZXB0IGFsaXZlIGJ5IGB+L3NtYWxsLW51a2VtL2Z1bm5lbC1rZWVwZXIuc2hgICsgTGF1bmNoQWdlbnQKYGNvbS5wYWRtYS5zbWFsbC1udWtlbS1mdW5uZWxgOgoKLSAqKmh0dHBzOi8va2pkLTIudGFpbDMxYjFlZi50cy5uZXQ6MTAwMDAqKiDihpIgYDEyNy4wLjAuMTo4OTMxYAoKVGhpcyBpcyBhIGRpZmZlcmVudCBob3N0bmFtZSBmcm9udGluZyB0aGUgc2FtZSBvcmlnaW4g4oCUIGEgcHVibGlzaCB1cGRhdGVzCmJvdGggdGhlIHB1YmxpYyBzaXRlIGFuZCB0aGUgdGVzdGVyIGxpbmsgYXQgb25jZS4KCiMjIFB1Ymxpc2ggc3RlcHMKClJ1biBvbiB0aGUgTWFjLCBhZnRlciB0aGUgc2hpcCBnYXRlcyBwYXNzIChzY3JpcHQgY2hlY2tzICsgZnVsbCB0ZXN0IHN1aXRlCisgU2FtaXJhJ3MgcGh5c2ljcyBibG9jayBieXRlLWlkZW50aWNhbCDigJQgc2VlIHRoZSBzaGlwIHByb2NlZHVyZSk6CgoxLiAqKkJhY2sgdXAgYmVmb3JlIHRoZSBzd2FwLioqIEtlZXAgYC5iYWstcHJlLXNoaXBOYCBjb3BpZXMsIE1ENS12ZXJpZmllZAogICBiZWZvcmUgcHVibGlzaGluZyAocGF0dGVybiBwcm92ZW4gYXQgc2hpcHMgIzIzLyMyNCk6CiAgIC0gYH4vc21hbGwtbnVrZW0vc21hbGwtbnVrZW0uaHRtbC5iYWstcHJlLXNoaXBOYCDigJQgdGhlIHByZXZpb3VzIGJ1aWxkCiAgIC0gYH4vc21hbGwtbnVrZW0vdGVzdHMvdmFsdWUtY2hlY2tzLm1qcy5iYWstcHJlLXNoaXBOYCDigJQgdGhlIHByZXZpb3VzIHN1aXRlCiAgIC0gYH4vc21hbGwtbnVrZW0tcHVibGlzaC9pbmRleC5odG1sLmJhay1wcmUtc2hpcE5gIOKAlCB0aGUgcHJldmlvdXMgc2VydmVkIGZpbGUKICAgLSBgfi9zbWFsbC1udWtlbS9TbWFsbE51a2VtLTEuMC5hcGsuYmFrLXByZS1zaGlwTmAg4oCUIHRoZSBwcmV2aW91cyBBUEssCiAgICAgdGFrZW4gYmVmb3JlIGFueSBBUEsgc3RlcAogICBUaGVzZSByb2xsYmFjayBjb3BpZXMgYXJlICoqa2VwdCwgbm90IGRlbGV0ZWQqKiBhZnRlciB0aGUgc2hpcC4KMi4gKipTdGFnZSB0aGUgYnVpbGQgaW50byB0aGUgcHVibGlzaCBmb2xkZXI6KioKCiAgIGBgYGJhc2gKICAgdG9vbHMvcHVibGlzaC5zaAogICAjIG9uIHRoZSBNYWMgdGhpcyBpcyB+L3NtYWxsLW51a2VtLXB1Ymxpc2gvcHVibGlzaC5zaDsgdGhlIHN0YWdlZCBjb3B5CiAgICMgaW4gdGhpcyByZXBvIGlzIHRvb2xzL3B1Ymxpc2guc2gKICAgYGBgCgogICBJdCBjb3BpZXMgYH4vc21hbGwtbnVrZW0vc21hbGwtbnVrZW0uaHRtbGAgdG8KICAgYH4vc21hbGwtbnVrZW0tcHVibGlzaC9pbmRleC5odG1sLnRtcGAgYW5kIGF0b21pY2FsbHkgcmVuYW1lcyBpdCB0bwogICBgaW5kZXguaHRtbGAgKGBjcGAgKyBgbXZgKSwgc28gbm8gcmVhZGVyIGV2ZXIgY2F0Y2hlcyBhIGhhbGYtY29waWVkCiAgIGZpbGUuIEl0IHByaW50cyBgcHVibGlzaGVkIDxieXRlcz4gYnl0ZXMgYXQgPGRhdGU+YC4gUnVuIGl0IHBlciBzaGlwIC8KICAgcGVyIGdhdGUgbGFuZGVkIOKAlCBuZXZlciBtaWQtbWlsZXN0b25lLgozLiBDb3B5IGFueSBuZXcgc2libGluZyBhc3NldHMgaW50byBgfi9zbWFsbC1udWtlbS1wdWJsaXNoL2AgYnkgaGFuZAogICAoc3RlcCBkb2VzIG5vdCBleGlzdCBpbiBgcHVibGlzaC5zaGApLgo0LiBSZWJ1aWxkIHRoZSBBUEsgKG5leHQgc2VjdGlvbikgYW5kIHZlcmlmeSB0aGUgcHVibGlzaCAobGFzdCBzZWN0aW9uKS4KCiMjIEFQSyByZWJ1aWxkCgpUaGUgQW5kcm9pZCByZWxlYXNlIHByb2plY3QgaXMgYH4vc21hbGwtbnVrZW0vYW5kcm9pZC9gIG9uIHRoZSBNYWMuClRoZXJlIGlzIG5vIGFzc2V0LXN5bmMgc2NyaXB0IOKAlCBza2lwcGluZyB0aGUgbWFudWFsIGNvcHkgc2hpcHMgdGhlIE9MRApIVE1MIGluc2lkZSBhIG5ldyBBUEsuCgpgYGBiYXNoCiMgMS4gTWFudWFsIGFzc2V0IHN5bmMgKG1hbmRhdG9yeSkKY3Agfi9zbWFsbC1udWtlbS9zbWFsbC1udWtlbS5odG1sIH4vc21hbGwtbnVrZW0vYW5kcm9pZC9hcHAvc3JjL21haW4vYXNzZXRzL2luZGV4Lmh0bWwKIyAgICBwbHVzIGFueSBuZXcgc2libGluZyBhc3NldHMgaW50byBhbmRyb2lkL2FwcC9zcmMvbWFpbi9hc3NldHMv4oCmIGJ5IGhhbmQKIyAgICB2ZXJpZnk6IHNoYXN1bSAtYSAyNTYgb2Ygc291cmNlIGFuZCBhc3NldCBtdXN0IG1hdGNoCgojIDIuIEJ1aWxkIOKAlCBzeXN0ZW0gSmF2YSBkb2VzIG5vdCBleGlzdCBvbiB0aGUgTWFjOyBKQVZBX0hPTUUgaXMgbWFuZGF0b3J5CmNkIH4vc21hbGwtbnVrZW0vYW5kcm9pZApleHBvcnQgSkFWQV9IT01FPSIvQXBwbGljYXRpb25zL0FuZHJvaWQgU3R1ZGlvLmFwcC9Db250ZW50cy9qYnIvQ29udGVudHMvSG9tZSIKLi9ncmFkbGV3IGFzc2VtYmxlUmVsZWFzZSAgICAgICAgIyBleHBlY3QgQlVJTEQgU1VDQ0VTU0ZVTAoKIyAzLiBTaGlwIGNvcHkKY3AgYXBwL2J1aWxkL291dHB1dHMvYXBrL3JlbGVhc2UvYXBwLXJlbGVhc2UuYXBrIH4vc21hbGwtbnVrZW0vU21hbGxOdWtlbS0xLjAuYXBrCgojIDQuIFZlcmlmeSB0aGUgYnVuZGxlOiBleHRyYWN0IGFzc2V0cy9pbmRleC5odG1sIGZyb20gdGhlIEFQSyDigJQKIyAgICBpdHMgTUQ1IG11c3QgZXF1YWwgdGhlIHNoaXBwZWQgYnVpbGQncyBNRDUKYGBgCgpUaGUgcmVsZWFzZSBpcyBzaWduZWQgd2l0aCB0aGUgbG9jYWwgZGVidWcga2V5IGJ5IGRlc2lnbgooYH4vLmFuZHJvaWQvZGVidWcua2V5c3RvcmVgKSDigJQgZG8gbm90IHJlZ2VuZXJhdGUgaXQsIG9yCmluc3RhbGwtb3Zlci10aGUtdG9wIGJyZWFrcy4gSW5zdGFsbCB3aXRoIGBhZGIgaW5zdGFsbCAtcmAKKHZlcnNpb25Db2RlIHN0YXlzIDEpLCB0aGVuIGNvbmZpcm0gdGhlIHBhY2thZ2UncyBgbGFzdFVwZGF0ZVRpbWVgIGlzIG5ldwphbmQgcmVsYXVuY2ggdGhlIGFwcC4KCiMjIFBvc3QtcHVibGlzaCB2ZXJpZmljYXRpb24KCkEgcHVibGlzaCBpcyBub3QgZG9uZSB1bnRpbCBhbGwgb2YgdGhlc2UgcGFzczoKCjEuICoqTUQ1IG1hdGNoLCB0aHJlZSB3YXlzLioqIFRoZSBsaXZlIGZpbGUgZmV0Y2hlZCBvdmVyIHRoZSBwdWJsaWMgVVJMCiAgIG11c3QgaGFzaCBpZGVudGljYWxseSB0byB0aGUgc2hpcHBlZCBidWlsZDoKCiAgIGBgYGJhc2gKICAgbWQ1IH4vc21hbGwtbnVrZW0vc21hbGwtbnVrZW0uaHRtbCAgICAgICAgICAgICAgICAgIyBNYWM6IHRoZSBzaGlwcGVkIGJ1aWxkCiAgIGN1cmwgLXMgaHR0cDovLzEyNy4wLjAuMTo4OTMxLyB8IG1kNXN1bSAgICAgICAgICAgICMgTWFjOiB0aGUgb3JpZ2luCiAgIGN1cmwgLXMgaHR0cHM6Ly9udWtlLmFic29sdXRlam9rZXIuY2EvIHwgbWQ1c3VtICAgICMgYW55d2hlcmU6IHRoZSBwdWJsaWMgVVJMCiAgIGBgYAoKICAgQWxsIHRocmVlIE1ENXMgYW5kIHRoZSBieXRlIHNpemUgbXVzdCBhZ3JlZSwgd2l0aCBIVFRQIDIwMCBmcm9tIHRoZQogICBwdWJsaWMgVVJMLiBSZWNvcmQgYnVpbGQgZmlsZSAvIHB1Ymxpc2ggaW5kZXggLyBwdWJsaWMgVVJMIE1ENXMgaW4gdGhlCiAgIHNoaXAgbG9nLgoyLiAqKk5ldyBhc3NldHMgc2VydmUuKiogRmV0Y2ggZWFjaCBuZXcgb3IgY2hhbmdlZCBzaWJsaW5nIGFzc2V0IGZyb20gdGhlCiAgIG9yaWdpbiBhbmQgY29uZmlybSBpdHMgTUQ1IG1hdGNoZXMgdGhlIHNvdXJjZSBmaWxlLgozLiAqKkNhY2hlIHdhcm5pbmcg4oCUIGNvbmZpcm0gdGhlIG5ldyBncmFwaGljcyBhY3R1YWxseSBsb2FkLioqIFRoZSBvbGQKICAgYnVpbGQgY2FuIGxvYWQgZnJvbSBicm93c2VyIGNhY2hlIGFuZCAqbG9vayogcHVibGlzaGVkIHdoaWxlIHNob3dpbmcKICAgc3RhbGUgYXNzZXRzLiBPbiBldmVyeSBwbGF5dGVzdCBsb2FkLCBjaGVjayB0aGUgbG9hZGVkIGJ1aWxkJ3MKICAgdmVyc2lvbi9jaGVja3N1bSBhZ2FpbnN0IHRoZSBjdXJyZW50IGxpdmUgYnVpbGQgYW5kIGNvbmZpcm0gdGhlIE5FVwogICBncmFwaGljcyBhcmUgYWN0dWFsbHkgb24gc2NyZWVuIChub3Qgc3RhbGUgY2FjaGVkIGFzc2V0cykuIEEgc3RhbGUKICAgbG9hZCBpcyByZWxvYWRlZCAvIGNhY2hlLWJ5cGFzc2VkLCBuZXZlciBwbGF5ZWQgb24uIFBsYXl0ZXN0cyBydW4gb25seQogICBhZ2FpbnN0IGh0dHBzOi8vbnVrZS5hYnNvbHV0ZWpva2VyLmNhIOKAlCBuZXZlciBhIGxvY2FsIGFkZHJlc3MuCjQuICoqQVBLIGJ1bmRsZSBjaGVjay4qKiBUaGUgYGFzc2V0cy9pbmRleC5odG1sYCBleHRyYWN0ZWQgZnJvbSB0aGUKICAgcmVidWlsdCBBUEsgbXVzdCBNRDUtbWF0Y2ggdGhlIHNoaXBwZWQgYnVpbGQgKHN0ZXAgNCBvZiB0aGUgQVBLCiAgIHNlY3Rpb24gYWJvdmUpLgoKIyMgU291cmNlIG5vdGVzCgotIGB0b29scy9wdWJsaXNoLnNoYCBpbiB0aGlzIHJlcG8gaXMgYSB2ZXJiYXRpbSBjb3B5IG9mIHRoZSBNYWMncwogIGB+L3NtYWxsLW51a2VtLXB1Ymxpc2gvcHVibGlzaC5zaGAgKDQwNyBieXRlcykuCi0gVGhlIENhZGR5IGNvbmZpZ3VyYXRpb24gbWFwcGluZyBgbnVrZS5hYnNvbHV0ZWpva2VyLmNhYCB0bwogIGAxMjcuMC4wLjE6ODkzMWAgd2FzIG5vdCBsb2NhdGVkIG9uIHRoZSBNYWMgZHVyaW5nIHRoZSBzaGlwLXByb2NlZHVyZQogIHJlc2VhcmNoOyB0aGUgbWFwcGluZyBpcyBlc3RhYmxpc2hlZCBmcm9tIGxpdmUgcmVzcG9uc2UgaGVhZGVycwogIChgVmlhOiAxLjAgQ2FkZHlgKSBhbmQgdGhlIHNoaXAgbG9ncy4K
+# Small Nukem — Operations (serving, publishing, verification)
+
+How the shipped build reaches players, and how a publish is verified.
+The live build is a single HTML file: `~/small-nukem/small-nukem.html` on
+Kevin's Mac (`/Users/kdsouza/small-nukem/small-nukem.html`).
+
+## Serving chain
+
+```
+build file  ~/small-nukem/small-nukem.html          (Mac)
+    │  tools/publish.sh — atomic copy (see below)
+    ▼
+publish folder  ~/small-nukem-publish/              (Mac)
+    index.html + sibling assets (plates/ voice/ cine/ chief-tv/ sprites/
+    menu-console.webp, scorecard-shiftlog.webp, splash-control-room.mp4)
+    │  python3 -m http.server 8931 --bind 127.0.0.1 --directory ~/small-nukem-publish
+    │  LaunchAgent com.padma.small-nukem-site (RunAtLoad + KeepAlive,
+    │  log ~/small-nukem-publish/server.log)
+    ▼
+origin  http://127.0.0.1:8931/                       (Mac, loopback only)
+    │  Caddy reverse proxy fronts the origin
+    │  (live responses carry `Via: 1.0 Caddy` and
+    │   `Server: SimpleHTTP/0.6 Python/3.9.6`)
+    ▼
+public  https://nuke.absolutejoker.ca/
+```
+
+- The apex site `absolutejoker.ca` is a separate site and is **untouched**
+  by this chain — only the `nuke.` subdomain serves the game.
+- Publishing is a **copy**, not the live path: editing the build file does
+  nothing to the served site until `tools/publish.sh` runs.
+- New or changed sibling assets (plates, WebPs, media) are **not** copied by
+  `publish.sh` — it copies only the HTML. Copy new assets into
+  `~/small-nukem-publish/` by hand, and verify each one serves from the
+  origin (see verification below).
+
+## Tester link (Tailscale Funnel)
+
+The same publish folder is also exposed to testers through a Tailscale
+Funnel, kept alive by `~/small-nukem/funnel-keeper.sh` + LaunchAgent
+`com.padma.small-nukem-funnel`:
+
+- **https://kjd-2.tail31b1ef.ts.net:10000** → `127.0.0.1:8931`
+
+This is a different hostname fronting the same origin — a publish updates
+both the public site and the tester link at once.
+
+## Publish steps
+
+Run on the Mac, after the ship gates pass (script checks + full test suite
++ Samira's physics block byte-identical — see the ship procedure):
+
+1. **Back up before the swap.** Keep `.bak-pre-shipN` copies, MD5-verified
+   before publishing (pattern proven at ships #23/#24):
+   - `~/small-nukem/small-nukem.html.bak-pre-shipN` — the previous build
+   - `~/small-nukem/tests/value-checks.mjs.bak-pre-shipN` — the previous suite
+   - `~/small-nukem-publish/index.html.bak-pre-shipN` — the previous served file
+   - `~/small-nukem/SmallNukem-1.0.apk.bak-pre-shipN` — the previous APK,
+     taken before any APK step
+   These rollback copies are **kept, not deleted** after the ship.
+2. **Stage the build into the publish folder:**
+
+   ```bash
+   tools/publish.sh
+   # on the Mac this is ~/small-nukem-publish/publish.sh; the staged copy
+   # in this repo is tools/publish.sh
+   ```
+
+   It copies `~/small-nukem/small-nukem.html` to
+   `~/small-nukem-publish/index.html.tmp` and atomically renames it to
+   `index.html` (`cp` + `mv`), so no reader ever catches a half-copied
+   file. It prints `published <bytes> bytes at <date>`. Run it per ship /
+   per gate landed — never mid-milestone.
+3. Copy any new sibling assets into `~/small-nukem-publish/` by hand
+   (step does not exist in `publish.sh`).
+4. Rebuild the APK (next section) and verify the publish (last section).
+
+## APK rebuild
+
+The Android release project is `~/small-nukem/android/` on the Mac.
+There is no asset-sync script — skipping the manual copy ships the OLD
+HTML inside a new APK.
+
+```bash
+# 1. Manual asset sync (mandatory)
+cp ~/small-nukem/small-nukem.html ~/small-nukem/android/app/src/main/assets/index.html
+#    plus any new sibling assets into android/app/src/main/assets/… by hand
+#    verify: shasum -a 256 of source and asset must match
+
+# 2. Build — system Java does not exist on the Mac; JAVA_HOME is mandatory
+cd ~/small-nukem/android
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+./gradlew assembleRelease        # expect BUILD SUCCESSFUL
+
+# 3. Ship copy
+cp app/build/outputs/apk/release/app-release.apk ~/small-nukem/SmallNukem-1.0.apk
+
+# 4. Verify the bundle: extract assets/index.html from the APK —
+#    its MD5 must equal the shipped build's MD5
+```
+
+The release is signed with the local debug key by design
+(`~/.android/debug.keystore`) — do not regenerate it, or
+install-over-the-top breaks. Install with `adb install -r`
+(versionCode stays 1), then confirm the package's `lastUpdateTime` is new
+and relaunch the app.
+
+## Post-publish verification
+
+A publish is not done until all of these pass:
+
+1. **MD5 match, three ways.** The live file fetched over the public URL
+   must hash identically to the shipped build:
+
+   ```bash
+   md5 ~/small-nukem/small-nukem.html                 # Mac: the shipped build
+   curl -s http://127.0.0.1:8931/ | md5sum            # Mac: the origin
+   curl -s https://nuke.absolutejoker.ca/ | md5sum    # anywhere: the public URL
+   ```
+
+   All three MD5s and the byte size must agree, with HTTP 200 from the
+   public URL. Record build file / publish index / public URL MD5s in the
+   ship log.
+2. **New assets serve.** Fetch each new or changed sibling asset from the
+   origin and confirm its MD5 matches the source file.
+3. **Cache warning — confirm the new graphics actually load.** The old
+   build can load from browser cache and *look* published while showing
+   stale assets. On every playtest load, check the loaded build's
+   version/checksum against the current live build and confirm the NEW
+   graphics are actually on screen (not stale cached assets). A stale
+   load is reloaded / cache-bypassed, never played on. Playtests run only
+   against https://nuke.absolutejoker.ca — never a local address.
+4. **APK bundle check.** The `assets/index.html` extracted from the
+   rebuilt APK must MD5-match the shipped build (step 4 of the APK
+   section above).
+
+## Source notes
+
+- `tools/publish.sh` in this repo is a verbatim copy of the Mac's
+  `~/small-nukem-publish/publish.sh` (407 bytes).
+- The Caddy configuration mapping `nuke.absolutejoker.ca` to
+  `127.0.0.1:8931` was not located on the Mac during the ship-procedure
+  research; the mapping is established from live response headers
+  (`Via: 1.0 Caddy`) and the ship logs.

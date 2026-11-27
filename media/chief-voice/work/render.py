@@ -1,1 +1,111 @@
-IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoiIiJSZW5kZXIgZXZlcnkgbGluZSBpbiBsaW5lcy5qc29uIHRvIGl0cyBvd24gbXAzIGNsaXAgd2l0aCBhdm9jYWRvX3YyOm1hZ251cywKdmVyaWZ5IGVhY2ggY2xpcCBjb250YWlucyByZWFsIHNwZWVjaCwgYW5kIHdyaXRlIHRoZSBtYW5pZmVzdC4iIiIKaW1wb3J0IGpzb24sIG9zLCByZSwgc3VicHJvY2Vzcywgc3lzLCB0ZW1wZmlsZQpmcm9tIGNvbmN1cnJlbnQuZnV0dXJlcyBpbXBvcnQgVGhyZWFkUG9vbEV4ZWN1dG9yCgpXID0gJy9ob21lL2hhdGNoL3dvcmtzcGFjZS9zbWFsbC1udWtlbS1jaGllZi1jbGlwcy93b3JrJwpPVVQgPSAnL2hvbWUvaGF0Y2gvd29ya3NwYWNlL3NtYWxsLW51a2VtLWNoaWVmLWNsaXBzJwpWT0lDRSA9ICdhdm9jYWRvX3YyOm1hZ251cycKTUFYVyA9IDQyICAjIHdvcmRzIHBlciBzeW50aGVzaXMgY2h1bmsKCmRlZiBjaHVua190ZXh0KHRleHQpOgogICAgc2VudHMgPSByZS5zcGxpdChyJyg/PD1bLiE/XSlccysnLCB0ZXh0LnN0cmlwKCkpCiAgICB1bml0cyA9IFtdCiAgICBmb3IgcyBpbiBzZW50czoKICAgICAgICBpZiBsZW4ocy5zcGxpdCgpKSA8PSBNQVhXOgogICAgICAgICAgICB1bml0cy5hcHBlbmQocykKICAgICAgICBlbHNlOiAgIyBzcGxpdCBhIGxvbmcgc2VudGVuY2UgYXQgY2xhdXNlIGJvdW5kYXJpZXMKICAgICAgICAgICAgcGFydHMgPSByZS5zcGxpdChyJyg/PD1bLDs6XSlccyt8XHMr4oCUXHMrJywgcykKICAgICAgICAgICAgYnVmID0gJycKICAgICAgICAgICAgZm9yIHAgaW4gcGFydHM6CiAgICAgICAgICAgICAgICBpZiBsZW4oKGJ1ZiArICcgJyArIHApLnNwbGl0KCkpIDw9IE1BWFc6CiAgICAgICAgICAgICAgICAgICAgYnVmID0gKGJ1ZiArICcgJyArIHApLnN0cmlwKCkKICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgaWYgYnVmOiB1bml0cy5hcHBlbmQoYnVmKQogICAgICAgICAgICAgICAgICAgIGJ1ZiA9IHAKICAgICAgICAgICAgaWYgYnVmOiB1bml0cy5hcHBlbmQoYnVmKQogICAgY2h1bmtzLCBidWYgPSBbXSwgJycKICAgIGZvciB1IGluIHVuaXRzOgogICAgICAgIGlmIGxlbigoYnVmICsgJyAnICsgdSkuc3BsaXQoKSkgPD0gTUFYVzoKICAgICAgICAgICAgYnVmID0gKGJ1ZiArICcgJyArIHUpLnN0cmlwKCkKICAgICAgICBlbHNlOgogICAgICAgICAgICBjaHVua3MuYXBwZW5kKGJ1Zik7IGJ1ZiA9IHUKICAgIGlmIGJ1ZjogY2h1bmtzLmFwcGVuZChidWYpCiAgICByZXR1cm4gW2MgZm9yIGMgaW4gY2h1bmtzIGlmIGNdCgpkZWYgcHJvYmUocGF0aCk6CiAgICBkdXIgPSBzdWJwcm9jZXNzLnJ1bihbJ2ZmcHJvYmUnLCAnLXYnLCAnZXJyb3InLCAnLXNob3dfZW50cmllcycsICdmb3JtYXQ9ZHVyYXRpb24nLAogICAgICAgICAgICAgICAgICAgICAgICAgICctb2YnLCAnY3N2PXA9MCcsIHBhdGhdLCBjYXB0dXJlX291dHB1dD1UcnVlLCB0ZXh0PVRydWUpLnN0ZG91dC5zdHJpcCgpCiAgICB2b2wgPSBzdWJwcm9jZXNzLnJ1bihbJ2ZmbXBlZycsICctaScsIHBhdGgsICctYWYnLCAndm9sdW1lZGV0ZWN0JywgJy1mJywgJ251bGwnLCAnLSddLAogICAgICAgICAgICAgICAgICAgICAgICAgY2FwdHVyZV9vdXRwdXQ9VHJ1ZSwgdGV4dD1UcnVlKS5zdGRlcnIKICAgIG0gPSByZS5zZWFyY2gocidtZWFuX3ZvbHVtZTpccyooLT9bXGQuXSspIGRCJywgdm9sKQogICAgcmV0dXJuIChmbG9hdChkdXIpIGlmIGR1ciBlbHNlIDAuMCksIChmbG9hdChtLmdyb3VwKDEpKSBpZiBtIGVsc2UgLTk5LjApCgpkZWYgc3ludGgodGV4dCwgcGF0aCk6CiAgICByID0gc3VicHJvY2Vzcy5ydW4oWyd0dHMnLCAnc3BlYWsnLCAnLS12b2ljZScsIFZPSUNFLCAnLS10ZXh0JywgdGV4dCwgJy0tb3V0cHV0JywgcGF0aF0sCiAgICAgICAgICAgICAgICAgICAgICAgY2FwdHVyZV9vdXRwdXQ9VHJ1ZSwgdGV4dD1UcnVlLCB0aW1lb3V0PTE4MCkKICAgIHJldHVybiByLnJldHVybmNvZGUgPT0gMCBhbmQgb3MucGF0aC5leGlzdHMocGF0aCkKCmRlZiByZW5kZXJfbGluZShsaW5lKToKICAgIGxpZCA9IGxpbmVbJ2lkJ10KICAgIGZpbmFsID0gb3MucGF0aC5qb2luKE9VVCwgbGlkICsgJy5tcDMnKQogICAgY2h1bmtzID0gY2h1bmtfdGV4dChsaW5lWyd0dHNfdGV4dCddKQogICAgdG1wID0gdGVtcGZpbGUubWtkdGVtcChwcmVmaXg9J2NoaWVmY2xpcF8nKQogICAgcGFydHMgPSBbXQogICAgdHJ5OgogICAgICAgIGZvciBpLCBjaCBpbiBlbnVtZXJhdGUoY2h1bmtzKToKICAgICAgICAgICAgcCA9IG9zLnBhdGguam9pbih0bXAsIGYncGFydHtpfS5tcDMnKQogICAgICAgICAgICBpZiBub3Qgc3ludGgoY2gsIHApOgogICAgICAgICAgICAgICAgcmV0dXJuIHsqKmxpbmUsICdzdGF0dXMnOiAnc3ludGgtZmFpbGVkJywgJ2NodW5rcyc6IGxlbihjaHVua3MpfQogICAgICAgICAgICBwYXJ0cy5hcHBlbmQocCkKICAgICAgICBpZiBsZW4ocGFydHMpID09IDE6CiAgICAgICAgICAgIHN1YnByb2Nlc3MucnVuKFsnY3AnLCBwYXJ0c1swXSwgZmluYWxdLCBjaGVjaz1UcnVlKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGxzdCA9IG9zLnBhdGguam9pbih0bXAsICdsaXN0LnR4dCcpCiAgICAgICAgICAgIHdpdGggb3Blbihsc3QsICd3JykgYXMgZjoKICAgICAgICAgICAgICAgIGZvciBwIGluIHBhcnRzOiBmLndyaXRlKGYiZmlsZSAne3B9J1xuIikKICAgICAgICAgICAgc3VicHJvY2Vzcy5ydW4oWydmZm1wZWcnLCAnLXknLCAnLXYnLCAnZXJyb3InLCAnLWYnLCAnY29uY2F0JywgJy1zYWZlJywgJzAnLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgJy1pJywgbHN0LCAnLWM6YScsICdsaWJtcDNsYW1lJywgJy1xOmEnLCAnMycsIGZpbmFsXSwgY2hlY2s9VHJ1ZSkKICAgIGZpbmFsbHk6CiAgICAgICAgc3VicHJvY2Vzcy5ydW4oWydybScsICctcmYnLCB0bXBdKQogICAgc2l6ZSA9IG9zLnBhdGguZ2V0c2l6ZShmaW5hbCkKICAgIGR1ciwgbWVhbnYgPSBwcm9iZShmaW5hbCkKICAgIHdvcmRzID0gbGVuKGxpbmVbJ3R0c190ZXh0J10uc3BsaXQoKSkKICAgIG9rID0gc2l6ZSA+IDQwMDAgYW5kIGR1ciA+PSBtYXgoMC43LCB3b3JkcyAqIDAuMTYpIGFuZCBtZWFudiA+IC00NQogICAgcmV0dXJuIHsqKmxpbmUsICdmaWxlJzogbGlkICsgJy5tcDMnLCAnZHVyYXRpb25fcyc6IHJvdW5kKGR1ciwgMiksCiAgICAgICAgICAgICdtZWFuX2RiJzogbWVhbnYsICdieXRlcyc6IHNpemUsICdjaHVua3MnOiBsZW4oY2h1bmtzKSwKICAgICAgICAgICAgJ3N0YXR1cyc6ICdvaycgaWYgb2sgZWxzZSAndmVyaWZ5LWZhaWxlZCd9CgpkZWYgbWFpbigpOgogICAgbGluZXMgPSBqc29uLmxvYWQob3BlbihXICsgJy9saW5lcy5qc29uJykpCiAgICBvbmx5ID0gc3lzLmFyZ3ZbMV0gaWYgbGVuKHN5cy5hcmd2KSA+IDEgZWxzZSBOb25lCiAgICBpZiBvbmx5OiBsaW5lcyA9IFtsIGZvciBsIGluIGxpbmVzIGlmIG9ubHkgaW4gbFsnaWQnXV0KICAgIHJlc3VsdHMgPSBbXQogICAgd2l0aCBUaHJlYWRQb29sRXhlY3V0b3IobWF4X3dvcmtlcnM9NCkgYXMgZXg6CiAgICAgICAgZm9yIHIgaW4gZXgubWFwKHJlbmRlcl9saW5lLCBsaW5lcyk6CiAgICAgICAgICAgIHJlc3VsdHMuYXBwZW5kKHIpCiAgICAgICAgICAgIHByaW50KCgnT0sgICcgaWYgclsnc3RhdHVzJ10gPT0gJ29rJyBlbHNlICdGQUlMJyksIHJbJ2lkJ10sIHIuZ2V0KCdkdXJhdGlvbl9zJywgJycpLCBmbHVzaD1UcnVlKQogICAgIyBvbmUgcmV0cnkgcGFzcyBmb3IgZmFpbHVyZXMKICAgIGZhaWxzID0gW3IgZm9yIHIgaW4gcmVzdWx0cyBpZiByWydzdGF0dXMnXSAhPSAnb2snXQogICAgaWYgZmFpbHMgYW5kIG5vdCBvbmx5OgogICAgICAgIHByaW50KCctLS0gcmV0cnlpbmcnLCBsZW4oZmFpbHMpLCAnZmFpbHVyZXMnKQogICAgICAgIHJldHJ5ID0gW10KICAgICAgICB3aXRoIFRocmVhZFBvb2xFeGVjdXRvcihtYXhfd29ya2Vycz0yKSBhcyBleDoKICAgICAgICAgICAgZm9yIHIgaW4gZXgubWFwKHJlbmRlcl9saW5lLCBbbmV4dChsIGZvciBsIGluIGxpbmVzIGlmIGxbJ2lkJ10gPT0gZlsnaWQnXSkgZm9yIGYgaW4gZmFpbHNdKToKICAgICAgICAgICAgICAgIHJldHJ5LmFwcGVuZChyKQogICAgICAgICAgICAgICAgcHJpbnQoKCdPSyAgJyBpZiByWydzdGF0dXMnXSA9PSAnb2snIGVsc2UgJ0ZBSUwnKSwgclsnaWQnXSwgJyhyZXRyeSknLCByLmdldCgnZHVyYXRpb25fcycsICcnKSwgZmx1c2g9VHJ1ZSkKICAgICAgICBieWlkID0ge3JbJ2lkJ106IHIgZm9yIHIgaW4gcmV0cnl9CiAgICAgICAgcmVzdWx0cyA9IFtieWlkLmdldChyWydpZCddLCByKSBmb3IgciBpbiByZXN1bHRzXQogICAgb3JkZXIgPSB7bFsnaWQnXTogaSBmb3IgaSwgbCBpbiBlbnVtZXJhdGUobGluZXMpfQogICAgcmVzdWx0cy5zb3J0KGtleT1sYW1iZGEgcjogb3JkZXJbclsnaWQnXV0pCiAgICBtYW5pZmVzdCA9IFt7azogci5nZXQoaykgZm9yIGsgaW4gKCdpZCcsICdncm91cCcsICdrZXknLCAnc291cmNlJywgJ3RleHQnLCAndHRzX3RleHQnLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJ2ZpbGUnLCAnZHVyYXRpb25fcycsICdjaHVua3MnLCAnc3RhdHVzJyl9IGZvciByIGluIHJlc3VsdHNdCiAgICBqc29uLmR1bXAobWFuaWZlc3QsIG9wZW4oT1VUICsgJy9tYW5pZmVzdC5qc29uJywgJ3cnKSwgaW5kZW50PTEpCiAgICBvayA9IHN1bSgxIGZvciByIGluIHJlc3VsdHMgaWYgclsnc3RhdHVzJ10gPT0gJ29rJykKICAgIHByaW50KGYnPT09IHtva30ve2xlbihyZXN1bHRzKX0gY2xpcHMgb2snKQogICAgZm9yIHIgaW4gcmVzdWx0czoKICAgICAgICBpZiByWydzdGF0dXMnXSAhPSAnb2snOiBwcmludCgnU1RJTEwgRkFJTElORzonLCByWydpZCddLCByWydzdGF0dXMnXSkKCmlmIF9fbmFtZV9fID09ICdfX21haW5fXyc6CiAgICBtYWluKCkK
+#!/usr/bin/env python3
+"""Render every line in lines.json to its own mp3 clip with avocado_v2:magnus,
+verify each clip contains real speech, and write the manifest."""
+import json, os, re, subprocess, sys, tempfile
+from concurrent.futures import ThreadPoolExecutor
+
+W = '/home/hatch/workspace/small-nukem-chief-clips/work'
+OUT = '/home/hatch/workspace/small-nukem-chief-clips'
+VOICE = 'avocado_v2:magnus'
+MAXW = 42  # words per synthesis chunk
+
+def chunk_text(text):
+    sents = re.split(r'(?<=[.!?])\s+', text.strip())
+    units = []
+    for s in sents:
+        if len(s.split()) <= MAXW:
+            units.append(s)
+        else:  # split a long sentence at clause boundaries
+            parts = re.split(r'(?<=[,;:])\s+|\s+—\s+', s)
+            buf = ''
+            for p in parts:
+                if len((buf + ' ' + p).split()) <= MAXW:
+                    buf = (buf + ' ' + p).strip()
+                else:
+                    if buf: units.append(buf)
+                    buf = p
+            if buf: units.append(buf)
+    chunks, buf = [], ''
+    for u in units:
+        if len((buf + ' ' + u).split()) <= MAXW:
+            buf = (buf + ' ' + u).strip()
+        else:
+            chunks.append(buf); buf = u
+    if buf: chunks.append(buf)
+    return [c for c in chunks if c]
+
+def probe(path):
+    dur = subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration',
+                          '-of', 'csv=p=0', path], capture_output=True, text=True).stdout.strip()
+    vol = subprocess.run(['ffmpeg', '-i', path, '-af', 'volumedetect', '-f', 'null', '-'],
+                         capture_output=True, text=True).stderr
+    m = re.search(r'mean_volume:\s*(-?[\d.]+) dB', vol)
+    return (float(dur) if dur else 0.0), (float(m.group(1)) if m else -99.0)
+
+def synth(text, path):
+    r = subprocess.run(['tts', 'speak', '--voice', VOICE, '--text', text, '--output', path],
+                       capture_output=True, text=True, timeout=180)
+    return r.returncode == 0 and os.path.exists(path)
+
+def render_line(line):
+    lid = line['id']
+    final = os.path.join(OUT, lid + '.mp3')
+    chunks = chunk_text(line['tts_text'])
+    tmp = tempfile.mkdtemp(prefix='chiefclip_')
+    parts = []
+    try:
+        for i, ch in enumerate(chunks):
+            p = os.path.join(tmp, f'part{i}.mp3')
+            if not synth(ch, p):
+                return {**line, 'status': 'synth-failed', 'chunks': len(chunks)}
+            parts.append(p)
+        if len(parts) == 1:
+            subprocess.run(['cp', parts[0], final], check=True)
+        else:
+            lst = os.path.join(tmp, 'list.txt')
+            with open(lst, 'w') as f:
+                for p in parts: f.write(f"file '{p}'\n")
+            subprocess.run(['ffmpeg', '-y', '-v', 'error', '-f', 'concat', '-safe', '0',
+                            '-i', lst, '-c:a', 'libmp3lame', '-q:a', '3', final], check=True)
+    finally:
+        subprocess.run(['rm', '-rf', tmp])
+    size = os.path.getsize(final)
+    dur, meanv = probe(final)
+    words = len(line['tts_text'].split())
+    ok = size > 4000 and dur >= max(0.7, words * 0.16) and meanv > -45
+    return {**line, 'file': lid + '.mp3', 'duration_s': round(dur, 2),
+            'mean_db': meanv, 'bytes': size, 'chunks': len(chunks),
+            'status': 'ok' if ok else 'verify-failed'}
+
+def main():
+    lines = json.load(open(W + '/lines.json'))
+    only = sys.argv[1] if len(sys.argv) > 1 else None
+    if only: lines = [l for l in lines if only in l['id']]
+    results = []
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        for r in ex.map(render_line, lines):
+            results.append(r)
+            print(('OK  ' if r['status'] == 'ok' else 'FAIL'), r['id'], r.get('duration_s', ''), flush=True)
+    # one retry pass for failures
+    fails = [r for r in results if r['status'] != 'ok']
+    if fails and not only:
+        print('--- retrying', len(fails), 'failures')
+        retry = []
+        with ThreadPoolExecutor(max_workers=2) as ex:
+            for r in ex.map(render_line, [next(l for l in lines if l['id'] == f['id']) for f in fails]):
+                retry.append(r)
+                print(('OK  ' if r['status'] == 'ok' else 'FAIL'), r['id'], '(retry)', r.get('duration_s', ''), flush=True)
+        byid = {r['id']: r for r in retry}
+        results = [byid.get(r['id'], r) for r in results]
+    order = {l['id']: i for i, l in enumerate(lines)}
+    results.sort(key=lambda r: order[r['id']])
+    manifest = [{k: r.get(k) for k in ('id', 'group', 'key', 'source', 'text', 'tts_text',
+                                        'file', 'duration_s', 'chunks', 'status')} for r in results]
+    json.dump(manifest, open(OUT + '/manifest.json', 'w'), indent=1)
+    ok = sum(1 for r in results if r['status'] == 'ok')
+    print(f'=== {ok}/{len(results)} clips ok')
+    for r in results:
+        if r['status'] != 'ok': print('STILL FAILING:', r['id'], r['status'])
+
+if __name__ == '__main__':
+    main()

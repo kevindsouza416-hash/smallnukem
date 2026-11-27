@@ -1,1 +1,200 @@
-IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoiIiJCdWlsZCB0aGUgZnVsbCBDaGllZiBjbGlwIGxpbmUgaW52ZW50b3J5OiBidWlsZCBsaW5lcyAoZXhhY3QpICsgYXV0aG9yZWQKdmFyaWFudHMgKG5vLXJlcGVhdCBydWxlKSArIHNjcmlwdCBuYXJyYXRpb24uIFByb2R1Y2VzIGxpbmVzLmpzb24gd2l0aAppZCAvIGdyb3VwIC8gdGV4dCAoY2Fub25pY2FsKSAvIHR0c190ZXh0IChzcG9rZW4gZm9ybSBhY3R1YWxseSBzeW50aGVzaXplZCkuIiIiCmltcG9ydCBqc29uLCByZSwgc3lzCgpXID0gJy9ob21lL2hhdGNoL3dvcmtzcGFjZS9zbWFsbC1udWtlbS1jaGllZi1jbGlwcy93b3JrJwpleHQgPSBqc29uLmxvYWQob3BlbihXICsgJy9leHRyYWN0ZWQuanNvbicpKQoKbGluZXMgPSBbXQpkZWYgYWRkKGlkXywgZ3JvdXAsIHRleHQsIHNvdXJjZSwga2V5PScnLCB0dHM9Tm9uZSk6CiAgICBsaW5lcy5hcHBlbmQoeydpZCc6IGlkXywgJ2dyb3VwJzogZ3JvdXAsICdrZXknOiBrZXksICd0ZXh0JzogdGV4dCwKICAgICAgICAgICAgICAgICAgJ3NvdXJjZSc6IHNvdXJjZSwgJ3R0c19vdmVycmlkZSc6IHR0c30pCgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gQ0FMTE9VVFMKIyBBdXRob3JlZCB2YXJpYW50cyB2Mi92MyBwZXIga2V5IChzYW1lIGZhY3RzL251bWJlcnMvdGVhY2hpbmcsIENoaWVmIHJlZ2lzdGVyKS4KQ0FMTE9VVF9WQVJJQU5UUyA9IHsKICdpbnRybyc6IFsKICAgIkNvbGQgaXJvbiwgY29sZCBjb3JlLCBhbmQgYSBmdWxsIHNoaWZ0IGFoZWFkIG9mIHVzLiBUaGlzIEJXUlgtMzAwIChhIHNtYWxsIG1vZHVsYXIgYm9pbGluZyB3YXRlciByZWFjdG9yKSBpcyBpbiBjb2xkIHNodXRkb3duLCBhbmQgd2UncmUgdGFraW5nIGhlciBhbGwgdGhlIHdheSB0byBmdWxsIHBvd2VyLiIsCiAgICJTaGUncyBjb2xkIGFuZCBzaGUncyB3YWl0aW5nLiBPbmUgQldSWC0zMDAgKGEgc21hbGwgbW9kdWxhciBib2lsaW5nIHdhdGVyIHJlYWN0b3IpLCBzaXR0aW5nIGluIGNvbGQgc2h1dGRvd24g4oCUIGFuZCBieSB0aGUgZW5kIG9mIHRoaXMgc2hpZnQsIHNoZSdsbCBiZSBhdCBmdWxsIHBvd2VyLCBpZiB3ZSBkbyBpdCByaWdodC4iXSwKICdwcmVfY2hlY2snOiBbCiAgICJGaXJzdCBqb2IgbmV2ZXIgY2hhbmdlczogcHJvdmUgc2hlJ3MgY29sZC4gQXJvdW5kIDMwQywgYWJvdXQgMC4xMCBNUGEsIGNyaXRpY2FsIGF0IDAuMiUgcG93ZXIsIHdhdGVyIGxldmVsIGF0IDEwMCUuIFJlYWQgdGhlbSBvZmYgdGhlIHBhbmVsLCBub3Qgb2ZmIHlvdXIgbWVtb3J5LiIsCiAgICJCZWZvcmUgYSBzaW5nbGUgY29udHJvbCBtb3ZlcywgdGhlIG51bWJlcnMgaGF2ZSB0byBhZ3JlZSB3aXRoIHRoZSBwcm9jZWR1cmU6IHJvdWdobHkgMzBDLCAwLjEwIE1QYSwgY3JpdGljYWwgYXQgMC4yJSwgbGV2ZWwgZnVsbCBhdCAxMDAlLiBDaGVjayB0aGVtIGxpa2UgaXQncyB5b3VyIGZpcnN0IGRheSDigJQgZXZlcnkgZGF5LiJdLAogJ3JvZF93aXRoZHJhdyc6IFsKICAgIlJvZHMgb3V0LCBnZW50bHkuIEV2ZXJ5IHJvZCB5b3Ugd2l0aGRyYXcgdGFrZXMgbmV1dHJvbiBhYnNvcmJlcnMgb3V0IG9mIHRoZSBjb3JlIGFuZCBsZXRzIHRoZSByZWFjdGlvbiBidWlsZC4gQSBmaXJzdCwgdGhlbiBCLCB0aGVuIEMg4oCUIGFuZCBrZWVwIHlvdXIgZXllcyBvbiB0aGUgcGVyaW9kICh0aGUgZG91YmxpbmcgdGltZSkuIFlvdXIgY2FyZWVyIHJpZGVzIG9uIHRoYXQgbnVtYmVyLCBzbyBhY3QgbGlrZSBpdC4iLAogICAiVGltZSB0byBicmluZyBoZXIgdXAuIFdpdGhkcmF3aW5nIHRoZSByb2RzIHJlbW92ZXMgdGhlIG5ldXRyb24gYWJzb3JiZXJzLCBhbmQgdGhlIGNoYWluIHJlYWN0aW9uIHN0YXJ0cyB0byBjbGltYi4gU2VxdWVuY2UgaXMgQSwgQiwgQywgc21hbGwgcHVsbHMg4oCUIGFuZCB0aGUgcGVyaW9kIChob3cgZmFzdCBwb3dlciBkb3VibGVzKSBpcyB0aGUgb25seSBudW1iZXIgdGhhdCBtYXR0ZXJzIHJpZ2h0IG5vdy4iXSwKICdhcHByb2FjaF9jcml0JzogWwogICAiV2F0Y2ggdGhlIHBlcmlvZCBzaHJpbmsg4oCUIHRoYXQncyBwb3dlciBkb3VibGluZyBmYXN0ZXIgYW5kIGZhc3Rlci4gVHdlbnR5IHNlY29uZHMgaXMgdGhlIGNvbWZvcnRhYmxlIHRhcmdldC4gTGV0IGl0IGZhbGwgdW5kZXIgdGVuIGFuZCB5b3UncmUgaW4gYSB0cmFuc2llbnQgKGFuIHVud2FudGVkIHBvd2VyIHNwaWtlKSwgYW5kIHRyYW5zaWVudHMgY29tZSB3aXRoIHBhcGVyd29yay4iLAogICAiUGVyaW9kJ3Mgc2hvcnRlbmluZywgd2hpY2ggbWVhbnMgdGhlIGNsaW1iIGlzIHN0ZWVwZW5pbmcuIEhvbGQgaGVyIG5lYXIgdHdlbnR5IHNlY29uZHMgb2YgZG91YmxpbmcgdGltZS4gVW5kZXIgdGVuIHNlY29uZHMgaXMgYSB0cmFuc2llbnQgKGEgcG93ZXIgc3Bpa2Ugbm9ib2R5IG9yZGVyZWQpIOKAlCBlYXNlIG9mZiBiZWZvcmUgSSBoYXZlIHRvIGV4cGxhaW4geW91IHRvIHRoZSByZWd1bGF0b3IuIl0sCiAnY3JpdGljYWwnOiBbCiAgICJUaGVyZSBpdCBpcyDigJQgY3JpdGljYWwgKHRoZSBjaGFpbiByZWFjdGlvbiBzdXN0YWluaW5nIGl0c2VsZiwgb25lIGZpc3Npb24gcGF5aW5nIGZvciB0aGUgbmV4dCkuIFJlYWN0aXZpdHkgaXMgemVybyBtSyAobWlsbGktaywgdGhlIHJlYWN0aXZpdHkgdW5pdCDigJQgemVybyBpcyBwZXJmZWN0IGJhbGFuY2UpLiBTaGUncyBob2xkaW5nIHN0ZWFkeS4gR29vZCB3b3JrLiBEb24ndCBsZXQgaXQgZ28gdG8geW91ciBoZWFkLiIsCiAgICJDcml0aWNhbGl0eS4gVGhlIHJlYWN0aW9uIG5vdyBmZWVkcyBpdHNlbGYsIHJlYWN0aXZpdHkgc2l0dGluZyBhdCB6ZXJvIG1LIChtaWxsaS1rIOKAlCB6ZXJvIG1lYW5zIHRoZSBjb3JlIGlzIGV4YWN0bHkgaW4gYmFsYW5jZSkuIFN0ZWFkeSBhcyBhIHRhYmxlLiBUaGF0J3MgdGhlIGhhcmRlc3QgcGFydCBkb25lIHF1aWV0bHksIHRoZSB3YXkgaXQgc2hvdWxkIGJlLiJdLAogJ2hlYXRfdXAnOiBbCiAgICJOb3cgd2Ugd2FybSBoZXIgdGhyb3VnaC4gVGVtcGVyYXR1cmUncyBoZWFkZWQgZm9yIDI4OEM7IHRoZSBoZWF0LXVwIHJhdGUgc3RheXMgdW5kZXIgMTUwQyBhIG1pbnV0ZSDigJQgdGhhdCdzIGEgcGxhbnQgbGltaXQsIG5vdCBhIGd1aWRlbGluZS4gVGhlIG5lZ2F0aXZlIHRlbXBlcmF0dXJlIGNvZWZmaWNpZW50ICh0aGUgcmVhY3Rpb24gZWFzZXMgaXRzZWxmIGFzIHRoZSB3YXRlciBoZWF0cykgd29ya3MgaW4geW91ciBmYXZvdXIgdGhlIHdob2xlIHdheSB1cC4iLAogICAiSGVhdC11cCdzIGEgcGF0aWVuY2UgZ2FtZTogY2xpbWIgdG93YXJkIDI4OEMsIG5ldmVyIGZhc3RlciB0aGFuIDE1MEMgYSBtaW51dGUuIEFuZCByZW1lbWJlciB0aGUgYnVpbHQtaW4gaGVscCDigJQgdGhlIG5lZ2F0aXZlIHRlbXBlcmF0dXJlIGNvZWZmaWNpZW50IChob3R0ZXIgd2F0ZXIgbmF0dXJhbGx5IHNsb3dzIHRoZSByZWFjdGlvbikuIFBoeXNpY3MgaXMgcHVsbGluZyB3aXRoIHlvdSBvbiB0aGlzIG9uZS4iXSwKICdwcmVzc3VyaXNlJzogWwogICAiSGVhdCB0dXJucyB0byBwcmVzc3VyZSBub3cuIFRoZSBzZXRwb2ludCBpcyA3LjIgTVBhIChhYm91dCAxMDAwIHBzaSk7IG9wZXJhdGluZyBwcmVzc3VyZSBpcyA2LjggTVBhLCBhbmQgdGhlIHR1cmJpbmUgc3luY3MgaXRzZWxmIGF0IDYuMyBNUGEuIEhhbmRzIG9mZiB0aGUgc3RlYW0gdmFsdmUg4oCUIGxldCB0aGUgdGhlcm1vZHluYW1pY3MgZG8gdGhlIGhlYXZ5IGxpZnRpbmcuIiwKICAgIkFzIHRoZSB3YXRlciBoZWF0cywgcHJlc3N1cmUgZm9sbG93cy4gV2UncmUgYWltaW5nIGF0IHRoZSA3LjIgTVBhIHNldHBvaW50IChyb3VnaGx5IDEwMDAgcHNpKSwgdGhyb3VnaCA2LjggTVBhIG9wZXJhdGluZyBwcmVzc3VyZSwgd2l0aCB0aGUgdHVyYmluZSBzeW5jaW5nIGF0IDYuMyBNUGEuIE5vIHRvdWNoaW5nIHRoZSBzdGVhbSB2YWx2ZSB5ZXQuIFRoZSBwbGFudCBrbm93cyB0aGUgd2F5LiJdLAogJ3R1cmJpbmVfcm9sbCc6IFsKICAgIlByZXNzdXJlJ3MgcGFzdCA2LjMgTVBhLCBzbyB0aGUgdHVyYmluZSByb2xscyBieSBpdHNlbGYgdXAgdG8gMTUwMCBSUE0sIHN5bmNocm9ub3VzIHNwZWVkLiBZb3Ugd2F0Y2g7IGlmIHByZXNzdXJlIHJ1bnMgaG90LCB0aGUgYnlwYXNzIHZhbHZlIGlzIHlvdXIgdG9vbC4gU2hlJ3MgYSBWOCB3aXRoIGEgY2l0eSBibG9jaydzIHdvcnRoIG9mIHBvd2VyIOKAlCB0cmVhdCBoZXIgYWNjb3JkaW5nbHkuIiwKICAgIlRoZXJlJ3MgdGhlIHJvbGwuIE9uY2UgcHJlc3N1cmUgcGFzc2VzIDYuMyBNUGEgdGhlIHR1cmJpbmUgY29tZXMgdXAgb24gaXRzIG93biB0byAxNTAwIFJQTS4gWW91ciBqb2IgaXMgd2l0bmVzcyBhbmQgd2F0Y2hrZWVwZXI6IGV5ZXMgb24gdGhlIGdhdWdlcywgYnlwYXNzIHZhbHZlIHJlYWR5IGlmIHByZXNzdXJlIG1pc2JlaGF2ZXMuIl0sCiAnc3luYyc6IFsKICAgIkZpZnRlZW4gaHVuZHJlZCBSUE0gYW5kIHNoZSBzeW5jaHJvbmlzZXMgdG8gdGhlIGdyaWQgaGVyc2VsZi4gRnJlcXVlbmN5IG1hdGNoZWQsIHBoYXNlIGFuZ2xlIGNoZWNrZWQg4oCUIHRoYXQncyB0aGUgd2hvbGUgY2VyZW1vbnkuIENsb3NlIGEgYnJlYWtlciBvdXQgb2YgcGhhc2UgYW5kIHRoZSBnZW5lcmF0b3IgbG9zZXMsIGV2ZXJ5IHRpbWUuIFNvIHdlIGRvbid0LiIsCiAgICJBdCAxNTAwIFJQTSB0aGUgZ2VuZXJhdG9yIHN5bmNzIHRvIHRoZSBncmlkLiBZb3VyIHBhcnQgaXMgdmVyaWZpY2F0aW9uOiBmcmVxdWVuY3kgbWF0Y2hlZCwgcGhhc2UgYW5nbGUgcmlnaHQuIEFuIG91dC1vZi1waGFzZSBjbG9zZSBjYW4gd3JlY2sgdGhlIG1hY2hpbmUgaW4gb25lIGJhbmcg4oCUIGNoZWNrIGl0IHR3aWNlLCBjbG9zZSBpdCBvbmNlLiJdLAogJ2dyaWQnOiBbCiAgICJPbiB0aGUgZ3JpZC4gTm93IHJhaXNlIGxvYWQgc2xvd2x5IHRvd2FyZCAzMDAgTVdlIChtZWdhd2F0dHMgZWxlY3RyaWMg4oCUIGEgcXVhcnRlciBvZiBhIG1pbGxpb24gaG9tZXMsIGdpdmUgb3IgdGFrZSkuIFNtb290aCBvbiB0aGUgbGV2ZXIuIFRoaXMgaXMgdGhlIG1vbWVudCB0aGUgd2hvbGUgc3RhcnR1cCB3YXMgZm9yLiIsCiAgICJTeW5jaHJvbmlzZWQgYW5kIGRlbGl2ZXJpbmcuIEJyaW5nIGhlciB1cCBnZW50bHkgdG8gMzAwIE1XZSAobWVnYXdhdHRzIGVsZWN0cmljIOKAlCBlbm91Z2ggZm9yIGEgcXVhcnRlciBtaWxsaW9uIGhvbWVzKS4gTm8gc3Bpa2VzLCBubyBzaG93aW5nIG9mZi4gSnVzdCBhIGNsZWFuIGNsaW1iIHRvIGZ1bGwgcG93ZXIuIl0sCiAncGVyaW9kX3dhcm4nOiBbCiAgICJIZXkg4oCUIHBlcmlvZCdzIHVuZGVyIHRlbiBzZWNvbmRzLiBUaGF0J3MgYSB0cmFuc2llbnQgKGFuIHVud2FudGVkIHBvd2VyIGV4Y3Vyc2lvbiksIGFuZCB3ZSBkb24ndCByaWRlIHRob3NlLiBSb2RzIGJhY2sgaW4gYSB0b3VjaCwgbGV0IGhlciBzZXR0bGUuIFJlYWN0b3JzIHJld2FyZCBwYXRpZW5jZTsgdGhleSBwdW5pc2ggZHJhZyByYWNlcnMuIiwKICAgIlBlcmlvZCB1bmRlciB0ZW4gc2Vjb25kcyDigJQgdG9vIGZhc3QuIEluc2VydCB0aGUgcm9kcyBhIGxpdHRsZSBhbmQgY29vbCB0aGUgY2xpbWIgZG93bi4gV2UncmUgc3RhcnRpbmcgYSByZWFjdG9yIGhlcmUsIG5vdCBzZXR0aW5nIGEgbGFwIHRpbWUuIl0sCiAncGVyaW9kX2Rhbmdlcic6IFsKICAgIlBFUklPRCBVTkRFUiBGSVZFIFNFQ09ORFMg4oCUIFJPRFMgSU4sIE5PVyEgWW91J3JlIGNsb3Npbmcgb24gcHJvbXB0IGNyaXRpY2FsaXR5IChhIHJ1bmF3YXkgc3VyZ2Ugd2hlcmUgdGhlIHJlYWN0b3Igb3V0cnVucyBpdHMgb3BlcmF0b3JzKS4gVGhlIHByb3RlY3Rpb24gc3lzdGVtIHRyaXBzIG9uIHByZXNzdXJlLCBwb3dlciBhbmQgbGV2ZWwg4oCUIGRvIG5vdCBtYWtlIGl0IHByb3ZlIHRoYXQuIiwKICAgIkZpdmUgc2Vjb25kcyBhbmQgZmFsbGluZyDigJQgSU5TRVJUIFJPRFMgSU1NRURJQVRFTFkhIFRoYXQncyBwcm9tcHQgY3JpdGljYWxpdHkgdGVycml0b3J5IChwb3dlciByaXNpbmcgZmFzdGVyIHRoYW4gYW55b25lIGNhbiBzdGVlcikuIEJhY2sgaGVyIGRvd24gbm93LCBvciB0aGUgcHJvdGVjdGlvbiBzeXN0ZW0gZG9lcyBpdCBmb3IgeW91IGFuZCB3cml0ZXMgU0NSQU0gb24geW91ciByZWNvcmQuIl0sCiAnc2NyYW0nOiBbCiAgICJUaGF0J3MgYSBTQ1JBTSAoZW1lcmdlbmN5IHNodXRkb3duIOKAlCBldmVyeSByb2QgZHJvcHBlZCBpbiBieSBncmF2aXR5KS4gVGhlIHByb3RlY3Rpb24gc3lzdGVtIGVhcm5lZCBpdHMgcGF5IHRvZGF5LiBCZWZvcmUgd2UgcmVzZXQ6IHdhbGsgdGhlIHNlcXVlbmNlIGJhY2sgYW5kIGZpbmQgd2hlcmUgaXQgdHVybmVkLiBUaGUgcGxhbnQgZm9yZ2l2ZXMgb25jZSDigJQgbGVhcm4gZnJvbSB0aGUgb25jZS4iLAogICAiU0NSQU0uIEFsbCByb2RzIGluIGJ5IGdyYXZpdHksIHJlYWN0aW9uIHN0b3BwZWQsIHBsYW50IHNhZmUg4oCUIHRoZSBwcm90ZWN0aW9uIHN5c3RlbSBkaWQgZXhhY3RseSB3aGF0IGl0J3MgYnVpbHQgZm9yLiBOb3cgdGhlIHJlYWwgd29yazogZmlndXJlIG91dCB3aGF0IHlvdSBkaWQgd3JvbmcuIFdlIGRlYnJpZWYgZmlyc3QsIHJlc3RhcnQgc2Vjb25kLiJdLAogJ3N0dWNrX3JvZCc6IFsKICAgIk9uZSBkcml2ZSdzIG5vdCBhbnN3ZXJpbmcg4oCUIGEgc3R1Y2sgcm9kIG1lY2hhbmlzbS4gSXQgaGFwcGVuczsgdGhlIG1hbnVhbCBldmVuIGhhcyBhIHBhZ2UgZm9yIGl0LiBDb21wZW5zYXRlIHdpdGggdGhlIGFkamFjZW50IGRyaXZlcyBhbmQga2VlcCByZWFjdGl2aXR5ICh0aGUgY2hhaW4gcmVhY3Rpb24gYmFsYW5jZSkgdW5kZXIgY29udHJvbCB3aGlsZSB3ZSB3b3JrIGFyb3VuZCBpdC4iLAogICAiVGhhdCByb2QncyBzdHVjayDigJQgZHJpdmUncyBub3QgcmVzcG9uZGluZy4gRG9uJ3QgZm9yY2UgaXQuIFdvcmsgdGhlIG5laWdoYm91cmluZyBkcml2ZXMgdG8gaG9sZCByZWFjdGl2aXR5IChjaGFpbiByZWFjdGlvbiBiYWxhbmNlKSBzdGVhZHkuIE1hY2hpbmVyeSBzdGlja3M7IGdvb2Qgb3BlcmF0b3JzIGFkYXB0LiJdLAogJ3N0ZWFtX2xlYWsnOiBbCiAgICJTdGVhbSBsZWFrIGluIHRoZSB0dW5uZWwg4oCUIGhlYXIgaXQ/IFRoZSBpc29sYXRpb24gY29uZGVuc2VyIChwYXNzaXZlIGNvb2xpbmc6IGdyYXZpdHkgYW5kIHBoeXNpY3MsIG5vIHBvd2VyIG5lZWRlZCkgc2hvdWxkIHBpY2sgdXAgdGhlIGxvYWQsIGJ1dCBJIHdhbnQgdGhhdCBsaW5lIGlzb2xhdGVkIGJ5IGhhbmQuIE1vdmUgd2l0aCBwdXJwb3NlOyBwcmVzc3VyZSdzIGZhbGxpbmcuIiwKICAgIldlJ3ZlIGdvdCBhIGxlYWsgb24gdGhlIHN0ZWFtIGxpbmUuIFRoZSBpc29sYXRpb24gY29uZGVuc2VyIChhIHBhc3NpdmUgc3lzdGVtIOKAlCBncmF2aXR5IGRvZXMgdGhlIHdvcmspIGlzIHlvdXIgYmFja3N0b3AsIGJ1dCBiYWNrc3RvcHMgZG9uJ3QgcmVwbGFjZSBvcGVyYXRvcnM6IGdldCBkb3duIHRoZXJlIGFuZCBpc29sYXRlIHRoYXQgbGluZSBtYW51YWxseS4iXSwKICdmYXVsdF9jbGVhcmVkJzogWwogICAiSXNvbGF0ZWQgYW5kIGNsZWFyZWQuIFRoZSBCV1JYLTMwMCdzIHBhc3NpdmUgc2FmZXR5IGlzIGdlbnVpbmVseSBnb29kIOKAlCBidXQgaXQgd2FzIGEgc2hhcnAgb3BlcmF0b3Igd2hvIGNhdWdodCB0aGF0LCBub3QgYSBzZW5zb3IuIENyZWRpdCB3aGVyZSBpdCdzIGR1ZS4gTm93LCBiYWNrIG9uIHByb2NlZHVyZS4iLAogICAiRmF1bHQncyBkZWFsdCB3aXRoLiBUaGUgcGxhbnQncyBwYXNzaXZlIHN5c3RlbXMgYXJlIHNvbGlkLCBhbmQgc28sIGFwcGFyZW50bHksIGlzIG15IG9wZXJhdG9yLiBSZXNldCB5b3VyIGhlYWQsIHBpY2sgdGhlIHByb2NlZHVyZSBiYWNrIHVwIHdoZXJlIHdlIGxlZnQgaXQuIl0sCiAndmljdG9yeSc6IFsKICAgIlRocmVlIGh1bmRyZWQgTVdlIG9uIHRoZSBncmlkLCBhbmQgYSBjbGVhbiBzdGFydHVwIHRvIGJvb3QuIENvcmUgc3RlYWR5LCBsZXZlbCBzdGVhZHksIGNvbmRlbnNlciBjYXJyeWluZyB0aGUgaGVhdCBieSBncmF2aXR5LiBJJ3ZlIHdhdGNoZWQgdHdlbnR5LXllYXIgb3BlcmF0b3JzIG1ha2UgYSBtZWFsIG9mIHRoYXQuIFlvdSBkaWRuJ3QuIFdlbGwgZG9uZSwga2lkLiIsCiAgICJGdWxsIHBvd2VyLCBvbiB0aGUgZ3JpZCwgbm8gdHJpcHMsIG5vIHZpb2xhdGlvbnMuIFRoYXQncyBob3cgYSBzdGFydHVwIGlzIHN1cHBvc2VkIHRvIHJlYWQuIFRoZSBjb3JlJ3MgYmVoYXZpbmcgYW5kIHRoZSBwbGFudCdzIGhhcHB5LiBMb2cgaXQgYW5kIHNhdm91ciBpdCDigJQgeW91IGVhcm5lZCB0aGlzIG9uZS4iXSwKfQpmb3Iga2V5LCB0ZXh0IGluIGV4dFsnQ0FMTE9VVFMnXS5pdGVtcygpOgogICAgYWRkKGYnYnJpZWYte2tleX0tMScsICdicmllZmluZ3MnLCB0ZXh0LCAnYnVpbGQnLCBrZXkpCiAgICBmb3IgaSwgdiBpbiBlbnVtZXJhdGUoQ0FMTE9VVF9WQVJJQU5UU1trZXldKToKICAgICAgICBhZGQoZidicmllZi17a2V5fS17aSsyfScsICdicmllZmluZ3MnLCB2LCAnYXV0aG9yZWQtdmFyaWFudCcsIGtleSkKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBSRUFDVElPTlMKZm9yIGtleSwgdmFyaWFudHMgaW4gZXh0WydSRUFDVElPTlMnXS5pdGVtcygpOgogICAgZm9yIGksIHYgaW4gZW51bWVyYXRlKHZhcmlhbnRzKToKICAgICAgICBhZGQoZidyZWFjdC17a2V5fS17aSsxfScsICdyZWFjdGlvbnMnLCB2Wyd0J10sICdidWlsZCcsIGtleSkKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBHVUlEQU5DRSAoQVNTSVNUX0VYUExBSU4pCmZvciBzdGVwLCB2YXJpYW50cyBpbiBlbnVtZXJhdGUoZXh0WydBU1NJU1RfRVhQTEFJTiddKToKICAgIGZvciBpLCB2IGluIGVudW1lcmF0ZSh2YXJpYW50cyk6CiAgICAgICAgYWRkKGYnZ3VpZGUtc3RlcHtzdGVwKzF9LXtpKzF9JywgJ2d1aWRhbmNlJywgdiwgJ2J1aWxkJywgZidzdGVwe3N0ZXArMX0nKQoKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIExBRERFUgpmb3Igc3RlcCwgdCBpbiBlbnVtZXJhdGUoZXh0WydBU1NJU1RfVEVBQ0gnXSk6CiAgICBhZGQoZidsYWRkZXItdGVhY2gtc3RlcHtzdGVwKzF9JywgJ2xhZGRlcicsIHQsICdidWlsZCcsIGYnc3RlcHtzdGVwKzF9JykKYWRkKCdsYWRkZXItYW5ub3VuY2UtMScsICdsYWRkZXInLCBleHRbJ0ZJWEVEJ11bJ2Fzc2lzdF9hbm5vdW5jZSddLCAnYnVpbGQnLCAnYW5ub3VuY2UnKQphZGQoJ2xhZGRlci1hbm5vdW5jZS0yJywgJ2xhZGRlcicsICJFbm91Z2ggdGVsbGluZyDigJQgdGltZSBmb3Igc2hvd2luZy4gSSdsbCB0YWtlIHRoaXMgb25lIG15c2VsZiwgYW5kIEknbGwgdGFsayB5b3UgdGhyb3VnaCBldmVyeSBtb3ZlIHdoaWxlIEkgbWFrZSBpdC4iLCAnYXV0aG9yZWQtdmFyaWFudCcsICdhbm5vdW5jZScpCmFkZCgnbGFkZGVyLWFubm91bmNlLTMnLCAnbGFkZGVyJywgIk15IHR1cm4sIGtpZC4gV2F0Y2ggdGhlIHdob2xlIHRoaW5nOiBJJ2xsIGRvIHRoaXMgc3RlcCB0aGUgd2F5IGl0IHNob3VsZCBiZSBkb25lLCBhbmQgZXhwbGFpbiBpdCBhcyBJIGdvLiIsICdhdXRob3JlZC12YXJpYW50JywgJ2Fubm91bmNlJykKYWRkKCdsYWRkZXItaGFuZGJhY2stMScsICdsYWRkZXInLCBleHRbJ0ZJWEVEJ11bJ2Fzc2lzdF9oYW5kYmFjayddLCAnYnVpbGQnLCAnaGFuZGJhY2snKQphZGQoJ2xhZGRlci1oYW5kYmFjay0yJywgJ2xhZGRlcicsICJUaGVyZSDigJQgZG9uZSwgYW5kIHRoZSBwbGFudCdzIHlvdXJzIGFnYWluLiBOZXh0IHN0ZXAgaGFzIHlvdXIgbmFtZSBvbiBpdC4iLCAnYXV0aG9yZWQtdmFyaWFudCcsICdoYW5kYmFjaycpCmFkZCgnbGFkZGVyLWhhbmRiYWNrLTMnLCAnbGFkZGVyJywgIkhhbmRpbmcgaGVyIGJhY2suIFRoYXQgb25lJ3MgaW4gdGhlIGJvb2s7IHRoZSBuZXh0IG9uZSdzIGFsbCB5b3UuIiwgJ2F1dGhvcmVkLXZhcmlhbnQnLCAnaGFuZGJhY2snKQphZGQoJ2xhZGRlci1jb2FjaC1saW5lJywgJ2xhZGRlcicsIGV4dFsnRklYRUQnXVsnYXNzaXN0X2NvYWNoX2xpbmUnXSwgJ2J1aWxkJywgJ2Fzc2lzdF9jb2FjaCcpCgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gU0hPV01FICh0YWtlb3Zlci9kZW1vIG5hcnJhdGlvbikKU0hPV01FX0VYVFJBID0gewogJ3JvZF9kcml2ZV8yJzogIkIgZHJpdmUgbm93LiBJIGtlZXAgdGhlIHB1bGxzIHNtYWxsIGFuZCBldmVuLCBiZWNhdXNlIHRoZSBjb3JlIHJlbWVtYmVycyBldmVyeSBsb3BzaWRlZCBtb3ZlIHlvdSBtYWtlIOKAlCBiYWxhbmNlIGluLCBiYWxhbmNlIG91dC4iLAogJ3JvZF9kcml2ZV8zJzogIkFuZCBDIGNvbXBsZXRlcyB0aGUgcGF0dGVybi4gV29ya2VkIGluIG9yZGVyLCB0aGUgdGhyZWUgZHJpdmVzIGJyaW5nIGhlciB1cCBzeW1tZXRyaWMg4oCUIGFuZCBzeW1tZXRyaWMgaXMgd2hhdCBrZWVwcyB0aGUgbmV4dCBob3VyIGJvcmluZywgd2hpY2ggaXMgdGhlIGdvYWwuIiwKICdzdGVhbV92YWx2ZSc6ICJPbmUgbW9yZSB0b29sIGZvciB5b3VyIGtpdDogdGhlIGJ5cGFzcyBoYW5kd2hlZWwuIEEgdHVybiBhdCBhIHRpbWUgZnJvbSBtZSDigJQgYmVjYXVzZSBzdGVhbSB5b3Ugcm91dGUgY2FsbWx5IHRvIHRoZSBjb25kZW5zZXIgaXMgc3RlYW0gdGhhdCBuZXZlciBhcmd1ZXMgd2l0aCB5b3UuIiwKICdyYWlzZV9wb3dlcic6ICJGaW5hbCBjbGltYiwgc2FtZSBkaXNjaXBsaW5lOiBsZXZlciB1cCBzbG93bHksIG1lZ2F3YXR0cyByaXNpbmcsIGFuZCBJIGhvbGQgaGVyIHN0ZWFkeSBvdmVyIDI4NSDigJQgYmVjYXVzZSB0aGUgaG9sZCBpcyB0aGUgc3RlcCwgbm90IHRoZSBjbGltYi4iLAogJ3R1cmJpbmVfY29udHJvbCc6ICJUdXJiaW5lIHBhbmVsLCBjb25maXJtYXRpb24gb25seTogMTUwMCBSUE0gYW5kIGhvbGRpbmcuIEkgZG9uJ3QgdG91Y2ggd2hhdCBkb2Vzbid0IG5lZWQgdG91Y2hpbmcsIGJlY2F1c2UgYSBtYWNoaW5lIGF0IHN5bmNocm9ub3VzIHNwZWVkIGlzIGFscmVhZHkgZG9pbmcgaXRzIGpvYi4iLAogJ3N5bmNfZ3JpZCc6ICJBdCB0aGUgc3luYyBwYW5lbCBJIGRvIHRoZSBvcGVyYXRvcidzIGhhbGY6IHZlcmlmeS4gRnJlcXVlbmN5IG1hdGNoZWQsIHBoYXNlIG1hdGNoZWQg4oCUIGJlY2F1c2UgdGhlIGJyZWFrZXIgb25seSBjbG9zZXMgd2hlbiB0aGUgdHdvIHNpZGVzIGFncmVlLCBhbmQgSSdtIHRoZSB3aXRuZXNzIHdobyBzaWducyBpdC4iLAogJ2ZlZWRfcHVtcCc6ICJTdGFuZGJ5IHB1bXAgc3RhcnRlZCwgYW5kIG5vdyBJIHdhdGNoIHRoZSBsZXZlbCBhbnN3ZXIgYmVmb3JlIGFueXRoaW5nIGVsc2UgbW92ZXMg4oCUIGJlY2F1c2Ugb25lIGNoYW5nZSBhdCBhIHRpbWUgaXMgaG93IHlvdSBhbHdheXMga25vdyB3aGF0IHdvcmtlZC4iLAogJ2lzb19jb25kZW5zZXInOiAiUHV0dGluZyB0aGUgaXNvbGF0aW9uIGNvbmRlbnNlciBpbiBzZXJ2aWNlIOKAlCBvbmUgcHJlc3MsIGRvbmUgZWFybHkgb24gcHVycG9zZSwgYmVjYXVzZSB0aGUgdGltZSB0byBwcm92ZSB5b3VyIHBhc3NpdmUgaGVhdCBzaW5rIGlzIGJlZm9yZSB0aGUgcGxhbnQgZXZlciBhc2tzIGZvciBpdC4iLAogJ3NodXRkb3duX3JvZHMnOiAiV2F0Y2ggdGhlIHNodXRkb3duIGRvbmUgcHJvcGVybHk6IGxldmVyIGRvd24gYXQgdGhlIGRyaXZlcywgcm9kcyBmdWxseSBpbiwgaW5zZXJ0aW9uIHZlcmlmaWVkIOKAlCBiZWNhdXNlIGVuZGluZyBhIHNoaWZ0IHNhZmVseSBpcyBhIHNraWxsLCBub3QgYSBzdXJyZW5kZXIuIiwKICdnZW5lcmljJzogIk5vdGhpbmcgdXAgbXkgc2xlZXZlOiB0aGUgc2FtZSBwYW5lbCwgdGhlIHNhbWUgY29udHJvbCwgdGhlIHNhbWUgbW90aW9uIHlvdSdkIG1ha2UuIElmIHlvdSBjYW4gZm9sbG93IG15IGhhbmRzLCB5b3UgY2FuIGRvIHRoZSBzdGVwIOKAlCB0aGF0J3MgdGhlIHBvaW50IG9mIHRoZSBkZW1vbnN0cmF0aW9uLiIsCn0KZm9yIGtleSwgdmFyaWFudHMgaW4gZXh0WydTSE9XTUVfTElORVMnXS5pdGVtcygpOgogICAgZm9yIGksIHYgaW4gZW51bWVyYXRlKHZhcmlhbnRzKToKICAgICAgICBhZGQoZidzaG93bWUte2tleX0te2krMX0nLCAnc2hvd21lJywgdiwgJ2J1aWxkJywga2V5KQogICAgaWYga2V5IGluIFNIT1dNRV9FWFRSQToKICAgICAgICBhZGQoZidzaG93bWUte2tleX0te2xlbih2YXJpYW50cykrMX0nLCAnc2hvd21lJywgU0hPV01FX0VYVFJBW2tleV0sICdhdXRob3JlZC12YXJpYW50Jywga2V5KQoKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIFRBS0VPVkVSIC8gREVNTyBmaXhlZCBsaW5lcwphZGQoJ3Rha2VvdmVyLWFubm91bmNlLTEnLCAndGFrZW92ZXInLCBleHRbJ0ZJWEVEJ11bJ3Rha2VvdmVyX2Fubm91bmNlJ10sICdidWlsZCcsICdhbm5vdW5jZScpCmFkZCgndGFrZW92ZXItYW5ub3VuY2UtMicsICd0YWtlb3ZlcicsICJSaWdodCDigJQgbXkgdHVybiBhdCB0aGUgd2hlZWwuIEknbGwgdGFrZSBpdCBmcm9tIGhlcmU6IGZpcnN0IEkgbG9vayBhdCB3aGF0IHlvdSd2ZSBoYW5kZWQgbWUsIHRoZW4gSSBmaXggaXQgaW4gdGhlIG9wZW4gd2hlcmUgeW91IGNhbiB3YXRjaC4iLCAnYXV0aG9yZWQtdmFyaWFudCcsICdhbm5vdW5jZScpCmFkZCgndGFrZW92ZXItYW5ub3VuY2UtMycsICd0YWtlb3ZlcicsICJTdGVwcGluZyBpbi4gSSdsbCB0YWtlIGl0IGZyb20gaGVyZSDigJQgZGlhZ25vc2lzIGZpcnN0LCB0aGVuIHRoZSBmaXgsIGFsbCBvZiBpdCB3aGVyZSB5b3UgY2FuIHNlZSBteSBoYW5kcy4gV2F0Y2ggY2xvc2VseTsgdGhpcyBpcyB0aGUgZ29vZCBzdHVmZi4iLCAnYXV0aG9yZWQtdmFyaWFudCcsICdhbm5vdW5jZScpCmFkZCgndGFrZW92ZXItZGVtby1vbicsICd0YWtlb3ZlcicsIGV4dFsnRklYRUQnXVsnZGVtb19vbiddLCAnYnVpbGQnLCAnZGVtb19vbicpCmFkZCgndGFrZW92ZXItZGVtby1vZmYnLCAndGFrZW92ZXInLCBleHRbJ0ZJWEVEJ11bJ2RlbW9fb2ZmJ10sICdidWlsZCcsICdkZW1vX29mZicpCmFkZCgndGFrZW92ZXItb2ZmJywgJ3Rha2VvdmVyJywgZXh0WydGSVhFRCddWyd0YWtlb3Zlcl9vZmYnXSwgJ2J1aWxkJywgJ3Rha2VvdmVyX29mZicpCgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gQ0lORU1BVElDUwpmb3IgbmFtZSwgc2NlbmUgaW4gZXh0WydDSU5FJ10uaXRlbXMoKToKICAgIGlmIHNjZW5lWyd0ZWFjaCddOgogICAgICAgIGFkZChmJ2NpbmUte25hbWV9LXRlYWNoJywgJ2NpbmVtYXRpY3MnLCBzY2VuZVsndGVhY2gnXSwgJ2J1aWxkJywgbmFtZSkKICAgIGlmIHNjZW5lWydsaW5lJ106CiAgICAgICAgYWRkKGYnY2luZS17bmFtZX0tcXVpcCcsICdjaW5lbWF0aWNzLXF1aXBzJywgc2NlbmVbJ2xpbmUnXSwgJ2J1aWxkJywgbmFtZSkKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBERU1PIFRPVVIgKGluLWJ1aWxkKQpmb3IgaXRlbSBpbiBleHRbJ0RFTU9fVE9VUiddOgogICAgYWRkKGYidG91ci17aXRlbVsna2V5J119IiwgJ3RvdXInLCBpdGVtWyd0ZXh0J10sICdidWlsZCcsIGl0ZW1bJ2tleSddKQoKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIFBBTkVMIEhJTlRTCmZvciBrZXksIHQgaW4gZXh0WydTTlhfSElOVFMnXS5pdGVtcygpOgogICAgYWRkKGYnaGludC17a2V5fScsICdoaW50cycsIHQsICdidWlsZCcsIGtleSkKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBUT1VSIFNDUklQVCBuYXJyYXRpb24gKHRvdXItc2NyaXB0Lm1kKQp0b3VyX21kID0gb3BlbignL2hvbWUvaGF0Y2gvd29ya3NwYWNlL3NtYWxsLW51a2VtLXRvdXIvdG91ci1zY3JpcHQubWQnLCBlbmNvZGluZz0ndXRmLTgnKS5yZWFkKCkKYmxvY2tzID0gcmUuZmluZGFsbChyJ05BUlJBVElPTlteIl0qIigoPzpbXiJcXF18XFwuKSopIicsIHRvdXJfbWQsIHJlLlMpCmxhYmVscyA9IFsnc2hvdDEnLCdzaG90MicsJ3Nob3QzJywnc2hvdDQnLCdzaG90NScsJ3Nob3Q2Jywnc2hvdDcnLCdzaG90OCcsCiAgICAgICAgICAnc2hvdDlhJywnc2hvdDliJywnc2hvdDljJywnc2hvdDEwJywnc2hvdDExJywnc2hvdDEyYWInLCdzaG90MTJjZCcsJ3Nob3QxMycsJ3Nob3QxNCddCmFzc2VydCBsZW4oYmxvY2tzKSA9PSBsZW4obGFiZWxzKSwgZid0b3VyIGJsb2Nrczoge2xlbihibG9ja3MpfScKZm9yIGxhYiwgYiBpbiB6aXAobGFiZWxzLCBibG9ja3MpOgogICAgdGV4dCA9ICcgJy5qb2luKGIuc3BsaXQoKSkKICAgIGFkZChmJ3RvdXJzY3JpcHQte2xhYn0nLCAndG91ci1zY3JpcHQnLCB0ZXh0LCAndG91ci1zY3JpcHQnLCBsYWIpCgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gUExBWVRIUk9VR0ggbmFycmF0aW9uIChuYXJyYXRpb24tc2NyaXB0LnR4dCkKbmFyciA9IG9wZW4oJy9ob21lL2hhdGNoL3dvcmtzcGFjZS9zbWFsbC1udWtlbS1wbGF5dGhyb3VnaC9uYXJyYXRpb24tc2NyaXB0LnR4dCcsIGVuY29kaW5nPSd1dGYtOCcpLnJlYWQoKQpwYXJ0cyA9IHJlLnNwbGl0KHInXG5QQVJUIFxkXG4nLCBuYXJyKQpwYXJ0cyA9IFtwLnN0cmlwKCkgZm9yIHAgaW4gcGFydHMgaWYgbGVuKHAuc3RyaXAoKSkgPiAyMDAgYW5kICdUYXJnZXQ6JyBub3QgaW4gcF0KYXNzZXJ0IGxlbihwYXJ0cykgPT0gMywgZiduYXJyYXRpb24gcGFydHM6IHtsZW4ocGFydHMpfScKZm9yIGksIHAgaW4gZW51bWVyYXRlKHBhcnRzKToKICAgIGFkZChmJ2RlbW8tbmFycmF0aW9uLXBhcnR7aSsxfScsICdkZW1vLW5hcnJhdGlvbicsICcgJy5qb2luKHAuc3BsaXQoKSksICdwbGF5dGhyb3VnaC1zY3JpcHQnLCBmJ3BhcnR7aSsxfScpCgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gc3Bva2VuIGZvcm0gKHR0c190ZXh0KQpSRVBMQUNFTUVOVFMgPSBbCiAgICAoJ0JXUlgtMzAwJywgJ0JXUlggdGhyZWUgaHVuZHJlZCcpLAogICAgKCcwLjEwIE1QYScsICd6ZXJvIHBvaW50IG9uZSBtZWdhcGFzY2FscycpLAogICAgKCc3LjIgTVBhJywgJ3NldmVuIHBvaW50IHR3byBtZWdhcGFzY2FscycpLAogICAgKCc2LjggTVBhJywgJ3NpeCBwb2ludCBlaWdodCBtZWdhcGFzY2FscycpLAogICAgKCc2LjMgTVBhJywgJ3NpeCBwb2ludCB0aHJlZSBtZWdhcGFzY2FscycpLAogICAgKCdvZiBhbiBNUGEnLCAnb2YgYSBtZWdhcGFzY2FsJyksCiAgICAoJ34zMEMnLCAnYWJvdXQgdGhpcnR5IGRlZ3JlZXMnKSwgKCd+MC4xMCcsICdhYm91dCB6ZXJvIHBvaW50IG9uZScpLAogICAgKCczMEMnLCAndGhpcnR5IGRlZ3JlZXMnKSwgKCcyODhDJywgJ3R3byBodW5kcmVkIGFuZCBlaWdodHktZWlnaHQgZGVncmVlcycpLAogICAgKCcxNTBDJywgJ2EgaHVuZHJlZCBhbmQgZmlmdHkgZGVncmVlcycpLAogICAgKCcwLjIlJywgJ3plcm8gcG9pbnQgdHdvIHBlcmNlbnQnKSwgKCcxMDAlJywgJ29uZSBodW5kcmVkIHBlcmNlbnQnKSwKICAgICgnMTUwMCBSUE0nLCAnZmlmdGVlbiBodW5kcmVkIFJQTScpLAogICAgKCczMDAgTVdlJywgJ3RocmVlIGh1bmRyZWQgbWVnYXdhdHRzIGVsZWN0cmljJyksCiAgICAoJzI4NSsgTVdlJywgJ3R3byBodW5kcmVkIGFuZCBlaWdodHktZml2ZSBwbHVzIG1lZ2F3YXR0cycpLAogICAgKCcyODUtcGx1cycsICd0d28gaHVuZHJlZCBhbmQgZWlnaHR5LWZpdmUgcGx1cycpLAogICAgKCcgbUsnLCAnIG1pbGxpLWsnKSwKICAgICgnVjgnLCAnVi1laWdodCcpLAogICAgKCdSQ0lDJywgJ1ItQy1JLUMnKSwgKCdBVFdTJywgJ0EtVC1XLVMnKSwgKCdBUkknLCAnQS1SLUknKSwgKCdTTEMnLCAnUy1MLUMnKSwKICAgICgnIE1XICcsICcgbWVnYXdhdHRzICcpLAogICAgKCcyODUgTVdlJywgJ3R3byBodW5kcmVkIGFuZCBlaWdodHktZml2ZSBtZWdhd2F0dHMnKSwKICAgICgnIE1XZScsICcgbWVnYXdhdHRzIGVsZWN0cmljJyksCiAgICAoJy0tJywgJ+KAlCcpLAogICAgKCd+JywgJ2Fib3V0ICcpLApdCk9WRVJSSURFUyA9IHsKICdicmllZi1jcml0aWNhbC0xJzogIkNyaXRpY2FsaXR5IGFjaGlldmVkICh0aGUgY2hhaW4gcmVhY3Rpb24gaXMgbm93IHNlbGYtc3VzdGFpbmluZykuIFJlYWN0aXZpdHkgKGhvdyBmYXIgZnJvbSBiYWxhbmNlKSBpcyB6ZXJvIG1pbGxpLWsg4oCUIGEgdW5pdCBvZiByZWFjdGl2aXR5IOKAlCB6ZXJvIG1lYW5zIHBlcmZlY3RseSBiYWxhbmNlZC4gVGhlIHJlYWN0b3IncyBob2xkaW5nIHN0ZWFkeS4gVHJ5IG5vdCB0byBsb29rIHRvbyBzbXVnLiIsCn0KZm9yIGxuIGluIGxpbmVzOgogICAgdCA9IGxuWyd0dHNfb3ZlcnJpZGUnXSBvciBsblsndGV4dCddCiAgICBpZiBsblsnaWQnXSBpbiBPVkVSUklERVM6CiAgICAgICAgdCA9IE9WRVJSSURFU1tsblsnaWQnXV0KICAgIGVsc2U6CiAgICAgICAgZm9yIGEsIGIgaW4gUkVQTEFDRU1FTlRTOgogICAgICAgICAgICB0ID0gdC5yZXBsYWNlKGEsIGIpCiAgICBsblsndHRzX3RleHQnXSA9IHQKICAgIGRlbCBsblsndHRzX292ZXJyaWRlJ10KCmlkcyA9IFtsWydpZCddIGZvciBsIGluIGxpbmVzXQphc3NlcnQgbGVuKGlkcykgPT0gbGVuKHNldChpZHMpKSwgJ2R1cGxpY2F0ZSBpZHMnCmpzb24uZHVtcChsaW5lcywgb3BlbihXICsgJy9saW5lcy5qc29uJywgJ3cnKSwgaW5kZW50PTEpCmZyb20gY29sbGVjdGlvbnMgaW1wb3J0IENvdW50ZXIKcHJpbnQoJ3RvdGFsIGxpbmVzOicsIGxlbihsaW5lcykpCnByaW50KENvdW50ZXIobFsnZ3JvdXAnXSBmb3IgbCBpbiBsaW5lcykpCnByaW50KENvdW50ZXIobFsnc291cmNlJ10gZm9yIGwgaW4gbGluZXMpKQo=
+#!/usr/bin/env python3
+"""Build the full Chief clip line inventory: build lines (exact) + authored
+variants (no-repeat rule) + script narration. Produces lines.json with
+id / group / text (canonical) / tts_text (spoken form actually synthesized)."""
+import json, re, sys
+
+W = '/home/hatch/workspace/small-nukem-chief-clips/work'
+ext = json.load(open(W + '/extracted.json'))
+
+lines = []
+def add(id_, group, text, source, key='', tts=None):
+    lines.append({'id': id_, 'group': group, 'key': key, 'text': text,
+                  'source': source, 'tts_override': tts})
+
+# ---------------------------------------------------------------- CALLOUTS
+# Authored variants v2/v3 per key (same facts/numbers/teaching, Chief register).
+CALLOUT_VARIANTS = {
+ 'intro': [
+   "Cold iron, cold core, and a full shift ahead of us. This BWRX-300 (a small modular boiling water reactor) is in cold shutdown, and we're taking her all the way to full power.",
+   "She's cold and she's waiting. One BWRX-300 (a small modular boiling water reactor), sitting in cold shutdown — and by the end of this shift, she'll be at full power, if we do it right."],
+ 'pre_check': [
+   "First job never changes: prove she's cold. Around 30C, about 0.10 MPa, critical at 0.2% power, water level at 100%. Read them off the panel, not off your memory.",
+   "Before a single control moves, the numbers have to agree with the procedure: roughly 30C, 0.10 MPa, critical at 0.2%, level full at 100%. Check them like it's your first day — every day."],
+ 'rod_withdraw': [
+   "Rods out, gently. Every rod you withdraw takes neutron absorbers out of the core and lets the reaction build. A first, then B, then C — and keep your eyes on the period (the doubling time). Your career rides on that number, so act like it.",
+   "Time to bring her up. Withdrawing the rods removes the neutron absorbers, and the chain reaction starts to climb. Sequence is A, B, C, small pulls — and the period (how fast power doubles) is the only number that matters right now."],
+ 'approach_crit': [
+   "Watch the period shrink — that's power doubling faster and faster. Twenty seconds is the comfortable target. Let it fall under ten and you're in a transient (an unwanted power spike), and transients come with paperwork.",
+   "Period's shortening, which means the climb is steepening. Hold her near twenty seconds of doubling time. Under ten seconds is a transient (a power spike nobody ordered) — ease off before I have to explain you to the regulator."],
+ 'critical': [
+   "There it is — critical (the chain reaction sustaining itself, one fission paying for the next). Reactivity is zero mK (milli-k, the reactivity unit — zero is perfect balance). She's holding steady. Good work. Don't let it go to your head.",
+   "Criticality. The reaction now feeds itself, reactivity sitting at zero mK (milli-k — zero means the core is exactly in balance). Steady as a table. That's the hardest part done quietly, the way it should be."],
+ 'heat_up': [
+   "Now we warm her through. Temperature's headed for 288C; the heat-up rate stays under 150C a minute — that's a plant limit, not a guideline. The negative temperature coefficient (the reaction eases itself as the water heats) works in your favour the whole way up.",
+   "Heat-up's a patience game: climb toward 288C, never faster than 150C a minute. And remember the built-in help — the negative temperature coefficient (hotter water naturally slows the reaction). Physics is pulling with you on this one."],
+ 'pressurise': [
+   "Heat turns to pressure now. The setpoint is 7.2 MPa (about 1000 psi); operating pressure is 6.8 MPa, and the turbine syncs itself at 6.3 MPa. Hands off the steam valve — let the thermodynamics do the heavy lifting.",
+   "As the water heats, pressure follows. We're aiming at the 7.2 MPa setpoint (roughly 1000 psi), through 6.8 MPa operating pressure, with the turbine syncing at 6.3 MPa. No touching the steam valve yet. The plant knows the way."],
+ 'turbine_roll': [
+   "Pressure's past 6.3 MPa, so the turbine rolls by itself up to 1500 RPM, synchronous speed. You watch; if pressure runs hot, the bypass valve is your tool. She's a V8 with a city block's worth of power — treat her accordingly.",
+   "There's the roll. Once pressure passes 6.3 MPa the turbine comes up on its own to 1500 RPM. Your job is witness and watchkeeper: eyes on the gauges, bypass valve ready if pressure misbehaves."],
+ 'sync': [
+   "Fifteen hundred RPM and she synchronises to the grid herself. Frequency matched, phase angle checked — that's the whole ceremony. Close a breaker out of phase and the generator loses, every time. So we don't.",
+   "At 1500 RPM the generator syncs to the grid. Your part is verification: frequency matched, phase angle right. An out-of-phase close can wreck the machine in one bang — check it twice, close it once."],
+ 'grid': [
+   "On the grid. Now raise load slowly toward 300 MWe (megawatts electric — a quarter of a million homes, give or take). Smooth on the lever. This is the moment the whole startup was for.",
+   "Synchronised and delivering. Bring her up gently to 300 MWe (megawatts electric — enough for a quarter million homes). No spikes, no showing off. Just a clean climb to full power."],
+ 'period_warn': [
+   "Hey — period's under ten seconds. That's a transient (an unwanted power excursion), and we don't ride those. Rods back in a touch, let her settle. Reactors reward patience; they punish drag racers.",
+   "Period under ten seconds — too fast. Insert the rods a little and cool the climb down. We're starting a reactor here, not setting a lap time."],
+ 'period_danger': [
+   "PERIOD UNDER FIVE SECONDS — RODS IN, NOW! You're closing on prompt criticality (a runaway surge where the reactor outruns its operators). The protection system trips on pressure, power and level — do not make it prove that.",
+   "Five seconds and falling — INSERT RODS IMMEDIATELY! That's prompt criticality territory (power rising faster than anyone can steer). Back her down now, or the protection system does it for you and writes SCRAM on your record."],
+ 'scram': [
+   "That's a SCRAM (emergency shutdown — every rod dropped in by gravity). The protection system earned its pay today. Before we reset: walk the sequence back and find where it turned. The plant forgives once — learn from the once.",
+   "SCRAM. All rods in by gravity, reaction stopped, plant safe — the protection system did exactly what it's built for. Now the real work: figure out what you did wrong. We debrief first, restart second."],
+ 'stuck_rod': [
+   "One drive's not answering — a stuck rod mechanism. It happens; the manual even has a page for it. Compensate with the adjacent drives and keep reactivity (the chain reaction balance) under control while we work around it.",
+   "That rod's stuck — drive's not responding. Don't force it. Work the neighbouring drives to hold reactivity (chain reaction balance) steady. Machinery sticks; good operators adapt."],
+ 'steam_leak': [
+   "Steam leak in the tunnel — hear it? The isolation condenser (passive cooling: gravity and physics, no power needed) should pick up the load, but I want that line isolated by hand. Move with purpose; pressure's falling.",
+   "We've got a leak on the steam line. The isolation condenser (a passive system — gravity does the work) is your backstop, but backstops don't replace operators: get down there and isolate that line manually."],
+ 'fault_cleared': [
+   "Isolated and cleared. The BWRX-300's passive safety is genuinely good — but it was a sharp operator who caught that, not a sensor. Credit where it's due. Now, back on procedure.",
+   "Fault's dealt with. The plant's passive systems are solid, and so, apparently, is my operator. Reset your head, pick the procedure back up where we left it."],
+ 'victory': [
+   "Three hundred MWe on the grid, and a clean startup to boot. Core steady, level steady, condenser carrying the heat by gravity. I've watched twenty-year operators make a meal of that. You didn't. Well done, kid.",
+   "Full power, on the grid, no trips, no violations. That's how a startup is supposed to read. The core's behaving and the plant's happy. Log it and savour it — you earned this one."],
+}
+for key, text in ext['CALLOUTS'].items():
+    add(f'brief-{key}-1', 'briefings', text, 'build', key)
+    for i, v in enumerate(CALLOUT_VARIANTS[key]):
+        add(f'brief-{key}-{i+2}', 'briefings', v, 'authored-variant', key)
+
+# ---------------------------------------------------------------- REACTIONS
+for key, variants in ext['REACTIONS'].items():
+    for i, v in enumerate(variants):
+        add(f'react-{key}-{i+1}', 'reactions', v['t'], 'build', key)
+
+# ---------------------------------------------------------------- GUIDANCE (ASSIST_EXPLAIN)
+for step, variants in enumerate(ext['ASSIST_EXPLAIN']):
+    for i, v in enumerate(variants):
+        add(f'guide-step{step+1}-{i+1}', 'guidance', v, 'build', f'step{step+1}')
+
+# ---------------------------------------------------------------- LADDER
+for step, t in enumerate(ext['ASSIST_TEACH']):
+    add(f'ladder-teach-step{step+1}', 'ladder', t, 'build', f'step{step+1}')
+add('ladder-announce-1', 'ladder', ext['FIXED']['assist_announce'], 'build', 'announce')
+add('ladder-announce-2', 'ladder', "Enough telling — time for showing. I'll take this one myself, and I'll talk you through every move while I make it.", 'authored-variant', 'announce')
+add('ladder-announce-3', 'ladder', "My turn, kid. Watch the whole thing: I'll do this step the way it should be done, and explain it as I go.", 'authored-variant', 'announce')
+add('ladder-handback-1', 'ladder', ext['FIXED']['assist_handback'], 'build', 'handback')
+add('ladder-handback-2', 'ladder', "There — done, and the plant's yours again. Next step has your name on it.", 'authored-variant', 'handback')
+add('ladder-handback-3', 'ladder', "Handing her back. That one's in the book; the next one's all you.", 'authored-variant', 'handback')
+add('ladder-coach-line', 'ladder', ext['FIXED']['assist_coach_line'], 'build', 'assist_coach')
+
+# ---------------------------------------------------------------- SHOWME (takeover/demo narration)
+SHOWME_EXTRA = {
+ 'rod_drive_2': "B drive now. I keep the pulls small and even, because the core remembers every lopsided move you make — balance in, balance out.",
+ 'rod_drive_3': "And C completes the pattern. Worked in order, the three drives bring her up symmetric — and symmetric is what keeps the next hour boring, which is the goal.",
+ 'steam_valve': "One more tool for your kit: the bypass handwheel. A turn at a time from me — because steam you route calmly to the condenser is steam that never argues with you.",
+ 'raise_power': "Final climb, same discipline: lever up slowly, megawatts rising, and I hold her steady over 285 — because the hold is the step, not the climb.",
+ 'turbine_control': "Turbine panel, confirmation only: 1500 RPM and holding. I don't touch what doesn't need touching, because a machine at synchronous speed is already doing its job.",
+ 'sync_grid': "At the sync panel I do the operator's half: verify. Frequency matched, phase matched — because the breaker only closes when the two sides agree, and I'm the witness who signs it.",
+ 'feed_pump': "Standby pump started, and now I watch the level answer before anything else moves — because one change at a time is how you always know what worked.",
+ 'iso_condenser': "Putting the isolation condenser in service — one press, done early on purpose, because the time to prove your passive heat sink is before the plant ever asks for it.",
+ 'shutdown_rods': "Watch the shutdown done properly: lever down at the drives, rods fully in, insertion verified — because ending a shift safely is a skill, not a surrender.",
+ 'generic': "Nothing up my sleeve: the same panel, the same control, the same motion you'd make. If you can follow my hands, you can do the step — that's the point of the demonstration.",
+}
+for key, variants in ext['SHOWME_LINES'].items():
+    for i, v in enumerate(variants):
+        add(f'showme-{key}-{i+1}', 'showme', v, 'build', key)
+    if key in SHOWME_EXTRA:
+        add(f'showme-{key}-{len(variants)+1}', 'showme', SHOWME_EXTRA[key], 'authored-variant', key)
+
+# ---------------------------------------------------------------- TAKEOVER / DEMO fixed lines
+add('takeover-announce-1', 'takeover', ext['FIXED']['takeover_announce'], 'build', 'announce')
+add('takeover-announce-2', 'takeover', "Right — my turn at the wheel. I'll take it from here: first I look at what you've handed me, then I fix it in the open where you can watch.", 'authored-variant', 'announce')
+add('takeover-announce-3', 'takeover', "Stepping in. I'll take it from here — diagnosis first, then the fix, all of it where you can see my hands. Watch closely; this is the good stuff.", 'authored-variant', 'announce')
+add('takeover-demo-on', 'takeover', ext['FIXED']['demo_on'], 'build', 'demo_on')
+add('takeover-demo-off', 'takeover', ext['FIXED']['demo_off'], 'build', 'demo_off')
+add('takeover-off', 'takeover', ext['FIXED']['takeover_off'], 'build', 'takeover_off')
+
+# ---------------------------------------------------------------- CINEMATICS
+for name, scene in ext['CINE'].items():
+    if scene['teach']:
+        add(f'cine-{name}-teach', 'cinematics', scene['teach'], 'build', name)
+    if scene['line']:
+        add(f'cine-{name}-quip', 'cinematics-quips', scene['line'], 'build', name)
+
+# ---------------------------------------------------------------- DEMO TOUR (in-build)
+for item in ext['DEMO_TOUR']:
+    add(f"tour-{item['key']}", 'tour', item['text'], 'build', item['key'])
+
+# ---------------------------------------------------------------- PANEL HINTS
+for key, t in ext['SNX_HINTS'].items():
+    add(f'hint-{key}', 'hints', t, 'build', key)
+
+# ---------------------------------------------------------------- TOUR SCRIPT narration (tour-script.md)
+tour_md = open('/home/hatch/workspace/small-nukem-tour/tour-script.md', encoding='utf-8').read()
+blocks = re.findall(r'NARRATION[^"]*"((?:[^"\\]|\\.)*)"', tour_md, re.S)
+labels = ['shot1','shot2','shot3','shot4','shot5','shot6','shot7','shot8',
+          'shot9a','shot9b','shot9c','shot10','shot11','shot12ab','shot12cd','shot13','shot14']
+assert len(blocks) == len(labels), f'tour blocks: {len(blocks)}'
+for lab, b in zip(labels, blocks):
+    text = ' '.join(b.split())
+    add(f'tourscript-{lab}', 'tour-script', text, 'tour-script', lab)
+
+# ---------------------------------------------------------------- PLAYTHROUGH narration (narration-script.txt)
+narr = open('/home/hatch/workspace/small-nukem-playthrough/narration-script.txt', encoding='utf-8').read()
+parts = re.split(r'\nPART \d\n', narr)
+parts = [p.strip() for p in parts if len(p.strip()) > 200 and 'Target:' not in p]
+assert len(parts) == 3, f'narration parts: {len(parts)}'
+for i, p in enumerate(parts):
+    add(f'demo-narration-part{i+1}', 'demo-narration', ' '.join(p.split()), 'playthrough-script', f'part{i+1}')
+
+# ---------------------------------------------------------------- spoken form (tts_text)
+REPLACEMENTS = [
+    ('BWRX-300', 'BWRX three hundred'),
+    ('0.10 MPa', 'zero point one megapascals'),
+    ('7.2 MPa', 'seven point two megapascals'),
+    ('6.8 MPa', 'six point eight megapascals'),
+    ('6.3 MPa', 'six point three megapascals'),
+    ('of an MPa', 'of a megapascal'),
+    ('~30C', 'about thirty degrees'), ('~0.10', 'about zero point one'),
+    ('30C', 'thirty degrees'), ('288C', 'two hundred and eighty-eight degrees'),
+    ('150C', 'a hundred and fifty degrees'),
+    ('0.2%', 'zero point two percent'), ('100%', 'one hundred percent'),
+    ('1500 RPM', 'fifteen hundred RPM'),
+    ('300 MWe', 'three hundred megawatts electric'),
+    ('285+ MWe', 'two hundred and eighty-five plus megawatts'),
+    ('285-plus', 'two hundred and eighty-five plus'),
+    (' mK', ' milli-k'),
+    ('V8', 'V-eight'),
+    ('RCIC', 'R-C-I-C'), ('ATWS', 'A-T-W-S'), ('ARI', 'A-R-I'), ('SLC', 'S-L-C'),
+    (' MW ', ' megawatts '),
+    ('285 MWe', 'two hundred and eighty-five megawatts'),
+    (' MWe', ' megawatts electric'),
+    ('--', '—'),
+    ('~', 'about '),
+]
+OVERRIDES = {
+ 'brief-critical-1': "Criticality achieved (the chain reaction is now self-sustaining). Reactivity (how far from balance) is zero milli-k — a unit of reactivity — zero means perfectly balanced. The reactor's holding steady. Try not to look too smug.",
+}
+for ln in lines:
+    t = ln['tts_override'] or ln['text']
+    if ln['id'] in OVERRIDES:
+        t = OVERRIDES[ln['id']]
+    else:
+        for a, b in REPLACEMENTS:
+            t = t.replace(a, b)
+    ln['tts_text'] = t
+    del ln['tts_override']
+
+ids = [l['id'] for l in lines]
+assert len(ids) == len(set(ids)), 'duplicate ids'
+json.dump(lines, open(W + '/lines.json', 'w'), indent=1)
+from collections import Counter
+print('total lines:', len(lines))
+print(Counter(l['group'] for l in lines))
+print(Counter(l['source'] for l in lines))

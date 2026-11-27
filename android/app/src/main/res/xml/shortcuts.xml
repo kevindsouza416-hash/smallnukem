@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutId="demo"
+        android:shortcutLongLabel="@string/shortcut_demo_long"
+        android:shortcutShortLabel="@string/shortcut_demo_short">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="smallnukem://start?mode=demo"
+            android:targetClass="com.smallnukem.app.MainActivity"
+            android:targetPackage="com.smallnukem.app" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutId="play"
+        android:shortcutLongLabel="@string/shortcut_play_long"
+        android:shortcutShortLabel="@string/shortcut_play_short">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.smallnukem.app.MainActivity"
+            android:targetPackage="com.smallnukem.app" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>

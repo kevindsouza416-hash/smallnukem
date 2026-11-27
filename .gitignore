@@ -1,1 +1,32 @@
-IyBBbmRyb2lkIC8gR3JhZGxlIGJ1aWxkIG91dHB1dAphbmRyb2lkL2FwcC9idWlsZC8KYW5kcm9pZC8uZ3JhZGxlLwouZ3JhZGxlLwoKIyBBbmRyb2lkIHBhY2thZ2VzCiouYXBrCgojIExvY2FsIEFuZHJvaWQgU0RLIGNvbmZpZ3VyYXRpb24KKiovbG9jYWwucHJvcGVydGllcwoKIyBCYWNrdXBzIGFuZCBkdXBsaWNhdGVzCiouYmFrCiouYmFrLSoKKi5kdXBhZ2VudCoKCiMgbWFjT1MKLkRTX1N0b3JlCgojIFB1Ymxpc2ggc3RhZ2luZwpwdWJsaXNoLwpzbWFsbC1udWtlbS1wdWJsaXNoLwoKIyBMb2dzCioubG9nCgojIE5vZGUKbm9kZV9tb2R1bGVzLwoKIyBNdXNlIEdpdEh1YiBzbmFwc2hvdCBzeW5jIHN0YXRlCi5tdXNlLWdpdGh1Yi1zbmFwc2hvdC1zeW5jLmpzb24KLm11c2UtZ2l0aHViLXNuYXBzaG90LXN5bmMuanNvbi50bXAtKgo=
+# Android / Gradle build output
+android/app/build/
+android/.gradle/
+.gradle/
+
+# Android packages
+*.apk
+
+# Local Android SDK configuration
+**/local.properties
+
+# Backups and duplicates
+*.bak
+*.bak-*
+*.dupagent*
+
+# macOS
+.DS_Store
+
+# Publish staging
+publish/
+small-nukem-publish/
+
+# Logs
+*.log
+
+# Node
+node_modules/
+
+# Muse GitHub snapshot sync state
+.muse-github-snapshot-sync.json
+.muse-github-snapshot-sync.json.tmp-*

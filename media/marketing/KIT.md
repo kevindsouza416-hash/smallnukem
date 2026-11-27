@@ -1,1 +1,67 @@
-IyBTTUFMTCBOVUtFTSDigJQgTWFya2V0aW5nIEtpdCAoRFJBRlRTIOKAlCBub3RoaW5nIHBvc3RlZCwgbm90aGluZyBzZW50KQoKR2FtZTogKipTbWFsbCBOdWtlbSDigJQgQldSWC0zMDAgU3RhcnR1cCBTaW11bGF0b3IqKiDCtyBQbGF5IGZyZWU6IGh0dHBzOi8vbnVrZS5hYnNvbHV0ZWpva2VyLmNhClByZXBhcmVkIE5vdiAyNiwgMjAyNi4gQWxsIGNvcHkgY2xhaW1zIHRyYWNlIHRvIHRoZSBzaGlwcGVkIGdhbWU7IG5vIHJldmlld3MsIHJhdGluZ3MsIG9yIGZlYXR1cmVzIHdlcmUgaW52ZW50ZWQuCgojIyBLZXkgYXJ0IC8gcG9zdGVycyDigJQgYHBvc3RlcnMvYAp8IEZpbGUgfCBGb3JtYXQgLyBzaXplIHwgVXNlIHwKfC0tLXwtLS18LS0tfAp8IGBwb3N0ZXJzL3Bvc3Rlci1sYW5kc2NhcGUucG5nYCB8IFBORywgMjA0OMOXMTE1MiwgMiw5ODksOTIwIEIgKH4yLjkgTUIpIHwgTGFuZHNjYXBlIGtleSBhcnQg4oCUIHZpZGVvIHRodW1ibmFpbHMsIHdlYiBoZXJvLCBwcmVzcyB8CnwgYHBvc3RlcnMvcG9zdGVyLXBvcnRyYWl0LnBuZ2AgfCBQTkcsIDEwODDDlzE5MjAsIDIsOTUwLDU5OSBCICh+Mi44IE1CKSB8IFBvcnRyYWl0IGtleSBhcnQg4oCUIHBob25lIHdhbGxwYXBlciwgc3RvcnkvcmVlbCBjb3Zlciwgc3RvcmUgYXJ0IHwKCkJvdGggZ2VuZXJhdGVkIGFuY2hvcmVkIG9uIHRoZSBsb2NrZWQgRmx1a2UgT3B0aW9uIDIgcmVmZXJlbmNlIGFuZCB0aGUgYXBwcm92ZWQgcmVhY3RvciByZW5kZXIgKGdlYXJib3gtZnJlZSBwbGF0ZSk7IHRpdGxlICJTTUFMTCBOVUtFTSIgYW5kIHN1YnRpdGxlICJCV1JYLTMwMCBTdGFydHVwIFNpbXVsYXRvciIgdmVyaWZpZWQgc3BlbGxlZCBleGFjdGx5IGluIHRoZSBhcnQuIFRoZSBDaGllZiBhcHBlYXJzIGluIGEgVFYgd2luZG93IHdpdGggaGlzIGNvZmZlZSBtdWcuCgojIyBTb2NpYWwgcGFjayDigJQgYHNvY2lhbC9gCkNvcHkgZm9yIGFsbCBmb3VyIHBsYXRmb3JtcyBpcyBpbiBgc29jaWFsL3NvY2lhbC1jb3B5Lm1kYCAoWCBhbm5vdW5jZW1lbnQgKyA0LXBvc3QgdGhyZWFkLCBJbnN0YWdyYW0gY2FwdGlvbiArIGhhc2h0YWdzLCBGYWNlYm9vayBwb3N0LCBUaHJlYWRzIHBvc3Qg4oCUIGV2ZXJ5IHBvc3QgY2FycmllcyBodHRwczovL251a2UuYWJzb2x1dGVqb2tlci5jYSkuCnwgRmlsZSB8IEZvcm1hdCAvIHNpemUgfCBVc2UgfAp8LS0tfC0tLXwtLS18CnwgYHNvY2lhbC9zb2NpYWwtY29weS5tZGAgfCBNYXJrZG93biwgMyw3MzkgQiB8IEFsbCBwb3N0IGNvcHksIHJlYWR5IHRvIHBhc3RlIHwKfCBgc29jaWFsL3gtY2FyZC0xNjAweDkwMC5qcGdgIHwgSlBHLCAxNjAww5c5MDAsIDM5NCwxMzkgQiB8IEltYWdlIGZvciB0aGUgWCBhbm5vdW5jZW1lbnQgcG9zdCBhbmQgdGhyZWFkIHBvc3QgMS80IHwKfCBgc29jaWFsL2luc3RhZ3JhbS1mZWVkLTEwODB4MTM1MC5qcGdgIHwgSlBHLCAxMDgww5cxMzUwLCA0MDksNjQzIEIgfCBJbnN0YWdyYW0gZmVlZCBwb3N0IGltYWdlIHwKfCBgc29jaWFsL2ZhY2Vib29rLTEyMDB4NjMwLmpwZ2AgfCBKUEcsIDEyMDDDlzYzMCwgMjQyLDg3MCBCIHwgRmFjZWJvb2sgcG9zdCAvIGxpbmstc2hhcmUgaW1hZ2UgfAp8IGBzb2NpYWwvdGhyZWFkcy0xMDgweDEwODAuanBnYCB8IEpQRywgMTA4MMOXMTA4MCwgMzM0LDA1NSBCIHwgVGhyZWFkcyBwb3N0IGltYWdlIHwKClNvY2lhbCBpbWFnZXMgYXJlIHNpemVkIGNyb3BzIG9mIHRoZSBhcHByb3ZlZCBrZXkgYXJ0LCBzbyB0aGUgdGl0bGUgdHJlYXRtZW50IG1hdGNoZXMgdGhlIHBvc3RlcnMgZXhhY3RseS4KCiMjIFByb21vIHZpZGVvIOKAlCBgdmlkZW8vYAp8IEZpbGUgfCBGb3JtYXQgLyBzaXplIHwgVXNlIHwKfC0tLXwtLS18LS0tfAp8IGB2aWRlby90cmFpbGVyLWxhbmRzY2FwZS0zMHMubXA0YCB8IE1QNCAoaDI2NCArIEFBQywgZmFzdHN0YXJ0KSwgMTkyMMOXMTA4MCwgMzAuMCBzLCAxNSw0MTgsODU2IEIgKH4xNC43IE1CKSB8IFlvdVR1YmUgLyBYIC8gd2ViIHRyYWlsZXIgfAp8IGB2aWRlby90ZWFzZXItcG9ydHJhaXQtMTVzLm1wNGAgfCBNUDQgKGgyNjQgKyBBQUMsIGZhc3RzdGFydCksIDEwODDDlzE5MjAsIDE0LjYgcywgNSwzNDUsMzM3IEIgKH41LjEgTUIpIHwgUmVlbHMgLyBTaG9ydHMgLyBUaWtUb2stc3R5bGUgdGVhc2VyIHwKfCBgdmlkZW8vZW5kY2FyZC1sYW5kc2NhcGUucG5nYCB8IFBORywgMTkyMMOXMTA4MCwgMiwwNjQsNTc2IEIgfCBFbmQtY2FyZCBzb3VyY2Ugc3RpbGwgKHRpdGxlICsgVVJMKSwgdXNlZCBpbiB0aGUgdHJhaWxlciB8CnwgYHZpZGVvL2VuZGNhcmQtcG9ydHJhaXQucG5nYCB8IFBORywgMTA4MMOXMTkyMCwgMiwxOTQsNjk1IEIgfCBFbmQtY2FyZCBzb3VyY2Ugc3RpbGwsIHVzZWQgaW4gdGhlIHRlYXNlciB8CgpUcmFpbGVyIHN0cnVjdHVyZTogZm91ciBvZiB0aGUgZ2FtZSdzIG93biBwcm9kdWNlZCBjaW5lbWF0aWNzIChDb2xkIFN0YXRlIFZlcmlmaWVkIOKGkiBGaXJzdCBDcml0aWNhbGl0eSDihpIgUG93ZXIgQXNjZW5zaW9uIOKGkiBPbiB0aGUgR3JpZCksIHNvIHRoZSBhdWRpbyBpcyB0aGUgQ2hpZWYncyBhY3R1YWwgaW4tZ2FtZSBuYXJyYXRpb24sIHZvaWNlIGZpcnN0LCBvdmVyIHRoZSBwbGFudCBzb3VuZCBiZWQg4oCUIG5vIGFkZGVkIG11c2ljIHRyYWNrLCBtYXRjaGluZyB0aGUgZ2FtZSdzIGNpbmVtYXRpYyBzb3VuZCBydWxlLiBUaGVuIHRoZSBlbmQgY2FyZC4KVGVhc2VyIHN0cnVjdHVyZTogdGhlIGNvbnRyb2wtcm9vbSBsaWdodC11cCBzcGxhc2ggdmlkZW8g4oaSIGEgS2VuIEJ1cm5zIHBhbiBvdmVyIGZpbmFsLWJ1aWxkIGdhbWVwbGF5IOKGkiBlbmQgY2FyZDsgYXVkaW8gaXMgdGhlIHNwbGFzaCBzb3VuZCBmb2xsb3dlZCBieSB0aGUgQ2hpZWYncyBQb3dlciBBc2NlbnNpb24gbmFycmF0aW9uLgoKIyMgV2ViIOKAlCBgd2ViL2AKfCBGaWxlIHwgRm9ybWF0IC8gc2l6ZSB8IFVzZSB8CnwtLS18LS0tfC0tLXwKfCBgd2ViL2hlcm8tYmFubmVyLTE5MjB4NjQwLnBuZ2AgfCBQTkcsIDE5MjDDlzY0MCwgMSwxOTcsNTgwIEIgfCBIZXJvIGJhbm5lciBmb3IgbnVrZS5hYnNvbHV0ZWpva2VyLmNhIChyZWFjdG9yIHBsYXRlICsgdGl0bGUgKyBVUkwpIHwKfCBgd2ViL2xhbmRpbmctY29weS5tZGAgfCBNYXJrZG93biwgMSw0MjYgQiB8IExhbmRpbmcgdGV4dDogaGVhZGxpbmUsIHN1YmhlYWQsIDMgZmVhdHVyZSBidWxsZXRzLCBob3ctdG8tcGxheSwgZm9vdGVyIGNyZWRpdCAoQldSWC0zMDAgbW9kZWwgY3JlZGl0ZWQgdG8gU2FtaXJhJ3Mgc2ltdWxhdG9yIHdvcmsgaW4gdGhlIGNyZWRpdHMgbGluZSBvbmx5KSB8CgojIyBTdG9yZSBsaXN0aW5nIOKAlCByb290CnwgRmlsZSB8IEZvcm1hdCAvIHNpemUgfCBVc2UgfAp8LS0tfC0tLXwtLS18CnwgYHN0b3JlLWxpc3RpbmcubWRgIHwgTWFya2Rvd24sIDIsMjg2IEIgfCBHb29nbGUgUGxheeKAk3N0eWxlIGxpc3Rpbmc6IHRpdGxlLCBzdWJ0aXRsZSwgc2hvcnQgKyBmdWxsIGRlc2NyaXB0aW9uLCBmZWF0dXJlIGxpc3QsICJXaGF0J3MgbmV3IiB8CgojIyBQcmVzcyDigJQgcm9vdAp8IEZpbGUgfCBGb3JtYXQgLyBzaXplIHwgVXNlIHwKfC0tLXwtLS18LS0tfAp8IGBwcmVzcy1vbmVwYWdlci5tZGAgfCBNYXJrZG93biwgMiw1NjkgQiB8IFByZXNzIG9uZS1wYWdlciAodGV4dCB2ZXJzaW9uKSB8CnwgYHByZXNzLW9uZXBhZ2VyLnBkZmAgfCBQREYsIDEgcGFnZSAoTGV0dGVyKSwgMjg5LDk2NiBCIHwgUHJlc3Mgb25lLXBhZ2VyIHdpdGgga2V5LWZhY3RzIGJveCBhbmQgdHdvIGVtYmVkZGVkIHNjcmVlbnNob3RzIHwKCiMjIFNjcmVlbnNob3QgcGFjayDigJQgYHNjcmVlbnNob3RzL2AKQWxsIDEwODDDlzI0MjQgb24tZGV2aWNlIGNhcHR1cmVzIGZyb20gdGhlIHNoaXBwZWQgZ2FtZS4KfCBGaWxlIHwgU2l6ZSB8IFdoYXQgaXQgc2hvd3MgfAp8LS0tfC0tLXwtLS18CnwgYHNjcmVlbnNob3RzLzAxLW1haW4tbWVudS5wbmdgIHwgODUxLDY1NyBCIHwgTWFpbiBtZW51IG9mIHRoZSBmaW5hbCBidWlsZCAoc291cmNlOiBxYTEzLW1lbnUucG5nKSB8CnwgYHNjcmVlbnNob3RzLzAyLWxldmVsMS1nYW1lcGxheS1maW5hbC1idWlsZC5wbmdgIHwgMSwyNDAsMzQzIEIgfCBMZXZlbCAxIGdhbWVwbGF5IG9uIHRoZSBmaW5hbCBidWlsZCAoc291cmNlOiBxYTE0LWdhbWUucG5nKSDigJQgYWxzbyBlbWJlZGRlZCBpbiB0aGUgcHJlc3MgUERGIGFuZCB1c2VkIGluIHRoZSB0ZWFzZXIgfAp8IGBzY3JlZW5zaG90cy8wMy1sZXZlbDEtZ2FtZXBsYXktcmVhY3Rvci12aWV3LnBuZ2AgfCAxLDc2NCw2NTggQiB8IExldmVsIDEgZ2FtZXBsYXksIHJlYWN0b3IgdmlldyAoc291cmNlOiBxYTEzLWdhbWUyLnBuZykgfAp8IGBzY3JlZW5zaG90cy8wNC1jaGllZi1kZW1vbnN0cmF0aW9uLnBuZ2AgfCAxLDAzMyw3MzkgQiB8IFRoZSBDaGllZiBkZW1vbnN0cmF0aW5nIGEgdGFzayDigJQgdGhlIFNIT1cgYXNzaXN0IGluIGFjdGlvbiAoc291cmNlOiBhcHAtc2hpcDEwLWRlbW8ucG5nKSDigJQgYWxzbyBlbWJlZGRlZCBpbiB0aGUgcHJlc3MgUERGIHwKfCBgc2NyZWVuc2hvdHMvMDUtd2htaXMtc2FmZXR5LWNhcmQucG5nYCB8IDY4Nyw1NzcgQiB8IFdITUlTIHNhZmV0eSBjYXJkIHdpdGggdGhlIGV4YWN0IG9mZmljaWFsIHBpY3RvZ3JhbXMgKHNvdXJjZTogd2htaXMtY2FyZC1uZXcyLnBuZykgfAoKIyMgTm90ZXMKLSBEcmFmdHMgb25seS4gTm90aGluZyBpbiB0aGlzIGtpdCBoYXMgYmVlbiBwb3N0ZWQsIHB1Ymxpc2hlZCwgb3Igc2VudCBhbnl3aGVyZS4KLSBQb3N0ZXIgYXJ0IG5vdGU6IHRoZSBsYW5kc2NhcGUgcG9zdGVyJ3MgcmVhY3RvciBjYXJyaWVzIGEgc21hbGwgcGFpbnRlZCBuYW1lcGxhdGUgb24gdGhlIHZlc3NlbCDigJQgZGVjb3JhdGl2ZSB0ZXh0dXJlIGluIHRoZSBnZW5lcmF0ZWQgYXJ0LCBub3QgYSBnYW1lIGZlYXR1cmUuCi0gVGhlIHRyYWlsZXIgd2FzIHJlLWVuY29kZWQgYXQgQ1JGIDI1IHRvIHN0YXkgdW5kZXIgdGhlIDI1IE1CIGNhcCAoZmlyc3QgcmVuZGVyIHdhcyAyNy41IE1CKTsgcXVhbGl0eSByZW1haW5zIGNsZWFuIGF0IDEwODBwLgo=
+# SMALL NUKEM — Marketing Kit (DRAFTS — nothing posted, nothing sent)
+
+Game: **Small Nukem — BWRX-300 Startup Simulator** · Play free: https://nuke.absolutejoker.ca
+Prepared Nov 26, 2026. All copy claims trace to the shipped game; no reviews, ratings, or features were invented.
+
+## Key art / posters — `posters/`
+| File | Format / size | Use |
+|---|---|---|
+| `posters/poster-landscape.png` | PNG, 2048×1152, 2,989,920 B (~2.9 MB) | Landscape key art — video thumbnails, web hero, press |
+| `posters/poster-portrait.png` | PNG, 1080×1920, 2,950,599 B (~2.8 MB) | Portrait key art — phone wallpaper, story/reel cover, store art |
+
+Both generated anchored on the locked Fluke Option 2 reference and the approved reactor render (gearbox-free plate); title "SMALL NUKEM" and subtitle "BWRX-300 Startup Simulator" verified spelled exactly in the art. The Chief appears in a TV window with his coffee mug.
+
+## Social pack — `social/`
+Copy for all four platforms is in `social/social-copy.md` (X announcement + 4-post thread, Instagram caption + hashtags, Facebook post, Threads post — every post carries https://nuke.absolutejoker.ca).
+| File | Format / size | Use |
+|---|---|---|
+| `social/social-copy.md` | Markdown, 3,739 B | All post copy, ready to paste |
+| `social/x-card-1600x900.jpg` | JPG, 1600×900, 394,139 B | Image for the X announcement post and thread post 1/4 |
+| `social/instagram-feed-1080x1350.jpg` | JPG, 1080×1350, 409,643 B | Instagram feed post image |
+| `social/facebook-1200x630.jpg` | JPG, 1200×630, 242,870 B | Facebook post / link-share image |
+| `social/threads-1080x1080.jpg` | JPG, 1080×1080, 334,055 B | Threads post image |
+
+Social images are sized crops of the approved key art, so the title treatment matches the posters exactly.
+
+## Promo video — `video/`
+| File | Format / size | Use |
+|---|---|---|
+| `video/trailer-landscape-30s.mp4` | MP4 (h264 + AAC, faststart), 1920×1080, 30.0 s, 15,418,856 B (~14.7 MB) | YouTube / X / web trailer |
+| `video/teaser-portrait-15s.mp4` | MP4 (h264 + AAC, faststart), 1080×1920, 14.6 s, 5,345,337 B (~5.1 MB) | Reels / Shorts / TikTok-style teaser |
+| `video/endcard-landscape.png` | PNG, 1920×1080, 2,064,576 B | End-card source still (title + URL), used in the trailer |
+| `video/endcard-portrait.png` | PNG, 1080×1920, 2,194,695 B | End-card source still, used in the teaser |
+
+Trailer structure: four of the game's own produced cinematics (Cold State Verified → First Criticality → Power Ascension → On the Grid), so the audio is the Chief's actual in-game narration, voice first, over the plant sound bed — no added music track, matching the game's cinematic sound rule. Then the end card.
+Teaser structure: the control-room light-up splash video → a Ken Burns pan over final-build gameplay → end card; audio is the splash sound followed by the Chief's Power Ascension narration.
+
+## Web — `web/`
+| File | Format / size | Use |
+|---|---|---|
+| `web/hero-banner-1920x640.png` | PNG, 1920×640, 1,197,580 B | Hero banner for nuke.absolutejoker.ca (reactor plate + title + URL) |
+| `web/landing-copy.md` | Markdown, 1,426 B | Landing text: headline, subhead, 3 feature bullets, how-to-play, footer credit (BWRX-300 model credited to Samira's simulator work in the credits line only) |
+
+## Store listing — root
+| File | Format / size | Use |
+|---|---|---|
+| `store-listing.md` | Markdown, 2,286 B | Google Play–style listing: title, subtitle, short + full description, feature list, "What's new" |
+
+## Press — root
+| File | Format / size | Use |
+|---|---|---|
+| `press-onepager.md` | Markdown, 2,569 B | Press one-pager (text version) |
+| `press-onepager.pdf` | PDF, 1 page (Letter), 289,966 B | Press one-pager with key-facts box and two embedded screenshots |
+
+## Screenshot pack — `screenshots/`
+All 1080×2424 on-device captures from the shipped game.
+| File | Size | What it shows |
+|---|---|---|
+| `screenshots/01-main-menu.png` | 851,657 B | Main menu of the final build (source: qa13-menu.png) |
+| `screenshots/02-level1-gameplay-final-build.png` | 1,240,343 B | Level 1 gameplay on the final build (source: qa14-game.png) — also embedded in the press PDF and used in the teaser |
+| `screenshots/03-level1-gameplay-reactor-view.png` | 1,764,658 B | Level 1 gameplay, reactor view (source: qa13-game2.png) |
+| `screenshots/04-chief-demonstration.png` | 1,033,739 B | The Chief demonstrating a task — the SHOW assist in action (source: app-ship10-demo.png) — also embedded in the press PDF |
+| `screenshots/05-whmis-safety-card.png` | 687,577 B | WHMIS safety card with the exact official pictograms (source: whmis-card-new2.png) |
+
+## Notes
+- Drafts only. Nothing in this kit has been posted, published, or sent anywhere.
+- Poster art note: the landscape poster's reactor carries a small painted nameplate on the vessel — decorative texture in the generated art, not a game feature.
+- The trailer was re-encoded at CRF 25 to stay under the 25 MB cap (first render was 27.5 MB); quality remains clean at 1080p.

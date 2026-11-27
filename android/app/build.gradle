@@ -1,1 +1,30 @@
-YXBwbHkgcGx1Z2luOiAnY29tLmFuZHJvaWQuYXBwbGljYXRpb24nCgphbmRyb2lkIHsKICAgIG5hbWVzcGFjZSAnY29tLnNtYWxsbnVrZW0uYXBwJwogICAgY29tcGlsZVNkayAzNgogICAgYnVpbGRUb29sc1ZlcnNpb24gJzM2LjAuMCcKCiAgICBkZWZhdWx0Q29uZmlnIHsKICAgICAgICBhcHBsaWNhdGlvbklkICdjb20uc21hbGxudWtlbS5hcHAnCiAgICAgICAgbWluU2RrIDI2CiAgICAgICAgdGFyZ2V0U2RrIDM2CiAgICAgICAgdmVyc2lvbkNvZGUgMQogICAgICAgIHZlcnNpb25OYW1lICcxLjAnCiAgICB9CgogICAgYnVpbGRUeXBlcyB7CiAgICAgICAgcmVsZWFzZSB7CiAgICAgICAgICAgIG1pbmlmeUVuYWJsZWQgZmFsc2UKICAgICAgICAgICAgc2hyaW5rUmVzb3VyY2VzIGZhbHNlCiAgICAgICAgICAgIC8vIFNpZGVsb2FkZWQgcGVyc29uYWwgYnVpbGQ6IHNpZ25lZCB3aXRoIHRoZSBsb2NhbCBkZWJ1ZyBrZXkKICAgICAgICAgICAgLy8gKEFHUCdzIGJ1aWx0LWluIGRlYnVnIHNpZ25pbmcgY29uZmlnIC8gfi8uYW5kcm9pZC9kZWJ1Zy5rZXlzdG9yZSkuCiAgICAgICAgICAgIHNpZ25pbmdDb25maWcgc2lnbmluZ0NvbmZpZ3MuZGVidWcKICAgICAgICB9CiAgICB9CgogICAgY29tcGlsZU9wdGlvbnMgewogICAgICAgIHNvdXJjZUNvbXBhdGliaWxpdHkgSmF2YVZlcnNpb24uVkVSU0lPTl8xNwogICAgICAgIHRhcmdldENvbXBhdGliaWxpdHkgSmF2YVZlcnNpb24uVkVSU0lPTl8xNwogICAgfQp9Cg==
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.smallnukem.app'
+    compileSdk 36
+    buildToolsVersion '36.0.0'
+
+    defaultConfig {
+        applicationId 'com.smallnukem.app'
+        minSdk 26
+        targetSdk 36
+        versionCode 1
+        versionName '1.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            // Sideloaded personal build: signed with the local debug key
+            // (AGP's built-in debug signing config / ~/.android/debug.keystore).
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

@@ -1,0 +1,1722 @@
+[
+ {
+  "id": "brief-intro-1",
+  "group": "briefings",
+  "key": "intro",
+  "text": "Reactor's cold as my ex's heart. Time to wake this baby up. We're gonna take this BWRX-300 (a small modular boiling water reactor) from cold shutdown to full power.",
+  "source": "build",
+  "tts_text": "Reactor's cold as my ex's heart. Time to wake this baby up. We're gonna take this BWRX three hundred (a small modular boiling water reactor) from cold shutdown to full power."
+ },
+ {
+  "id": "brief-intro-2",
+  "group": "briefings",
+  "key": "intro",
+  "text": "Cold iron, cold core, and a full shift ahead of us. This BWRX-300 (a small modular boiling water reactor) is in cold shutdown, and we're taking her all the way to full power.",
+  "source": "authored-variant",
+  "tts_text": "Cold iron, cold core, and a full shift ahead of us. This BWRX three hundred (a small modular boiling water reactor) is in cold shutdown, and we're taking her all the way to full power."
+ },
+ {
+  "id": "brief-intro-3",
+  "group": "briefings",
+  "key": "intro",
+  "text": "She's cold and she's waiting. One BWRX-300 (a small modular boiling water reactor), sitting in cold shutdown \u2014 and by the end of this shift, she'll be at full power, if we do it right.",
+  "source": "authored-variant",
+  "tts_text": "She's cold and she's waiting. One BWRX three hundred (a small modular boiling water reactor), sitting in cold shutdown \u2014 and by the end of this shift, she'll be at full power, if we do it right."
+ },
+ {
+  "id": "brief-pre_check-1",
+  "group": "briefings",
+  "key": "pre_check",
+  "text": "Before we do anything, verify those readings. Cold shutdown should be ~30C, ~0.10 MPa, reactor critical at 0.2% power, water level 100%. Don't skip this -- even legends check twice.",
+  "source": "build",
+  "tts_text": "Before we do anything, verify those readings. Cold shutdown should be about thirty degrees, about zero point one megapascals, reactor critical at zero point two percent power, water level one hundred percent. Don't skip this \u2014 even legends check twice."
+ },
+ {
+  "id": "brief-pre_check-2",
+  "group": "briefings",
+  "key": "pre_check",
+  "text": "First job never changes: prove she's cold. Around 30C, about 0.10 MPa, critical at 0.2% power, water level at 100%. Read them off the panel, not off your memory.",
+  "source": "authored-variant",
+  "tts_text": "First job never changes: prove she's cold. Around thirty degrees, about zero point one megapascals, critical at zero point two percent power, water level at one hundred percent. Read them off the panel, not off your memory."
+ },
+ {
+  "id": "brief-pre_check-3",
+  "group": "briefings",
+  "key": "pre_check",
+  "text": "Before a single control moves, the numbers have to agree with the procedure: roughly 30C, 0.10 MPa, critical at 0.2%, level full at 100%. Check them like it's your first day \u2014 every day.",
+  "source": "authored-variant",
+  "tts_text": "Before a single control moves, the numbers have to agree with the procedure: roughly thirty degrees, zero point one megapascals, critical at zero point two percent, level full at one hundred percent. Check them like it's your first day \u2014 every day."
+ },
+ {
+  "id": "brief-rod_withdraw-1",
+  "group": "briefings",
+  "key": "rod_withdraw",
+  "text": "Time to pull rods. The control rods absorb neutrons -- pulling them out lets the chain reaction build. Easy does it: A, then B, then C. Watch that reactor period (the time it takes for power to double) like your career depends on it. Because it does.",
+  "source": "build",
+  "tts_text": "Time to pull rods. The control rods absorb neutrons \u2014 pulling them out lets the chain reaction build. Easy does it: A, then B, then C. Watch that reactor period (the time it takes for power to double) like your career depends on it. Because it does."
+ },
+ {
+  "id": "brief-rod_withdraw-2",
+  "group": "briefings",
+  "key": "rod_withdraw",
+  "text": "Rods out, gently. Every rod you withdraw takes neutron absorbers out of the core and lets the reaction build. A first, then B, then C \u2014 and keep your eyes on the period (the doubling time). Your career rides on that number, so act like it.",
+  "source": "authored-variant",
+  "tts_text": "Rods out, gently. Every rod you withdraw takes neutron absorbers out of the core and lets the reaction build. A first, then B, then C \u2014 and keep your eyes on the period (the doubling time). Your career rides on that number, so act like it."
+ },
+ {
+  "id": "brief-rod_withdraw-3",
+  "group": "briefings",
+  "key": "rod_withdraw",
+  "text": "Time to bring her up. Withdrawing the rods removes the neutron absorbers, and the chain reaction starts to climb. Sequence is A, B, C, small pulls \u2014 and the period (how fast power doubles) is the only number that matters right now.",
+  "source": "authored-variant",
+  "tts_text": "Time to bring her up. Withdrawing the rods removes the neutron absorbers, and the chain reaction starts to climb. Sequence is A, B, C, small pulls \u2014 and the period (how fast power doubles) is the only number that matters right now."
+ },
+ {
+  "id": "brief-approach_crit-1",
+  "group": "briefings",
+  "key": "approach_crit",
+  "text": "Period's coming down -- that means power is rising faster. Target 20 seconds (comfortable doubling time). Under 10 seconds and you've got a transient (an unwanted power spike) -- I'll be writing up an incident report with YOUR name on it.",
+  "source": "build",
+  "tts_text": "Period's coming down \u2014 that means power is rising faster. Target 20 seconds (comfortable doubling time). Under 10 seconds and you've got a transient (an unwanted power spike) \u2014 I'll be writing up an incident report with YOUR name on it."
+ },
+ {
+  "id": "brief-approach_crit-2",
+  "group": "briefings",
+  "key": "approach_crit",
+  "text": "Watch the period shrink \u2014 that's power doubling faster and faster. Twenty seconds is the comfortable target. Let it fall under ten and you're in a transient (an unwanted power spike), and transients come with paperwork.",
+  "source": "authored-variant",
+  "tts_text": "Watch the period shrink \u2014 that's power doubling faster and faster. Twenty seconds is the comfortable target. Let it fall under ten and you're in a transient (an unwanted power spike), and transients come with paperwork."
+ },
+ {
+  "id": "brief-approach_crit-3",
+  "group": "briefings",
+  "key": "approach_crit",
+  "text": "Period's shortening, which means the climb is steepening. Hold her near twenty seconds of doubling time. Under ten seconds is a transient (a power spike nobody ordered) \u2014 ease off before I have to explain you to the regulator.",
+  "source": "authored-variant",
+  "tts_text": "Period's shortening, which means the climb is steepening. Hold her near twenty seconds of doubling time. Under ten seconds is a transient (a power spike nobody ordered) \u2014 ease off before I have to explain you to the regulator."
+ },
+ {
+  "id": "brief-critical-1",
+  "group": "briefings",
+  "key": "critical",
+  "text": "Criticality achieved (the chain reaction is now self-sustaining). Reactivity (how far from balance) is zero mK (milli-k, a unit of reactivity -- zero means perfectly balanced). The reactor's holding steady. Try not to look too smug.",
+  "source": "build",
+  "tts_text": "Criticality achieved (the chain reaction is now self-sustaining). Reactivity (how far from balance) is zero milli-k \u2014 a unit of reactivity \u2014 zero means perfectly balanced. The reactor's holding steady. Try not to look too smug."
+ },
+ {
+  "id": "brief-critical-2",
+  "group": "briefings",
+  "key": "critical",
+  "text": "There it is \u2014 critical (the chain reaction sustaining itself, one fission paying for the next). Reactivity is zero mK (milli-k, the reactivity unit \u2014 zero is perfect balance). She's holding steady. Good work. Don't let it go to your head.",
+  "source": "authored-variant",
+  "tts_text": "There it is \u2014 critical (the chain reaction sustaining itself, one fission paying for the next). Reactivity is zero milli-k (milli-k, the reactivity unit \u2014 zero is perfect balance). She's holding steady. Good work. Don't let it go to your head."
+ },
+ {
+  "id": "brief-critical-3",
+  "group": "briefings",
+  "key": "critical",
+  "text": "Criticality. The reaction now feeds itself, reactivity sitting at zero mK (milli-k \u2014 zero means the core is exactly in balance). Steady as a table. That's the hardest part done quietly, the way it should be.",
+  "source": "authored-variant",
+  "tts_text": "Criticality. The reaction now feeds itself, reactivity sitting at zero milli-k (milli-k \u2014 zero means the core is exactly in balance). Steady as a table. That's the hardest part done quietly, the way it should be."
+ },
+ {
+  "id": "brief-heat_up-1",
+  "group": "briefings",
+  "key": "heat_up",
+  "text": "She's warming up. Let the temperature climb toward 288C, and keep the heat-up rate under 150C a minute -- that's the plant limit. The negative temperature coefficient (as temp rises, the reaction naturally slows down -- a built-in safety feature) will help you out. Physics has got your back.",
+  "source": "build",
+  "tts_text": "She's warming up. Let the temperature climb toward two hundred and eighty-eight degrees, and keep the heat-up rate under a hundred and fifty degrees a minute \u2014 that's the plant limit. The negative temperature coefficient (as temp rises, the reaction naturally slows down \u2014 a built-in safety feature) will help you out. Physics has got your back."
+ },
+ {
+  "id": "brief-heat_up-2",
+  "group": "briefings",
+  "key": "heat_up",
+  "text": "Now we warm her through. Temperature's headed for 288C; the heat-up rate stays under 150C a minute \u2014 that's a plant limit, not a guideline. The negative temperature coefficient (the reaction eases itself as the water heats) works in your favour the whole way up.",
+  "source": "authored-variant",
+  "tts_text": "Now we warm her through. Temperature's headed for two hundred and eighty-eight degrees; the heat-up rate stays under a hundred and fifty degrees a minute \u2014 that's a plant limit, not a guideline. The negative temperature coefficient (the reaction eases itself as the water heats) works in your favour the whole way up."
+ },
+ {
+  "id": "brief-heat_up-3",
+  "group": "briefings",
+  "key": "heat_up",
+  "text": "Heat-up's a patience game: climb toward 288C, never faster than 150C a minute. And remember the built-in help \u2014 the negative temperature coefficient (hotter water naturally slows the reaction). Physics is pulling with you on this one.",
+  "source": "authored-variant",
+  "tts_text": "Heat-up's a patience game: climb toward two hundred and eighty-eight degrees, never faster than a hundred and fifty degrees a minute. And remember the built-in help \u2014 the negative temperature coefficient (hotter water naturally slows the reaction). Physics is pulling with you on this one."
+ },
+ {
+  "id": "brief-pressurise-1",
+  "group": "briefings",
+  "key": "pressurise",
+  "text": "Pressure's building as the water heats up. 7.2 MPa (about 1000 psi) is the setpoint. At 6.8 MPa we're at operating pressure, and the turbine syncs itself at 6.3 MPa. Don't touch that steam valve yet -- let thermodynamics do its thing.",
+  "source": "build",
+  "tts_text": "Pressure's building as the water heats up. seven point two megapascals (about 1000 psi) is the setpoint. At six point eight megapascals we're at operating pressure, and the turbine syncs itself at six point three megapascals. Don't touch that steam valve yet \u2014 let thermodynamics do its thing."
+ },
+ {
+  "id": "brief-pressurise-2",
+  "group": "briefings",
+  "key": "pressurise",
+  "text": "Heat turns to pressure now. The setpoint is 7.2 MPa (about 1000 psi); operating pressure is 6.8 MPa, and the turbine syncs itself at 6.3 MPa. Hands off the steam valve \u2014 let the thermodynamics do the heavy lifting.",
+  "source": "authored-variant",
+  "tts_text": "Heat turns to pressure now. The setpoint is seven point two megapascals (about 1000 psi); operating pressure is six point eight megapascals, and the turbine syncs itself at six point three megapascals. Hands off the steam valve \u2014 let the thermodynamics do the heavy lifting."
+ },
+ {
+  "id": "brief-pressurise-3",
+  "group": "briefings",
+  "key": "pressurise",
+  "text": "As the water heats, pressure follows. We're aiming at the 7.2 MPa setpoint (roughly 1000 psi), through 6.8 MPa operating pressure, with the turbine syncing at 6.3 MPa. No touching the steam valve yet. The plant knows the way.",
+  "source": "authored-variant",
+  "tts_text": "As the water heats, pressure follows. We're aiming at the seven point two megapascals setpoint (roughly 1000 psi), through six point eight megapascals operating pressure, with the turbine syncing at six point three megapascals. No touching the steam valve yet. The plant knows the way."
+ },
+ {
+  "id": "brief-turbine_roll-1",
+  "group": "briefings",
+  "key": "turbine_roll",
+  "text": "Pressure's up. The turbine rolls on its own once pressure passes 6.3 MPa -- 1500 RPM, synchronous speed. Your job: watch it, and work the bypass valve if pressure runs hot. Same as a good V8, way more power.",
+  "source": "build",
+  "tts_text": "Pressure's up. The turbine rolls on its own once pressure passes six point three megapascals \u2014 fifteen hundred RPM, synchronous speed. Your job: watch it, and work the bypass valve if pressure runs hot. Same as a good V-eight, way more power."
+ },
+ {
+  "id": "brief-turbine_roll-2",
+  "group": "briefings",
+  "key": "turbine_roll",
+  "text": "Pressure's past 6.3 MPa, so the turbine rolls by itself up to 1500 RPM, synchronous speed. You watch; if pressure runs hot, the bypass valve is your tool. She's a V8 with a city block's worth of power \u2014 treat her accordingly.",
+  "source": "authored-variant",
+  "tts_text": "Pressure's past six point three megapascals, so the turbine rolls by itself up to fifteen hundred RPM, synchronous speed. You watch; if pressure runs hot, the bypass valve is your tool. She's a V-eight with a city block's worth of power \u2014 treat her accordingly."
+ },
+ {
+  "id": "brief-turbine_roll-3",
+  "group": "briefings",
+  "key": "turbine_roll",
+  "text": "There's the roll. Once pressure passes 6.3 MPa the turbine comes up on its own to 1500 RPM. Your job is witness and watchkeeper: eyes on the gauges, bypass valve ready if pressure misbehaves.",
+  "source": "authored-variant",
+  "tts_text": "There's the roll. Once pressure passes six point three megapascals the turbine comes up on its own to fifteen hundred RPM. Your job is witness and watchkeeper: eyes on the gauges, bypass valve ready if pressure misbehaves."
+ },
+ {
+  "id": "brief-sync-1",
+  "group": "briefings",
+  "key": "sync",
+  "text": "1500 RPM and the generator synchronises itself to the grid. Match frequency, check phase angle -- do NOT close that breaker out of phase or I will haunt your dreams. Out-of-phase sync can destroy the generator.",
+  "source": "build",
+  "tts_text": "fifteen hundred RPM and the generator synchronises itself to the grid. Match frequency, check phase angle \u2014 do NOT close that breaker out of phase or I will haunt your dreams. Out-of-phase sync can destroy the generator."
+ },
+ {
+  "id": "brief-sync-2",
+  "group": "briefings",
+  "key": "sync",
+  "text": "Fifteen hundred RPM and she synchronises to the grid herself. Frequency matched, phase angle checked \u2014 that's the whole ceremony. Close a breaker out of phase and the generator loses, every time. So we don't.",
+  "source": "authored-variant",
+  "tts_text": "Fifteen hundred RPM and she synchronises to the grid herself. Frequency matched, phase angle checked \u2014 that's the whole ceremony. Close a breaker out of phase and the generator loses, every time. So we don't."
+ },
+ {
+  "id": "brief-sync-3",
+  "group": "briefings",
+  "key": "sync",
+  "text": "At 1500 RPM the generator syncs to the grid. Your part is verification: frequency matched, phase angle right. An out-of-phase close can wreck the machine in one bang \u2014 check it twice, close it once.",
+  "source": "authored-variant",
+  "tts_text": "At fifteen hundred RPM the generator syncs to the grid. Your part is verification: frequency matched, phase angle right. An out-of-phase close can wreck the machine in one bang \u2014 check it twice, close it once."
+ },
+ {
+  "id": "brief-grid-1",
+  "group": "briefings",
+  "key": "grid",
+  "text": "Synced to the grid. Now bring up load slowly to 300 MWe (megawatts electric -- enough to power a quarter million homes). This is what we came for.",
+  "source": "build",
+  "tts_text": "Synced to the grid. Now bring up load slowly to three hundred megawatts electric (megawatts electric \u2014 enough to power a quarter million homes). This is what we came for."
+ },
+ {
+  "id": "brief-grid-2",
+  "group": "briefings",
+  "key": "grid",
+  "text": "On the grid. Now raise load slowly toward 300 MWe (megawatts electric \u2014 a quarter of a million homes, give or take). Smooth on the lever. This is the moment the whole startup was for.",
+  "source": "authored-variant",
+  "tts_text": "On the grid. Now raise load slowly toward three hundred megawatts electric (megawatts electric \u2014 a quarter of a million homes, give or take). Smooth on the lever. This is the moment the whole startup was for."
+ },
+ {
+  "id": "brief-grid-3",
+  "group": "briefings",
+  "key": "grid",
+  "text": "Synchronised and delivering. Bring her up gently to 300 MWe (megawatts electric \u2014 enough for a quarter million homes). No spikes, no showing off. Just a clean climb to full power.",
+  "source": "authored-variant",
+  "tts_text": "Synchronised and delivering. Bring her up gently to three hundred megawatts electric (megawatts electric \u2014 enough for a quarter million homes). No spikes, no showing off. Just a clean climb to full power."
+ },
+ {
+  "id": "brief-period_warn-1",
+  "group": "briefings",
+  "key": "period_warn",
+  "text": "Hey! Reactor period (doubling time) is under 10 seconds! That's a transient (unwanted power excursion). Back those rods in, cool it down. We're running a reactor, not a drag race.",
+  "source": "build",
+  "tts_text": "Hey! Reactor period (doubling time) is under 10 seconds! That's a transient (unwanted power excursion). Back those rods in, cool it down. We're running a reactor, not a drag race."
+ },
+ {
+  "id": "brief-period_warn-2",
+  "group": "briefings",
+  "key": "period_warn",
+  "text": "Hey \u2014 period's under ten seconds. That's a transient (an unwanted power excursion), and we don't ride those. Rods back in a touch, let her settle. Reactors reward patience; they punish drag racers.",
+  "source": "authored-variant",
+  "tts_text": "Hey \u2014 period's under ten seconds. That's a transient (an unwanted power excursion), and we don't ride those. Rods back in a touch, let her settle. Reactors reward patience; they punish drag racers."
+ },
+ {
+  "id": "brief-period_warn-3",
+  "group": "briefings",
+  "key": "period_warn",
+  "text": "Period under ten seconds \u2014 too fast. Insert the rods a little and cool the climb down. We're starting a reactor here, not setting a lap time.",
+  "source": "authored-variant",
+  "tts_text": "Period under ten seconds \u2014 too fast. Insert the rods a little and cool the climb down. We're starting a reactor here, not setting a lap time."
+ },
+ {
+  "id": "brief-period_danger-1",
+  "group": "briefings",
+  "key": "period_danger",
+  "text": "PERIOD UNDER 5 SECONDS! INSERT RODS NOW! You're approaching prompt criticality (an uncontrolled rapid power surge where the reactor runs away from you). The protection system trips on pressure, power and water level -- don't give it a reason. Do you WANT a SCRAM on your record?!",
+  "source": "build",
+  "tts_text": "PERIOD UNDER 5 SECONDS! INSERT RODS NOW! You're approaching prompt criticality (an uncontrolled rapid power surge where the reactor runs away from you). The protection system trips on pressure, power and water level \u2014 don't give it a reason. Do you WANT a SCRAM on your record?!"
+ },
+ {
+  "id": "brief-period_danger-2",
+  "group": "briefings",
+  "key": "period_danger",
+  "text": "PERIOD UNDER FIVE SECONDS \u2014 RODS IN, NOW! You're closing on prompt criticality (a runaway surge where the reactor outruns its operators). The protection system trips on pressure, power and level \u2014 do not make it prove that.",
+  "source": "authored-variant",
+  "tts_text": "PERIOD UNDER FIVE SECONDS \u2014 RODS IN, NOW! You're closing on prompt criticality (a runaway surge where the reactor outruns its operators). The protection system trips on pressure, power and level \u2014 do not make it prove that."
+ },
+ {
+  "id": "brief-period_danger-3",
+  "group": "briefings",
+  "key": "period_danger",
+  "text": "Five seconds and falling \u2014 INSERT RODS IMMEDIATELY! That's prompt criticality territory (power rising faster than anyone can steer). Back her down now, or the protection system does it for you and writes SCRAM on your record.",
+  "source": "authored-variant",
+  "tts_text": "Five seconds and falling \u2014 INSERT RODS IMMEDIATELY! That's prompt criticality territory (power rising faster than anyone can steer). Back her down now, or the protection system does it for you and writes SCRAM on your record."
+ },
+ {
+  "id": "brief-scram-1",
+  "group": "briefings",
+  "key": "scram",
+  "text": "SCRAM (emergency shutdown -- all control rods dropped in by gravity). The automatic protection system did its job. Figure out what you did wrong before we try again. The reactor doesn't give second chances -- but the safety systems do.",
+  "source": "build",
+  "tts_text": "SCRAM (emergency shutdown \u2014 all control rods dropped in by gravity). The automatic protection system did its job. Figure out what you did wrong before we try again. The reactor doesn't give second chances \u2014 but the safety systems do."
+ },
+ {
+  "id": "brief-scram-2",
+  "group": "briefings",
+  "key": "scram",
+  "text": "That's a SCRAM (emergency shutdown \u2014 every rod dropped in by gravity). The protection system earned its pay today. Before we reset: walk the sequence back and find where it turned. The plant forgives once \u2014 learn from the once.",
+  "source": "authored-variant",
+  "tts_text": "That's a SCRAM (emergency shutdown \u2014 every rod dropped in by gravity). The protection system earned its pay today. Before we reset: walk the sequence back and find where it turned. The plant forgives once \u2014 learn from the once."
+ },
+ {
+  "id": "brief-scram-3",
+  "group": "briefings",
+  "key": "scram",
+  "text": "SCRAM. All rods in by gravity, reaction stopped, plant safe \u2014 the protection system did exactly what it's built for. Now the real work: figure out what you did wrong. We debrief first, restart second.",
+  "source": "authored-variant",
+  "tts_text": "SCRAM. All rods in by gravity, reaction stopped, plant safe \u2014 the protection system did exactly what it's built for. Now the real work: figure out what you did wrong. We debrief first, restart second."
+ },
+ {
+  "id": "brief-stuck_rod-1",
+  "group": "briefings",
+  "key": "stuck_rod",
+  "text": "One of the rod drives isn't responding -- probably a stuck mechanism. That rod's not moving. Compensate with the adjacent ones to keep reactivity (chain reaction balance) under control. Happens more than management admits.",
+  "source": "build",
+  "tts_text": "One of the rod drives isn't responding \u2014 probably a stuck mechanism. That rod's not moving. Compensate with the adjacent ones to keep reactivity (chain reaction balance) under control. Happens more than management admits."
+ },
+ {
+  "id": "brief-stuck_rod-2",
+  "group": "briefings",
+  "key": "stuck_rod",
+  "text": "One drive's not answering \u2014 a stuck rod mechanism. It happens; the manual even has a page for it. Compensate with the adjacent drives and keep reactivity (the chain reaction balance) under control while we work around it.",
+  "source": "authored-variant",
+  "tts_text": "One drive's not answering \u2014 a stuck rod mechanism. It happens; the manual even has a page for it. Compensate with the adjacent drives and keep reactivity (the chain reaction balance) under control while we work around it."
+ },
+ {
+  "id": "brief-stuck_rod-3",
+  "group": "briefings",
+  "key": "stuck_rod",
+  "text": "That rod's stuck \u2014 drive's not responding. Don't force it. Work the neighbouring drives to hold reactivity (chain reaction balance) steady. Machinery sticks; good operators adapt.",
+  "source": "authored-variant",
+  "tts_text": "That rod's stuck \u2014 drive's not responding. Don't force it. Work the neighbouring drives to hold reactivity (chain reaction balance) steady. Machinery sticks; good operators adapt."
+ },
+ {
+  "id": "brief-steam_leak-1",
+  "group": "briefings",
+  "key": "steam_leak",
+  "text": "We've got a steam leak in the tunnel! The isolation condenser (a passive cooling system that works without power -- just gravity and physics) should actuate -- but get down there and isolate that line manually. Pressure's dropping.",
+  "source": "build",
+  "tts_text": "We've got a steam leak in the tunnel! The isolation condenser (a passive cooling system that works without power \u2014 just gravity and physics) should actuate \u2014 but get down there and isolate that line manually. Pressure's dropping."
+ },
+ {
+  "id": "brief-steam_leak-2",
+  "group": "briefings",
+  "key": "steam_leak",
+  "text": "Steam leak in the tunnel \u2014 hear it? The isolation condenser (passive cooling: gravity and physics, no power needed) should pick up the load, but I want that line isolated by hand. Move with purpose; pressure's falling.",
+  "source": "authored-variant",
+  "tts_text": "Steam leak in the tunnel \u2014 hear it? The isolation condenser (passive cooling: gravity and physics, no power needed) should pick up the load, but I want that line isolated by hand. Move with purpose; pressure's falling."
+ },
+ {
+  "id": "brief-steam_leak-3",
+  "group": "briefings",
+  "key": "steam_leak",
+  "text": "We've got a leak on the steam line. The isolation condenser (a passive system \u2014 gravity does the work) is your backstop, but backstops don't replace operators: get down there and isolate that line manually.",
+  "source": "authored-variant",
+  "tts_text": "We've got a leak on the steam line. The isolation condenser (a passive system \u2014 gravity does the work) is your backstop, but backstops don't replace operators: get down there and isolate that line manually."
+ },
+ {
+  "id": "brief-fault_cleared-1",
+  "group": "briefings",
+  "key": "fault_cleared",
+  "text": "Good catch. Fault isolated. The passive safety systems in this BWRX-300 are solid -- but nothing beats a sharp operator. Now get back on procedure.",
+  "source": "build",
+  "tts_text": "Good catch. Fault isolated. The passive safety systems in this BWRX three hundred are solid \u2014 but nothing beats a sharp operator. Now get back on procedure."
+ },
+ {
+  "id": "brief-fault_cleared-2",
+  "group": "briefings",
+  "key": "fault_cleared",
+  "text": "Isolated and cleared. The BWRX-300's passive safety is genuinely good \u2014 but it was a sharp operator who caught that, not a sensor. Credit where it's due. Now, back on procedure.",
+  "source": "authored-variant",
+  "tts_text": "Isolated and cleared. The BWRX three hundred's passive safety is genuinely good \u2014 but it was a sharp operator who caught that, not a sensor. Credit where it's due. Now, back on procedure."
+ },
+ {
+  "id": "brief-fault_cleared-3",
+  "group": "briefings",
+  "key": "fault_cleared",
+  "text": "Fault's dealt with. The plant's passive systems are solid, and so, apparently, is my operator. Reset your head, pick the procedure back up where we left it.",
+  "source": "authored-variant",
+  "tts_text": "Fault's dealt with. The plant's passive systems are solid, and so, apparently, is my operator. Reset your head, pick the procedure back up where we left it."
+ },
+ {
+  "id": "brief-victory-1",
+  "group": "briefings",
+  "key": "victory",
+  "text": "300 MWe on the grid. That's a clean startup. The core's behaving, the level's steady, and the condenser is taking the heat by gravity. I've seen worse from people with twenty years experience. Not bad, kid.",
+  "source": "build",
+  "tts_text": "three hundred megawatts electric on the grid. That's a clean startup. The core's behaving, the level's steady, and the condenser is taking the heat by gravity. I've seen worse from people with twenty years experience. Not bad, kid."
+ },
+ {
+  "id": "brief-victory-2",
+  "group": "briefings",
+  "key": "victory",
+  "text": "Three hundred MWe on the grid, and a clean startup to boot. Core steady, level steady, condenser carrying the heat by gravity. I've watched twenty-year operators make a meal of that. You didn't. Well done, kid.",
+  "source": "authored-variant",
+  "tts_text": "Three hundred megawatts electric on the grid, and a clean startup to boot. Core steady, level steady, condenser carrying the heat by gravity. I've watched twenty-year operators make a meal of that. You didn't. Well done, kid."
+ },
+ {
+  "id": "brief-victory-3",
+  "group": "briefings",
+  "key": "victory",
+  "text": "Full power, on the grid, no trips, no violations. That's how a startup is supposed to read. The core's behaving and the plant's happy. Log it and savour it \u2014 you earned this one.",
+  "source": "authored-variant",
+  "tts_text": "Full power, on the grid, no trips, no violations. That's how a startup is supposed to read. The core's behaving and the plant's happy. Log it and savour it \u2014 you earned this one."
+ },
+ {
+  "id": "react-correct_step-1",
+  "group": "reactions",
+  "key": "correct_step",
+  "text": "That's the one. Clean work \u2014 keep her coming up nice and steady.",
+  "source": "build",
+  "tts_text": "That's the one. Clean work \u2014 keep her coming up nice and steady."
+ },
+ {
+  "id": "react-correct_step-2",
+  "group": "reactions",
+  "key": "correct_step",
+  "text": "Correct. You might just make an operator yet, kid.",
+  "source": "build",
+  "tts_text": "Correct. You might just make an operator yet, kid."
+ },
+ {
+  "id": "react-correct_step-3",
+  "group": "reactions",
+  "key": "correct_step",
+  "text": "Right panel, right move. The plant thanks you. So do I, quietly.",
+  "source": "build",
+  "tts_text": "Right panel, right move. The plant thanks you. So do I, quietly."
+ },
+ {
+  "id": "react-wrong_order-1",
+  "group": "reactions",
+  "key": "wrong_order",
+  "text": "Whoa \u2014 not yet. Procedure has an order for a reason. Check the step list.",
+  "source": "build",
+  "tts_text": "Whoa \u2014 not yet. Procedure has an order for a reason. Check the step list."
+ },
+ {
+  "id": "react-wrong_order-2",
+  "group": "reactions",
+  "key": "wrong_order",
+  "text": "Skipping steps is how incident reports get written. Follow the sequence.",
+  "source": "build",
+  "tts_text": "Skipping steps is how incident reports get written. Follow the sequence."
+ },
+ {
+  "id": "react-wrong_order-3",
+  "group": "reactions",
+  "key": "wrong_order",
+  "text": "That comes later. Right now, the procedure wants something else.",
+  "source": "build",
+  "tts_text": "That comes later. Right now, the procedure wants something else."
+ },
+ {
+  "id": "react-wrong_component-1",
+  "group": "reactions",
+  "key": "wrong_component",
+  "text": "That panel won't help this step. Eyes on the procedure, operator.",
+  "source": "build",
+  "tts_text": "That panel won't help this step. Eyes on the procedure, operator."
+ },
+ {
+  "id": "react-wrong_component-2",
+  "group": "reactions",
+  "key": "wrong_component",
+  "text": "Wrong iron. The step tells you what to work \u2014 trust it.",
+  "source": "build",
+  "tts_text": "Wrong iron. The step tells you what to work \u2014 trust it."
+ },
+ {
+  "id": "react-wrong_component-3",
+  "group": "reactions",
+  "key": "wrong_component",
+  "text": "You can polish that panel later. The reactor's waiting on the right one.",
+  "source": "build",
+  "tts_text": "You can polish that panel later. The reactor's waiting on the right one."
+ },
+ {
+  "id": "react-alarm_raised-1",
+  "group": "reactions",
+  "key": "alarm_raised",
+  "text": "Alarm! Eyes on the gauges \u2014 find what's out of family and deal with it.",
+  "source": "build",
+  "tts_text": "Alarm! Eyes on the gauges \u2014 find what's out of family and deal with it."
+ },
+ {
+  "id": "react-alarm_raised-2",
+  "group": "reactions",
+  "key": "alarm_raised",
+  "text": "That's an alarm condition. Don't admire it \u2014 respond to it.",
+  "source": "build",
+  "tts_text": "That's an alarm condition. Don't admire it \u2014 respond to it."
+ },
+ {
+  "id": "react-alarm_raised-3",
+  "group": "reactions",
+  "key": "alarm_raised",
+  "text": "Annunciator's lit for a reason. Check the deck, find the offender.",
+  "source": "build",
+  "tts_text": "Annunciator's lit for a reason. Check the deck, find the offender."
+ },
+ {
+  "id": "react-alarm_cleared-1",
+  "group": "reactions",
+  "key": "alarm_cleared",
+  "text": "Alarm cleared. Nice recovery \u2014 that's how it's done.",
+  "source": "build",
+  "tts_text": "Alarm cleared. Nice recovery \u2014 that's how it's done."
+ },
+ {
+  "id": "react-alarm_cleared-2",
+  "group": "reactions",
+  "key": "alarm_cleared",
+  "text": "Back in family. Steady as she goes.",
+  "source": "build",
+  "tts_text": "Back in family. Steady as she goes."
+ },
+ {
+  "id": "react-alarm_cleared-3",
+  "group": "reactions",
+  "key": "alarm_cleared",
+  "text": "Cleared. The plant forgives. This time.",
+  "source": "build",
+  "tts_text": "Cleared. The plant forgives. This time."
+ },
+ {
+  "id": "react-idle_30s_hint-1",
+  "group": "reactions",
+  "key": "idle_30s_hint",
+  "text": "Still with me? The procedure step at the top tells you what's next.",
+  "source": "build",
+  "tts_text": "Still with me? The procedure step at the top tells you what's next."
+ },
+ {
+  "id": "react-idle_30s_hint-2",
+  "group": "reactions",
+  "key": "idle_30s_hint",
+  "text": "Plant's waiting on you, operator. Next step's in the list.",
+  "source": "build",
+  "tts_text": "Plant's waiting on you, operator. Next step's in the list."
+ },
+ {
+  "id": "react-idle_30s_hint-3",
+  "group": "reactions",
+  "key": "idle_30s_hint",
+  "text": "No rush \u2014 but the core notices when nobody's driving.",
+  "source": "build",
+  "tts_text": "No rush \u2014 but the core notices when nobody's driving."
+ },
+ {
+  "id": "react-milestone_complete-1",
+  "group": "reactions",
+  "key": "milestone_complete",
+  "text": "Milestone in the book. That's real progress, operator.",
+  "source": "build",
+  "tts_text": "Milestone in the book. That's real progress, operator."
+ },
+ {
+  "id": "react-milestone_complete-2",
+  "group": "reactions",
+  "key": "milestone_complete",
+  "text": "Phase complete. Even I'm impressed, and I don't impress.",
+  "source": "build",
+  "tts_text": "Phase complete. Even I'm impressed, and I don't impress."
+ },
+ {
+  "id": "react-milestone_complete-3",
+  "group": "reactions",
+  "key": "milestone_complete",
+  "text": "That's a milestone. Log it, savour it for one second, move on.",
+  "source": "build",
+  "tts_text": "That's a milestone. Log it, savour it for one second, move on."
+ },
+ {
+  "id": "react-startup_complete-1",
+  "group": "reactions",
+  "key": "startup_complete",
+  "text": "FULL POWER. Three hundred megawatts, clean startup. Drinks are on me \u2014 in the simulator, anyway.",
+  "source": "build",
+  "tts_text": "FULL POWER. Three hundred megawatts, clean startup. Drinks are on me \u2014 in the simulator, anyway."
+ },
+ {
+  "id": "react-startup_complete-2",
+  "group": "reactions",
+  "key": "startup_complete",
+  "text": "Startup complete! The grid's got our power and you did every step by the book. Beautiful.",
+  "source": "build",
+  "tts_text": "Startup complete! The grid's got our power and you did every step by the book. Beautiful."
+ },
+ {
+  "id": "react-startup_complete-3",
+  "group": "reactions",
+  "key": "startup_complete",
+  "text": "She's on the grid at full power. Kid, you just started up a reactor. Frame that feeling.",
+  "source": "build",
+  "tts_text": "She's on the grid at full power. Kid, you just started up a reactor. Frame that feeling."
+ },
+ {
+  "id": "guide-step1-1",
+  "group": "guidance",
+  "key": "step1",
+  "text": "Step one: verify the cold state at the local panel. Temperature, pressure, level \u2014 read them before you touch anything.",
+  "source": "build",
+  "tts_text": "Step one: verify the cold state at the local panel. Temperature, pressure, level \u2014 read them before you touch anything."
+ },
+ {
+  "id": "guide-step1-2",
+  "group": "guidance",
+  "key": "step1",
+  "text": "The panel's right there, kid. Check the readings against the procedure \u2014 30 degrees, 0.10 MPa, level at 100.",
+  "source": "build",
+  "tts_text": "The panel's right there, kid. Check the readings against the procedure \u2014 30 degrees, zero point one megapascals, level at 100."
+ },
+ {
+  "id": "guide-step1-3",
+  "group": "guidance",
+  "key": "step1",
+  "text": "Last word on this one: cold state first, hands second. The local panel tells you if she's truly cold.",
+  "source": "build",
+  "tts_text": "Last word on this one: cold state first, hands second. The local panel tells you if she's truly cold."
+ },
+ {
+  "id": "guide-step2-1",
+  "group": "guidance",
+  "key": "step2",
+  "text": "Step two: the rod drives. Work the lever at the drive panels \u2014 A, then B, then C \u2014 and keep the heat-up rate under 150 a minute.",
+  "source": "build",
+  "tts_text": "Step two: the rod drives. Work the lever at the drive panels \u2014 A, then B, then C \u2014 and keep the heat-up rate under 150 a minute."
+ },
+ {
+  "id": "guide-step2-2",
+  "group": "guidance",
+  "key": "step2",
+  "text": "Lever's on the rod drive panels, one floor up. Easy pulls. Watch the period \u2014 20 seconds is comfortable, under 10 is trouble.",
+  "source": "build",
+  "tts_text": "Lever's on the rod drive panels, one floor up. Easy pulls. Watch the period \u2014 20 seconds is comfortable, under 10 is trouble."
+ },
+ {
+  "id": "guide-step2-3",
+  "group": "guidance",
+  "key": "step2",
+  "text": "Still on the lever, kid: small pulls, watch the rate. The core rewards patience and punishes enthusiasm.",
+  "source": "build",
+  "tts_text": "Still on the lever, kid: small pulls, watch the rate. The core rewards patience and punishes enthusiasm."
+ },
+ {
+  "id": "guide-step3-1",
+  "group": "guidance",
+  "key": "step3",
+  "text": "Step three is patience: let her heat up and pressurise on the saturation curve. Work the lever gently and keep the rate in family.",
+  "source": "build",
+  "tts_text": "Step three is patience: let her heat up and pressurise on the saturation curve. Work the lever gently and keep the rate in family."
+ },
+ {
+  "id": "guide-step3-2",
+  "group": "guidance",
+  "key": "step3",
+  "text": "Temperature climbs, pressure follows \u2014 that's the curve doing its job. Your job is just the rate: under 150 a minute.",
+  "source": "build",
+  "tts_text": "Temperature climbs, pressure follows \u2014 that's the curve doing its job. Your job is just the rate: under 150 a minute."
+ },
+ {
+  "id": "guide-step3-3",
+  "group": "guidance",
+  "key": "step3",
+  "text": "Nothing new to touch, operator. Heat and pressure rise together; you just keep the rate honest.",
+  "source": "build",
+  "tts_text": "Nothing new to touch, operator. Heat and pressure rise together; you just keep the rate honest."
+ },
+ {
+  "id": "guide-step4-1",
+  "group": "guidance",
+  "key": "step4",
+  "text": "Step four: the turbine. At 6.3 MPa she rolls to 1500 RPM and syncs herself \u2014 confirm it at the turbine control and sync panels.",
+  "source": "build",
+  "tts_text": "Step four: the turbine. At six point three megapascals she rolls to fifteen hundred RPM and syncs herself \u2014 confirm it at the turbine control and sync panels."
+ },
+ {
+  "id": "guide-step4-2",
+  "group": "guidance",
+  "key": "step4",
+  "text": "Watch the turbine panel: 1500 RPM, then the sync panel shows her matched to the grid. Confirm, don't force.",
+  "source": "build",
+  "tts_text": "Watch the turbine panel: fifteen hundred RPM, then the sync panel shows her matched to the grid. Confirm, don't force."
+ },
+ {
+  "id": "guide-step4-3",
+  "group": "guidance",
+  "key": "step4",
+  "text": "Turbine's the show now. RPM at 1500, sync confirmed \u2014 that's the step, kid.",
+  "source": "build",
+  "tts_text": "Turbine's the show now. RPM at 1500, sync confirmed \u2014 that's the step, kid."
+ },
+ {
+  "id": "guide-step5-1",
+  "group": "guidance",
+  "key": "step5",
+  "text": "Last step: raise power to 300 MWe at the load control. Bring the lever up and hold 285-plus for three seconds.",
+  "source": "build",
+  "tts_text": "Last step: raise power to three hundred megawatts electric at the load control. Bring the lever up and hold two hundred and eighty-five plus for three seconds."
+ },
+ {
+  "id": "guide-step5-2",
+  "group": "guidance",
+  "key": "step5",
+  "text": "Load control panel, kid. Lever up slow, watch the megawatts \u2014 she needs to hold over 285, steady.",
+  "source": "build",
+  "tts_text": "Load control panel, kid. Lever up slow, watch the megawatts \u2014 she needs to hold over 285, steady."
+ },
+ {
+  "id": "guide-step5-3",
+  "group": "guidance",
+  "key": "step5",
+  "text": "Nearly home. Full lever, steady hold, three seconds over 285 MWe. That's the whole step.",
+  "source": "build",
+  "tts_text": "Nearly home. Full lever, steady hold, three seconds over two hundred and eighty-five megawatts. That's the whole step."
+ },
+ {
+  "id": "ladder-teach-step1",
+  "group": "ladder",
+  "key": "step1",
+  "text": "Verify before you touch: temperature, pressure, level \u2014 read them, don't assume them.",
+  "source": "build",
+  "tts_text": "Verify before you touch: temperature, pressure, level \u2014 read them, don't assume them."
+ },
+ {
+  "id": "ladder-teach-step2",
+  "group": "ladder",
+  "key": "step2",
+  "text": "The lever sets the pace of the whole heat-up. Slow hands, steady rate \u2014 under 150 a minute.",
+  "source": "build",
+  "tts_text": "The lever sets the pace of the whole heat-up. Slow hands, steady rate \u2014 under 150 a minute."
+ },
+ {
+  "id": "ladder-teach-step3",
+  "group": "ladder",
+  "key": "step3",
+  "text": "Heat makes pressure. Ride the saturation curve and let physics do the lifting.",
+  "source": "build",
+  "tts_text": "Heat makes pressure. Ride the saturation curve and let physics do the lifting."
+ },
+ {
+  "id": "ladder-teach-step4",
+  "group": "ladder",
+  "key": "step4",
+  "text": "1500 RPM is the magic number \u2014 frequency and phase matched before the breaker closes.",
+  "source": "build",
+  "tts_text": "fifteen hundred RPM is the magic number \u2014 frequency and phase matched before the breaker closes."
+ },
+ {
+  "id": "ladder-teach-step5",
+  "group": "ladder",
+  "key": "step5",
+  "text": "Full power is a hold, not a spike: 285+ MWe, steady, for three full seconds.",
+  "source": "build",
+  "tts_text": "Full power is a hold, not a spike: two hundred and eighty-five plus megawatts, steady, for three full seconds."
+ },
+ {
+  "id": "ladder-announce-1",
+  "group": "ladder",
+  "key": "announce",
+  "text": "Step aside, kid \u2014 I'll take this one and show you how it's done.",
+  "source": "build",
+  "tts_text": "Step aside, kid \u2014 I'll take this one and show you how it's done."
+ },
+ {
+  "id": "ladder-announce-2",
+  "group": "ladder",
+  "key": "announce",
+  "text": "Enough telling \u2014 time for showing. I'll take this one myself, and I'll talk you through every move while I make it.",
+  "source": "authored-variant",
+  "tts_text": "Enough telling \u2014 time for showing. I'll take this one myself, and I'll talk you through every move while I make it."
+ },
+ {
+  "id": "ladder-announce-3",
+  "group": "ladder",
+  "key": "announce",
+  "text": "My turn, kid. Watch the whole thing: I'll do this step the way it should be done, and explain it as I go.",
+  "source": "authored-variant",
+  "tts_text": "My turn, kid. Watch the whole thing: I'll do this step the way it should be done, and explain it as I go."
+ },
+ {
+  "id": "ladder-handback-1",
+  "group": "ladder",
+  "key": "handback",
+  "text": "Your plant. Next one's yours.",
+  "source": "build",
+  "tts_text": "Your plant. Next one's yours."
+ },
+ {
+  "id": "ladder-handback-2",
+  "group": "ladder",
+  "key": "handback",
+  "text": "There \u2014 done, and the plant's yours again. Next step has your name on it.",
+  "source": "authored-variant",
+  "tts_text": "There \u2014 done, and the plant's yours again. Next step has your name on it."
+ },
+ {
+  "id": "ladder-handback-3",
+  "group": "ladder",
+  "key": "handback",
+  "text": "Handing her back. That one's in the book; the next one's all you.",
+  "source": "authored-variant",
+  "tts_text": "Handing her back. That one's in the book; the next one's all you."
+ },
+ {
+  "id": "ladder-coach-line",
+  "group": "ladder",
+  "key": "assist_coach",
+  "text": "Watch how it's done, kid.",
+  "source": "build",
+  "tts_text": "Watch how it's done, kid."
+ },
+ {
+  "id": "showme-check_readings-1",
+  "group": "showme",
+  "key": "check_readings",
+  "text": "Watch me first: I press the panel check and read temperature, pressure and level out loud \u2014 because you never touch a control before you've verified the plant is truly in the state the procedure assumes.",
+  "source": "build",
+  "tts_text": "Watch me first: I press the panel check and read temperature, pressure and level out loud \u2014 because you never touch a control before you've verified the plant is truly in the state the procedure assumes."
+ },
+ {
+  "id": "showme-check_readings-2",
+  "group": "showme",
+  "key": "check_readings",
+  "text": "First move is always the same: verify the cold state at the local panel. Thirty degrees, a tenth of an MPa, level at a hundred \u2014 because a startup built on assumed readings is a startup built on sand.",
+  "source": "build",
+  "tts_text": "First move is always the same: verify the cold state at the local panel. Thirty degrees, a tenth of a megapascal, level at a hundred \u2014 because a startup built on assumed readings is a startup built on sand."
+ },
+ {
+  "id": "showme-check_readings-3",
+  "group": "showme",
+  "key": "check_readings",
+  "text": "Eyes before hands, kid. I read the panel and check her numbers against the procedure, because the one time you skip it is the one time she's not cold.",
+  "source": "build",
+  "tts_text": "Eyes before hands, kid. I read the panel and check her numbers against the procedure, because the one time you skip it is the one time she's not cold."
+ },
+ {
+  "id": "showme-rod_withdraw-1",
+  "group": "showme",
+  "key": "rod_withdraw",
+  "text": "Now the lever, at the rod drives \u2014 I work it the way you'd work it: hold to withdraw, easy pulls. Because the lever sets the pace of the whole heat-up, and a yanked lever means a runaway period.",
+  "source": "build",
+  "tts_text": "Now the lever, at the rod drives \u2014 I work it the way you'd work it: hold to withdraw, easy pulls. Because the lever sets the pace of the whole heat-up, and a yanked lever means a runaway period."
+ },
+ {
+  "id": "showme-rod_withdraw-2",
+  "group": "showme",
+  "key": "rod_withdraw",
+  "text": "Here's the touch: small, steady pulls on the drive lever. I'm keeping the period near twenty seconds because that's a doubling time you can think in \u2014 under ten, nobody can.",
+  "source": "build",
+  "tts_text": "Here's the touch: small, steady pulls on the drive lever. I'm keeping the period near twenty seconds because that's a doubling time you can think in \u2014 under ten, nobody can."
+ },
+ {
+  "id": "showme-rod_withdraw-3",
+  "group": "showme",
+  "key": "rod_withdraw",
+  "text": "See the lever move? That's your hand, next time. Slow withdraw, watch the rate \u2014 because heat-up is capped at a hundred and fifty a minute, and the lever is how you respect the cap.",
+  "source": "build",
+  "tts_text": "See the lever move? That's your hand, next time. Slow withdraw, watch the rate \u2014 because heat-up is capped at a hundred and fifty a minute, and the lever is how you respect the cap."
+ },
+ {
+  "id": "showme-rod_drive_2-1",
+  "group": "showme",
+  "key": "rod_drive_2",
+  "text": "Drive B next \u2014 same lever, same patience. Working the drives in order keeps the core's shape even, because a lopsided withdraw makes a lopsided core.",
+  "source": "build",
+  "tts_text": "Drive B next \u2014 same lever, same patience. Working the drives in order keeps the core's shape even, because a lopsided withdraw makes a lopsided core."
+ },
+ {
+  "id": "showme-rod_drive_2-2",
+  "group": "showme",
+  "key": "rod_drive_2",
+  "text": "On to B. The sequence matters more than the speed: A, then B, then C, so reactivity comes in balanced instead of all on one side.",
+  "source": "build",
+  "tts_text": "On to B. The sequence matters more than the speed: A, then B, then C, so reactivity comes in balanced instead of all on one side."
+ },
+ {
+  "id": "showme-rod_drive_2-3",
+  "group": "showme",
+  "key": "rod_drive_2",
+  "text": "B drive now. I keep the pulls small and even, because the core remembers every lopsided move you make \u2014 balance in, balance out.",
+  "source": "authored-variant",
+  "tts_text": "B drive now. I keep the pulls small and even, because the core remembers every lopsided move you make \u2014 balance in, balance out."
+ },
+ {
+  "id": "showme-rod_drive_3-1",
+  "group": "showme",
+  "key": "rod_drive_3",
+  "text": "Last drive, C \u2014 finish the set. Three drives worked in order means the flux stays symmetric, and a symmetric core is a predictable core.",
+  "source": "build",
+  "tts_text": "Last drive, C \u2014 finish the set. Three drives worked in order means the flux stays symmetric, and a symmetric core is a predictable core."
+ },
+ {
+  "id": "showme-rod_drive_3-2",
+  "group": "showme",
+  "key": "rod_drive_3",
+  "text": "C drive, same gentle pull. You've seen the whole sequence now \u2014 that's exactly how you'd do it, because it IS how it's done.",
+  "source": "build",
+  "tts_text": "C drive, same gentle pull. You've seen the whole sequence now \u2014 that's exactly how you'd do it, because it IS how it's done."
+ },
+ {
+  "id": "showme-rod_drive_3-3",
+  "group": "showme",
+  "key": "rod_drive_3",
+  "text": "And C completes the pattern. Worked in order, the three drives bring her up symmetric \u2014 and symmetric is what keeps the next hour boring, which is the goal.",
+  "source": "authored-variant",
+  "tts_text": "And C completes the pattern. Worked in order, the three drives bring her up symmetric \u2014 and symmetric is what keeps the next hour boring, which is the goal."
+ },
+ {
+  "id": "showme-steam_valve-1",
+  "group": "showme",
+  "key": "steam_valve",
+  "text": "The bypass handwheel now \u2014 I open it the way you'd open it, a turn at a time. Because when pressure runs hot, the bypass is how you hand steam to the condenser instead of fighting the safety valves.",
+  "source": "build",
+  "tts_text": "The bypass handwheel now \u2014 I open it the way you'd open it, a turn at a time. Because when pressure runs hot, the bypass is how you hand steam to the condenser instead of fighting the safety valves."
+ },
+ {
+  "id": "showme-steam_valve-2",
+  "group": "showme",
+  "key": "steam_valve",
+  "text": "Watch the bypass: easing it open drops pressure without touching the core. You'd do the same, because pressure control lives here while the turbine's finding its feet.",
+  "source": "build",
+  "tts_text": "Watch the bypass: easing it open drops pressure without touching the core. You'd do the same, because pressure control lives here while the turbine's finding its feet."
+ },
+ {
+  "id": "showme-steam_valve-3",
+  "group": "showme",
+  "key": "steam_valve",
+  "text": "One more tool for your kit: the bypass handwheel. A turn at a time from me \u2014 because steam you route calmly to the condenser is steam that never argues with you.",
+  "source": "authored-variant",
+  "tts_text": "One more tool for your kit: the bypass handwheel. A turn at a time from me \u2014 because steam you route calmly to the condenser is steam that never argues with you."
+ },
+ {
+  "id": "showme-raise_power-1",
+  "group": "showme",
+  "key": "raise_power",
+  "text": "Load control: I raise the lever slowly toward full power and hold her over 285. Because a spike trips the very machine you're trying to bring online \u2014 smooth in, steady hold.",
+  "source": "build",
+  "tts_text": "Load control: I raise the lever slowly toward full power and hold her over 285. Because a spike trips the very machine you're trying to bring online \u2014 smooth in, steady hold."
+ },
+ {
+  "id": "showme-raise_power-2",
+  "group": "showme",
+  "key": "raise_power",
+  "text": "Here's the finish: lever up at the load panel, megawatts climbing, and I hold the number. You'd hold it the same way, because full power is a hold, not a spike.",
+  "source": "build",
+  "tts_text": "Here's the finish: lever up at the load panel, megawatts climbing, and I hold the number. You'd hold it the same way, because full power is a hold, not a spike."
+ },
+ {
+  "id": "showme-raise_power-3",
+  "group": "showme",
+  "key": "raise_power",
+  "text": "Final climb, same discipline: lever up slowly, megawatts rising, and I hold her steady over 285 \u2014 because the hold is the step, not the climb.",
+  "source": "authored-variant",
+  "tts_text": "Final climb, same discipline: lever up slowly, megawatts rising, and I hold her steady over 285 \u2014 because the hold is the step, not the climb."
+ },
+ {
+  "id": "showme-turbine_control-1",
+  "group": "showme",
+  "key": "turbine_control",
+  "text": "At the turbine panel I confirm the roll: 1500 RPM, steady. Because the turbine tells you when it's ready \u2014 your job is to witness it, not to force it.",
+  "source": "build",
+  "tts_text": "At the turbine panel I confirm the roll: fifteen hundred RPM, steady. Because the turbine tells you when it's ready \u2014 your job is to witness it, not to force it."
+ },
+ {
+  "id": "showme-turbine_control-2",
+  "group": "showme",
+  "key": "turbine_control",
+  "text": "Turbine control: I check she's at synchronous speed. Confirm, don't force \u2014 because a turbine pushed out of step punishes the whole hall.",
+  "source": "build",
+  "tts_text": "Turbine control: I check she's at synchronous speed. Confirm, don't force \u2014 because a turbine pushed out of step punishes the whole hall."
+ },
+ {
+  "id": "showme-turbine_control-3",
+  "group": "showme",
+  "key": "turbine_control",
+  "text": "Turbine panel, confirmation only: 1500 RPM and holding. I don't touch what doesn't need touching, because a machine at synchronous speed is already doing its job.",
+  "source": "authored-variant",
+  "tts_text": "Turbine panel, confirmation only: fifteen hundred RPM and holding. I don't touch what doesn't need touching, because a machine at synchronous speed is already doing its job."
+ },
+ {
+  "id": "showme-sync_grid-1",
+  "group": "showme",
+  "key": "sync_grid",
+  "text": "Sync panel: I confirm frequency and phase are matched before anything closes. Because closing a breaker out of phase can wreck the generator in one bang.",
+  "source": "build",
+  "tts_text": "Sync panel: I confirm frequency and phase are matched before anything closes. Because closing a breaker out of phase can wreck the generator in one bang."
+ },
+ {
+  "id": "showme-sync_grid-2",
+  "group": "showme",
+  "key": "sync_grid",
+  "text": "Here's where patience pays: the sync check. She synchronises herself when pressure's right \u2014 I just verify it, because verification is the operator's half of this step.",
+  "source": "build",
+  "tts_text": "Here's where patience pays: the sync check. She synchronises herself when pressure's right \u2014 I just verify it, because verification is the operator's half of this step."
+ },
+ {
+  "id": "showme-sync_grid-3",
+  "group": "showme",
+  "key": "sync_grid",
+  "text": "At the sync panel I do the operator's half: verify. Frequency matched, phase matched \u2014 because the breaker only closes when the two sides agree, and I'm the witness who signs it.",
+  "source": "authored-variant",
+  "tts_text": "At the sync panel I do the operator's half: verify. Frequency matched, phase matched \u2014 because the breaker only closes when the two sides agree, and I'm the witness who signs it."
+ },
+ {
+  "id": "showme-feed_pump-1",
+  "group": "showme",
+  "key": "feed_pump",
+  "text": "Feed pump panel: I start the standby pump the way you would \u2014 one press, then watch the level answer. Because level is life in a boiling core, and feedwater is how you defend it.",
+  "source": "build",
+  "tts_text": "Feed pump panel: I start the standby pump the way you would \u2014 one press, then watch the level answer. Because level is life in a boiling core, and feedwater is how you defend it."
+ },
+ {
+  "id": "showme-feed_pump-2",
+  "group": "showme",
+  "key": "feed_pump",
+  "text": "Standby feed pump, on. I watch the level recover before I touch anything else, because chasing two changes at once is how operators lose the thread.",
+  "source": "build",
+  "tts_text": "Standby feed pump, on. I watch the level recover before I touch anything else, because chasing two changes at once is how operators lose the thread."
+ },
+ {
+  "id": "showme-feed_pump-3",
+  "group": "showme",
+  "key": "feed_pump",
+  "text": "Standby pump started, and now I watch the level answer before anything else moves \u2014 because one change at a time is how you always know what worked.",
+  "source": "authored-variant",
+  "tts_text": "Standby pump started, and now I watch the level answer before anything else moves \u2014 because one change at a time is how you always know what worked."
+ },
+ {
+  "id": "showme-iso_condenser-1",
+  "group": "showme",
+  "key": "iso_condenser",
+  "text": "Isolation condenser: I put it in service with one press. Because it's the passive heat sink \u2014 gravity and physics, no power needed \u2014 and it has to be available before you need it.",
+  "source": "build",
+  "tts_text": "Isolation condenser: I put it in service with one press. Because it's the passive heat sink \u2014 gravity and physics, no power needed \u2014 and it has to be available before you need it."
+ },
+ {
+  "id": "showme-iso_condenser-2",
+  "group": "showme",
+  "key": "iso_condenser",
+  "text": "IC valve, over to auto. Same press you'd make. It matters because when everything else trips, this is the system that quietly carries the decay heat away.",
+  "source": "build",
+  "tts_text": "IC valve, over to auto. Same press you'd make. It matters because when everything else trips, this is the system that quietly carries the decay heat away."
+ },
+ {
+  "id": "showme-iso_condenser-3",
+  "group": "showme",
+  "key": "iso_condenser",
+  "text": "Putting the isolation condenser in service \u2014 one press, done early on purpose, because the time to prove your passive heat sink is before the plant ever asks for it.",
+  "source": "authored-variant",
+  "tts_text": "Putting the isolation condenser in service \u2014 one press, done early on purpose, because the time to prove your passive heat sink is before the plant ever asks for it."
+ },
+ {
+  "id": "showme-shutdown_rods-1",
+  "group": "showme",
+  "key": "shutdown_rods",
+  "text": "Different lesson now: I drive the lever DOWN at the rod drives until the rods are fully in. Because the first move with a plant you can't save is always the same \u2014 shut her down clean and let the condenser carry the heat.",
+  "source": "build",
+  "tts_text": "Different lesson now: I drive the lever DOWN at the rod drives until the rods are fully in. Because the first move with a plant you can't save is always the same \u2014 shut her down clean and let the condenser carry the heat."
+ },
+ {
+  "id": "showme-shutdown_rods-2",
+  "group": "showme",
+  "key": "shutdown_rods",
+  "text": "Rods going in, all the way. I'm showing you the shutdown you'd perform: lever down, verify insertion, because a safe plant is never a failure \u2014 it's the job.",
+  "source": "build",
+  "tts_text": "Rods going in, all the way. I'm showing you the shutdown you'd perform: lever down, verify insertion, because a safe plant is never a failure \u2014 it's the job."
+ },
+ {
+  "id": "showme-shutdown_rods-3",
+  "group": "showme",
+  "key": "shutdown_rods",
+  "text": "Watch the shutdown done properly: lever down at the drives, rods fully in, insertion verified \u2014 because ending a shift safely is a skill, not a surrender.",
+  "source": "authored-variant",
+  "tts_text": "Watch the shutdown done properly: lever down at the drives, rods fully in, insertion verified \u2014 because ending a shift safely is a skill, not a surrender."
+ },
+ {
+  "id": "showme-generic-1",
+  "group": "showme",
+  "key": "generic",
+  "text": "Follow my hands on this one: I work the control the way you'd work it, at a pace you can follow. Because a demonstration you can't imitate is just a show.",
+  "source": "build",
+  "tts_text": "Follow my hands on this one: I work the control the way you'd work it, at a pace you can follow. Because a demonstration you can't imitate is just a show."
+ },
+ {
+  "id": "showme-generic-2",
+  "group": "showme",
+  "key": "generic",
+  "text": "Same control, same motion you'd use. Watch what I do and why: every action on this panel has a reason, and the reason is the lesson.",
+  "source": "build",
+  "tts_text": "Same control, same motion you'd use. Watch what I do and why: every action on this panel has a reason, and the reason is the lesson."
+ },
+ {
+  "id": "showme-generic-3",
+  "group": "showme",
+  "key": "generic",
+  "text": "Nothing up my sleeve: the same panel, the same control, the same motion you'd make. If you can follow my hands, you can do the step \u2014 that's the point of the demonstration.",
+  "source": "authored-variant",
+  "tts_text": "Nothing up my sleeve: the same panel, the same control, the same motion you'd make. If you can follow my hands, you can do the step \u2014 that's the point of the demonstration."
+ },
+ {
+  "id": "takeover-announce-1",
+  "group": "takeover",
+  "key": "announce",
+  "text": "Watch \u2014 I'll take it from here. First, I diagnose what you've handed me\u2026",
+  "source": "build",
+  "tts_text": "Watch \u2014 I'll take it from here. First, I diagnose what you've handed me\u2026"
+ },
+ {
+  "id": "takeover-announce-2",
+  "group": "takeover",
+  "key": "announce",
+  "text": "Right \u2014 my turn at the wheel. I'll take it from here: first I look at what you've handed me, then I fix it in the open where you can watch.",
+  "source": "authored-variant",
+  "tts_text": "Right \u2014 my turn at the wheel. I'll take it from here: first I look at what you've handed me, then I fix it in the open where you can watch."
+ },
+ {
+  "id": "takeover-announce-3",
+  "group": "takeover",
+  "key": "announce",
+  "text": "Stepping in. I'll take it from here \u2014 diagnosis first, then the fix, all of it where you can see my hands. Watch closely; this is the good stuff.",
+  "source": "authored-variant",
+  "tts_text": "Stepping in. I'll take it from here \u2014 diagnosis first, then the fix, all of it where you can see my hands. Watch closely; this is the good stuff."
+ },
+ {
+  "id": "takeover-demo-on",
+  "group": "takeover",
+  "key": "demo_on",
+  "text": "Demo mode. Watch Fluke work the startup \u2014 touch anything to take the plant yourself.",
+  "source": "build",
+  "tts_text": "Demo mode. Watch Fluke work the startup \u2014 touch anything to take the plant yourself."
+ },
+ {
+  "id": "takeover-demo-off",
+  "group": "takeover",
+  "key": "demo_off",
+  "text": "Demo off. The plant is yours, operator.",
+  "source": "build",
+  "tts_text": "Demo off. The plant is yours, operator."
+ },
+ {
+  "id": "takeover-off",
+  "group": "takeover",
+  "key": "takeover_off",
+  "text": "Takeover off. Your plant, operator \u2014 it stays as the driver left it.",
+  "source": "build",
+  "tts_text": "Takeover off. Your plant, operator \u2014 it stays as the driver left it."
+ },
+ {
+  "id": "cine-first_criticality-teach",
+  "group": "cinematics",
+  "key": "first_criticality",
+  "text": "Criticality: each fission now triggers exactly one more \u2014 the chain reaction sustains itself. From here, rod position is power.",
+  "source": "build",
+  "tts_text": "Criticality: each fission now triggers exactly one more \u2014 the chain reaction sustains itself. From here, rod position is power."
+ },
+ {
+  "id": "cine-first_criticality-quip",
+  "group": "cinematics-quips",
+  "key": "first_criticality",
+  "text": "Critical. She purrs.",
+  "source": "build",
+  "tts_text": "Critical. She purrs."
+ },
+ {
+  "id": "cine-grid_sync-teach",
+  "group": "cinematics",
+  "key": "grid_sync",
+  "text": "Sync: the breaker may only close when turbine frequency and voltage match the grid \u2014 close out of phase and the machine, not the grid, loses.",
+  "source": "build",
+  "tts_text": "Sync: the breaker may only close when turbine frequency and voltage match the grid \u2014 close out of phase and the machine, not the grid, loses."
+ },
+ {
+  "id": "cine-grid_sync-quip",
+  "group": "cinematics-quips",
+  "key": "grid_sync",
+  "text": "Synchronised. Smooth as I am.",
+  "source": "build",
+  "tts_text": "Synchronised. Smooth as I am."
+ },
+ {
+  "id": "cine-power_ascension-teach",
+  "group": "cinematics",
+  "key": "power_ascension",
+  "text": "Ascension is a negotiation: raise power in holds, let temperature and pressure settle at each plateau, and never chase a moving needle.",
+  "source": "build",
+  "tts_text": "Ascension is a negotiation: raise power in holds, let temperature and pressure settle at each plateau, and never chase a moving needle."
+ },
+ {
+  "id": "cine-power_ascension-quip",
+  "group": "cinematics-quips",
+  "key": "power_ascension",
+  "text": "More power. Carefully. Mostly.",
+  "source": "build",
+  "tts_text": "More power. Carefully. Mostly."
+ },
+ {
+  "id": "cine-procedure_chain-teach",
+  "group": "cinematics",
+  "key": "procedure_chain",
+  "text": "Steps in order, checks before action: a clean chain is not luck \u2014 it is the procedure doing the thinking before the plant does the surprising.",
+  "source": "build",
+  "tts_text": "Steps in order, checks before action: a clean chain is not luck \u2014 it is the procedure doing the thinking before the plant does the surprising."
+ },
+ {
+  "id": "cine-procedure_chain-quip",
+  "group": "cinematics-quips",
+  "key": "procedure_chain",
+  "text": "By the book. The book works.",
+  "source": "build",
+  "tts_text": "By the book. The book works."
+ },
+ {
+  "id": "cine-level_complete-teach",
+  "group": "cinematics",
+  "key": "level_complete",
+  "text": "A shift is judged on margins kept, not power made: every trip you never caused is the real score. Log it, hand it over clean.",
+  "source": "build",
+  "tts_text": "A shift is judged on margins kept, not power made: every trip you never caused is the real score. Log it, hand it over clean."
+ },
+ {
+  "id": "cine-level_complete-quip",
+  "group": "cinematics-quips",
+  "key": "level_complete",
+  "text": "Hail to the king of the core.",
+  "source": "build",
+  "tts_text": "Hail to the king of the core."
+ },
+ {
+  "id": "cine-cold_state_verified-teach",
+  "group": "cinematics",
+  "key": "cold_state_verified",
+  "text": "Verify the cold state before touching anything: temperature, pressure, level, all read and recorded first.",
+  "source": "build",
+  "tts_text": "Verify the cold state before touching anything: temperature, pressure, level, all read and recorded first."
+ },
+ {
+  "id": "cine-cold_state_verified-quip",
+  "group": "cinematics-quips",
+  "key": "cold_state_verified",
+  "text": "Cold, shut down, and proven \u2014 not assumed.",
+  "source": "build",
+  "tts_text": "Cold, shut down, and proven \u2014 not assumed."
+ },
+ {
+  "id": "cine-fault_caught_fw-teach",
+  "group": "cinematics",
+  "key": "fault_caught_fw",
+  "text": "Feedwater loss shows first as level shrink and a pump note change \u2014 the standby pump and RCIC buy time, but only diagnosis buys a recovery.",
+  "source": "build",
+  "tts_text": "Feedwater loss shows first as level shrink and a pump note change \u2014 the standby pump and R-C-I-C buy time, but only diagnosis buys a recovery."
+ },
+ {
+  "id": "cine-fault_caught_fw-quip",
+  "group": "cinematics-quips",
+  "key": "fault_caught_fw",
+  "text": "Caught it early. That's the job.",
+  "source": "build",
+  "tts_text": "Caught it early. That's the job."
+ },
+ {
+  "id": "cine-fault_caught_turb-teach",
+  "group": "cinematics",
+  "key": "fault_caught_turb",
+  "text": "A turbine trip is a steam problem instantly: bypass open first, questions later \u2014 the steam has to go somewhere that is not the relief valves.",
+  "source": "build",
+  "tts_text": "A turbine trip is a steam problem instantly: bypass open first, questions later \u2014 the steam has to go somewhere that is not the relief valves."
+ },
+ {
+  "id": "cine-fault_caught_turb-quip",
+  "group": "cinematics-quips",
+  "key": "fault_caught_turb",
+  "text": "Turbine's out, plant's fine. Watch me.",
+  "source": "build",
+  "tts_text": "Turbine's out, plant's fine. Watch me."
+ },
+ {
+  "id": "cine-fault_caught_loop-teach",
+  "group": "cinematics",
+  "key": "fault_caught_loop",
+  "text": "Loss of offsite power: the diesels and batteries carry the safety loads \u2014 your job is load discipline until the grid returns, not heroics.",
+  "source": "build",
+  "tts_text": "Loss of offsite power: the diesels and batteries carry the safety loads \u2014 your job is load discipline until the grid returns, not heroics."
+ },
+ {
+  "id": "cine-fault_caught_loop-quip",
+  "group": "cinematics-quips",
+  "key": "fault_caught_loop",
+  "text": "Grid hiccup. We didn't.",
+  "source": "build",
+  "tts_text": "Grid hiccup. We didn't."
+ },
+ {
+  "id": "cine-fault_caught_sea-teach",
+  "group": "cinematics",
+  "key": "fault_caught_sea",
+  "text": "Losing circulating water warms the condenser and vacuum decays slowly \u2014 slow faults reward early eyes: trend it, don't wait for the alarm.",
+  "source": "build",
+  "tts_text": "Losing circulating water warms the condenser and vacuum decays slowly \u2014 slow faults reward early eyes: trend it, don't wait for the alarm."
+ },
+ {
+  "id": "cine-fault_caught_sea-quip",
+  "group": "cinematics-quips",
+  "key": "fault_caught_sea",
+  "text": "Lake's moody. Condenser's fine.",
+  "source": "build",
+  "tts_text": "Lake's moody. Condenser's fine."
+ },
+ {
+  "id": "cine-fault_caught_atws-teach",
+  "group": "cinematics",
+  "key": "fault_caught_atws",
+  "text": "ATWS \u2014 the scram that didn't: ARI drives the rods by a diverse path and SLC boron shuts the core down chemically. Two independent answers, by design.",
+  "source": "build",
+  "tts_text": "A-T-W-S \u2014 the scram that didn't: A-R-I drives the rods by a diverse path and S-L-C boron shuts the core down chemically. Two independent answers, by design."
+ },
+ {
+  "id": "cine-fault_caught_atws-quip",
+  "group": "cinematics-quips",
+  "key": "fault_caught_atws",
+  "text": "Rods said no. Boron said yes.",
+  "source": "build",
+  "tts_text": "Rods said no. Boron said yes."
+ },
+ {
+  "id": "cine-recovery_rate-teach",
+  "group": "cinematics",
+  "key": "recovery_rate",
+  "text": "Heat-up rate is a stress limit, not a suggestion: ease the lever back and let metal and water agree on a speed.",
+  "source": "build",
+  "tts_text": "Heat-up rate is a stress limit, not a suggestion: ease the lever back and let metal and water agree on a speed."
+ },
+ {
+  "id": "cine-recovery_rate-quip",
+  "group": "cinematics-quips",
+  "key": "recovery_rate",
+  "text": "Rate's mine now. Watch the dial.",
+  "source": "build",
+  "tts_text": "Rate's mine now. Watch the dial."
+ },
+ {
+  "id": "cine-recovery_rods-teach",
+  "group": "cinematics",
+  "key": "recovery_rods",
+  "text": "Rod position is reactivity: return to the procedure position notch by notch \u2014 never park the core somewhere the procedure didn't bless.",
+  "source": "build",
+  "tts_text": "Rod position is reactivity: return to the procedure position notch by notch \u2014 never park the core somewhere the procedure didn't bless."
+ },
+ {
+  "id": "cine-recovery_rods-quip",
+  "group": "cinematics-quips",
+  "key": "recovery_rods",
+  "text": "Rods where they belong. By the numbers.",
+  "source": "build",
+  "tts_text": "Rods where they belong. By the numbers."
+ },
+ {
+  "id": "cine-recovery_press-teach",
+  "group": "cinematics",
+  "key": "recovery_press",
+  "text": "Pressure is steam with nowhere to go: bypass and the isolation condenser are the exits \u2014 open one before the relief valves open themselves.",
+  "source": "build",
+  "tts_text": "Pressure is steam with nowhere to go: bypass and the isolation condenser are the exits \u2014 open one before the relief valves open themselves."
+ },
+ {
+  "id": "cine-recovery_press-quip",
+  "group": "cinematics-quips",
+  "key": "recovery_press",
+  "text": "Pressure's coming home. Easy does it.",
+  "source": "build",
+  "tts_text": "Pressure's coming home. Easy does it."
+ },
+ {
+  "id": "cine-recovery_bypass-teach",
+  "group": "cinematics",
+  "key": "recovery_bypass",
+  "text": "An abandoned bypass dumps your steam to the condenser: power stalls and pressure hunts. A control left in a bad position is a fault you scheduled.",
+  "source": "build",
+  "tts_text": "An abandoned bypass dumps your steam to the condenser: power stalls and pressure hunts. A control left in a bad position is a fault you scheduled."
+ },
+ {
+  "id": "cine-recovery_bypass-quip",
+  "group": "cinematics-quips",
+  "key": "recovery_bypass",
+  "text": "Bypass was doing overtime. Closing it down.",
+  "source": "build",
+  "tts_text": "Bypass was doing overtime. Closing it down."
+ },
+ {
+  "id": "cine-recovery_fw-teach",
+  "group": "cinematics",
+  "key": "recovery_fw",
+  "text": "Feedwater recovery is a sequence: standby pump running, flow proven, THEN restart the main \u2014 swapping pumps blind swaps one trip for two.",
+  "source": "build",
+  "tts_text": "Feedwater recovery is a sequence: standby pump running, flow proven, THEN restart the main \u2014 swapping pumps blind swaps one trip for two."
+ },
+ {
+  "id": "cine-recovery_fw-quip",
+  "group": "cinematics-quips",
+  "key": "recovery_fw",
+  "text": "Standby pump's up. Level's coming back.",
+  "source": "build",
+  "tts_text": "Standby pump's up. Level's coming back."
+ },
+ {
+  "id": "cine-recovery_level-teach",
+  "group": "cinematics",
+  "key": "recovery_level",
+  "text": "Level is the core's blanket: below the alarm, feed is the only conversation; below the scram setpoint, the plant ends the conversation for you.",
+  "source": "build",
+  "tts_text": "Level is the core's blanket: below the alarm, feed is the only conversation; below the scram setpoint, the plant ends the conversation for you."
+ },
+ {
+  "id": "cine-recovery_level-quip",
+  "group": "cinematics-quips",
+  "key": "recovery_level",
+  "text": "Level's the lifeline. Bringing it home.",
+  "source": "build",
+  "tts_text": "Level's the lifeline. Bringing it home."
+ },
+ {
+  "id": "cine-recovery_turb-teach",
+  "group": "cinematics",
+  "key": "recovery_turb",
+  "text": "Turbine recovery starts with the steam path proven and the bypass in hand \u2014 re-roll into a pressure spike and you'll trip twice.",
+  "source": "build",
+  "tts_text": "Turbine recovery starts with the steam path proven and the bypass in hand \u2014 re-roll into a pressure spike and you'll trip twice."
+ },
+ {
+  "id": "cine-recovery_turb-quip",
+  "group": "cinematics-quips",
+  "key": "recovery_turb",
+  "text": "She'll roll again. Steam first, pride later.",
+  "source": "build",
+  "tts_text": "She'll roll again. Steam first, pride later."
+ },
+ {
+  "id": "cine-recovery_ic-teach",
+  "group": "cinematics",
+  "key": "recovery_ic",
+  "text": "The isolation condenser needs no power and no pump: open its path and hot water rises, condenses, and falls back \u2014 physics as the backup generator.",
+  "source": "build",
+  "tts_text": "The isolation condenser needs no power and no pump: open its path and hot water rises, condenses, and falls back \u2014 physics as the backup generator."
+ },
+ {
+  "id": "cine-recovery_ic-quip",
+  "group": "cinematics-quips",
+  "key": "recovery_ic",
+  "text": "IC's on the job. Gravity does the heavy lifting.",
+  "source": "build",
+  "tts_text": "IC's on the job. Gravity does the heavy lifting."
+ },
+ {
+  "id": "cine-recovery_order-teach",
+  "group": "cinematics",
+  "key": "recovery_order",
+  "text": "A skipped step is a debt the plant collects later, with interest: go back, do the step, then continue \u2014 the procedure forgives, physics doesn't.",
+  "source": "build",
+  "tts_text": "A skipped step is a debt the plant collects later, with interest: go back, do the step, then continue \u2014 the procedure forgives, physics doesn't."
+ },
+ {
+  "id": "cine-recovery_order-quip",
+  "group": "cinematics-quips",
+  "key": "recovery_order",
+  "text": "Steps exist in order for a reason. Resetting.",
+  "source": "build",
+  "tts_text": "Steps exist in order for a reason. Resetting."
+ },
+ {
+  "id": "cine-recovery_alarm-teach",
+  "group": "cinematics",
+  "key": "recovery_alarm",
+  "text": "An alarm is the plant asking a specific question \u2014 answer THAT one, in its procedure, before touching anything else.",
+  "source": "build",
+  "tts_text": "An alarm is the plant asking a specific question \u2014 answer THAT one, in its procedure, before touching anything else."
+ },
+ {
+  "id": "cine-recovery_alarm-quip",
+  "group": "cinematics-quips",
+  "key": "recovery_alarm",
+  "text": "Alarm's a question. Here's the answer.",
+  "source": "build",
+  "tts_text": "Alarm's a question. Here's the answer."
+ },
+ {
+  "id": "cine-recovery_shutdown-teach",
+  "group": "cinematics",
+  "key": "recovery_shutdown",
+  "text": "A trip is the plant protecting itself when the procedure window closed \u2014 the debrief names the cause so the next shift doesn't repeat it.",
+  "source": "build",
+  "tts_text": "A trip is the plant protecting itself when the procedure window closed \u2014 the debrief names the cause so the next shift doesn't repeat it."
+ },
+ {
+  "id": "cine-recovery_shutdown-quip",
+  "group": "cinematics-quips",
+  "key": "recovery_shutdown",
+  "text": "She's down safe. Now we learn why.",
+  "source": "build",
+  "tts_text": "She's down safe. Now we learn why."
+ },
+ {
+  "id": "tour-intro",
+  "group": "tour",
+  "key": "intro",
+  "text": "While I run her up: the arrow over Fluke points at the step's machine and warms when he's headed right, the chip up top names the step, and the plant map is on the M key. Everything I do, you can do.",
+  "source": "build",
+  "tts_text": "While I run her up: the arrow over Fluke points at the step's machine and warms when he's headed right, the chip up top names the step, and the plant map is on the M key. Everything I do, you can do."
+ },
+ {
+  "id": "tour-reactor",
+  "group": "tour",
+  "key": "reactor",
+  "text": "Safety tour \u2014 reactor building: the trefoil placards mark the radiation zone, and every hazard symbol in this plant can be tapped for its WHMIS card. Standby liquid control and the isolation condensers are here \u2014 shutdown and cooling that need no power.",
+  "source": "build",
+  "tts_text": "Safety tour \u2014 reactor building: the trefoil placards mark the radiation zone, and every hazard symbol in this plant can be tapped for its WHMIS card. Standby liquid control and the isolation condensers are here \u2014 shutdown and cooling that need no power."
+ },
+ {
+  "id": "tour-steam",
+  "group": "tour",
+  "key": "steam",
+  "text": "Safety tour \u2014 steam tunnel: high-pressure steam signage on the main, and the leak isolation valve is in this tunnel. Listen as much as look \u2014 you will hear a steam leak before you see it.",
+  "source": "build",
+  "tts_text": "Safety tour \u2014 steam tunnel: high-pressure steam signage on the main, and the leak isolation valve is in this tunnel. Listen as much as look \u2014 you will hear a steam leak before you see it."
+ },
+ {
+  "id": "tour-turbine",
+  "group": "tour",
+  "key": "turbine",
+  "text": "Safety tour \u2014 turbine hall: electrical hazard signage on the generator, the flame pictogram on the hydrogen cooling \u2014 no sparks, ever. And the covered red button is the manual SCRAM: last resort, always in reach.",
+  "source": "build",
+  "tts_text": "Safety tour \u2014 turbine hall: electrical hazard signage on the generator, the flame pictogram on the hydrogen cooling \u2014 no sparks, ever. And the covered red button is the manual SCRAM: last resort, always in reach."
+ },
+ {
+  "id": "hint-iso_condenser",
+  "group": "hints",
+  "key": "iso_condenser",
+  "text": "Second use: the isolation condenser pulls pressure down passively \u2014 no bypass steam wasted.",
+  "source": "build",
+  "tts_text": "Second use: the isolation condenser pulls pressure down passively \u2014 no bypass steam wasted."
+ },
+ {
+  "id": "hint-feed_pump",
+  "group": "hints",
+  "key": "feed_pump",
+  "text": "Second use: feedwater trims power too \u2014 small flow changes move MW without touching the rods.",
+  "source": "build",
+  "tts_text": "Second use: feedwater trims power too \u2014 small flow changes move megawatts without touching the rods."
+ },
+ {
+  "id": "hint-steam_valve",
+  "group": "hints",
+  "key": "steam_valve",
+  "text": "Second use: the bypass is a load trim \u2014 crack it to hold pressure while the turbine catches up.",
+  "source": "build",
+  "tts_text": "Second use: the bypass is a load trim \u2014 crack it to hold pressure while the turbine catches up."
+ },
+ {
+  "id": "tourscript-shot1",
+  "group": "tour-script",
+  "key": "shot1",
+  "text": "Welcome to Small Nukem. That's Fluke \u2014 hard hat, shades, and a reactor to wake up. This is a BWRX-300, a real small modular reactor design, and you're going to start it from cold shutdown. Let me show you everything this plant gives you to work with.",
+  "source": "tour-script",
+  "tts_text": "Welcome to Small Nukem. That's Fluke \u2014 hard hat, shades, and a reactor to wake up. This is a BWRX three hundred, a real small modular reactor design, and you're going to start it from cold shutdown. Let me show you everything this plant gives you to work with."
+ },
+ {
+  "id": "tourscript-shot2",
+  "group": "tour-script",
+  "key": "shot2",
+  "text": "First, the Chief. He's your control room operator, and his window opens by default \u2014 you never have to go looking for him. He talks you through every step, and listen closely: he never repeats himself word for word. Every reminder comes back phrased a different way, a few times \u2014 then he stops, and lets you work.",
+  "source": "tour-script",
+  "tts_text": "First, the Chief. He's your control room operator, and his window opens by default \u2014 you never have to go looking for him. He talks you through every step, and listen closely: he never repeats himself word for word. Every reminder comes back phrased a different way, a few times \u2014 then he stops, and lets you work."
+ },
+ {
+  "id": "tourscript-shot3",
+  "group": "tour-script",
+  "key": "shot3",
+  "text": "Your procedure is right on screen \u2014 where you are, step one of five, what's done, what's next. One tap opens the full procedure. No hunting through menus. The steps are the real startup sequence: verify the cold state, raise the lever slowly, heat up and pressurise, sync the turbine, then raise power to three hundred megawatts.",
+  "source": "tour-script",
+  "tts_text": "Your procedure is right on screen \u2014 where you are, step one of five, what's done, what's next. One tap opens the full procedure. No hunting through menus. The steps are the real startup sequence: verify the cold state, raise the lever slowly, heat up and pressurise, sync the turbine, then raise power to three hundred megawatts."
+ },
+ {
+  "id": "tourscript-shot4",
+  "group": "tour-script",
+  "key": "shot4",
+  "text": "Now the part this game takes seriously: safety. See the symbols posted on the equipment? Those aren't decoration. The trefoil is the real radiation warning \u2014 prescribed by Canada's nuclear regulator, the CNSC. The steam lines carry high pressure steam warnings, and the hazard striping marks where you don't stand. In a real plant these signs are the law. Here, they're how you learn to read a plant.",
+  "source": "tour-script",
+  "tts_text": "Now the part this game takes seriously: safety. See the symbols posted on the equipment? Those aren't decoration. The trefoil is the real radiation warning \u2014 prescribed by Canada's nuclear regulator, the CNSC. The steam lines carry high pressure steam warnings, and the hazard striping marks where you don't stand. In a real plant these signs are the law. Here, they're how you learn to read a plant."
+ },
+ {
+  "id": "tourscript-shot5",
+  "group": "tour-script",
+  "key": "shot5",
+  "text": "Tap any symbol and you get its card. Real WHMIS \u2014 the Workplace Hazardous Materials Information System. The class name, what the pictogram means, where that hazard lives in this plant, and the one precaution that matters. Compressed gas. Corrosives at the boron system and the battery rooms. And the card tells you straight when a sign is plant signage or the regulator's \u2014 not WHMIS at all. No faking the labels.",
+  "source": "tour-script",
+  "tts_text": "Tap any symbol and you get its card. Real WHMIS \u2014 the Workplace Hazardous Materials Information System. The class name, what the pictogram means, where that hazard lives in this plant, and the one precaution that matters. Compressed gas. Corrosives at the boron system and the battery rooms. And the card tells you straight when a sign is plant signage or the regulator's \u2014 not WHMIS at all. No faking the labels."
+ },
+ {
+  "id": "tourscript-shot6",
+  "group": "tour-script",
+  "key": "shot6",
+  "text": "And if you get it wrong? The plant protects itself. Push pressure to eight point three megapascals, or power past a hundred and twelve percent, and the reactor SCRAMs \u2014 every rod in, reaction stopped. Failures in this game end in a safe shutdown. Never an explosion. That's not a softened game rule \u2014 that's how the real machine is built.",
+  "source": "tour-script",
+  "tts_text": "And if you get it wrong? The plant protects itself. Push pressure to eight point three megapascals, or power past a hundred and twelve percent, and the reactor SCRAMs \u2014 every rod in, reaction stopped. Failures in this game end in a safe shutdown. Never an explosion. That's not a softened game rule \u2014 that's how the real machine is built."
+ },
+ {
+  "id": "tourscript-shot7",
+  "group": "tour-script",
+  "key": "shot7",
+  "text": "Lost? Follow the arrow. It points at your current step's target \u2014 and it plays warmer-cooler with you. Head the wrong way, it cools to blue. Close the distance, it warms toward red. Target on another floor, it tells you up or down. When you arrive, it hands you off to the machine itself.",
+  "source": "tour-script",
+  "tts_text": "Lost? Follow the arrow. It points at your current step's target \u2014 and it plays warmer-cooler with you. Head the wrong way, it cools to blue. Close the distance, it warms toward red. Target on another floor, it tells you up or down. When you arrive, it hands you off to the machine itself."
+ },
+ {
+  "id": "tourscript-shot8",
+  "group": "tour-script",
+  "key": "shot8",
+  "text": "Every machine has its own control panel, modelled on the real device. Walk up, and the game tells you how to work it. Hold to withdraw the rods \u2014 gently. This is a startup, not a drag race. Heat-up stays under a hundred and fifty degrees a minute, or the Chief will have words.",
+  "source": "tour-script",
+  "tts_text": "Every machine has its own control panel, modelled on the real device. Walk up, and the game tells you how to work it. Hold to withdraw the rods \u2014 gently. This is a startup, not a drag race. Heat-up stays under a hundred and fifty degrees a minute, or the Chief will have words."
+ },
+ {
+  "id": "tourscript-shot9a",
+  "group": "tour-script",
+  "key": "shot9a",
+  "text": "Across the bottom, your instruments \u2014 as plain text you can actually read on a phone. Temperature, pressure, power, water level. The strip shows what matters for the area you're standing in. And when you need the big picture, the plant map pops up: the whole plant laid out, with a you-are-here marker on Fluke that tracks him live from area to area. Inside that same pop-up lives the detailed BWRX-300 schematic, for when you want every pipe and valve. Right now the map is still \u2014 cold plant, nothing moving, nothing glowing.",
+  "source": "tour-script",
+  "tts_text": "Across the bottom, your instruments \u2014 as plain text you can actually read on a phone. Temperature, pressure, power, water level. The strip shows what matters for the area you're standing in. And when you need the big picture, the plant map pops up: the whole plant laid out, with a you-are-here marker on Fluke that tracks him live from area to area. Inside that same pop-up lives the detailed BWRX three hundred schematic, for when you want every pipe and valve. Right now the map is still \u2014 cold plant, nothing moving, nothing glowing."
+ },
+ {
+  "id": "tourscript-shot9b",
+  "group": "tour-script",
+  "key": "shot9b",
+  "text": "Now look at the same map at power. Steam is flowing through the lines, and the vessel is radiating heat \u2014 the map isn't a picture, it's driven by the plant's real values, live.",
+  "source": "tour-script",
+  "tts_text": "Now look at the same map at power. Steam is flowing through the lines, and the vessel is radiating heat \u2014 the map isn't a picture, it's driven by the plant's real values, live."
+ },
+ {
+  "id": "tourscript-shot9c",
+  "group": "tour-script",
+  "key": "shot9c",
+  "text": "And it doesn't flatter you. That overheating component? I did that \u2014 pushed the plant too hard and hurt it. The map shows the plant as it truly is, including what you did to it. No hiding your mistakes from yourself in here.",
+  "source": "tour-script",
+  "tts_text": "And it doesn't flatter you. That overheating component? I did that \u2014 pushed the plant too hard and hurt it. The map shows the plant as it truly is, including what you did to it. No hiding your mistakes from yourself in here."
+ },
+ {
+  "id": "tourscript-shot10",
+  "group": "tour-script",
+  "key": "shot10",
+  "text": "Do something right, and the game stops to mark it \u2014 with a cinematic clip built from your own plant, at that moment. Each one carries a single teaching point. This one: verify the cold state before you touch anything. Proven \u2014 not assumed.",
+  "source": "tour-script",
+  "tts_text": "Do something right, and the game stops to mark it \u2014 with a cinematic clip built from your own plant, at that moment. Each one carries a single teaching point. This one: verify the cold state before you touch anything. Proven \u2014 not assumed."
+ },
+ {
+  "id": "tourscript-shot11",
+  "group": "tour-script",
+  "key": "shot11",
+  "text": "Want to watch it done properly? Demo mode runs the whole startup on the real physics, the Chief narrating as he goes. And mid-play, he can take over from wherever you've got the plant \u2014 fix what you broke, or shut it down safe and tell you why. A demo-finished shift is marked demo-assisted. The score stays honest.",
+  "source": "tour-script",
+  "tts_text": "Want to watch it done properly? Demo mode runs the whole startup on the real physics, the Chief narrating as he goes. And mid-play, he can take over from wherever you've got the plant \u2014 fix what you broke, or shut it down safe and tell you why. A demo-finished shift is marked demo-assisted. The score stays honest."
+ },
+ {
+  "id": "tourscript-shot12ab",
+  "group": "tour-script",
+  "key": "shot12ab",
+  "text": "Stuck? First, the Chief just tells you. Plainly, the way a trainer would. Still stuck, he tells you again \u2014 same point, different words, because hearing it the same way twice doesn't teach anybody anything.",
+  "source": "tour-script",
+  "tts_text": "Stuck? First, the Chief just tells you. Plainly, the way a trainer would. Still stuck, he tells you again \u2014 same point, different words, because hearing it the same way twice doesn't teach anybody anything."
+ },
+ {
+  "id": "tourscript-shot12cd",
+  "group": "tour-script",
+  "key": "shot12cd",
+  "text": "Still stuck after that, he stops telling and starts showing. He takes the controls, does the task himself, and talks you through what he's doing while he does it \u2014 watch his hands, not just the result. Then it's yours again. That's the whole ladder: told, retold, shown \u2014 then back to work.",
+  "source": "tour-script",
+  "tts_text": "Still stuck after that, he stops telling and starts showing. He takes the controls, does the task himself, and talks you through what he's doing while he does it \u2014 watch his hands, not just the result. Then it's yours again. That's the whole ladder: told, retold, shown \u2014 then back to work."
+ },
+ {
+  "id": "tourscript-shot13",
+  "group": "tour-script",
+  "key": "shot13",
+  "text": "Even the prompts dress the part \u2014 every key is drawn as a key.",
+  "source": "tour-script",
+  "tts_text": "Even the prompts dress the part \u2014 every key is drawn as a key."
+ },
+ {
+  "id": "tourscript-shot14",
+  "group": "tour-script",
+  "key": "shot14",
+  "text": "Any time you need out, the menu button is right there \u2014 one tap, back to the title, no maze. That's Small Nukem: a real reactor, a real procedure, real safety \u2014 and a Chief who won't let you fake any of it. Your shift, kid.",
+  "source": "tour-script",
+  "tts_text": "Any time you need out, the menu button is right there \u2014 one tap, back to the title, no maze. That's Small Nukem: a real reactor, a real procedure, real safety \u2014 and a Chief who won't let you fake any of it. Your shift, kid."
+ },
+ {
+  "id": "demo-narration-part1",
+  "group": "demo-narration",
+  "key": "part1",
+  "text": "Welcome to Small Nukem. This is Level One, a cold startup of the BWRX three hundred, and we are taking this reactor from cold shutdown all the way to full power. Fluke is on the ground floor of the Reactor Building, standing in front of the vessel, and the Chief is watching from the control room. Before anything moves, we verify the cold state. The core sits at thirty degrees, pressure is zero point one megapascals, and the reactor is critical, steady at zero point two percent power. Water level is full at one hundred percent. Those are exactly the numbers the procedure demands, so we are cleared to begin. Step one is the pre-start checks, run at the local panel beside the vessel, and the Chief signs them off.",
+  "source": "playthrough-script",
+  "tts_text": "Welcome to Small Nukem. This is Level One, a cold startup of the BWRX three hundred, and we are taking this reactor from cold shutdown all the way to full power. Fluke is on the ground floor of the Reactor Building, standing in front of the vessel, and the Chief is watching from the control room. Before anything moves, we verify the cold state. The core sits at thirty degrees, pressure is zero point one megapascals, and the reactor is critical, steady at zero point two percent power. Water level is full at one hundred percent. Those are exactly the numbers the procedure demands, so we are cleared to begin. Step one is the pre-start checks, run at the local panel beside the vessel, and the Chief signs them off."
+ },
+ {
+  "id": "demo-narration-part2",
+  "group": "demo-narration",
+  "key": "part2",
+  "text": "Step two, the lever comes up slowly and the control rods withdraw. We keep the heat-up gentle, under one hundred and fifty degrees a minute, because a vessel this size does not like to be rushed. From there the plant heats up and pressurises, pressure riding the saturation curve as temperature climbs toward two hundred and eighty-eight degrees. At six point three megapascals, the turbine rolls and synchronises itself to the grid. We confirm it on the grid at exactly fifteen hundred RPM, generator locked in, steam flowing. The plant settles there, parked at one hundred and sixty-nine megawatts, pressure at seven point one seven megapascals, water level steady and full.",
+  "source": "playthrough-script",
+  "tts_text": "Step two, the lever comes up slowly and the control rods withdraw. We keep the heat-up gentle, under one hundred and fifty degrees a minute, because a vessel this size does not like to be rushed. From there the plant heats up and pressurises, pressure riding the saturation curve as temperature climbs toward two hundred and eighty-eight degrees. At six point three megapascals, the turbine rolls and synchronises itself to the grid. We confirm it on the grid at exactly fifteen hundred RPM, generator locked in, steam flowing. The plant settles there, parked at one hundred and sixty-nine megawatts, pressure at seven point one seven megapascals, water level steady and full."
+ },
+ {
+  "id": "demo-narration-part3",
+  "group": "demo-narration",
+  "key": "part3",
+  "text": "Now the final step. The lever comes up further and power climbs toward three hundred megawatts electric, easing through two hundred, and we hold above two hundred and eighty-five megawatts for a full three seconds. Target met. The scorecard reads clean: five steps done in two hundred and eighty-eight seconds, one transient on the way up, no SCRAMs, and no step violations. Verify the cold state, draw the rods out gently, ride the curve up, let the turbine sync itself, then load to full power. That is how you wake up a reactor, kid.",
+  "source": "playthrough-script",
+  "tts_text": "Now the final step. The lever comes up further and power climbs toward three hundred megawatts electric, easing through two hundred, and we hold above two hundred and eighty-five megawatts for a full three seconds. Target met. The scorecard reads clean: five steps done in two hundred and eighty-eight seconds, one transient on the way up, no SCRAMs, and no step violations. Verify the cold state, draw the rods out gently, ride the curve up, let the turbine sync itself, then load to full power. That is how you wake up a reactor, kid."
+ }
+]

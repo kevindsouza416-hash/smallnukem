@@ -1,1 +1,91 @@
-IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoiIiJSZWNvdmVyeSBwYXNzOiB2ZXJpZnkgZXZlcnkgZXhpc3RpbmcgY2xpcCBvbiBkaXNrOyByZW5kZXIgb25seSB0aGUKbWlzc2luZy9pbnZhbGlkIG9uZXMgU0VSSUFMTFkgKHRoZSA0LXdheSBwYXJhbGxlbCBydW4gdHJpcHBlZCB0aGUgVFRTCmJhY2tlbmQg4oCUIGEgY29udGlndW91cyB3aW5kb3cgb2Ygc3ludGggZmFpbHVyZXMpLiBJZGVtcG90ZW50OiBzYWZlIHRvCnJlLXJ1bjsgdmFsaWQgZmlsZXMgYXJlIG5ldmVyIHJlLXJlbmRlcmVkLiBXcml0ZXMgdGhlIGZpbmFsIG1hbmlmZXN0LiIiIgppbXBvcnQganNvbiwgb3MsIHJlLCBzdWJwcm9jZXNzLCB0ZW1wZmlsZSwgdGltZQoKVyA9ICcvaG9tZS9oYXRjaC93b3Jrc3BhY2Uvc21hbGwtbnVrZW0tY2hpZWYtY2xpcHMvd29yaycKT1VUID0gJy9ob21lL2hhdGNoL3dvcmtzcGFjZS9zbWFsbC1udWtlbS1jaGllZi1jbGlwcycKVk9JQ0UgPSAnYXZvY2Fkb192MjptYWdudXMnCmltcG9ydCBpbXBvcnRsaWIudXRpbApzcGVjID0gaW1wb3J0bGliLnV0aWwuc3BlY19mcm9tX2ZpbGVfbG9jYXRpb24oJ3JlbmRlcicsIFcgKyAnL3JlbmRlci5weScpCnJlbmRlciA9IGltcG9ydGxpYi51dGlsLm1vZHVsZV9mcm9tX3NwZWMoc3BlYykKaW1wb3J0IHN5czsgc3lzLmFyZ3YgPSBbJ3JlbmRlci5weScsICdfX2ltcG9ydF9vbmx5X18nXQojIHJldXNlIGNodW5rX3RleHQvcHJvYmUvc3ludGggZnJvbSByZW5kZXIucHkgd2l0aG91dCBydW5uaW5nIG1haW4Kc3JjID0gb3BlbihXICsgJy9yZW5kZXIucHknKS5yZWFkKCkucmVwbGFjZSgiaWYgX19uYW1lX18gPT0gJ19fbWFpbl9fJzpcbiAgICBtYWluKCkiLCAnJykKZXhlYyhjb21waWxlKHNyYywgJ3JlbmRlci5weScsICdleGVjJykpCgpkZWYgY2hlY2sobGluZSk6CiAgICBwYXRoID0gb3MucGF0aC5qb2luKE9VVCwgbGluZVsnaWQnXSArICcubXAzJykKICAgIGlmIG5vdCBvcy5wYXRoLmV4aXN0cyhwYXRoKToKICAgICAgICByZXR1cm4gTm9uZQogICAgc2l6ZSA9IG9zLnBhdGguZ2V0c2l6ZShwYXRoKQogICAgZHVyLCBtZWFudiA9IHByb2JlKHBhdGgpCiAgICB3b3JkcyA9IGxlbihsaW5lWyd0dHNfdGV4dCddLnNwbGl0KCkpCiAgICBvayA9IHNpemUgPiA0MDAwIGFuZCBkdXIgPj0gbWF4KDAuNywgd29yZHMgKiAwLjE2KSBhbmQgbWVhbnYgPiAtNDUKICAgIHJldHVybiB7J3NpemUnOiBzaXplLCAnZHVyJzogZHVyLCAnbWVhbnYnOiBtZWFudiwgJ29rJzogb2t9CgpkZWYgcmVuZGVyX3NlcmlhbChsaW5lKToKICAgIGxpZCA9IGxpbmVbJ2lkJ10KICAgIGZpbmFsID0gb3MucGF0aC5qb2luKE9VVCwgbGlkICsgJy5tcDMnKQogICAgY2h1bmtzID0gY2h1bmtfdGV4dChsaW5lWyd0dHNfdGV4dCddKQogICAgdG1wID0gdGVtcGZpbGUubWtkdGVtcChwcmVmaXg9J2NoaWVmY2xpcF8nKQogICAgcGFydHMgPSBbXQogICAgdHJ5OgogICAgICAgIGZvciBpLCBjaCBpbiBlbnVtZXJhdGUoY2h1bmtzKToKICAgICAgICAgICAgcCA9IG9zLnBhdGguam9pbih0bXAsIGYncGFydHtpfS5tcDMnKQogICAgICAgICAgICBpZiBub3Qgc3ludGgoY2gsIHApOgogICAgICAgICAgICAgICAgcmV0dXJuIEZhbHNlCiAgICAgICAgICAgIHBhcnRzLmFwcGVuZChwKQogICAgICAgICAgICB0aW1lLnNsZWVwKDAuNSkKICAgICAgICBpZiBsZW4ocGFydHMpID09IDE6CiAgICAgICAgICAgIHN1YnByb2Nlc3MucnVuKFsnY3AnLCBwYXJ0c1swXSwgZmluYWxdLCBjaGVjaz1UcnVlKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGxzdCA9IG9zLnBhdGguam9pbih0bXAsICdsaXN0LnR4dCcpCiAgICAgICAgICAgIHdpdGggb3Blbihsc3QsICd3JykgYXMgZjoKICAgICAgICAgICAgICAgIGZvciBwIGluIHBhcnRzOiBmLndyaXRlKGYiZmlsZSAne3B9J1xuIikKICAgICAgICAgICAgc3VicHJvY2Vzcy5ydW4oWydmZm1wZWcnLCAnLXknLCAnLXYnLCAnZXJyb3InLCAnLWYnLCAnY29uY2F0JywgJy1zYWZlJywgJzAnLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgJy1pJywgbHN0LCAnLWM6YScsICdsaWJtcDNsYW1lJywgJy1xOmEnLCAnMycsIGZpbmFsXSwgY2hlY2s9VHJ1ZSkKICAgIGZpbmFsbHk6CiAgICAgICAgc3VicHJvY2Vzcy5ydW4oWydybScsICctcmYnLCB0bXBdKQogICAgcmV0dXJuIFRydWUKCmRlZiBtYWluKCk6CiAgICBsaW5lcyA9IGpzb24ubG9hZChvcGVuKFcgKyAnL2xpbmVzLmpzb24nKSkKICAgIHN0YXRlID0ge30KICAgIHRvZG8gPSBbXQogICAgZm9yIGxpbmUgaW4gbGluZXM6CiAgICAgICAgYyA9IGNoZWNrKGxpbmUpCiAgICAgICAgaWYgYyBhbmQgY1snb2snXToKICAgICAgICAgICAgc3RhdGVbbGluZVsnaWQnXV0gPSBjCiAgICAgICAgZWxzZToKICAgICAgICAgICAgdG9kby5hcHBlbmQobGluZSkKICAgIHByaW50KGYndmVyaWZpZWQgb24gZGlzazoge2xlbihzdGF0ZSl9L3tsZW4obGluZXMpfTsgdG8gcmVuZGVyOiB7bGVuKHRvZG8pfScsIGZsdXNoPVRydWUpCiAgICBmb3IgbGluZSBpbiB0b2RvOgogICAgICAgIG9rID0gcmVuZGVyX3NlcmlhbChsaW5lKQogICAgICAgIGMgPSBjaGVjayhsaW5lKSBpZiBvayBlbHNlIE5vbmUKICAgICAgICBpZiBjIGFuZCBjWydvayddOgogICAgICAgICAgICBzdGF0ZVtsaW5lWydpZCddXSA9IGMKICAgICAgICAgICAgcHJpbnQoJ09LICAnLCBsaW5lWydpZCddLCByb3VuZChjWydkdXInXSwgMiksIGZsdXNoPVRydWUpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcHJpbnQoJ0ZBSUwnLCBsaW5lWydpZCddLCBmbHVzaD1UcnVlKQogICAgICAgIHRpbWUuc2xlZXAoMS4wKQogICAgbWFuaWZlc3QgPSBbXQogICAgZm9yIGxpbmUgaW4gbGluZXM6CiAgICAgICAgYyA9IHN0YXRlLmdldChsaW5lWydpZCddKQogICAgICAgIG1hbmlmZXN0LmFwcGVuZCh7CiAgICAgICAgICAgICdpZCc6IGxpbmVbJ2lkJ10sICdncm91cCc6IGxpbmVbJ2dyb3VwJ10sICdrZXknOiBsaW5lWydrZXknXSwKICAgICAgICAgICAgJ3NvdXJjZSc6IGxpbmVbJ3NvdXJjZSddLCAndGV4dCc6IGxpbmVbJ3RleHQnXSwgJ3R0c190ZXh0JzogbGluZVsndHRzX3RleHQnXSwKICAgICAgICAgICAgJ2ZpbGUnOiBsaW5lWydpZCddICsgJy5tcDMnIGlmIGMgZWxzZSBOb25lLAogICAgICAgICAgICAnZHVyYXRpb25fcyc6IHJvdW5kKGNbJ2R1ciddLCAyKSBpZiBjIGVsc2UgTm9uZSwKICAgICAgICAgICAgJ2NodW5rcyc6IGxlbihjaHVua190ZXh0KGxpbmVbJ3R0c190ZXh0J10pKSwKICAgICAgICAgICAgJ3N0YXR1cyc6ICdvaycgaWYgYyBlbHNlICdmYWlsZWQnfSkKICAgIGpzb24uZHVtcChtYW5pZmVzdCwgb3BlbihPVVQgKyAnL21hbmlmZXN0Lmpzb24nLCAndycpLCBpbmRlbnQ9MSkKICAgIG9rID0gc3VtKDEgZm9yIG0gaW4gbWFuaWZlc3QgaWYgbVsnc3RhdHVzJ10gPT0gJ29rJykKICAgIHByaW50KGYnPT09IHtva30ve2xlbihtYW5pZmVzdCl9IGNsaXBzIG9rJykKICAgIGZvciBtIGluIG1hbmlmZXN0OgogICAgICAgIGlmIG1bJ3N0YXR1cyddICE9ICdvayc6IHByaW50KCdTVElMTCBGQUlMSU5HOicsIG1bJ2lkJ10pCgppZiBfX25hbWVfXyA9PSAnX19tYWluX18nOgogICAgbWFpbigpCg==
+#!/usr/bin/env python3
+"""Recovery pass: verify every existing clip on disk; render only the
+missing/invalid ones SERIALLY (the 4-way parallel run tripped the TTS
+backend — a contiguous window of synth failures). Idempotent: safe to
+re-run; valid files are never re-rendered. Writes the final manifest."""
+import json, os, re, subprocess, tempfile, time
+
+W = '/home/hatch/workspace/small-nukem-chief-clips/work'
+OUT = '/home/hatch/workspace/small-nukem-chief-clips'
+VOICE = 'avocado_v2:magnus'
+import importlib.util
+spec = importlib.util.spec_from_file_location('render', W + '/render.py')
+render = importlib.util.module_from_spec(spec)
+import sys; sys.argv = ['render.py', '__import_only__']
+# reuse chunk_text/probe/synth from render.py without running main
+src = open(W + '/render.py').read().replace("if __name__ == '__main__':\n    main()", '')
+exec(compile(src, 'render.py', 'exec'))
+
+def check(line):
+    path = os.path.join(OUT, line['id'] + '.mp3')
+    if not os.path.exists(path):
+        return None
+    size = os.path.getsize(path)
+    dur, meanv = probe(path)
+    words = len(line['tts_text'].split())
+    ok = size > 4000 and dur >= max(0.7, words * 0.16) and meanv > -45
+    return {'size': size, 'dur': dur, 'meanv': meanv, 'ok': ok}
+
+def render_serial(line):
+    lid = line['id']
+    final = os.path.join(OUT, lid + '.mp3')
+    chunks = chunk_text(line['tts_text'])
+    tmp = tempfile.mkdtemp(prefix='chiefclip_')
+    parts = []
+    try:
+        for i, ch in enumerate(chunks):
+            p = os.path.join(tmp, f'part{i}.mp3')
+            if not synth(ch, p):
+                return False
+            parts.append(p)
+            time.sleep(0.5)
+        if len(parts) == 1:
+            subprocess.run(['cp', parts[0], final], check=True)
+        else:
+            lst = os.path.join(tmp, 'list.txt')
+            with open(lst, 'w') as f:
+                for p in parts: f.write(f"file '{p}'\n")
+            subprocess.run(['ffmpeg', '-y', '-v', 'error', '-f', 'concat', '-safe', '0',
+                            '-i', lst, '-c:a', 'libmp3lame', '-q:a', '3', final], check=True)
+    finally:
+        subprocess.run(['rm', '-rf', tmp])
+    return True
+
+def main():
+    lines = json.load(open(W + '/lines.json'))
+    state = {}
+    todo = []
+    for line in lines:
+        c = check(line)
+        if c and c['ok']:
+            state[line['id']] = c
+        else:
+            todo.append(line)
+    print(f'verified on disk: {len(state)}/{len(lines)}; to render: {len(todo)}', flush=True)
+    for line in todo:
+        ok = render_serial(line)
+        c = check(line) if ok else None
+        if c and c['ok']:
+            state[line['id']] = c
+            print('OK  ', line['id'], round(c['dur'], 2), flush=True)
+        else:
+            print('FAIL', line['id'], flush=True)
+        time.sleep(1.0)
+    manifest = []
+    for line in lines:
+        c = state.get(line['id'])
+        manifest.append({
+            'id': line['id'], 'group': line['group'], 'key': line['key'],
+            'source': line['source'], 'text': line['text'], 'tts_text': line['tts_text'],
+            'file': line['id'] + '.mp3' if c else None,
+            'duration_s': round(c['dur'], 2) if c else None,
+            'chunks': len(chunk_text(line['tts_text'])),
+            'status': 'ok' if c else 'failed'})
+    json.dump(manifest, open(OUT + '/manifest.json', 'w'), indent=1)
+    ok = sum(1 for m in manifest if m['status'] == 'ok')
+    print(f'=== {ok}/{len(manifest)} clips ok')
+    for m in manifest:
+        if m['status'] != 'ok': print('STILL FAILING:', m['id'])
+
+if __name__ == '__main__':
+    main()

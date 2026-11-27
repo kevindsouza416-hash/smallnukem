@@ -1,0 +1,365 @@
+{
+  "CALLOUTS": {
+    "intro": "Reactor's cold as my ex's heart. Time to wake this baby up. We're gonna take this BWRX-300 (a small modular boiling water reactor) from cold shutdown to full power.",
+    "pre_check": "Before we do anything, verify those readings. Cold shutdown should be ~30C, ~0.10 MPa, reactor critical at 0.2% power, water level 100%. Don't skip this -- even legends check twice.",
+    "rod_withdraw": "Time to pull rods. The control rods absorb neutrons -- pulling them out lets the chain reaction build. Easy does it: A, then B, then C. Watch that reactor period (the time it takes for power to double) like your career depends on it. Because it does.",
+    "approach_crit": "Period's coming down -- that means power is rising faster. Target 20 seconds (comfortable doubling time). Under 10 seconds and you've got a transient (an unwanted power spike) -- I'll be writing up an incident report with YOUR name on it.",
+    "critical": "Criticality achieved (the chain reaction is now self-sustaining). Reactivity (how far from balance) is zero mK (milli-k, a unit of reactivity -- zero means perfectly balanced). The reactor's holding steady. Try not to look too smug.",
+    "heat_up": "She's warming up. Let the temperature climb toward 288C, and keep the heat-up rate under 150C a minute -- that's the plant limit. The negative temperature coefficient (as temp rises, the reaction naturally slows down -- a built-in safety feature) will help you out. Physics has got your back.",
+    "pressurise": "Pressure's building as the water heats up. 7.2 MPa (about 1000 psi) is the setpoint. At 6.8 MPa we're at operating pressure, and the turbine syncs itself at 6.3 MPa. Don't touch that steam valve yet -- let thermodynamics do its thing.",
+    "turbine_roll": "Pressure's up. The turbine rolls on its own once pressure passes 6.3 MPa -- 1500 RPM, synchronous speed. Your job: watch it, and work the bypass valve if pressure runs hot. Same as a good V8, way more power.",
+    "sync": "1500 RPM and the generator synchronises itself to the grid. Match frequency, check phase angle -- do NOT close that breaker out of phase or I will haunt your dreams. Out-of-phase sync can destroy the generator.",
+    "grid": "Synced to the grid. Now bring up load slowly to 300 MWe (megawatts electric -- enough to power a quarter million homes). This is what we came for.",
+    "period_warn": "Hey! Reactor period (doubling time) is under 10 seconds! That's a transient (unwanted power excursion). Back those rods in, cool it down. We're running a reactor, not a drag race.",
+    "period_danger": "PERIOD UNDER 5 SECONDS! INSERT RODS NOW! You're approaching prompt criticality (an uncontrolled rapid power surge where the reactor runs away from you). The protection system trips on pressure, power and water level -- don't give it a reason. Do you WANT a SCRAM on your record?!",
+    "scram": "SCRAM (emergency shutdown -- all control rods dropped in by gravity). The automatic protection system did its job. Figure out what you did wrong before we try again. The reactor doesn't give second chances -- but the safety systems do.",
+    "stuck_rod": "One of the rod drives isn't responding -- probably a stuck mechanism. That rod's not moving. Compensate with the adjacent ones to keep reactivity (chain reaction balance) under control. Happens more than management admits.",
+    "steam_leak": "We've got a steam leak in the tunnel! The isolation condenser (a passive cooling system that works without power -- just gravity and physics) should actuate -- but get down there and isolate that line manually. Pressure's dropping.",
+    "fault_cleared": "Good catch. Fault isolated. The passive safety systems in this BWRX-300 are solid -- but nothing beats a sharp operator. Now get back on procedure.",
+    "victory": "300 MWe on the grid. That's a clean startup. The core's behaving, the level's steady, and the condenser is taking the heat by gravity. I've seen worse from people with twenty years experience. Not bad, kid."
+  },
+  "REACTIONS": {
+    "correct_step": [
+      {
+        "t": "That's the one. Clean work — keep her coming up nice and steady.",
+        "e": "pleased"
+      },
+      {
+        "t": "Correct. You might just make an operator yet, kid.",
+        "e": "pleased"
+      },
+      {
+        "t": "Right panel, right move. The plant thanks you. So do I, quietly.",
+        "e": "neutral"
+      }
+    ],
+    "wrong_order": [
+      {
+        "t": "Whoa — not yet. Procedure has an order for a reason. Check the step list.",
+        "e": "stern"
+      },
+      {
+        "t": "Skipping steps is how incident reports get written. Follow the sequence.",
+        "e": "stern"
+      },
+      {
+        "t": "That comes later. Right now, the procedure wants something else.",
+        "e": "neutral"
+      }
+    ],
+    "wrong_component": [
+      {
+        "t": "That panel won't help this step. Eyes on the procedure, operator.",
+        "e": "stern"
+      },
+      {
+        "t": "Wrong iron. The step tells you what to work — trust it.",
+        "e": "neutral"
+      },
+      {
+        "t": "You can polish that panel later. The reactor's waiting on the right one.",
+        "e": "neutral"
+      }
+    ],
+    "alarm_raised": [
+      {
+        "t": "Alarm! Eyes on the gauges — find what's out of family and deal with it.",
+        "e": "alarmed"
+      },
+      {
+        "t": "That's an alarm condition. Don't admire it — respond to it.",
+        "e": "alarmed"
+      },
+      {
+        "t": "Annunciator's lit for a reason. Check the deck, find the offender.",
+        "e": "alarmed"
+      }
+    ],
+    "alarm_cleared": [
+      {
+        "t": "Alarm cleared. Nice recovery — that's how it's done.",
+        "e": "pleased"
+      },
+      {
+        "t": "Back in family. Steady as she goes.",
+        "e": "pleased"
+      },
+      {
+        "t": "Cleared. The plant forgives. This time.",
+        "e": "neutral"
+      }
+    ],
+    "idle_30s_hint": [
+      {
+        "t": "Still with me? The procedure step at the top tells you what's next.",
+        "e": "neutral"
+      },
+      {
+        "t": "Plant's waiting on you, operator. Next step's in the list.",
+        "e": "neutral"
+      },
+      {
+        "t": "No rush — but the core notices when nobody's driving.",
+        "e": "neutral"
+      }
+    ],
+    "milestone_complete": [
+      {
+        "t": "Milestone in the book. That's real progress, operator.",
+        "e": "celebrating"
+      },
+      {
+        "t": "Phase complete. Even I'm impressed, and I don't impress.",
+        "e": "celebrating"
+      },
+      {
+        "t": "That's a milestone. Log it, savour it for one second, move on.",
+        "e": "pleased"
+      }
+    ],
+    "startup_complete": [
+      {
+        "t": "FULL POWER. Three hundred megawatts, clean startup. Drinks are on me — in the simulator, anyway.",
+        "e": "celebrating"
+      },
+      {
+        "t": "Startup complete! The grid's got our power and you did every step by the book. Beautiful.",
+        "e": "celebrating"
+      },
+      {
+        "t": "She's on the grid at full power. Kid, you just started up a reactor. Frame that feeling.",
+        "e": "celebrating"
+      }
+    ]
+  },
+  "ASSIST_TEACH": [
+    "Verify before you touch: temperature, pressure, level — read them, don't assume them.",
+    "The lever sets the pace of the whole heat-up. Slow hands, steady rate — under 150 a minute.",
+    "Heat makes pressure. Ride the saturation curve and let physics do the lifting.",
+    "1500 RPM is the magic number — frequency and phase matched before the breaker closes.",
+    "Full power is a hold, not a spike: 285+ MWe, steady, for three full seconds."
+  ],
+  "ASSIST_EXPLAIN": [
+    [
+      "Step one: verify the cold state at the local panel. Temperature, pressure, level — read them before you touch anything.",
+      "The panel's right there, kid. Check the readings against the procedure — 30 degrees, 0.10 MPa, level at 100.",
+      "Last word on this one: cold state first, hands second. The local panel tells you if she's truly cold."
+    ],
+    [
+      "Step two: the rod drives. Work the lever at the drive panels — A, then B, then C — and keep the heat-up rate under 150 a minute.",
+      "Lever's on the rod drive panels, one floor up. Easy pulls. Watch the period — 20 seconds is comfortable, under 10 is trouble.",
+      "Still on the lever, kid: small pulls, watch the rate. The core rewards patience and punishes enthusiasm."
+    ],
+    [
+      "Step three is patience: let her heat up and pressurise on the saturation curve. Work the lever gently and keep the rate in family.",
+      "Temperature climbs, pressure follows — that's the curve doing its job. Your job is just the rate: under 150 a minute.",
+      "Nothing new to touch, operator. Heat and pressure rise together; you just keep the rate honest."
+    ],
+    [
+      "Step four: the turbine. At 6.3 MPa she rolls to 1500 RPM and syncs herself — confirm it at the turbine control and sync panels.",
+      "Watch the turbine panel: 1500 RPM, then the sync panel shows her matched to the grid. Confirm, don't force.",
+      "Turbine's the show now. RPM at 1500, sync confirmed — that's the step, kid."
+    ],
+    [
+      "Last step: raise power to 300 MWe at the load control. Bring the lever up and hold 285-plus for three seconds.",
+      "Load control panel, kid. Lever up slow, watch the megawatts — she needs to hold over 285, steady.",
+      "Nearly home. Full lever, steady hold, three seconds over 285 MWe. That's the whole step."
+    ]
+  ],
+  "SHOWME_LINES": {
+    "check_readings": [
+      "Watch me first: I press the panel check and read temperature, pressure and level out loud — because you never touch a control before you've verified the plant is truly in the state the procedure assumes.",
+      "First move is always the same: verify the cold state at the local panel. Thirty degrees, a tenth of an MPa, level at a hundred — because a startup built on assumed readings is a startup built on sand.",
+      "Eyes before hands, kid. I read the panel and check her numbers against the procedure, because the one time you skip it is the one time she's not cold."
+    ],
+    "rod_withdraw": [
+      "Now the lever, at the rod drives — I work it the way you'd work it: hold to withdraw, easy pulls. Because the lever sets the pace of the whole heat-up, and a yanked lever means a runaway period.",
+      "Here's the touch: small, steady pulls on the drive lever. I'm keeping the period near twenty seconds because that's a doubling time you can think in — under ten, nobody can.",
+      "See the lever move? That's your hand, next time. Slow withdraw, watch the rate — because heat-up is capped at a hundred and fifty a minute, and the lever is how you respect the cap."
+    ],
+    "rod_drive_2": [
+      "Drive B next — same lever, same patience. Working the drives in order keeps the core's shape even, because a lopsided withdraw makes a lopsided core.",
+      "On to B. The sequence matters more than the speed: A, then B, then C, so reactivity comes in balanced instead of all on one side."
+    ],
+    "rod_drive_3": [
+      "Last drive, C — finish the set. Three drives worked in order means the flux stays symmetric, and a symmetric core is a predictable core.",
+      "C drive, same gentle pull. You've seen the whole sequence now — that's exactly how you'd do it, because it IS how it's done."
+    ],
+    "steam_valve": [
+      "The bypass handwheel now — I open it the way you'd open it, a turn at a time. Because when pressure runs hot, the bypass is how you hand steam to the condenser instead of fighting the safety valves.",
+      "Watch the bypass: easing it open drops pressure without touching the core. You'd do the same, because pressure control lives here while the turbine's finding its feet."
+    ],
+    "raise_power": [
+      "Load control: I raise the lever slowly toward full power and hold her over 285. Because a spike trips the very machine you're trying to bring online — smooth in, steady hold.",
+      "Here's the finish: lever up at the load panel, megawatts climbing, and I hold the number. You'd hold it the same way, because full power is a hold, not a spike."
+    ],
+    "turbine_control": [
+      "At the turbine panel I confirm the roll: 1500 RPM, steady. Because the turbine tells you when it's ready — your job is to witness it, not to force it.",
+      "Turbine control: I check she's at synchronous speed. Confirm, don't force — because a turbine pushed out of step punishes the whole hall."
+    ],
+    "sync_grid": [
+      "Sync panel: I confirm frequency and phase are matched before anything closes. Because closing a breaker out of phase can wreck the generator in one bang.",
+      "Here's where patience pays: the sync check. She synchronises herself when pressure's right — I just verify it, because verification is the operator's half of this step."
+    ],
+    "feed_pump": [
+      "Feed pump panel: I start the standby pump the way you would — one press, then watch the level answer. Because level is life in a boiling core, and feedwater is how you defend it.",
+      "Standby feed pump, on. I watch the level recover before I touch anything else, because chasing two changes at once is how operators lose the thread."
+    ],
+    "iso_condenser": [
+      "Isolation condenser: I put it in service with one press. Because it's the passive heat sink — gravity and physics, no power needed — and it has to be available before you need it.",
+      "IC valve, over to auto. Same press you'd make. It matters because when everything else trips, this is the system that quietly carries the decay heat away."
+    ],
+    "shutdown_rods": [
+      "Different lesson now: I drive the lever DOWN at the rod drives until the rods are fully in. Because the first move with a plant you can't save is always the same — shut her down clean and let the condenser carry the heat.",
+      "Rods going in, all the way. I'm showing you the shutdown you'd perform: lever down, verify insertion, because a safe plant is never a failure — it's the job."
+    ],
+    "generic": [
+      "Follow my hands on this one: I work the control the way you'd work it, at a pace you can follow. Because a demonstration you can't imitate is just a show.",
+      "Same control, same motion you'd use. Watch what I do and why: every action on this panel has a reason, and the reason is the lesson."
+    ]
+  },
+  "SNX_HINTS": {
+    "iso_condenser": "Second use: the isolation condenser pulls pressure down passively — no bypass steam wasted.",
+    "feed_pump": "Second use: feedwater trims power too — small flow changes move MW without touching the rods.",
+    "steam_valve": "Second use: the bypass is a load trim — crack it to hold pressure while the turbine catches up."
+  },
+  "CINE": {
+    "first_criticality": {
+      "title": "FIRST CRITICALITY",
+      "line": "Critical. She purrs.",
+      "teach": "Criticality: each fission now triggers exactly one more — the chain reaction sustains itself. From here, rod position is power."
+    },
+    "grid_sync": {
+      "title": "ON THE GRID",
+      "line": "Synchronised. Smooth as I am.",
+      "teach": "Sync: the breaker may only close when turbine frequency and voltage match the grid — close out of phase and the machine, not the grid, loses."
+    },
+    "power_ascension": {
+      "title": "POWER ASCENSION",
+      "line": "More power. Carefully. Mostly.",
+      "teach": "Ascension is a negotiation: raise power in holds, let temperature and pressure settle at each plateau, and never chase a moving needle."
+    },
+    "procedure_chain": {
+      "title": "CLEAN PROCEDURE CHAIN",
+      "line": "By the book. The book works.",
+      "teach": "Steps in order, checks before action: a clean chain is not luck — it is the procedure doing the thinking before the plant does the surprising."
+    },
+    "level_complete": {
+      "title": "SHIFT COMPLETE",
+      "line": "Hail to the king of the core.",
+      "teach": "A shift is judged on margins kept, not power made: every trip you never caused is the real score. Log it, hand it over clean."
+    },
+    "cold_state_verified": {
+      "title": "COLD STATE VERIFIED",
+      "line": "Cold, shut down, and proven — not assumed.",
+      "teach": "Verify the cold state before touching anything: temperature, pressure, level, all read and recorded first."
+    },
+    "fault_caught_fw": {
+      "title": "FAULT CAUGHT — FEEDWATER",
+      "line": "Caught it early. That's the job.",
+      "teach": "Feedwater loss shows first as level shrink and a pump note change — the standby pump and RCIC buy time, but only diagnosis buys a recovery."
+    },
+    "fault_caught_turb": {
+      "title": "FAULT CAUGHT — TURBINE",
+      "line": "Turbine's out, plant's fine. Watch me.",
+      "teach": "A turbine trip is a steam problem instantly: bypass open first, questions later — the steam has to go somewhere that is not the relief valves."
+    },
+    "fault_caught_loop": {
+      "title": "FAULT CAUGHT — OFFSITE POWER",
+      "line": "Grid hiccup. We didn't.",
+      "teach": "Loss of offsite power: the diesels and batteries carry the safety loads — your job is load discipline until the grid returns, not heroics."
+    },
+    "fault_caught_sea": {
+      "title": "FAULT CAUGHT — LAKE WATER",
+      "line": "Lake's moody. Condenser's fine.",
+      "teach": "Losing circulating water warms the condenser and vacuum decays slowly — slow faults reward early eyes: trend it, don't wait for the alarm."
+    },
+    "fault_caught_atws": {
+      "title": "FAULT CAUGHT — ATWS",
+      "line": "Rods said no. Boron said yes.",
+      "teach": "ATWS — the scram that didn't: ARI drives the rods by a diverse path and SLC boron shuts the core down chemically. Two independent answers, by design."
+    },
+    "recovery_rate": {
+      "title": "RECOVERY — HEAT-UP RATE",
+      "line": "Rate's mine now. Watch the dial.",
+      "teach": "Heat-up rate is a stress limit, not a suggestion: ease the lever back and let metal and water agree on a speed."
+    },
+    "recovery_rods": {
+      "title": "RECOVERY — ROD POSITION",
+      "line": "Rods where they belong. By the numbers.",
+      "teach": "Rod position is reactivity: return to the procedure position notch by notch — never park the core somewhere the procedure didn't bless."
+    },
+    "recovery_press": {
+      "title": "RECOVERY — PRESSURE",
+      "line": "Pressure's coming home. Easy does it.",
+      "teach": "Pressure is steam with nowhere to go: bypass and the isolation condenser are the exits — open one before the relief valves open themselves."
+    },
+    "recovery_bypass": {
+      "title": "RECOVERY — BYPASS LEFT OPEN",
+      "line": "Bypass was doing overtime. Closing it down.",
+      "teach": "An abandoned bypass dumps your steam to the condenser: power stalls and pressure hunts. A control left in a bad position is a fault you scheduled."
+    },
+    "recovery_fw": {
+      "title": "RECOVERY — FEEDWATER",
+      "line": "Standby pump's up. Level's coming back.",
+      "teach": "Feedwater recovery is a sequence: standby pump running, flow proven, THEN restart the main — swapping pumps blind swaps one trip for two."
+    },
+    "recovery_level": {
+      "title": "RECOVERY — WATER LEVEL",
+      "line": "Level's the lifeline. Bringing it home.",
+      "teach": "Level is the core's blanket: below the alarm, feed is the only conversation; below the scram setpoint, the plant ends the conversation for you."
+    },
+    "recovery_turb": {
+      "title": "RECOVERY — TURBINE",
+      "line": "She'll roll again. Steam first, pride later.",
+      "teach": "Turbine recovery starts with the steam path proven and the bypass in hand — re-roll into a pressure spike and you'll trip twice."
+    },
+    "recovery_ic": {
+      "title": "RECOVERY — ISOLATION CONDENSER",
+      "line": "IC's on the job. Gravity does the heavy lifting.",
+      "teach": "The isolation condenser needs no power and no pump: open its path and hot water rises, condenses, and falls back — physics as the backup generator."
+    },
+    "recovery_order": {
+      "title": "RECOVERY — PROCEDURE ORDER",
+      "line": "Steps exist in order for a reason. Resetting.",
+      "teach": "A skipped step is a debt the plant collects later, with interest: go back, do the step, then continue — the procedure forgives, physics doesn't."
+    },
+    "recovery_alarm": {
+      "title": "RECOVERY — ALARM RESPONSE",
+      "line": "Alarm's a question. Here's the answer.",
+      "teach": "An alarm is the plant asking a specific question — answer THAT one, in its procedure, before touching anything else."
+    },
+    "recovery_shutdown": {
+      "title": "SAFE SHUTDOWN",
+      "line": "She's down safe. Now we learn why.",
+      "teach": "A trip is the plant protecting itself when the procedure window closed — the debrief names the cause so the next shift doesn't repeat it."
+    }
+  },
+  "DEMO_TOUR": [
+    {
+      "key": "intro",
+      "text": "While I run her up: the arrow over Fluke points at the step's machine and warms when he's headed right, the chip up top names the step, and the plant map is on the M key. Everything I do, you can do."
+    },
+    {
+      "key": "reactor",
+      "text": "Safety tour — reactor building: the trefoil placards mark the radiation zone, and every hazard symbol in this plant can be tapped for its WHMIS card. Standby liquid control and the isolation condensers are here — shutdown and cooling that need no power."
+    },
+    {
+      "key": "steam",
+      "text": "Safety tour — steam tunnel: high-pressure steam signage on the main, and the leak isolation valve is in this tunnel. Listen as much as look — you will hear a steam leak before you see it."
+    },
+    {
+      "key": "turbine",
+      "text": "Safety tour — turbine hall: electrical hazard signage on the generator, the flame pictogram on the hydrogen cooling — no sparks, ever. And the covered red button is the manual SCRAM: last resort, always in reach."
+    }
+  ],
+  "FIXED": {
+    "takeover_announce": "Watch — I'll take it from here. First, I diagnose what you've handed me…",
+    "assist_announce": "Step aside, kid — I'll take this one and show you how it's done.",
+    "assist_handback": "Your plant. Next one's yours.",
+    "assist_coach_line": "Watch how it's done, kid.",
+    "demo_on": "Demo mode. Watch Fluke work the startup — touch anything to take the plant yourself.",
+    "demo_off": "Demo off. The plant is yours, operator.",
+    "takeover_off": "Takeover off. Your plant, operator — it stays as the driver left it."
+  }
+}

@@ -1,1 +1,33 @@
-PHZlY3RvciB4bWxuczphbmRyb2lkPSJodHRwOi8vc2NoZW1hcy5hbmRyb2lkLmNvbS9hcGsvcmVzL2FuZHJvaWQiCiAgICBhbmRyb2lkOndpZHRoPSIxMDhkcCIKICAgIGFuZHJvaWQ6aGVpZ2h0PSIxMDhkcCIKICAgIGFuZHJvaWQ6dmlld3BvcnRXaWR0aD0iMTA4IgogICAgYW5kcm9pZDp2aWV3cG9ydEhlaWdodD0iMTA4Ij4KICAgIDwhLS0gZ2F1Z2UgYm9keSAtLT4KICAgIDxwYXRoCiAgICAgICAgYW5kcm9pZDpmaWxsQ29sb3I9IiMyQTM0NDIiCiAgICAgICAgYW5kcm9pZDpwYXRoRGF0YT0iTTU0LDE4IGEzNiwzNiAwIDEsMCAwLjEsMCBaIiAvPgogICAgPHBhdGgKICAgICAgICBhbmRyb2lkOmZpbGxDb2xvcj0iIzE0MUEyMSIKICAgICAgICBhbmRyb2lkOnBhdGhEYXRhPSJNNTQsMjQuNSBhMjkuNSwyOS41IDAgMSwwIDAuMSwwIFoiIC8+CiAgICA8IS0tIHJlZCB6b25lIGFyYywgdXBwZXIgcmlnaHQgLS0+CiAgICA8cGF0aAogICAgICAgIGFuZHJvaWQ6cGF0aERhdGE9Ik03MC40LDI1LjcgQTMyLjcsMzIuNyAwIDAgMSA4Ni4yLDQ4LjMiCiAgICAgICAgYW5kcm9pZDpzdHJva2VDb2xvcj0iI0U1MzkzNSIKICAgICAgICBhbmRyb2lkOnN0cm9rZVdpZHRoPSI0LjUiCiAgICAgICAgYW5kcm9pZDpzdHJva2VMaW5lQ2FwPSJyb3VuZCIgLz4KICAgIDwhLS0gdGlja3MgLS0+CiAgICA8cGF0aAogICAgICAgIGFuZHJvaWQ6cGF0aERhdGE9Ik0zMy43LDQyLjMgTDI4LjksMzkuNSBNNDIuMywzMy43IEwzOS41LDI4LjkgTTU0LDMwLjUgTDU0LDI1IE02NS44LDMzLjcgTDY4LjUsMjguOSBNNzQuMyw0Mi4zIEw3OS4xLDM5LjUgTTc3LjUsNTQgTDgzLDU0IE03NC4zLDY1LjggTDc5LjEsNjguNSIKICAgICAgICBhbmRyb2lkOnN0cm9rZUNvbG9yPSIjQ0ZEOEUzIgogICAgICAgIGFuZHJvaWQ6c3Ryb2tlV2lkdGg9IjMiCiAgICAgICAgYW5kcm9pZDpzdHJva2VMaW5lQ2FwPSJyb3VuZCIgLz4KICAgIDwhLS0gbmVlZGxlLCBwb2ludGluZyBpbnRvIHRoZSB1cHBlciByaWdodCAtLT4KICAgIDxwYXRoCiAgICAgICAgYW5kcm9pZDpmaWxsQ29sb3I9IiNGRkIzMDAiCiAgICAgICAgYW5kcm9pZDpwYXRoRGF0YT0iTTUyLjMsNTEuNSBMNzQuMSw0MCBMNTUuNyw1Ni41IEw0OC4zLDU4IFoiIC8+CiAgICA8IS0tIGh1YiAtLT4KICAgIDxwYXRoCiAgICAgICAgYW5kcm9pZDpmaWxsQ29sb3I9IiNGRkQ3NUUiCiAgICAgICAgYW5kcm9pZDpwYXRoRGF0YT0iTTU0LDQ5IGE1LDUgMCAxLDAgMC4xLDAgWiIgLz4KPC92ZWN0b3I+Cg==
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- gauge body -->
+    <path
+        android:fillColor="#2A3442"
+        android:pathData="M54,18 a36,36 0 1,0 0.1,0 Z" />
+    <path
+        android:fillColor="#141A21"
+        android:pathData="M54,24.5 a29.5,29.5 0 1,0 0.1,0 Z" />
+    <!-- red zone arc, upper right -->
+    <path
+        android:pathData="M70.4,25.7 A32.7,32.7 0 0 1 86.2,48.3"
+        android:strokeColor="#E53935"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round" />
+    <!-- ticks -->
+    <path
+        android:pathData="M33.7,42.3 L28.9,39.5 M42.3,33.7 L39.5,28.9 M54,30.5 L54,25 M65.8,33.7 L68.5,28.9 M74.3,42.3 L79.1,39.5 M77.5,54 L83,54 M74.3,65.8 L79.1,68.5"
+        android:strokeColor="#CFD8E3"
+        android:strokeWidth="3"
+        android:strokeLineCap="round" />
+    <!-- needle, pointing into the upper right -->
+    <path
+        android:fillColor="#FFB300"
+        android:pathData="M52.3,51.5 L74.1,40 L55.7,56.5 L48.3,58 Z" />
+    <!-- hub -->
+    <path
+        android:fillColor="#FFD75E"
+        android:pathData="M54,49 a5,5 0 1,0 0.1,0 Z" />
+</vector>
