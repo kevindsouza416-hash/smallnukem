@@ -1082,6 +1082,11 @@ chk('s25 cine: a CINE button sits immediately after the AUDIO button and shares 
 chk('s25 cine (functional): default ON; persisted OFF boots OFF; the audio / SFX boot rules are untouched', (() => { const d = snAudioBoot({}); const o = snAudioBoot({ 'sn.cine': 'off' }); const a = snAudioBoot({ 'sn.sfx': 'on', 'sn.audio': 'on', 'sn.cine': 'on' }); return d.cine === true && o.cine === false && a.cine === true && a.sfx === false && a.audio === true; })(), '');
 chk('s25 cine: toggleCine persists under sn.cine like the audio choice, and switching off closes the running cinematic and empties the queue', html.includes("localStorage.setItem('sn.cine', SN_AUDIO.cine ? 'on' : 'off');") && html.includes('if (SN_CINE.state.active) SN_CINE.close(false); SN_CINE.state.queue.length = 0;'), '');
 chk('s25 cine: with cinematics off every offer is dropped at the door - no video, no audio graph, no queue', html.includes("!SN_AUDIO.cine) { state.log.push({ key, dur_s: 0, dismissed: false, dropped: 'cinematics_off' }); return; }"), '');
+
+// ---- patch173 (SHIP #25): the Chief icon ----
+chk('s25 icon: the Chief icon is ~30% larger (24 -> 31 px, phone 20 -> 26 px) on a 40 px bitmap', html.includes('#guideBarCollapsed canvas { width: 31px; height: 31px;') && html.includes('#guideBarCollapsed canvas { width: 26px; height: 26px; }') && html.includes('<canvas id="portraitMini" width="40" height="40"></canvas>'), '');
+chk('s25 icon: image only - the icon element carries no text, label or title', /<canvas id="portraitMini"[^>]*><\/canvas>/.test(html) && !/<canvas id="portraitMini"[^>]*(title|aria-label|alt)=/.test(html), '');
+chk('s25 icon: the frame mirrors the SHOW follow state (green following / red stopped); it adds no press-and-hold or long-press handler', html.includes("ic173.classList.toggle('follow-on'") && !/portraitMini[^\n]*(long|hold|contextmenu)/i.test(html.slice(html.indexOf('#guideBarCollapsed canvas { width: 31px'), html.indexOf('#guideBarCollapsed canvas { width: 31px') + 600)), '');
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);
 
