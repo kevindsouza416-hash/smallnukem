@@ -981,7 +981,7 @@ body.chief-speaking .guide-speech { font-size: 14px; color: #ffffff; }   /* patc
   <button id="procDoneBtn" type="button" onclick="toggleProcedure()">Done ✔</button>
 </div>
 
-<div id="scramAlert">!! AUTOMATIC SCRAM !!<br><span style="font-size:16px" id="scramReason"></span></div>
+<div id="scramAlert"><span id="scramHead">!! AUTOMATIC SCRAM !!</span><br><span style="font-size:16px" id="scramReason"></span></div>
 <div id="interactPrompt">[E] Interact</div>
 <div id="scoreScreen">
   <canvas class="score-backdrop" id="scoreBackdrop"></canvas>
@@ -4819,6 +4819,35 @@ function checkScramConditions() {
   }
 }
 
+// patch162: the operator's SCRAM.  Hold X (1.0 s) or gamepad Back/View, or hold the
+// SCRAM button on the ARI-01 panel (0.8 s).  Release early = cancelled.  The trip
+// itself is HER BWR.scramNow(); checkScramConditions() then raises the overlay.
+const SN_SCRAM = { t: 0, HOLD_S: 1.0 };
+function snManualScram() {
+  if (!S || gameState.phase !== 'playing' || S.scram || S.phase === 'failed' || S.phase === 'complete') return false;
+  BWR.scramNow(S);
+  return true;
+}
+function snScramPillSet(frac) {
+  let el = document.getElementById('scramPill');
+  if (!el) {
+    if (frac <= 0) return;
+    el = document.createElement('div'); el.id = 'scramPill'; el.textContent = 'HOLD TO SCRAM';
+    el.style.cssText = 'position:fixed;left:50%;top:8px;transform:translateX(-50%);z-index:950;padding:7px 16px;border:2px solid #e5484d;border-radius:6px;color:#ffe3e3;font:bold 15px "Courier New",monospace;letter-spacing:1px;pointer-events:none;white-space:nowrap';
+    document.body.appendChild(el);
+  }
+  el.style.display = frac > 0 ? 'block' : 'none';
+  if (frac > 0) { const pct = Math.round(Math.min(1, frac) * 100); el.style.background = 'linear-gradient(90deg,#b01515 ' + pct + '%,#2a0a0a ' + pct + '%)'; }
+}
+function snScramHoldTick(dt) {
+  const gp = getGamepad();
+  const down = !!(KB['KeyX'] || (gp && gp.buttons[8] && gp.buttons[8].pressed));
+  if (!down || gameState.phase !== 'playing' || CINE_ACTIVE || !S || S.scram) { if (SN_SCRAM.t > 0) snScramPillSet(0); SN_SCRAM.t = 0; return; }
+  SN_SCRAM.t += dt;
+  snScramPillSet(SN_SCRAM.t / SN_SCRAM.HOLD_S);
+  if (SN_SCRAM.t >= SN_SCRAM.HOLD_S) { SN_SCRAM.t = 0; snScramPillSet(0); snManualScram(); }
+}
+
 function triggerScram(reason) {
   if (gameState.phase === 'scram' || gameState.phase === 'scored') return;
   SN_SFX.scram();
@@ -4832,7 +4861,13 @@ function triggerScram(reason) {
   gameState.scramCount++;
   document.getElementById('scramAlert').style.display = 'block';
   document.getElementById('scramReason').textContent = reason;
-  showCallout('scram');
+  const manual162 = /^Manual/.test(reason);   // patch162: the operator's own SCRAM is not an automatic one
+  const head162 = document.getElementById('scramHead');
+  if (head162) head162.textContent = manual162 ? '!! MANUAL SCRAM !!' : '!! AUTOMATIC SCRAM !!';
+  if (manual162) {
+    const t162 = 'Manual SCRAM. You tripped the reactor by hand. Rods are in and passive cooling holds the plant: a safe shutdown.';
+    showCalloutText(t162); chiefSpeak(t162, true); CHIEF.expr = 'alarmed'; CHIEF.exprT = 4;
+  } else showCallout('scram');
   setTimeout(() => {
     document.getElementById('scramAlert').style.display = 'none';
     endGame('scram');
@@ -7089,7 +7124,10 @@ const SN_TOUCH = (() => {
       if (pop.guardOpen && ly > soY(150)) { pop.grab = { id, kind: 'hold', fx: 'slcFire', t: performance.now() }; return; }
       return;
     }
-    if (a === 'ari_button' && ly > soY(130)) { actuateARI(); return; }
+    if (a === 'ari_button' && ly > soY(130)) {
+      if (lx < r.w / 2) { pop.grab = { id, kind: 'hold', fx: 'scramFire', t: performance.now() }; snTick(880, 0.04, 0.06); return; }   // patch162: left half = SCRAM (hold), right half = ARI (tap)
+      actuateARI(); return;
+    }
     if (a === 'rcic_panel' && ly > soY(140)) {
       const modes = ['auto', 'on', 'off']; const idx = modes.indexOf(S.ctl.rcic);
       S.ctl.rcic = modes[(idx + 1) % 3]; SN_SFX.switchThrow(); showFaultBanner('RCIC mode: ' + S.ctl.rcic.toUpperCase()); snTick(300, 0.07, 0.1); return;
@@ -7218,6 +7256,7 @@ const SN_TOUCH = (() => {
       if (held >= 0.8 && !pop.holdFx) {
         pop.holdFx = pop.grab.fx;
         if (pop.grab.fx === 'fwRestart') { BWR.inject(S, 'fw'); SN_SFX.pumpStart(); SN_SFX.holdDone(); showFaultBanner('Main feedwater pump restarted.'); }
+        if (pop.grab.fx === 'scramFire') { SN_SFX.switchThrow(); SN_SFX.holdDone(); snManualScram(); }   // patch162
         if (pop.grab.fx === 'slcFire') { S.ctl.slc = !S.ctl.slc; SN_SFX.switchThrow(); if (S.ctl.slc) SN_SFX.hiss(1.1, 0.13); SN_SFX.holdDone(); showFaultBanner('SLC boron injection: ' + (S.ctl.slc ? 'ON — tank ' + Math.round(S.tank) + '%' : 'OFF')); }
         snTick(110, 0.1, 0.13); pop.grab = null;
       }
@@ -7574,8 +7613,12 @@ const SN_TOUCH = (() => {
       }
     } else if (a === 'ari_button') {
       readout(r, S.atws ? 'ATWS — ARI AVAILABLE' : 'ARI ARMED · NO ATWS');
-      mushroom(cx, r.y + soY(182), srY(44), '#b01515', '#e84a4a');
-      ctx.fillStyle = '#fff'; ctx.font = 'bold 14px Courier New'; ctx.textAlign = 'center'; ctx.fillText('ARI', cx, r.y + soY(188));
+      mushroom(cx + 62, r.y + soY(182), srY(44), '#b01515', '#e84a4a');   // patch162: ARI right (tap) ...
+      ctx.fillStyle = '#fff'; ctx.font = 'bold 14px Courier New'; ctx.textAlign = 'center'; ctx.fillText('ARI', cx + 62, r.y + soY(188));
+      mushroom(cx - 62, r.y + soY(182), srY(44), '#5c0d0d', '#c0392b');   // ... SCRAM left (hold)
+      ctx.fillStyle = '#fff'; ctx.font = 'bold 12px Courier New'; ctx.fillText('SCRAM', cx - 62, r.y + soY(187));
+      ctx.fillStyle = '#9fd8ff'; ctx.font = '11px Courier New'; ctx.fillText('HOLD: SCRAM  \u00b7  TAP: ARI', cx, r.y + soY(240));
+      if (pop.grab && pop.grab.kind === 'hold' && pop.grab.fx === 'scramFire') { ctx.fillStyle = '#e5484d'; ctx.fillRect(cx - 62 - 40, r.y + soY(222), 80 * Math.min(1, (performance.now() - pop.grab.t) / 800), 5); }
     } else if (a === 'rcic_panel') {
       readout(r, 'RCIC MODE: ' + S.ctl.rcic.toUpperCase() + (S.rcicOn ? ' · RUNNING' : ''));
       const modes = ['auto', 'on', 'off'];
@@ -11769,6 +11812,7 @@ function gameLoop(ts) {
   if (gameState.phase === 'playing' && !player.onLadder && Math.abs(player.vx || 0) > 20) { SNX.stepAcc = (SNX.stepAcc || 0) + Math.abs(player.vx) * dt; if (SNX.stepAcc > 52) { SNX.stepAcc = 0; SNX.stepAlt = !SNX.stepAlt; SN_SFX.step(SNX.stepAlt); } }
 
   handleGamepad();
+  snScramHoldTick(dt);   // patch162
   // 280 ms hold-gate flip: re-sync once when a stationary operate press goes
   // deliberate (a full per-frame sync would fight SN_TOUCH's walk driver).
   for (const p of pointers.values()) if (p.role === 'operate' && !p.gateFired && performance.now() - p.t >= 280) { p.gateFired = true; syncPointerInput(); }

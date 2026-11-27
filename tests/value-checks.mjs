@@ -989,6 +989,17 @@ chk('p161 D1: a panel grab is released through SN_TOUCH.up (snap-on-release stil
 chk('p161 D2: a key skips the startup splash, shortcuts / bare modifiers excepted', html.includes("window.addEventListener('keydown', endKey, true);") && html.includes('e.ctrlKey || e.metaKey || e.altKey'), '');
 chk('p161 D3: both canvas pointerdown listeners ignore non-primary mouse buttons (2 guards)', (html.match(/if \(e\.pointerType === 'mouse' && e\.button !== 0\) return;/g) || []).length === 2, '');
 chk('p161 D4: mergeInput scans KB / KB_LATCH without Object.values allocations', !html.includes('Object.values(KB)') && html.includes('let phys161 = false;'), '');
+
+// ---- patch162 (controls audit): the operator's manual SCRAM ----
+{
+  const S = fresh(); run(S, 5); BWR.scramNow(S);
+  chk('p162 model: her scramNow() trips with her reason string "Manual scram by operator" (the game now calls it)', S.scram === true && S.why === 'Manual scram by operator' && S.phase === 'tripped', S.why);
+}
+chk('p162: manual SCRAM is wired to the model through snManualScram -> BWR.scramNow(S)', html.includes('function snManualScram() {') && html.includes('BWR.scramNow(S);'), '');
+chk('p162: keyboard X and gamepad Back/View hold (1.0 s) with a progress pill; release cancels', html.includes("KB['KeyX'] || (gp && gp.buttons[8] && gp.buttons[8].pressed)") && html.includes('HOLD_S: 1.0') && html.includes('snScramHoldTick(dt);'), '');
+chk('p162: ARI-01 panel carries a SCRAM hold button (left) beside the ARI tap button (right)', html.includes("fx: 'scramFire'") && html.includes("if (pop.grab.fx === 'scramFire')"), '');
+chk('p162: overlay heading distinguishes a manual SCRAM from an automatic one', html.includes('id="scramHead"') && html.includes("'!! MANUAL SCRAM !!'") && html.includes("'!! AUTOMATIC SCRAM !!'"), '');
+chk('p162: the Chief stock automatic-trip line is NOT used for a manual SCRAM', html.includes('} else showCallout(\'scram\');'), '');
 console.log('\n' + pass + ' passed, ' + fail + ' failed');
 process.exit(fail ? 1 : 0);
 
